@@ -1,0 +1,3 @@
+module butterfly(input number, output fnumber);
+
+endmodule

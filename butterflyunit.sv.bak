@@ -1,0 +1,6 @@
+module butterflyunit( input [15:0] A_t_real, input [15:0] A_t_imag, input [15:0] B_t_real, input [15:0] B_t_imag,
+							 output [15:0] A_f_real, output [15:0] A_f_imag, output [15:0] B_f_real, output [15:0] B_f_imag);
+	
+	
+							 
+endmodule 

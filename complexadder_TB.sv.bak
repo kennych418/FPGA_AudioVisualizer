@@ -1,0 +1,6 @@
+module complexadder_TB( input [15:0] a_real, input [15:0] a_imag, input [15:0] b_real, input [15:0] b_imag, 
+							output [15:0] c_real, output [15:0] c_imag );
+			
+	
+			
+endmodule 

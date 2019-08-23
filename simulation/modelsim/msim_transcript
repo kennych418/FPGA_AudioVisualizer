@@ -1,0 +1,205 @@
+# Reading C:/intelFPGA_lite/18.1/modelsim_ase/tcl/vsim/pref.tcl
+# do FFT_run_msim_rtl_verilog.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 10.5b Lib Mapping Utility 2016.10 Oct  5 2016
+# vmap work rtl_work 
+# Copying C:/intelFPGA_lite/18.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vlog -sv -work work +incdir+C:/Users/chank/OneDrive/Quartus/FFT {C:/Users/chank/OneDrive/Quartus/FFT/FFT.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 22:49:24 on Aug 21,2019
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/chank/OneDrive/Quartus/FFT" C:/Users/chank/OneDrive/Quartus/FFT/FFT.sv 
+# -- Compiling module FFT
+# 
+# Top level modules:
+# 	FFT
+# End time: 22:49:24 on Aug 21,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/chank/OneDrive/Quartus/FFT {C:/Users/chank/OneDrive/Quartus/FFT/butterflyunit.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 22:49:24 on Aug 21,2019
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/chank/OneDrive/Quartus/FFT" C:/Users/chank/OneDrive/Quartus/FFT/butterflyunit.sv 
+# -- Compiling module butterflyunit
+# 
+# Top level modules:
+# 	butterflyunit
+# End time: 22:49:24 on Aug 21,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/chank/OneDrive/Quartus/FFT {C:/Users/chank/OneDrive/Quartus/FFT/complexmultiplier.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 22:49:24 on Aug 21,2019
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/chank/OneDrive/Quartus/FFT" C:/Users/chank/OneDrive/Quartus/FFT/complexmultiplier.sv 
+# -- Compiling module complexmultiplier
+# 
+# Top level modules:
+# 	complexmultiplier
+# End time: 22:49:24 on Aug 21,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/chank/OneDrive/Quartus/FFT {C:/Users/chank/OneDrive/Quartus/FFT/complexadder.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 22:49:24 on Aug 21,2019
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/chank/OneDrive/Quartus/FFT" C:/Users/chank/OneDrive/Quartus/FFT/complexadder.sv 
+# -- Compiling module complexadder
+# 
+# Top level modules:
+# 	complexadder
+# End time: 22:49:24 on Aug 21,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/chank/OneDrive/Quartus/FFT {C:/Users/chank/OneDrive/Quartus/FFT/simplemultiplier.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 22:49:24 on Aug 21,2019
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/chank/OneDrive/Quartus/FFT" C:/Users/chank/OneDrive/Quartus/FFT/simplemultiplier.sv 
+# -- Compiling module simplemultiplier
+# 
+# Top level modules:
+# 	simplemultiplier
+# End time: 22:49:24 on Aug 21,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/chank/OneDrive/Quartus/FFT {C:/Users/chank/OneDrive/Quartus/FFT/complexsubtractor.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 22:49:24 on Aug 21,2019
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/chank/OneDrive/Quartus/FFT" C:/Users/chank/OneDrive/Quartus/FFT/complexsubtractor.sv 
+# -- Compiling module complexsubtractor
+# 
+# Top level modules:
+# 	complexsubtractor
+# End time: 22:49:24 on Aug 21,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+vlog -reportprogress 300 -work work C:/Users/chank/OneDrive/Quartus/FFT/butterflyunit.sv
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 22:49:31 on Aug 21,2019
+# vlog -reportprogress 300 -work work C:/Users/chank/OneDrive/Quartus/FFT/butterflyunit.sv 
+# -- Compiling module butterflyunit
+# 
+# Top level modules:
+# 	butterflyunit
+# End time: 22:49:32 on Aug 21,2019, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+vlog -reportprogress 300 -work work C:/Users/chank/OneDrive/Quartus/FFT/butterflyunit_TB.sv
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 22:49:32 on Aug 21,2019
+# vlog -reportprogress 300 -work work C:/Users/chank/OneDrive/Quartus/FFT/butterflyunit_TB.sv 
+# -- Compiling module butterflyunit_TB
+# 
+# Top level modules:
+# 	butterflyunit_TB
+# End time: 22:49:32 on Aug 21,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -reportprogress 300 -work work C:/Users/chank/OneDrive/Quartus/FFT/complexadder.sv
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 22:49:33 on Aug 21,2019
+# vlog -reportprogress 300 -work work C:/Users/chank/OneDrive/Quartus/FFT/complexadder.sv 
+# -- Compiling module complexadder
+# 
+# Top level modules:
+# 	complexadder
+# End time: 22:49:33 on Aug 21,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -reportprogress 300 -work work C:/Users/chank/OneDrive/Quartus/FFT/complexadder_TB.sv
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 22:49:33 on Aug 21,2019
+# vlog -reportprogress 300 -work work C:/Users/chank/OneDrive/Quartus/FFT/complexadder_TB.sv 
+# -- Compiling module complexadder_TB
+# 
+# Top level modules:
+# 	complexadder_TB
+# End time: 22:49:34 on Aug 21,2019, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+vlog -reportprogress 300 -work work C:/Users/chank/OneDrive/Quartus/FFT/complexmultiplier.sv
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 22:49:34 on Aug 21,2019
+# vlog -reportprogress 300 -work work C:/Users/chank/OneDrive/Quartus/FFT/complexmultiplier.sv 
+# -- Compiling module complexmultiplier
+# 
+# Top level modules:
+# 	complexmultiplier
+# End time: 22:49:34 on Aug 21,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -reportprogress 300 -work work C:/Users/chank/OneDrive/Quartus/FFT/complexsubtractor.sv
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 22:49:35 on Aug 21,2019
+# vlog -reportprogress 300 -work work C:/Users/chank/OneDrive/Quartus/FFT/complexsubtractor.sv 
+# -- Compiling module complexsubtractor
+# 
+# Top level modules:
+# 	complexsubtractor
+# End time: 22:49:35 on Aug 21,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -reportprogress 300 -work work C:/Users/chank/OneDrive/Quartus/FFT/complexsubtractor_TB.sv
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 22:49:35 on Aug 21,2019
+# vlog -reportprogress 300 -work work C:/Users/chank/OneDrive/Quartus/FFT/complexsubtractor_TB.sv 
+# -- Compiling module complexsubtractor_TB
+# 
+# Top level modules:
+# 	complexsubtractor_TB
+# End time: 22:49:35 on Aug 21,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -reportprogress 300 -work work C:/Users/chank/OneDrive/Quartus/FFT/FFT.sv
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 22:49:36 on Aug 21,2019
+# vlog -reportprogress 300 -work work C:/Users/chank/OneDrive/Quartus/FFT/FFT.sv 
+# -- Compiling module FFT
+# 
+# Top level modules:
+# 	FFT
+# End time: 22:49:36 on Aug 21,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -reportprogress 300 -work work C:/Users/chank/OneDrive/Quartus/FFT/multiplier_TB.sv
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 22:49:37 on Aug 21,2019
+# vlog -reportprogress 300 -work work C:/Users/chank/OneDrive/Quartus/FFT/multiplier_TB.sv 
+# -- Compiling module multiplier_TB
+# 
+# Top level modules:
+# 	multiplier_TB
+# End time: 22:49:37 on Aug 21,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -reportprogress 300 -work work C:/Users/chank/OneDrive/Quartus/FFT/simplemultiplier.sv
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 22:49:38 on Aug 21,2019
+# vlog -reportprogress 300 -work work C:/Users/chank/OneDrive/Quartus/FFT/simplemultiplier.sv 
+# -- Compiling module simplemultiplier
+# 
+# Top level modules:
+# 	simplemultiplier
+# End time: 22:49:38 on Aug 21,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -reportprogress 300 -work work C:/Users/chank/OneDrive/Quartus/FFT/VGA_Components.sv
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 22:49:39 on Aug 21,2019
+# vlog -reportprogress 300 -work work C:/Users/chank/OneDrive/Quartus/FFT/VGA_Components.sv 
+# -- Compiling module PLL
+# -- Compiling module hsync
+# -- Compiling module vsync
+# -- Compiling module data
+# -- Compiling module video_sync_generator
+# 
+# Top level modules:
+# 	video_sync_generator
+# End time: 22:49:39 on Aug 21,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vsim work.butterflyunit_TB
+# vsim work.butterflyunit_TB 
+# Start time: 22:49:42 on Aug 21,2019
+# Loading sv_std.std
+# Loading work.butterflyunit_TB
+# Loading work.butterflyunit
+# Loading work.complexadder
+# Loading work.complexsubtractor
+# Loading work.complexmultiplier
+# Loading work.simplemultiplier
+add wave -position end  sim:/butterflyunit_TB/A_t
+add wave -position end  sim:/butterflyunit_TB/B_t
+add wave -position end  sim:/butterflyunit_TB/W
+add wave -position end  sim:/butterflyunit_TB/A_f
+add wave -position end  sim:/butterflyunit_TB/B_f
+run
+# End time: 23:14:38 on Aug 21,2019, Elapsed time: 0:24:56
+# Errors: 0, Warnings: 0

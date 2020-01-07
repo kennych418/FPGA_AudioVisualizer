@@ -7,10 +7,10 @@ module FFT(input clk,
 	
 	//video_sync_generator vga(clk, vsync, hsync, r, g, b);
 	
-	butterflyunit BFU( //inputs
-							 .A_t(MemToBFU_A), .B_t(MemToBFU_B), 
+	//butterflyunit BFU( //inputs		/* MOVING TO FFT_PROCESSOR */
+							 //.A_t(MemToBFU_A), .B_t(MemToBFU_B), 
 							 //outputs
-							 .A_f(BFUToMem_A), .B_f(BFUToMem_B));
+							 //.A_f(BFUToMem_A), .B_f(BFUToMem_B));
 	
 	
 endmodule

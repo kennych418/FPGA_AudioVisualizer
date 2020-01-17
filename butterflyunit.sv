@@ -8,7 +8,7 @@ module butterflyunit( input [31:0] A_t, input [31:0] B_t, input [31:0] W,		//31:
 	wire [31:0] truncated_prod;
 	
 	assign truncated_prod = {multout[62:47], multout[30:15]};		//range set to avoid extra sign bit that results from signed multiplication, truncation avoids unneeded LSB's
-	
+																						//15 bits truncated out, therefore to improve accuracy W is format b16.b15b14b13...
 	complexadder topadder(				.comp_augend		(A_t), 
 												.comp_addend		(truncated_prod), 
 												.comp_sum			(A_f)	);

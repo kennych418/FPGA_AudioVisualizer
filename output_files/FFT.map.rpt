@@ -1,5 +1,5 @@
 Analysis & Synthesis report for FFT
-Tue Jan 07 12:59:02 2020
+Sun Jan 19 02:17:38 2020
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -14,11 +14,9 @@ Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
   8. General Register Statistics
-  9. Port Connectivity Checks: "butterflyunit:BFU|complexmultiplier:twiddlemult"
- 10. Port Connectivity Checks: "butterflyunit:BFU"
- 11. Post-Synthesis Netlist Statistics for Top Partition
- 12. Elapsed Time Per Partition
- 13. Analysis & Synthesis Messages
+  9. Post-Synthesis Netlist Statistics for Top Partition
+ 10. Elapsed Time Per Partition
+ 11. Analysis & Synthesis Messages
 
 
 
@@ -44,7 +42,7 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Tue Jan 07 12:59:02 2020       ;
+; Analysis & Synthesis Status        ; Successful - Sun Jan 19 02:17:38 2020       ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; FFT                                         ;
 ; Top-level Entity Name              ; FFT                                         ;
@@ -165,18 +163,13 @@ refer to the applicable agreement for further details.
 +----------------------------+-------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                 ;
-+----------------------------------+-----------------+------------------------------+----------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                             ; Library ;
-+----------------------------------+-----------------+------------------------------+----------------------------------------------------------+---------+
-; FFT.sv                           ; yes             ; User SystemVerilog HDL File  ; C:/Users/chank/OneDrive/Quartus/FFT/FFT.sv               ;         ;
-; butterflyunit.sv                 ; yes             ; User SystemVerilog HDL File  ; C:/Users/chank/OneDrive/Quartus/FFT/butterflyunit.sv     ;         ;
-; complexmultiplier.sv             ; yes             ; User SystemVerilog HDL File  ; C:/Users/chank/OneDrive/Quartus/FFT/complexmultiplier.sv ;         ;
-; complexadder.sv                  ; yes             ; User SystemVerilog HDL File  ; C:/Users/chank/OneDrive/Quartus/FFT/complexadder.sv      ;         ;
-; simplemultiplier.sv              ; yes             ; User SystemVerilog HDL File  ; C:/Users/chank/OneDrive/Quartus/FFT/simplemultiplier.sv  ;         ;
-; complexsubtractor.sv             ; yes             ; User SystemVerilog HDL File  ; C:/Users/chank/OneDrive/Quartus/FFT/complexsubtractor.sv ;         ;
-+----------------------------------+-----------------+------------------------------+----------------------------------------------------------+---------+
++------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                   ;
++----------------------------------+-----------------+------------------------------+--------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path               ; Library ;
++----------------------------------+-----------------+------------------------------+--------------------------------------------+---------+
+; FFT.sv                           ; yes             ; User SystemVerilog HDL File  ; C:/Users/chank/OneDrive/Quartus/FFT/FFT.sv ;         ;
++----------------------------------+-----------------+------------------------------+--------------------------------------------+---------+
 
 
 +-----------------------------------------------------+
@@ -235,28 +228,6 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "butterflyunit:BFU|complexmultiplier:twiddlemult"                                                    ;
-+----------------------+--------+----------+-------------------------------------------------------------------------------------+
-; Port                 ; Type   ; Severity ; Details                                                                             ;
-+----------------------+--------+----------+-------------------------------------------------------------------------------------+
-; comp_product[46..31] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; comp_product[14..0]  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; comp_product[63]     ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+----------------------+--------+----------+-------------------------------------------------------------------------------------+
-
-
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "butterflyunit:BFU"                                                                                                                           ;
-+------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
-; Port ; Type   ; Severity ; Details                                                                                                                                      ;
-+------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
-; A_f  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                          ;
-; B_f  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                          ;
-; W    ; Input  ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
-+------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
-
-
 +-----------------------------------------------------+
 ; Post-Synthesis Netlist Statistics for Top Partition ;
 +-----------------------+-----------------------------+
@@ -287,7 +258,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Tue Jan 07 12:58:53 2020
+    Info: Processing started: Sun Jan 19 02:17:29 2020
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off FFT -c FFT
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 6 of the 6 processors detected
@@ -319,14 +290,6 @@ Warning (10034): Output port "g" at FFT.sv(2) has no driver File: C:/Users/chank
 Warning (10034): Output port "b" at FFT.sv(2) has no driver File: C:/Users/chank/OneDrive/Quartus/FFT/FFT.sv Line: 2
 Warning (10034): Output port "vsync" at FFT.sv(2) has no driver File: C:/Users/chank/OneDrive/Quartus/FFT/FFT.sv Line: 2
 Warning (10034): Output port "hsync" at FFT.sv(2) has no driver File: C:/Users/chank/OneDrive/Quartus/FFT/FFT.sv Line: 2
-Info (12128): Elaborating entity "butterflyunit" for hierarchy "butterflyunit:BFU" File: C:/Users/chank/OneDrive/Quartus/FFT/FFT.sv Line: 13
-Info (12128): Elaborating entity "complexadder" for hierarchy "butterflyunit:BFU|complexadder:topadder" File: C:/Users/chank/OneDrive/Quartus/FFT/butterflyunit.sv Line: 14
-Info (12128): Elaborating entity "complexsubtractor" for hierarchy "butterflyunit:BFU|complexsubtractor:bottomadder" File: C:/Users/chank/OneDrive/Quartus/FFT/butterflyunit.sv Line: 18
-Warning (10230): Verilog HDL assignment warning at complexsubtractor.sv(6): truncated value with size 32 to match size of target (16) File: C:/Users/chank/OneDrive/Quartus/FFT/complexsubtractor.sv Line: 6
-Warning (10230): Verilog HDL assignment warning at complexsubtractor.sv(7): truncated value with size 32 to match size of target (16) File: C:/Users/chank/OneDrive/Quartus/FFT/complexsubtractor.sv Line: 7
-Info (12128): Elaborating entity "complexmultiplier" for hierarchy "butterflyunit:BFU|complexmultiplier:twiddlemult" File: C:/Users/chank/OneDrive/Quartus/FFT/butterflyunit.sv Line: 22
-Info (12128): Elaborating entity "simplemultiplier" for hierarchy "butterflyunit:BFU|complexmultiplier:twiddlemult|simplemultiplier:mult_ar_br" File: C:/Users/chank/OneDrive/Quartus/FFT/complexmultiplier.sv Line: 10
-Warning (12241): 1 hierarchies have connectivity warnings - see the Connectivity Checks report folder
 Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "vsync" is stuck at GND File: C:/Users/chank/OneDrive/Quartus/FFT/FFT.sv Line: 2
     Warning (13410): Pin "hsync" is stuck at GND File: C:/Users/chank/OneDrive/Quartus/FFT/FFT.sv Line: 2
@@ -350,9 +313,9 @@ Warning (21074): Design contains 2 input pin(s) that do not drive logic
 Info (21057): Implemented 16 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 2 input pins
     Info (21059): Implemented 14 output pins
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 27 warnings
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 24 warnings
     Info: Peak virtual memory: 4743 megabytes
-    Info: Processing ended: Tue Jan 07 12:59:02 2020
+    Info: Processing ended: Sun Jan 19 02:17:38 2020
     Info: Elapsed time: 00:00:09
     Info: Total CPU time (on all processors): 00:00:18
 

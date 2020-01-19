@@ -10,6 +10,14 @@ module butterflyunit_TB;
 	
 	initial begin
 	
+		A_t_real = 100;
+		A_t_imag = 0;
+		B_t_real = 100;
+		B_t_imag = 0;
+		W_real = 16'b0101_1010_1000_0010;
+		W_imag = 16'b1010_0101_0111_1110;
+		#100; 
+		/*
 		A_t_real = 1023;
 		A_t_imag = 0;
 		B_t_real = 1023;
@@ -38,6 +46,7 @@ module butterflyunit_TB;
 		W_real = 32'h7FFF;
 		W_imag = 0;
 		#100; 
+		*/
 	
 	end
 							 

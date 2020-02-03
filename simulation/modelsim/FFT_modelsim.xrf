@@ -28,7 +28,6 @@ instance = comp, \b[1]~output , b[1]~output, FFT, 1
 instance = comp, \b[2]~output , b[2]~output, FFT, 1
 instance = comp, \b[3]~output , b[3]~output, FFT, 1
 instance = comp, \clk~input , clk~input, FFT, 1
-instance = comp, \t_number~input , t_number~input, FFT, 1
 instance = comp, \~QUARTUS_CREATED_UNVM~ , ~QUARTUS_CREATED_UNVM~, FFT, 1
 instance = comp, \~QUARTUS_CREATED_ADC1~ , ~QUARTUS_CREATED_ADC1~, FFT, 1
 instance = comp, \~QUARTUS_CREATED_ADC2~ , ~QUARTUS_CREATED_ADC2~, FFT, 1

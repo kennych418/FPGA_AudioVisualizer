@@ -16,7 +16,7 @@
 // PROGRAM "Quartus Prime"
 // VERSION "Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition"
 
-// DATE "01/19/2020 19:44:45"
+// DATE "02/03/2020 01:06:39"
 
 // 
 // Device: Altera 10M50DAF484C7G Package FBGA484
@@ -34,15 +34,13 @@ module FFT (
 	hsync,
 	r,
 	g,
-	b,
-	t_number);
+	b);
 input 	clk;
 output 	vsync;
 output 	hsync;
 output 	[3:0] r;
 output 	[3:0] g;
 output 	[3:0] b;
-input 	t_number;
 
 // Design Ports Information
 // clk	=>  Location: PIN_N5,	 I/O Standard: 2.5 V,	 Current Strength: Default
@@ -60,7 +58,6 @@ input 	t_number;
 // b[1]	=>  Location: PIN_T1,	 I/O Standard: 2.5 V,	 Current Strength: Default
 // b[2]	=>  Location: PIN_P4,	 I/O Standard: 2.5 V,	 Current Strength: Default
 // b[3]	=>  Location: PIN_N2,	 I/O Standard: 2.5 V,	 Current Strength: Default
-// t_number	=>  Location: PIN_E8,	 I/O Standard: 2.5 V,	 Current Strength: Default
 
 
 wire gnd;
@@ -75,7 +72,6 @@ tri1 devclrn;
 tri1 devpor;
 tri1 devoe;
 wire \clk~input_o ;
-wire \t_number~input_o ;
 wire \~QUARTUS_CREATED_GND~I_combout ;
 wire \~QUARTUS_CREATED_UNVM~~busy ;
 wire \~QUARTUS_CREATED_ADC1~~eoc ;
@@ -101,7 +97,7 @@ hard_block auto_generated_inst(
 	.devclrn(devclrn),
 	.devoe(devoe));
 
-// Location: LCCOMB_X44_Y41_N8
+// Location: LCCOMB_X1_Y1_N24
 fiftyfivenm_lcell_comb \~QUARTUS_CREATED_GND~I (
 // Equation(s):
 // \~QUARTUS_CREATED_GND~I_combout  = GND
@@ -310,18 +306,6 @@ fiftyfivenm_io_ibuf \clk~input (
 defparam \clk~input .bus_hold = "false";
 defparam \clk~input .listen_to_nsleep_signal = "false";
 defparam \clk~input .simulate_z_as = "z";
-// synopsys translate_on
-
-// Location: IOIBUF_X24_Y39_N8
-fiftyfivenm_io_ibuf \t_number~input (
-	.i(t_number),
-	.ibar(gnd),
-	.nsleep(vcc),
-	.o(\t_number~input_o ));
-// synopsys translate_off
-defparam \t_number~input .bus_hold = "false";
-defparam \t_number~input .listen_to_nsleep_signal = "false";
-defparam \t_number~input .simulate_z_as = "z";
 // synopsys translate_on
 
 // Location: UNVM_X0_Y40_N40

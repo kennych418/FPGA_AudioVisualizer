@@ -9,6 +9,8 @@ module FFT_Processor(input clk, input new_t,
 							output [31:0] f12, output [31:0] f13, output [31:0] f14, output [31:0] f15,
 							output done);
 
+	reg [1:0] cycles_counter;
+	
 	reg [31:0] W0, W1, W2, W3, W4, W5, W6, W7;
 	
 	reg [31:0] mem0, mem1, mem2, mem3, 
@@ -23,25 +25,7 @@ module FFT_Processor(input clk, input new_t,
 	
 	
 	always @ (posedge clk) begin
-		if (new_t) begin
-			mem0 <= BFU_out0;
-			mem1 <= BFU_out1;
-			mem2 <= BFU_out2;
-			mem3 <= BFU_out3;
-			mem4 <= BFU_out4;
-			mem5 <= BFU_out5;
-			mem6 <= BFU_out6;
-			mem7 <= BFU_out7;
-			mem8 <= BFU_out8;
-			mem9 <= BFU_out9;
-			mem10 <= BFU_out10;
-			mem11 <= BFU_out11;
-			mem12 <= BFU_out12;
-			mem13 <= BFU_out13;
-			mem14 <= BFU_out14;
-			mem15 <= BFU_out15;
-		end
-		else begin
+		if (new_t && cycles_counter == 3) begin
 			mem0 <= {t0, 16'b0};
 			mem1 <= {t1, 16'b0};
 			mem2 <= {t2, 16'b0};
@@ -58,8 +42,30 @@ module FFT_Processor(input clk, input new_t,
 			mem13 <= {t13, 16'b0};
 			mem14 <= {t14, 16'b0};
 			mem15 <= {t15, 16'b0};
+			cycles_counter <= 0;
+		end
+		else begin
+			mem0 <= BFU_out0;
+			mem1 <= BFU_out1;
+			mem2 <= BFU_out2;
+			mem3 <= BFU_out3;
+			mem4 <= BFU_out4;
+			mem5 <= BFU_out5;
+			mem6 <= BFU_out6;
+			mem7 <= BFU_out7;
+			mem8 <= BFU_out8;
+			mem9 <= BFU_out9;
+			mem10 <= BFU_out10;
+			mem11 <= BFU_out11;
+			mem12 <= BFU_out12;
+			mem13 <= BFU_out13;
+			mem14 <= BFU_out14;
+			mem15 <= BFU_out15;
+			cycles_counter <= cycles_counter + 1;
 		end
 	end
+	
+	assign done = (cycles_counter == 3);
 	
 	assign f0 = mem0;
 	assign f1 = mem1;

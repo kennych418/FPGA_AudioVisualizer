@@ -10,6 +10,7 @@ source_file = 1, C:/Users/chank/OneDrive/Quartus/FFT/complexsubtractor.sv
 source_file = 1, C:/Users/chank/OneDrive/Quartus/FFT/complexsubtractor_TB.sv
 source_file = 1, C:/Users/chank/OneDrive/Quartus/FFT/butterflyunit_TB.sv
 source_file = 1, C:/Users/chank/OneDrive/Quartus/FFT/FFT_Processor.sv
+source_file = 1, C:/Users/chank/OneDrive/Quartus/FFT/FFT_Processor_TB.sv
 source_file = 1, C:/Users/chank/OneDrive/Quartus/FFT/db/FFT.cbx.xml
 design_name = FFT
 instance = comp, \~QUARTUS_CREATED_GND~I , ~QUARTUS_CREATED_GND~I, FFT, 1

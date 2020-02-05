@@ -1,5 +1,5 @@
 Fitter report for FFT
-Tue Feb 04 02:02:55 2020
+Wed Feb 05 03:37:20 2020
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -61,7 +61,7 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Fitter Summary                                                                   ;
 +------------------------------------+---------------------------------------------+
-; Fitter Status                      ; Successful - Tue Feb 04 02:02:55 2020       ;
+; Fitter Status                      ; Successful - Wed Feb 05 03:37:20 2020       ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; FFT                                         ;
 ; Top-level Entity Name              ; FFT                                         ;
@@ -152,7 +152,7 @@ refer to the applicable agreement for further details.
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processors 2-6         ;   0.3%      ;
+;     Processors 2-6         ;   0.4%      ;
 +----------------------------+-------------+
 
 
@@ -1190,9 +1190,9 @@ Info (334004): Delay annotation completed successfully
 Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:01
 Info (144001): Generated suppressed messages file C:/Users/chank/OneDrive/Quartus/FFT/output_files/FFT.fit.smsg
 Info: Quartus Prime Fitter was successful. 0 errors, 5 warnings
-    Info: Peak virtual memory: 5765 megabytes
-    Info: Processing ended: Tue Feb 04 02:02:56 2020
-    Info: Elapsed time: 00:00:06
+    Info: Peak virtual memory: 5767 megabytes
+    Info: Processing ended: Wed Feb 05 03:37:20 2020
+    Info: Elapsed time: 00:00:05
     Info: Total CPU time (on all processors): 00:00:08
 
 

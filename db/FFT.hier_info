@@ -17,8 +17,10 @@ b[3] << <GND>
 
 
 |FFT|FFT_Processor:main_professor
+clk => done_reg.CLK
 clk => cycles_counter[0].CLK
 clk => cycles_counter[1].CLK
+clk => cycles_counter[2].CLK
 clk => W7[0].CLK
 clk => W7[1].CLK
 clk => W7[2].CLK
@@ -1300,7 +1302,7 @@ f15[12] <= mem15[28].DB_MAX_OUTPUT_PORT_TYPE
 f15[13] <= mem15[29].DB_MAX_OUTPUT_PORT_TYPE
 f15[14] <= mem15[30].DB_MAX_OUTPUT_PORT_TYPE
 f15[15] <= mem15[31].DB_MAX_OUTPUT_PORT_TYPE
-done <= Equal0.DB_MAX_OUTPUT_PORT_TYPE
+done <= done_reg.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |FFT|FFT_Processor:main_professor|butterflyunit:BFU0

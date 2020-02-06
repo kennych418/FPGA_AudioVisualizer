@@ -1,5 +1,5 @@
 Analysis & Synthesis report for FFT
-Wed Feb 05 03:37:14 2020
+Wed Feb 05 12:00:15 2020
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -44,7 +44,7 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Wed Feb 05 03:37:14 2020       ;
+; Analysis & Synthesis Status        ; Successful - Wed Feb 05 12:00:15 2020       ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; FFT                                         ;
 ; Top-level Entity Name              ; FFT                                         ;
@@ -320,7 +320,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Wed Feb 05 03:37:05 2020
+    Info: Processing started: Wed Feb 05 12:00:06 2020
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off FFT -c FFT
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 6 of the 6 processors detected
@@ -355,8 +355,8 @@ Warning (10034): Output port "b" at FFT.sv(2) has no driver File: C:/Users/chank
 Warning (10034): Output port "vsync" at FFT.sv(2) has no driver File: C:/Users/chank/OneDrive/Quartus/FFT/FFT.sv Line: 2
 Warning (10034): Output port "hsync" at FFT.sv(2) has no driver File: C:/Users/chank/OneDrive/Quartus/FFT/FFT.sv Line: 2
 Info (12128): Elaborating entity "FFT_Processor" for hierarchy "FFT_Processor:main_professor" File: C:/Users/chank/OneDrive/Quartus/FFT/FFT.sv Line: 10
-Warning (10230): Verilog HDL assignment warning at FFT_Processor.sv(114): truncated value with size 32 to match size of target (2) File: C:/Users/chank/OneDrive/Quartus/FFT/FFT_Processor.sv Line: 114
-Info (12128): Elaborating entity "butterflyunit" for hierarchy "FFT_Processor:main_professor|butterflyunit:BFU0" File: C:/Users/chank/OneDrive/Quartus/FFT/FFT_Processor.sv Line: 141
+Warning (10230): Verilog HDL assignment warning at FFT_Processor.sv(130): truncated value with size 32 to match size of target (3) File: C:/Users/chank/OneDrive/Quartus/FFT/FFT_Processor.sv Line: 130
+Info (12128): Elaborating entity "butterflyunit" for hierarchy "FFT_Processor:main_professor|butterflyunit:BFU0" File: C:/Users/chank/OneDrive/Quartus/FFT/FFT_Processor.sv Line: 158
 Info (12128): Elaborating entity "complexadder" for hierarchy "FFT_Processor:main_professor|butterflyunit:BFU0|complexadder:topadder" File: C:/Users/chank/OneDrive/Quartus/FFT/butterflyunit.sv Line: 14
 Info (12128): Elaborating entity "complexsubtractor" for hierarchy "FFT_Processor:main_professor|butterflyunit:BFU0|complexsubtractor:bottomadder" File: C:/Users/chank/OneDrive/Quartus/FFT/butterflyunit.sv Line: 18
 Warning (10230): Verilog HDL assignment warning at complexsubtractor.sv(6): truncated value with size 32 to match size of target (16) File: C:/Users/chank/OneDrive/Quartus/FFT/complexsubtractor.sv Line: 6
@@ -387,9 +387,9 @@ Info (21057): Implemented 15 device resources after synthesis - the final resour
     Info (21058): Implemented 1 input pins
     Info (21059): Implemented 14 output pins
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 27 warnings
-    Info: Peak virtual memory: 4750 megabytes
-    Info: Processing ended: Wed Feb 05 03:37:14 2020
+    Info: Peak virtual memory: 4749 megabytes
+    Info: Processing ended: Wed Feb 05 12:00:15 2020
     Info: Elapsed time: 00:00:09
-    Info: Total CPU time (on all processors): 00:00:20
+    Info: Total CPU time (on all processors): 00:00:19
 
 

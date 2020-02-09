@@ -1,5 +1,5 @@
 Analysis & Synthesis report for FFT
-Wed Feb 05 12:00:15 2020
+Sun Feb 09 02:43:22 2020
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -16,9 +16,10 @@ Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
   8. General Register Statistics
   9. Port Connectivity Checks: "FFT_Processor:main_professor|butterflyunit:BFU0|complexmultiplier:twiddlemult"
  10. Port Connectivity Checks: "FFT_Processor:main_professor"
- 11. Post-Synthesis Netlist Statistics for Top Partition
- 12. Elapsed Time Per Partition
- 13. Analysis & Synthesis Messages
+ 11. Port Connectivity Checks: "mic_translator:main_translator"
+ 12. Post-Synthesis Netlist Statistics for Top Partition
+ 13. Elapsed Time Per Partition
+ 14. Analysis & Synthesis Messages
 
 
 
@@ -44,7 +45,7 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Wed Feb 05 12:00:15 2020       ;
+; Analysis & Synthesis Status        ; Successful - Sun Feb 09 02:43:22 2020       ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; FFT                                         ;
 ; Top-level Entity Name              ; FFT                                         ;
@@ -53,7 +54,7 @@ refer to the applicable agreement for further details.
 ;     Total combinational functions  ; 0                                           ;
 ;     Dedicated logic registers      ; 0                                           ;
 ; Total registers                    ; 0                                           ;
-; Total pins                         ; 15                                          ;
+; Total pins                         ; 18                                          ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 0                                           ;
 ; Embedded Multiplier 9-bit elements ; 0                                           ;
@@ -176,7 +177,9 @@ refer to the applicable agreement for further details.
 ; complexadder.sv                  ; yes             ; User SystemVerilog HDL File  ; C:/Users/chank/OneDrive/Quartus/FFT/complexadder.sv      ;         ;
 ; simplemultiplier.sv              ; yes             ; User SystemVerilog HDL File  ; C:/Users/chank/OneDrive/Quartus/FFT/simplemultiplier.sv  ;         ;
 ; complexsubtractor.sv             ; yes             ; User SystemVerilog HDL File  ; C:/Users/chank/OneDrive/Quartus/FFT/complexsubtractor.sv ;         ;
+; butterflyunit_TB.sv              ; yes             ; User SystemVerilog HDL File  ; C:/Users/chank/OneDrive/Quartus/FFT/butterflyunit_TB.sv  ;         ;
 ; FFT_Processor.sv                 ; yes             ; User SystemVerilog HDL File  ; C:/Users/chank/OneDrive/Quartus/FFT/FFT_Processor.sv     ;         ;
+; mic_translator.sv                ; yes             ; User SystemVerilog HDL File  ; C:/Users/chank/OneDrive/Quartus/FFT/mic_translator.sv    ;         ;
 +----------------------------------+-----------------+------------------------------+----------------------------------------------------------+---------+
 
 
@@ -200,13 +203,13 @@ refer to the applicable agreement for further details.
 ;     -- Dedicated logic registers            ; 0     ;
 ;     -- I/O registers                        ; 0     ;
 ;                                             ;       ;
-; I/O pins                                    ; 15    ;
+; I/O pins                                    ; 18    ;
 ;                                             ;       ;
 ; Embedded Multiplier 9-bit elements          ; 0     ;
 ;                                             ;       ;
 ; Maximum fan-out node                        ; clk   ;
 ; Maximum fan-out                             ; 1     ;
-; Total fan-out                               ; 15    ;
+; Total fan-out                               ; 18    ;
 ; Average fan-out                             ; 0.50  ;
 +---------------------------------------------+-------+
 
@@ -216,7 +219,7 @@ refer to the applicable agreement for further details.
 +----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+---------------------+-------------+--------------+
 ; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; ADC blocks ; Full Hierarchy Name ; Entity Name ; Library Name ;
 +----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+---------------------+-------------+--------------+
-; |FFT                       ; 0 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 15   ; 0            ; 0          ; |FFT                ; FFT         ; work         ;
+; |FFT                       ; 0 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 18   ; 0            ; 0          ; |FFT                ; FFT         ; work         ;
 +----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+---------------------+-------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -247,47 +250,53 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------+--------+----------+-------------------------------------------------------------------------------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "FFT_Processor:main_professor"                                                                                                                                                             ;
-+------------+--------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port       ; Type   ; Severity ; Details                                                                                                                                                                             ;
-+------------+--------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; clk        ; Input  ; Warning  ; Input port expression (16 bits) is wider than the input port (1 bits) it drives.  The 15 most-significant bit(s) in the expression will be dangling if they have no other fanouts.  ;
-; new_t      ; Input  ; Warning  ; Input port expression (16 bits) is wider than the input port (1 bits) it drives.  The 15 most-significant bit(s) in the expression will be dangling if they have no other fanouts.  ;
-; t14        ; Input  ; Warning  ; Input port expression (32 bits) is wider than the input port (16 bits) it drives.  The 16 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
-; t15        ; Input  ; Warning  ; Input port expression (32 bits) is wider than the input port (16 bits) it drives.  The 16 most-significant bit(s) in the expression will be dangling if they have no other fanouts. ;
-; f0         ; Output ; Warning  ; Output or bidir port (16 bits) is smaller than the port expression (32 bits) it drives.  The 16 most-significant bit(s) in the port expression will be connected to GND.            ;
-; f0[15..0]  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                                                                 ;
-; f1         ; Output ; Warning  ; Output or bidir port (16 bits) is smaller than the port expression (32 bits) it drives.  The 16 most-significant bit(s) in the port expression will be connected to GND.            ;
-; f1[15..0]  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                                                                 ;
-; f2         ; Output ; Warning  ; Output or bidir port (16 bits) is smaller than the port expression (32 bits) it drives.  The 16 most-significant bit(s) in the port expression will be connected to GND.            ;
-; f2[15..0]  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                                                                 ;
-; f3         ; Output ; Warning  ; Output or bidir port (16 bits) is smaller than the port expression (32 bits) it drives.  The 16 most-significant bit(s) in the port expression will be connected to GND.            ;
-; f3[15..0]  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                                                                 ;
-; f4         ; Output ; Warning  ; Output or bidir port (16 bits) is smaller than the port expression (32 bits) it drives.  The 16 most-significant bit(s) in the port expression will be connected to GND.            ;
-; f4[15..0]  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                                                                 ;
-; f5         ; Output ; Warning  ; Output or bidir port (16 bits) is smaller than the port expression (32 bits) it drives.  The 16 most-significant bit(s) in the port expression will be connected to GND.            ;
-; f5[15..0]  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                                                                 ;
-; f6         ; Output ; Warning  ; Output or bidir port (16 bits) is smaller than the port expression (32 bits) it drives.  The 16 most-significant bit(s) in the port expression will be connected to GND.            ;
-; f6[15..0]  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                                                                 ;
-; f7         ; Output ; Warning  ; Output or bidir port (16 bits) is smaller than the port expression (32 bits) it drives.  The 16 most-significant bit(s) in the port expression will be connected to GND.            ;
-; f7[15..0]  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                                                                 ;
-; f8         ; Output ; Warning  ; Output or bidir port (16 bits) is smaller than the port expression (32 bits) it drives.  The 16 most-significant bit(s) in the port expression will be connected to GND.            ;
-; f8[15..0]  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                                                                 ;
-; f9         ; Output ; Warning  ; Output or bidir port (16 bits) is smaller than the port expression (32 bits) it drives.  The 16 most-significant bit(s) in the port expression will be connected to GND.            ;
-; f9[15..0]  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                                                                 ;
-; f10        ; Output ; Warning  ; Output or bidir port (16 bits) is smaller than the port expression (32 bits) it drives.  The 16 most-significant bit(s) in the port expression will be connected to GND.            ;
-; f10[15..0] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                                                                 ;
-; f11        ; Output ; Warning  ; Output or bidir port (16 bits) is smaller than the port expression (32 bits) it drives.  The 16 most-significant bit(s) in the port expression will be connected to GND.            ;
-; f11[15..0] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                                                                 ;
-; f12        ; Output ; Warning  ; Output or bidir port (16 bits) is smaller than the port expression (32 bits) it drives.  The 16 most-significant bit(s) in the port expression will be connected to GND.            ;
-; f12[15..0] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                                                                 ;
-; f13        ; Output ; Warning  ; Output or bidir port (16 bits) is smaller than the port expression (32 bits) it drives.  The 16 most-significant bit(s) in the port expression will be connected to GND.            ;
-; f13[15..0] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                                                                 ;
-; f14        ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed.                                                                            ;
-; f15        ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed.                                                                            ;
-; done       ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed.                                                                            ;
-+------------+--------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
++----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "FFT_Processor:main_professor"                                                       ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                             ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; f0   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; f1   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; f2   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; f3   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; f4   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; f5   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; f6   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; f7   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; f8   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; f9   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; f10  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; f11  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; f12  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; f13  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; f14  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; f15  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; done ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "mic_translator:main_translator"                                                                                                                                         ;
++------+--------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                                                                                                                 ;
++------+--------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; t0   ; Output ; Warning  ; Output or bidir port (10 bits) is smaller than the port expression (16 bits) it drives.  The 6 most-significant bit(s) in the port expression will be connected to GND. ;
+; t1   ; Output ; Warning  ; Output or bidir port (10 bits) is smaller than the port expression (16 bits) it drives.  The 6 most-significant bit(s) in the port expression will be connected to GND. ;
+; t2   ; Output ; Warning  ; Output or bidir port (10 bits) is smaller than the port expression (16 bits) it drives.  The 6 most-significant bit(s) in the port expression will be connected to GND. ;
+; t3   ; Output ; Warning  ; Output or bidir port (10 bits) is smaller than the port expression (16 bits) it drives.  The 6 most-significant bit(s) in the port expression will be connected to GND. ;
+; t4   ; Output ; Warning  ; Output or bidir port (10 bits) is smaller than the port expression (16 bits) it drives.  The 6 most-significant bit(s) in the port expression will be connected to GND. ;
+; t5   ; Output ; Warning  ; Output or bidir port (10 bits) is smaller than the port expression (16 bits) it drives.  The 6 most-significant bit(s) in the port expression will be connected to GND. ;
+; t6   ; Output ; Warning  ; Output or bidir port (10 bits) is smaller than the port expression (16 bits) it drives.  The 6 most-significant bit(s) in the port expression will be connected to GND. ;
+; t7   ; Output ; Warning  ; Output or bidir port (10 bits) is smaller than the port expression (16 bits) it drives.  The 6 most-significant bit(s) in the port expression will be connected to GND. ;
+; t8   ; Output ; Warning  ; Output or bidir port (10 bits) is smaller than the port expression (16 bits) it drives.  The 6 most-significant bit(s) in the port expression will be connected to GND. ;
+; t9   ; Output ; Warning  ; Output or bidir port (10 bits) is smaller than the port expression (16 bits) it drives.  The 6 most-significant bit(s) in the port expression will be connected to GND. ;
+; t10  ; Output ; Warning  ; Output or bidir port (10 bits) is smaller than the port expression (16 bits) it drives.  The 6 most-significant bit(s) in the port expression will be connected to GND. ;
+; t11  ; Output ; Warning  ; Output or bidir port (10 bits) is smaller than the port expression (16 bits) it drives.  The 6 most-significant bit(s) in the port expression will be connected to GND. ;
+; t12  ; Output ; Warning  ; Output or bidir port (10 bits) is smaller than the port expression (16 bits) it drives.  The 6 most-significant bit(s) in the port expression will be connected to GND. ;
+; t13  ; Output ; Warning  ; Output or bidir port (10 bits) is smaller than the port expression (16 bits) it drives.  The 6 most-significant bit(s) in the port expression will be connected to GND. ;
+; t14  ; Output ; Warning  ; Output or bidir port (10 bits) is smaller than the port expression (16 bits) it drives.  The 6 most-significant bit(s) in the port expression will be connected to GND. ;
+; t15  ; Output ; Warning  ; Output or bidir port (10 bits) is smaller than the port expression (16 bits) it drives.  The 6 most-significant bit(s) in the port expression will be connected to GND. ;
++------+--------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 
 +-----------------------------------------------------+
@@ -295,7 +304,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; boundary_port         ; 15                          ;
+; boundary_port         ; 18                          ;
 ; cycloneiii_lcell_comb ; 1                           ;
 ;     normal            ; 1                           ;
 ;         0 data inputs ; 1                           ;
@@ -320,7 +329,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Wed Feb 05 12:00:06 2020
+    Info: Processing started: Sun Feb 09 02:43:13 2020
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off FFT -c FFT
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 6 of the 6 processors detected
@@ -343,28 +352,133 @@ Info (12021): Found 1 design units, including 1 entities, in source file complex
 Info (12021): Found 1 design units, including 1 entities, in source file complexsubtractor_tb.sv
     Info (12023): Found entity 1: complexsubtractor_TB File: C:/Users/chank/OneDrive/Quartus/FFT/complexsubtractor_TB.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file butterflyunit_tb.sv
-    Info (12023): Found entity 1: butterflyunit_TB File: C:/Users/chank/OneDrive/Quartus/FFT/butterflyunit_TB.sv Line: 1
+    Info (12023): Found entity 1: butterflyunit_TB File: C:/Users/chank/OneDrive/Quartus/FFT/butterflyunit_TB.sv Line: 13
 Info (12021): Found 1 design units, including 1 entities, in source file fft_processor.sv
     Info (12023): Found entity 1: FFT_Processor File: C:/Users/chank/OneDrive/Quartus/FFT/FFT_Processor.sv Line: 10
+Warning (10274): Verilog HDL macro warning at FFT_Processor_TB.sv(2): overriding existing definition for macro "tmax", which was defined in "butterflyunit_TB.sv", line 2 File: C:/Users/chank/OneDrive/Quartus/FFT/FFT_Processor_TB.sv Line: 2
+Warning (10274): Verilog HDL macro warning at FFT_Processor_TB.sv(3): overriding existing definition for macro "tmin", which was defined in "butterflyunit_TB.sv", line 3 File: C:/Users/chank/OneDrive/Quartus/FFT/FFT_Processor_TB.sv Line: 3
 Info (12021): Found 1 design units, including 1 entities, in source file fft_processor_tb.sv
-    Info (12023): Found entity 1: FFT_Processor_TB File: C:/Users/chank/OneDrive/Quartus/FFT/FFT_Processor_TB.sv Line: 1
+    Info (12023): Found entity 1: FFT_Processor_TB File: C:/Users/chank/OneDrive/Quartus/FFT/FFT_Processor_TB.sv Line: 4
+Info (12021): Found 1 design units, including 1 entities, in source file mic_translator.sv
+    Info (12023): Found entity 1: mic_translator File: C:/Users/chank/OneDrive/Quartus/FFT/mic_translator.sv Line: 1
 Info (12127): Elaborating entity "FFT" for the top level hierarchy
 Warning (10034): Output port "r" at FFT.sv(2) has no driver File: C:/Users/chank/OneDrive/Quartus/FFT/FFT.sv Line: 2
 Warning (10034): Output port "g" at FFT.sv(2) has no driver File: C:/Users/chank/OneDrive/Quartus/FFT/FFT.sv Line: 2
 Warning (10034): Output port "b" at FFT.sv(2) has no driver File: C:/Users/chank/OneDrive/Quartus/FFT/FFT.sv Line: 2
 Warning (10034): Output port "vsync" at FFT.sv(2) has no driver File: C:/Users/chank/OneDrive/Quartus/FFT/FFT.sv Line: 2
 Warning (10034): Output port "hsync" at FFT.sv(2) has no driver File: C:/Users/chank/OneDrive/Quartus/FFT/FFT.sv Line: 2
-Info (12128): Elaborating entity "FFT_Processor" for hierarchy "FFT_Processor:main_professor" File: C:/Users/chank/OneDrive/Quartus/FFT/FFT.sv Line: 10
-Warning (10230): Verilog HDL assignment warning at FFT_Processor.sv(130): truncated value with size 32 to match size of target (3) File: C:/Users/chank/OneDrive/Quartus/FFT/FFT_Processor.sv Line: 130
-Info (12128): Elaborating entity "butterflyunit" for hierarchy "FFT_Processor:main_professor|butterflyunit:BFU0" File: C:/Users/chank/OneDrive/Quartus/FFT/FFT_Processor.sv Line: 158
+Info (12128): Elaborating entity "mic_translator" for hierarchy "mic_translator:main_translator" File: C:/Users/chank/OneDrive/Quartus/FFT/FFT.sv Line: 16
+Warning (10034): Output port "BCLK" at mic_translator.sv(1) has no driver File: C:/Users/chank/OneDrive/Quartus/FFT/mic_translator.sv Line: 1
+Warning (10034): Output port "new_t" at mic_translator.sv(1) has no driver File: C:/Users/chank/OneDrive/Quartus/FFT/mic_translator.sv Line: 1
+Info (12128): Elaborating entity "FFT_Processor" for hierarchy "FFT_Processor:main_professor" File: C:/Users/chank/OneDrive/Quartus/FFT/FFT.sv Line: 28
+Warning (10230): Verilog HDL assignment warning at FFT_Processor.sv(177): truncated value with size 32 to match size of target (3) File: C:/Users/chank/OneDrive/Quartus/FFT/FFT_Processor.sv Line: 177
+Info (12128): Elaborating entity "butterflyunit" for hierarchy "FFT_Processor:main_professor|butterflyunit:BFU0" File: C:/Users/chank/OneDrive/Quartus/FFT/FFT_Processor.sv Line: 205
 Info (12128): Elaborating entity "complexadder" for hierarchy "FFT_Processor:main_professor|butterflyunit:BFU0|complexadder:topadder" File: C:/Users/chank/OneDrive/Quartus/FFT/butterflyunit.sv Line: 14
 Info (12128): Elaborating entity "complexsubtractor" for hierarchy "FFT_Processor:main_professor|butterflyunit:BFU0|complexsubtractor:bottomadder" File: C:/Users/chank/OneDrive/Quartus/FFT/butterflyunit.sv Line: 18
 Warning (10230): Verilog HDL assignment warning at complexsubtractor.sv(6): truncated value with size 32 to match size of target (16) File: C:/Users/chank/OneDrive/Quartus/FFT/complexsubtractor.sv Line: 6
 Warning (10230): Verilog HDL assignment warning at complexsubtractor.sv(7): truncated value with size 32 to match size of target (16) File: C:/Users/chank/OneDrive/Quartus/FFT/complexsubtractor.sv Line: 7
 Info (12128): Elaborating entity "complexmultiplier" for hierarchy "FFT_Processor:main_professor|butterflyunit:BFU0|complexmultiplier:twiddlemult" File: C:/Users/chank/OneDrive/Quartus/FFT/butterflyunit.sv Line: 22
 Info (12128): Elaborating entity "simplemultiplier" for hierarchy "FFT_Processor:main_professor|butterflyunit:BFU0|complexmultiplier:twiddlemult|simplemultiplier:mult_ar_br" File: C:/Users/chank/OneDrive/Quartus/FFT/complexmultiplier.sv Line: 10
+Warning (12011): Net is missing source, defaulting to GND
+    Warning (12110): Net "t0[15]" is missing source, defaulting to GND File: C:/Users/chank/OneDrive/Quartus/FFT/FFT.sv Line: 5
+    Warning (12110): Net "t0[14]" is missing source, defaulting to GND File: C:/Users/chank/OneDrive/Quartus/FFT/FFT.sv Line: 5
+    Warning (12110): Net "t0[13]" is missing source, defaulting to GND File: C:/Users/chank/OneDrive/Quartus/FFT/FFT.sv Line: 5
+    Warning (12110): Net "t0[12]" is missing source, defaulting to GND File: C:/Users/chank/OneDrive/Quartus/FFT/FFT.sv Line: 5
+    Warning (12110): Net "t0[11]" is missing source, defaulting to GND File: C:/Users/chank/OneDrive/Quartus/FFT/FFT.sv Line: 5
+    Warning (12110): Net "t0[10]" is missing source, defaulting to GND File: C:/Users/chank/OneDrive/Quartus/FFT/FFT.sv Line: 5
+    Warning (12110): Net "t1[15]" is missing source, defaulting to GND File: C:/Users/chank/OneDrive/Quartus/FFT/FFT.sv Line: 5
+    Warning (12110): Net "t1[14]" is missing source, defaulting to GND File: C:/Users/chank/OneDrive/Quartus/FFT/FFT.sv Line: 5
+    Warning (12110): Net "t1[13]" is missing source, defaulting to GND File: C:/Users/chank/OneDrive/Quartus/FFT/FFT.sv Line: 5
+    Warning (12110): Net "t1[12]" is missing source, defaulting to GND File: C:/Users/chank/OneDrive/Quartus/FFT/FFT.sv Line: 5
+    Warning (12110): Net "t1[11]" is missing source, defaulting to GND File: C:/Users/chank/OneDrive/Quartus/FFT/FFT.sv Line: 5
+    Warning (12110): Net "t1[10]" is missing source, defaulting to GND File: C:/Users/chank/OneDrive/Quartus/FFT/FFT.sv Line: 5
+    Warning (12110): Net "t2[15]" is missing source, defaulting to GND File: C:/Users/chank/OneDrive/Quartus/FFT/FFT.sv Line: 5
+    Warning (12110): Net "t2[14]" is missing source, defaulting to GND File: C:/Users/chank/OneDrive/Quartus/FFT/FFT.sv Line: 5
+    Warning (12110): Net "t2[13]" is missing source, defaulting to GND File: C:/Users/chank/OneDrive/Quartus/FFT/FFT.sv Line: 5
+    Warning (12110): Net "t2[12]" is missing source, defaulting to GND File: C:/Users/chank/OneDrive/Quartus/FFT/FFT.sv Line: 5
+    Warning (12110): Net "t2[11]" is missing source, defaulting to GND File: C:/Users/chank/OneDrive/Quartus/FFT/FFT.sv Line: 5
+    Warning (12110): Net "t2[10]" is missing source, defaulting to GND File: C:/Users/chank/OneDrive/Quartus/FFT/FFT.sv Line: 5
+    Warning (12110): Net "t3[15]" is missing source, defaulting to GND File: C:/Users/chank/OneDrive/Quartus/FFT/FFT.sv Line: 5
+    Warning (12110): Net "t3[14]" is missing source, defaulting to GND File: C:/Users/chank/OneDrive/Quartus/FFT/FFT.sv Line: 5
+    Warning (12110): Net "t3[13]" is missing source, defaulting to GND File: C:/Users/chank/OneDrive/Quartus/FFT/FFT.sv Line: 5
+    Warning (12110): Net "t3[12]" is missing source, defaulting to GND File: C:/Users/chank/OneDrive/Quartus/FFT/FFT.sv Line: 5
+    Warning (12110): Net "t3[11]" is missing source, defaulting to GND File: C:/Users/chank/OneDrive/Quartus/FFT/FFT.sv Line: 5
+    Warning (12110): Net "t3[10]" is missing source, defaulting to GND File: C:/Users/chank/OneDrive/Quartus/FFT/FFT.sv Line: 5
+    Warning (12110): Net "t4[15]" is missing source, defaulting to GND File: C:/Users/chank/OneDrive/Quartus/FFT/FFT.sv Line: 5
+    Warning (12110): Net "t4[14]" is missing source, defaulting to GND File: C:/Users/chank/OneDrive/Quartus/FFT/FFT.sv Line: 5
+    Warning (12110): Net "t4[13]" is missing source, defaulting to GND File: C:/Users/chank/OneDrive/Quartus/FFT/FFT.sv Line: 5
+    Warning (12110): Net "t4[12]" is missing source, defaulting to GND File: C:/Users/chank/OneDrive/Quartus/FFT/FFT.sv Line: 5
+    Warning (12110): Net "t4[11]" is missing source, defaulting to GND File: C:/Users/chank/OneDrive/Quartus/FFT/FFT.sv Line: 5
+    Warning (12110): Net "t4[10]" is missing source, defaulting to GND File: C:/Users/chank/OneDrive/Quartus/FFT/FFT.sv Line: 5
+    Warning (12110): Net "t5[15]" is missing source, defaulting to GND File: C:/Users/chank/OneDrive/Quartus/FFT/FFT.sv Line: 5
+    Warning (12110): Net "t5[14]" is missing source, defaulting to GND File: C:/Users/chank/OneDrive/Quartus/FFT/FFT.sv Line: 5
+    Warning (12110): Net "t5[13]" is missing source, defaulting to GND File: C:/Users/chank/OneDrive/Quartus/FFT/FFT.sv Line: 5
+    Warning (12110): Net "t5[12]" is missing source, defaulting to GND File: C:/Users/chank/OneDrive/Quartus/FFT/FFT.sv Line: 5
+    Warning (12110): Net "t5[11]" is missing source, defaulting to GND File: C:/Users/chank/OneDrive/Quartus/FFT/FFT.sv Line: 5
+    Warning (12110): Net "t5[10]" is missing source, defaulting to GND File: C:/Users/chank/OneDrive/Quartus/FFT/FFT.sv Line: 5
+    Warning (12110): Net "t6[15]" is missing source, defaulting to GND File: C:/Users/chank/OneDrive/Quartus/FFT/FFT.sv Line: 5
+    Warning (12110): Net "t6[14]" is missing source, defaulting to GND File: C:/Users/chank/OneDrive/Quartus/FFT/FFT.sv Line: 5
+    Warning (12110): Net "t6[13]" is missing source, defaulting to GND File: C:/Users/chank/OneDrive/Quartus/FFT/FFT.sv Line: 5
+    Warning (12110): Net "t6[12]" is missing source, defaulting to GND File: C:/Users/chank/OneDrive/Quartus/FFT/FFT.sv Line: 5
+    Warning (12110): Net "t6[11]" is missing source, defaulting to GND File: C:/Users/chank/OneDrive/Quartus/FFT/FFT.sv Line: 5
+    Warning (12110): Net "t6[10]" is missing source, defaulting to GND File: C:/Users/chank/OneDrive/Quartus/FFT/FFT.sv Line: 5
+    Warning (12110): Net "t7[15]" is missing source, defaulting to GND File: C:/Users/chank/OneDrive/Quartus/FFT/FFT.sv Line: 5
+    Warning (12110): Net "t7[14]" is missing source, defaulting to GND File: C:/Users/chank/OneDrive/Quartus/FFT/FFT.sv Line: 5
+    Warning (12110): Net "t7[13]" is missing source, defaulting to GND File: C:/Users/chank/OneDrive/Quartus/FFT/FFT.sv Line: 5
+    Warning (12110): Net "t7[12]" is missing source, defaulting to GND File: C:/Users/chank/OneDrive/Quartus/FFT/FFT.sv Line: 5
+    Warning (12110): Net "t7[11]" is missing source, defaulting to GND File: C:/Users/chank/OneDrive/Quartus/FFT/FFT.sv Line: 5
+    Warning (12110): Net "t7[10]" is missing source, defaulting to GND File: C:/Users/chank/OneDrive/Quartus/FFT/FFT.sv Line: 5
+    Warning (12110): Net "t8[15]" is missing source, defaulting to GND File: C:/Users/chank/OneDrive/Quartus/FFT/FFT.sv Line: 5
+    Warning (12110): Net "t8[14]" is missing source, defaulting to GND File: C:/Users/chank/OneDrive/Quartus/FFT/FFT.sv Line: 5
+    Warning (12110): Net "t8[13]" is missing source, defaulting to GND File: C:/Users/chank/OneDrive/Quartus/FFT/FFT.sv Line: 5
+    Warning (12110): Net "t8[12]" is missing source, defaulting to GND File: C:/Users/chank/OneDrive/Quartus/FFT/FFT.sv Line: 5
+    Warning (12110): Net "t8[11]" is missing source, defaulting to GND File: C:/Users/chank/OneDrive/Quartus/FFT/FFT.sv Line: 5
+    Warning (12110): Net "t8[10]" is missing source, defaulting to GND File: C:/Users/chank/OneDrive/Quartus/FFT/FFT.sv Line: 5
+    Warning (12110): Net "t9[15]" is missing source, defaulting to GND File: C:/Users/chank/OneDrive/Quartus/FFT/FFT.sv Line: 5
+    Warning (12110): Net "t9[14]" is missing source, defaulting to GND File: C:/Users/chank/OneDrive/Quartus/FFT/FFT.sv Line: 5
+    Warning (12110): Net "t9[13]" is missing source, defaulting to GND File: C:/Users/chank/OneDrive/Quartus/FFT/FFT.sv Line: 5
+    Warning (12110): Net "t9[12]" is missing source, defaulting to GND File: C:/Users/chank/OneDrive/Quartus/FFT/FFT.sv Line: 5
+    Warning (12110): Net "t9[11]" is missing source, defaulting to GND File: C:/Users/chank/OneDrive/Quartus/FFT/FFT.sv Line: 5
+    Warning (12110): Net "t9[10]" is missing source, defaulting to GND File: C:/Users/chank/OneDrive/Quartus/FFT/FFT.sv Line: 5
+    Warning (12110): Net "t10[15]" is missing source, defaulting to GND File: C:/Users/chank/OneDrive/Quartus/FFT/FFT.sv Line: 5
+    Warning (12110): Net "t10[14]" is missing source, defaulting to GND File: C:/Users/chank/OneDrive/Quartus/FFT/FFT.sv Line: 5
+    Warning (12110): Net "t10[13]" is missing source, defaulting to GND File: C:/Users/chank/OneDrive/Quartus/FFT/FFT.sv Line: 5
+    Warning (12110): Net "t10[12]" is missing source, defaulting to GND File: C:/Users/chank/OneDrive/Quartus/FFT/FFT.sv Line: 5
+    Warning (12110): Net "t10[11]" is missing source, defaulting to GND File: C:/Users/chank/OneDrive/Quartus/FFT/FFT.sv Line: 5
+    Warning (12110): Net "t10[10]" is missing source, defaulting to GND File: C:/Users/chank/OneDrive/Quartus/FFT/FFT.sv Line: 5
+    Warning (12110): Net "t11[15]" is missing source, defaulting to GND File: C:/Users/chank/OneDrive/Quartus/FFT/FFT.sv Line: 5
+    Warning (12110): Net "t11[14]" is missing source, defaulting to GND File: C:/Users/chank/OneDrive/Quartus/FFT/FFT.sv Line: 5
+    Warning (12110): Net "t11[13]" is missing source, defaulting to GND File: C:/Users/chank/OneDrive/Quartus/FFT/FFT.sv Line: 5
+    Warning (12110): Net "t11[12]" is missing source, defaulting to GND File: C:/Users/chank/OneDrive/Quartus/FFT/FFT.sv Line: 5
+    Warning (12110): Net "t11[11]" is missing source, defaulting to GND File: C:/Users/chank/OneDrive/Quartus/FFT/FFT.sv Line: 5
+    Warning (12110): Net "t11[10]" is missing source, defaulting to GND File: C:/Users/chank/OneDrive/Quartus/FFT/FFT.sv Line: 5
+    Warning (12110): Net "t12[15]" is missing source, defaulting to GND File: C:/Users/chank/OneDrive/Quartus/FFT/FFT.sv Line: 5
+    Warning (12110): Net "t12[14]" is missing source, defaulting to GND File: C:/Users/chank/OneDrive/Quartus/FFT/FFT.sv Line: 5
+    Warning (12110): Net "t12[13]" is missing source, defaulting to GND File: C:/Users/chank/OneDrive/Quartus/FFT/FFT.sv Line: 5
+    Warning (12110): Net "t12[12]" is missing source, defaulting to GND File: C:/Users/chank/OneDrive/Quartus/FFT/FFT.sv Line: 5
+    Warning (12110): Net "t12[11]" is missing source, defaulting to GND File: C:/Users/chank/OneDrive/Quartus/FFT/FFT.sv Line: 5
+    Warning (12110): Net "t12[10]" is missing source, defaulting to GND File: C:/Users/chank/OneDrive/Quartus/FFT/FFT.sv Line: 5
+    Warning (12110): Net "t13[15]" is missing source, defaulting to GND File: C:/Users/chank/OneDrive/Quartus/FFT/FFT.sv Line: 5
+    Warning (12110): Net "t13[14]" is missing source, defaulting to GND File: C:/Users/chank/OneDrive/Quartus/FFT/FFT.sv Line: 5
+    Warning (12110): Net "t13[13]" is missing source, defaulting to GND File: C:/Users/chank/OneDrive/Quartus/FFT/FFT.sv Line: 5
+    Warning (12110): Net "t13[12]" is missing source, defaulting to GND File: C:/Users/chank/OneDrive/Quartus/FFT/FFT.sv Line: 5
+    Warning (12110): Net "t13[11]" is missing source, defaulting to GND File: C:/Users/chank/OneDrive/Quartus/FFT/FFT.sv Line: 5
+    Warning (12110): Net "t13[10]" is missing source, defaulting to GND File: C:/Users/chank/OneDrive/Quartus/FFT/FFT.sv Line: 5
+    Warning (12110): Net "t14[15]" is missing source, defaulting to GND File: C:/Users/chank/OneDrive/Quartus/FFT/FFT.sv Line: 5
+    Warning (12110): Net "t14[14]" is missing source, defaulting to GND File: C:/Users/chank/OneDrive/Quartus/FFT/FFT.sv Line: 5
+    Warning (12110): Net "t14[13]" is missing source, defaulting to GND File: C:/Users/chank/OneDrive/Quartus/FFT/FFT.sv Line: 5
+    Warning (12110): Net "t14[12]" is missing source, defaulting to GND File: C:/Users/chank/OneDrive/Quartus/FFT/FFT.sv Line: 5
+    Warning (12110): Net "t14[11]" is missing source, defaulting to GND File: C:/Users/chank/OneDrive/Quartus/FFT/FFT.sv Line: 5
+    Warning (12110): Net "t14[10]" is missing source, defaulting to GND File: C:/Users/chank/OneDrive/Quartus/FFT/FFT.sv Line: 5
+    Warning (12110): Net "t15[15]" is missing source, defaulting to GND File: C:/Users/chank/OneDrive/Quartus/FFT/FFT.sv Line: 5
+    Warning (12110): Net "t15[14]" is missing source, defaulting to GND File: C:/Users/chank/OneDrive/Quartus/FFT/FFT.sv Line: 5
+    Warning (12110): Net "t15[13]" is missing source, defaulting to GND File: C:/Users/chank/OneDrive/Quartus/FFT/FFT.sv Line: 5
+    Warning (12110): Net "t15[12]" is missing source, defaulting to GND File: C:/Users/chank/OneDrive/Quartus/FFT/FFT.sv Line: 5
+    Warning (12110): Net "t15[11]" is missing source, defaulting to GND File: C:/Users/chank/OneDrive/Quartus/FFT/FFT.sv Line: 5
+    Warning (12110): Net "t15[10]" is missing source, defaulting to GND File: C:/Users/chank/OneDrive/Quartus/FFT/FFT.sv Line: 5
 Warning (12241): 1 hierarchies have connectivity warnings - see the Connectivity Checks report folder
 Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "BCLK" is stuck at GND File: C:/Users/chank/OneDrive/Quartus/FFT/FFT.sv Line: 1
     Warning (13410): Pin "vsync" is stuck at GND File: C:/Users/chank/OneDrive/Quartus/FFT/FFT.sv Line: 2
     Warning (13410): Pin "hsync" is stuck at GND File: C:/Users/chank/OneDrive/Quartus/FFT/FFT.sv Line: 2
     Warning (13410): Pin "r[0]" is stuck at GND File: C:/Users/chank/OneDrive/Quartus/FFT/FFT.sv Line: 2
@@ -381,15 +495,17 @@ Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "b[3]" is stuck at GND File: C:/Users/chank/OneDrive/Quartus/FFT/FFT.sv Line: 2
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Warning (21074): Design contains 1 input pin(s) that do not drive logic
+Warning (21074): Design contains 3 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "clk" File: C:/Users/chank/OneDrive/Quartus/FFT/FFT.sv Line: 1
-Info (21057): Implemented 15 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 1 input pins
-    Info (21059): Implemented 14 output pins
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 27 warnings
-    Info: Peak virtual memory: 4749 megabytes
-    Info: Processing ended: Wed Feb 05 12:00:15 2020
+    Warning (15610): No output dependent on input pin "DOUT" File: C:/Users/chank/OneDrive/Quartus/FFT/FFT.sv Line: 1
+    Warning (15610): No output dependent on input pin "LRCLK" File: C:/Users/chank/OneDrive/Quartus/FFT/FFT.sv Line: 1
+Info (21057): Implemented 18 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 3 input pins
+    Info (21059): Implemented 15 output pins
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 131 warnings
+    Info: Peak virtual memory: 4748 megabytes
+    Info: Processing ended: Sun Feb 09 02:43:22 2020
     Info: Elapsed time: 00:00:09
-    Info: Total CPU time (on all processors): 00:00:19
+    Info: Total CPU time (on all processors): 00:00:18
 
 

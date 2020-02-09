@@ -1,4 +1,4 @@
-Analysis & Synthesis Status : Successful - Wed Feb 05 12:00:15 2020
+Analysis & Synthesis Status : Successful - Sun Feb 09 02:43:22 2020
 Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 Revision Name : FFT
 Top-level Entity Name : FFT
@@ -7,7 +7,7 @@ Total logic elements : 0
     Total combinational functions : 0
     Dedicated logic registers : 0
 Total registers : 0
-Total pins : 15
+Total pins : 18
 Total virtual pins : 0
 Total memory bits : 0
 Embedded Multiplier 9-bit elements : 0

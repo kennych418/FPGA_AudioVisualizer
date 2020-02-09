@@ -16,7 +16,7 @@
 // PROGRAM "Quartus Prime"
 // VERSION "Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition"
 
-// DATE "02/05/2020 12:00:30"
+// DATE "02/09/2020 02:43:38"
 
 // 
 // Device: Altera 10M50DAF484C7G Package FBGA484
@@ -30,12 +30,18 @@
 
 module FFT (
 	clk,
+	DOUT,
+	LRCLK,
+	BCLK,
 	vsync,
 	hsync,
 	r,
 	g,
 	b);
 input 	clk;
+input 	DOUT;
+input 	LRCLK;
+output 	BCLK;
 output 	vsync;
 output 	hsync;
 output 	[3:0] r;
@@ -44,6 +50,9 @@ output 	[3:0] b;
 
 // Design Ports Information
 // clk	=>  Location: PIN_N5,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// DOUT	=>  Location: PIN_B4,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// LRCLK	=>  Location: PIN_B3,	 I/O Standard: 2.5 V,	 Current Strength: Default
+// BCLK	=>  Location: PIN_B2,	 I/O Standard: 2.5 V,	 Current Strength: Default
 // vsync	=>  Location: PIN_N1,	 I/O Standard: 2.5 V,	 Current Strength: Default
 // hsync	=>  Location: PIN_N3,	 I/O Standard: 2.5 V,	 Current Strength: Default
 // r[0]	=>  Location: PIN_AA1,	 I/O Standard: 2.5 V,	 Current Strength: Default
@@ -72,10 +81,13 @@ tri1 devclrn;
 tri1 devpor;
 tri1 devoe;
 wire \clk~input_o ;
+wire \DOUT~input_o ;
+wire \LRCLK~input_o ;
 wire \~QUARTUS_CREATED_GND~I_combout ;
 wire \~QUARTUS_CREATED_UNVM~~busy ;
 wire \~QUARTUS_CREATED_ADC1~~eoc ;
 wire \~QUARTUS_CREATED_ADC2~~eoc ;
+wire \BCLK~output_o ;
 wire \vsync~output_o ;
 wire \hsync~output_o ;
 wire \r[0]~output_o ;
@@ -112,6 +124,19 @@ fiftyfivenm_lcell_comb \~QUARTUS_CREATED_GND~I (
 // synopsys translate_off
 defparam \~QUARTUS_CREATED_GND~I .lut_mask = 16'h0000;
 defparam \~QUARTUS_CREATED_GND~I .sum_lutc_input = "datac";
+// synopsys translate_on
+
+// Location: IOOBUF_X22_Y39_N16
+fiftyfivenm_io_obuf \BCLK~output (
+	.i(gnd),
+	.oe(vcc),
+	.seriesterminationcontrol(16'b0000000000000000),
+	.devoe(devoe),
+	.o(\BCLK~output_o ),
+	.obar());
+// synopsys translate_off
+defparam \BCLK~output .bus_hold = "false";
+defparam \BCLK~output .open_drain_output = "false";
 // synopsys translate_on
 
 // Location: IOOBUF_X0_Y13_N9
@@ -308,6 +333,30 @@ defparam \clk~input .listen_to_nsleep_signal = "false";
 defparam \clk~input .simulate_z_as = "z";
 // synopsys translate_on
 
+// Location: IOIBUF_X26_Y39_N22
+fiftyfivenm_io_ibuf \DOUT~input (
+	.i(DOUT),
+	.ibar(gnd),
+	.nsleep(vcc),
+	.o(\DOUT~input_o ));
+// synopsys translate_off
+defparam \DOUT~input .bus_hold = "false";
+defparam \DOUT~input .listen_to_nsleep_signal = "false";
+defparam \DOUT~input .simulate_z_as = "z";
+// synopsys translate_on
+
+// Location: IOIBUF_X26_Y39_N15
+fiftyfivenm_io_ibuf \LRCLK~input (
+	.i(LRCLK),
+	.ibar(gnd),
+	.nsleep(vcc),
+	.o(\LRCLK~input_o ));
+// synopsys translate_off
+defparam \LRCLK~input .bus_hold = "false";
+defparam \LRCLK~input .listen_to_nsleep_signal = "false";
+defparam \LRCLK~input .simulate_z_as = "z";
+// synopsys translate_on
+
 // Location: UNVM_X0_Y40_N40
 fiftyfivenm_unvm \~QUARTUS_CREATED_UNVM~ (
 	.arclk(vcc),
@@ -388,6 +437,8 @@ defparam \~QUARTUS_CREATED_ADC2~ .testbits = 66;
 defparam \~QUARTUS_CREATED_ADC2~ .tsclkdiv = 1;
 defparam \~QUARTUS_CREATED_ADC2~ .tsclksel = 0;
 // synopsys translate_on
+
+assign BCLK = \BCLK~output_o ;
 
 assign vsync = \vsync~output_o ;
 

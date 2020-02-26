@@ -108,11 +108,12 @@ module vsync(newline_in, vsync_out, blank_out);
 endmodule
 
 
-module data(input clk, input hblank, input vblank, output [3:0] r, output [3:0] g, output [3:0] b,
-				output [15:0] f0, output [15:0] f1, output [15:0] f2, output [15:0] f3,
-				output [15:0] f4, output [15:0] f5, output [15:0] f6, output [15:0] f7,
-				output [15:0] f8, output [15:0] f9, output [15:0] f10, output [15:0] f11,
-				output [15:0] f12, output [15:0] f13, output [15:0] f14, output [15:0] f15);
+module data(clk, hblank, vblank, r, g, b);
+
+	input clk, hblank, vblank;
+	output [3:0] r, g, b;
+	
+	reg [3:0] r, g, b;
 	
 	always @ (posedge clk) begin
 		if (hblank == 1 || vblank == 1) begin
@@ -130,12 +131,11 @@ module data(input clk, input hblank, input vblank, output [3:0] r, output [3:0] 
 
 endmodule
 
-module video_sync_generator(input clk50, output vsync, output hsync, output [3:0] r, output [3:0] g, output [3:0] b,
-									 output [15:0] f0, output [15:0] f1, output [15:0] f2, output [15:0] f3,
-									 output [15:0] f4, output [15:0] f5, output [15:0] f6, output [15:0] f7,
-									 output [15:0] f8, output [15:0] f9, output [15:0] f10, output [15:0] f11,
-									 output [15:0] f12, output [15:0] f13, output [15:0] f14, output [15:0] f15);
+module video_sync_generator(clk50, vsync, hsync, r, g, b);
 
+	input clk50;
+	output vsync, hsync;
+	output [3:0] r, g, b;
 	
 	wire pixelclk, hblank, vblank, newline;
 	
@@ -144,15 +144,6 @@ module video_sync_generator(input clk50, output vsync, output hsync, output [3:0
 	hsync horizontal(pixelclk, hsync, hblank, newline);
 	vsync vertical(newline, vsync, vblank);
 	
-	data display(	.clk(pixelclk), 
-						.hblank(hblank), 
-						.vblank(vblank), 
-						.r(r), 
-						.g(g), 
-						.b(b),
-						.f0		(f0),		.f1		(f1),		.f2		(f2),		.f3		(f3),
-						.f4		(f4),		.f5		(f5),		.f6		(f6),		.f7		(f7),
-						.f8		(f8),		.f9		(f9),		.f10		(f10),	.f11		(f11),
-						.f12		(f12),	.f13		(f13),	.f14		(f14),	.f15		(f15)	);
+	data display(pixelclk, hblank, vblank, r, g, b);
 	
 endmodule

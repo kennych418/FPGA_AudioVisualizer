@@ -2,4 +2,112 @@
 Timing Analyzer Summary
 ------------------------------------------------------------
 
+Type  : Slow 1200mV 85C Model Setup 'video_sync_generator:vga|PLL:clockdivider|pixelclk'
+Slack : -1.619
+TNS   : -19.783
+
+Type  : Slow 1200mV 85C Model Setup 'video_sync_generator:vga|hsync:horizontal|newline_out'
+Slack : -1.397
+TNS   : -15.913
+
+Type  : Slow 1200mV 85C Model Setup 'clk'
+Slack : -0.583
+TNS   : -0.583
+
+Type  : Slow 1200mV 85C Model Hold 'video_sync_generator:vga|PLL:clockdivider|pixelclk'
+Slack : 0.432
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'video_sync_generator:vga|hsync:horizontal|newline_out'
+Slack : 0.436
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'clk'
+Slack : 0.480
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'clk'
+Slack : -3.000
+TNS   : -4.403
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'video_sync_generator:vga|PLL:clockdivider|pixelclk'
+Slack : -1.403
+TNS   : -22.448
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'video_sync_generator:vga|hsync:horizontal|newline_out'
+Slack : -1.403
+TNS   : -16.836
+
+Type  : Slow 1200mV 0C Model Setup 'video_sync_generator:vga|PLL:clockdivider|pixelclk'
+Slack : -1.434
+TNS   : -16.919
+
+Type  : Slow 1200mV 0C Model Setup 'video_sync_generator:vga|hsync:horizontal|newline_out'
+Slack : -1.208
+TNS   : -13.713
+
+Type  : Slow 1200mV 0C Model Setup 'clk'
+Slack : -0.495
+TNS   : -0.495
+
+Type  : Slow 1200mV 0C Model Hold 'video_sync_generator:vga|PLL:clockdivider|pixelclk'
+Slack : 0.399
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'video_sync_generator:vga|hsync:horizontal|newline_out'
+Slack : 0.400
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'clk'
+Slack : 0.411
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'clk'
+Slack : -3.000
+TNS   : -4.403
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'video_sync_generator:vga|PLL:clockdivider|pixelclk'
+Slack : -1.403
+TNS   : -22.448
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'video_sync_generator:vga|hsync:horizontal|newline_out'
+Slack : -1.403
+TNS   : -16.836
+
+Type  : Fast 1200mV 0C Model Setup 'video_sync_generator:vga|PLL:clockdivider|pixelclk'
+Slack : -0.139
+TNS   : -0.415
+
+Type  : Fast 1200mV 0C Model Setup 'video_sync_generator:vga|hsync:horizontal|newline_out'
+Slack : 0.003
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Setup 'clk'
+Slack : 0.086
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'clk'
+Slack : 0.146
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'video_sync_generator:vga|hsync:horizontal|newline_out'
+Slack : 0.175
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'video_sync_generator:vga|PLL:clockdivider|pixelclk'
+Slack : 0.177
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'clk'
+Slack : -3.000
+TNS   : -4.033
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'video_sync_generator:vga|PLL:clockdivider|pixelclk'
+Slack : -1.000
+TNS   : -16.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'video_sync_generator:vga|hsync:horizontal|newline_out'
+Slack : -1.000
+TNS   : -12.000
+
 ------------------------------------------------------------

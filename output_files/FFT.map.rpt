@@ -1,5 +1,5 @@
 Analysis & Synthesis report for FFT
-Sun Feb 09 02:43:22 2020
+Wed Feb 26 02:14:38 2020
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -13,13 +13,16 @@ Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
   5. Analysis & Synthesis Source Files Read
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
-  8. General Register Statistics
-  9. Port Connectivity Checks: "FFT_Processor:main_professor|butterflyunit:BFU0|complexmultiplier:twiddlemult"
- 10. Port Connectivity Checks: "FFT_Processor:main_professor"
- 11. Port Connectivity Checks: "mic_translator:main_translator"
- 12. Post-Synthesis Netlist Statistics for Top Partition
- 13. Elapsed Time Per Partition
- 14. Analysis & Synthesis Messages
+  8. Registers Removed During Synthesis
+  9. General Register Statistics
+ 10. Parameter Settings for User Entity Instance: video_sync_generator:vga|hsync:horizontal
+ 11. Parameter Settings for User Entity Instance: video_sync_generator:vga|vsync:vertical
+ 12. Port Connectivity Checks: "FFT_Processor:main_professor|butterflyunit:BFU0|complexmultiplier:twiddlemult"
+ 13. Port Connectivity Checks: "FFT_Processor:main_professor"
+ 14. Port Connectivity Checks: "mic_translator:main_translator"
+ 15. Post-Synthesis Netlist Statistics for Top Partition
+ 16. Elapsed Time Per Partition
+ 17. Analysis & Synthesis Messages
 
 
 
@@ -45,15 +48,15 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Sun Feb 09 02:43:22 2020       ;
+; Analysis & Synthesis Status        ; Successful - Wed Feb 26 02:14:38 2020       ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; FFT                                         ;
 ; Top-level Entity Name              ; FFT                                         ;
 ; Family                             ; MAX 10                                      ;
-; Total logic elements               ; 0                                           ;
-;     Total combinational functions  ; 0                                           ;
-;     Dedicated logic registers      ; 0                                           ;
-; Total registers                    ; 0                                           ;
+; Total logic elements               ; 39                                          ;
+;     Total combinational functions  ; 37                                          ;
+;     Dedicated logic registers      ; 29                                          ;
+; Total registers                    ; 29                                          ;
 ; Total pins                         ; 18                                          ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 0                                           ;
@@ -159,10 +162,11 @@ refer to the applicable agreement for further details.
 ; Maximum allowed            ; 6           ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
-; Maximum used               ; 1           ;
+; Maximum used               ; 6           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
+;     Processors 2-6         ;   0.0%      ;
 +----------------------------+-------------+
 
 
@@ -180,48 +184,67 @@ refer to the applicable agreement for further details.
 ; butterflyunit_TB.sv              ; yes             ; User SystemVerilog HDL File  ; C:/Users/chank/OneDrive/Quartus/FFT/butterflyunit_TB.sv  ;         ;
 ; FFT_Processor.sv                 ; yes             ; User SystemVerilog HDL File  ; C:/Users/chank/OneDrive/Quartus/FFT/FFT_Processor.sv     ;         ;
 ; mic_translator.sv                ; yes             ; User SystemVerilog HDL File  ; C:/Users/chank/OneDrive/Quartus/FFT/mic_translator.sv    ;         ;
+; VGA_Components.sv                ; yes             ; User SystemVerilog HDL File  ; C:/Users/chank/OneDrive/Quartus/FFT/VGA_Components.sv    ;         ;
 +----------------------------------+-----------------+------------------------------+----------------------------------------------------------+---------+
 
 
-+-----------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary         ;
-+---------------------------------------------+-------+
-; Resource                                    ; Usage ;
-+---------------------------------------------+-------+
-;                                             ;       ;
-; Total combinational functions               ; 0     ;
-; Logic element usage by number of LUT inputs ;       ;
-;     -- 4 input functions                    ; 0     ;
-;     -- 3 input functions                    ; 0     ;
-;     -- <=2 input functions                  ; 0     ;
-;                                             ;       ;
-; Logic elements by mode                      ;       ;
-;     -- normal mode                          ; 0     ;
-;     -- arithmetic mode                      ; 0     ;
-;                                             ;       ;
-; Total registers                             ; 0     ;
-;     -- Dedicated logic registers            ; 0     ;
-;     -- I/O registers                        ; 0     ;
-;                                             ;       ;
-; I/O pins                                    ; 18    ;
-;                                             ;       ;
-; Embedded Multiplier 9-bit elements          ; 0     ;
-;                                             ;       ;
-; Maximum fan-out node                        ; clk   ;
-; Maximum fan-out                             ; 1     ;
-; Total fan-out                               ; 18    ;
-; Average fan-out                             ; 0.50  ;
-+---------------------------------------------+-------+
++--------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                                                      ;
++---------------------------------------------+----------------------------------------------------+
+; Resource                                    ; Usage                                              ;
++---------------------------------------------+----------------------------------------------------+
+; Estimated Total logic elements              ; 39                                                 ;
+;                                             ;                                                    ;
+; Total combinational functions               ; 37                                                 ;
+; Logic element usage by number of LUT inputs ;                                                    ;
+;     -- 4 input functions                    ; 10                                                 ;
+;     -- 3 input functions                    ; 3                                                  ;
+;     -- <=2 input functions                  ; 24                                                 ;
+;                                             ;                                                    ;
+; Logic elements by mode                      ;                                                    ;
+;     -- normal mode                          ; 19                                                 ;
+;     -- arithmetic mode                      ; 18                                                 ;
+;                                             ;                                                    ;
+; Total registers                             ; 29                                                 ;
+;     -- Dedicated logic registers            ; 29                                                 ;
+;     -- I/O registers                        ; 0                                                  ;
+;                                             ;                                                    ;
+; I/O pins                                    ; 18                                                 ;
+;                                             ;                                                    ;
+; Embedded Multiplier 9-bit elements          ; 0                                                  ;
+;                                             ;                                                    ;
+; Maximum fan-out node                        ; video_sync_generator:vga|PLL:clockdivider|pixelclk ;
+; Maximum fan-out                             ; 17                                                 ;
+; Total fan-out                               ; 195                                                ;
+; Average fan-out                             ; 1.91                                               ;
++---------------------------------------------+----------------------------------------------------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                ;
-+----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+---------------------+-------------+--------------+
-; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; ADC blocks ; Full Hierarchy Name ; Entity Name ; Library Name ;
-+----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+---------------------+-------------+--------------+
-; |FFT                       ; 0 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 18   ; 0            ; 0          ; |FFT                ; FFT         ; work         ;
-+----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+---------------------+-------------+--------------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                       ;
++-------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+------------------------------------------------+----------------------+--------------+
+; Compilation Hierarchy Node    ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; ADC blocks ; Full Hierarchy Name                            ; Entity Name          ; Library Name ;
++-------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+------------------------------------------------+----------------------+--------------+
+; |FFT                          ; 37 (0)              ; 29 (0)                    ; 0           ; 0          ; 0            ; 0       ; 0         ; 18   ; 0            ; 0          ; |FFT                                           ; FFT                  ; work         ;
+;    |video_sync_generator:vga| ; 37 (0)              ; 29 (0)                    ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |FFT|video_sync_generator:vga                  ; video_sync_generator ; work         ;
+;       |PLL:clockdivider|      ; 1 (1)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |FFT|video_sync_generator:vga|PLL:clockdivider ; PLL                  ; work         ;
+;       |data:display|          ; 1 (1)               ; 3 (3)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |FFT|video_sync_generator:vga|data:display     ; data                 ; work         ;
+;       |hsync:horizontal|      ; 18 (18)             ; 13 (13)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |FFT|video_sync_generator:vga|hsync:horizontal ; hsync                ; work         ;
+;       |vsync:vertical|        ; 17 (17)             ; 12 (12)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |FFT|video_sync_generator:vga|vsync:vertical   ; vsync                ; work         ;
++-------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+------------------------------------------------+----------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++----------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                     ;
++-----------------------------------------------+----------------------------------------+
+; Register name                                 ; Reason for Removal                     ;
++-----------------------------------------------+----------------------------------------+
+; video_sync_generator:vga|data:display|b[0..2] ; Stuck at GND due to stuck port data_in ;
+; video_sync_generator:vga|data:display|g[0..2] ; Stuck at GND due to stuck port data_in ;
+; video_sync_generator:vga|data:display|r[0..2] ; Stuck at GND due to stuck port data_in ;
+; Total Number of Removed Registers = 9         ;                                        ;
++-----------------------------------------------+----------------------------------------+
 
 
 +------------------------------------------------------+
@@ -229,14 +252,42 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 0     ;
-; Number of registers using Synchronous Clear  ; 0     ;
+; Total registers                              ; 29    ;
+; Number of registers using Synchronous Clear  ; 20    ;
 ; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
 ; Number of registers using Clock Enable       ; 0     ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
+
+
++----------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: video_sync_generator:vga|hsync:horizontal ;
++----------------+-------+---------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                          ;
++----------------+-------+---------------------------------------------------------------+
+; TOTAL_COUNTER  ; 800   ; Signed Integer                                                ;
+; SYNC           ; 96    ; Signed Integer                                                ;
+; BACKPORCH      ; 48    ; Signed Integer                                                ;
+; DISPLAY        ; 640   ; Signed Integer                                                ;
+; FRONTPORCH     ; 16    ; Signed Integer                                                ;
++----------------+-------+---------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++--------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: video_sync_generator:vga|vsync:vertical ;
++----------------+-------+-------------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                        ;
++----------------+-------+-------------------------------------------------------------+
+; TOTAL_COUNTER  ; 525   ; Signed Integer                                              ;
+; SYNC           ; 2     ; Signed Integer                                              ;
+; BACKPORCH      ; 33    ; Signed Integer                                              ;
+; DISPLAY        ; 480   ; Signed Integer                                              ;
+; FRONTPORCH     ; 10    ; Signed Integer                                              ;
++----------------+-------+-------------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
 +--------------------------------------------------------------------------------------------------------------------------------+
@@ -305,12 +356,21 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
 ; boundary_port         ; 18                          ;
-; cycloneiii_lcell_comb ; 1                           ;
-;     normal            ; 1                           ;
+; cycloneiii_ff         ; 29                          ;
+;     SCLR              ; 20                          ;
+;     plain             ; 9                           ;
+; cycloneiii_lcell_comb ; 38                          ;
+;     arith             ; 18                          ;
+;         2 data inputs ; 18                          ;
+;     normal            ; 20                          ;
 ;         0 data inputs ; 1                           ;
+;         1 data inputs ; 3                           ;
+;         2 data inputs ; 3                           ;
+;         3 data inputs ; 3                           ;
+;         4 data inputs ; 10                          ;
 ;                       ;                             ;
-; Max LUT depth         ; 0.00                        ;
-; Average LUT depth     ; 0.00                        ;
+; Max LUT depth         ; 2.00                        ;
+; Average LUT depth     ; 1.58                        ;
 +-----------------------+-----------------------------+
 
 
@@ -329,7 +389,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Sun Feb 09 02:43:13 2020
+    Info: Processing started: Wed Feb 26 02:14:28 2020
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off FFT -c FFT
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 6 of the 6 processors detected
@@ -361,12 +421,13 @@ Info (12021): Found 1 design units, including 1 entities, in source file fft_pro
     Info (12023): Found entity 1: FFT_Processor_TB File: C:/Users/chank/OneDrive/Quartus/FFT/FFT_Processor_TB.sv Line: 4
 Info (12021): Found 1 design units, including 1 entities, in source file mic_translator.sv
     Info (12023): Found entity 1: mic_translator File: C:/Users/chank/OneDrive/Quartus/FFT/mic_translator.sv Line: 1
+Info (12021): Found 5 design units, including 5 entities, in source file vga_components.sv
+    Info (12023): Found entity 1: PLL File: C:/Users/chank/OneDrive/Quartus/FFT/VGA_Components.sv Line: 3
+    Info (12023): Found entity 2: hsync File: C:/Users/chank/OneDrive/Quartus/FFT/VGA_Components.sv Line: 16
+    Info (12023): Found entity 3: vsync File: C:/Users/chank/OneDrive/Quartus/FFT/VGA_Components.sv Line: 71
+    Info (12023): Found entity 4: data File: C:/Users/chank/OneDrive/Quartus/FFT/VGA_Components.sv Line: 111
+    Info (12023): Found entity 5: video_sync_generator File: C:/Users/chank/OneDrive/Quartus/FFT/VGA_Components.sv Line: 133
 Info (12127): Elaborating entity "FFT" for the top level hierarchy
-Warning (10034): Output port "r" at FFT.sv(2) has no driver File: C:/Users/chank/OneDrive/Quartus/FFT/FFT.sv Line: 2
-Warning (10034): Output port "g" at FFT.sv(2) has no driver File: C:/Users/chank/OneDrive/Quartus/FFT/FFT.sv Line: 2
-Warning (10034): Output port "b" at FFT.sv(2) has no driver File: C:/Users/chank/OneDrive/Quartus/FFT/FFT.sv Line: 2
-Warning (10034): Output port "vsync" at FFT.sv(2) has no driver File: C:/Users/chank/OneDrive/Quartus/FFT/FFT.sv Line: 2
-Warning (10034): Output port "hsync" at FFT.sv(2) has no driver File: C:/Users/chank/OneDrive/Quartus/FFT/FFT.sv Line: 2
 Info (12128): Elaborating entity "mic_translator" for hierarchy "mic_translator:main_translator" File: C:/Users/chank/OneDrive/Quartus/FFT/FFT.sv Line: 16
 Warning (10034): Output port "BCLK" at mic_translator.sv(1) has no driver File: C:/Users/chank/OneDrive/Quartus/FFT/mic_translator.sv Line: 1
 Warning (10034): Output port "new_t" at mic_translator.sv(1) has no driver File: C:/Users/chank/OneDrive/Quartus/FFT/mic_translator.sv Line: 1
@@ -379,6 +440,27 @@ Warning (10230): Verilog HDL assignment warning at complexsubtractor.sv(6): trun
 Warning (10230): Verilog HDL assignment warning at complexsubtractor.sv(7): truncated value with size 32 to match size of target (16) File: C:/Users/chank/OneDrive/Quartus/FFT/complexsubtractor.sv Line: 7
 Info (12128): Elaborating entity "complexmultiplier" for hierarchy "FFT_Processor:main_professor|butterflyunit:BFU0|complexmultiplier:twiddlemult" File: C:/Users/chank/OneDrive/Quartus/FFT/butterflyunit.sv Line: 22
 Info (12128): Elaborating entity "simplemultiplier" for hierarchy "FFT_Processor:main_professor|butterflyunit:BFU0|complexmultiplier:twiddlemult|simplemultiplier:mult_ar_br" File: C:/Users/chank/OneDrive/Quartus/FFT/complexmultiplier.sv Line: 10
+Info (12128): Elaborating entity "video_sync_generator" for hierarchy "video_sync_generator:vga" File: C:/Users/chank/OneDrive/Quartus/FFT/FFT.sv Line: 39
+Info (12128): Elaborating entity "PLL" for hierarchy "video_sync_generator:vga|PLL:clockdivider" File: C:/Users/chank/OneDrive/Quartus/FFT/VGA_Components.sv Line: 142
+Info (12128): Elaborating entity "hsync" for hierarchy "video_sync_generator:vga|hsync:horizontal" File: C:/Users/chank/OneDrive/Quartus/FFT/VGA_Components.sv Line: 144
+Info (12128): Elaborating entity "vsync" for hierarchy "video_sync_generator:vga|vsync:vertical" File: C:/Users/chank/OneDrive/Quartus/FFT/VGA_Components.sv Line: 145
+Info (12128): Elaborating entity "data" for hierarchy "video_sync_generator:vga|data:display" File: C:/Users/chank/OneDrive/Quartus/FFT/VGA_Components.sv Line: 156
+Warning (10034): Output port "f0" at VGA_Components.sv(112) has no driver File: C:/Users/chank/OneDrive/Quartus/FFT/VGA_Components.sv Line: 112
+Warning (10034): Output port "f1" at VGA_Components.sv(112) has no driver File: C:/Users/chank/OneDrive/Quartus/FFT/VGA_Components.sv Line: 112
+Warning (10034): Output port "f2" at VGA_Components.sv(112) has no driver File: C:/Users/chank/OneDrive/Quartus/FFT/VGA_Components.sv Line: 112
+Warning (10034): Output port "f3" at VGA_Components.sv(112) has no driver File: C:/Users/chank/OneDrive/Quartus/FFT/VGA_Components.sv Line: 112
+Warning (10034): Output port "f4" at VGA_Components.sv(113) has no driver File: C:/Users/chank/OneDrive/Quartus/FFT/VGA_Components.sv Line: 113
+Warning (10034): Output port "f5" at VGA_Components.sv(113) has no driver File: C:/Users/chank/OneDrive/Quartus/FFT/VGA_Components.sv Line: 113
+Warning (10034): Output port "f6" at VGA_Components.sv(113) has no driver File: C:/Users/chank/OneDrive/Quartus/FFT/VGA_Components.sv Line: 113
+Warning (10034): Output port "f7" at VGA_Components.sv(113) has no driver File: C:/Users/chank/OneDrive/Quartus/FFT/VGA_Components.sv Line: 113
+Warning (10034): Output port "f8" at VGA_Components.sv(114) has no driver File: C:/Users/chank/OneDrive/Quartus/FFT/VGA_Components.sv Line: 114
+Warning (10034): Output port "f9" at VGA_Components.sv(114) has no driver File: C:/Users/chank/OneDrive/Quartus/FFT/VGA_Components.sv Line: 114
+Warning (10034): Output port "f10" at VGA_Components.sv(114) has no driver File: C:/Users/chank/OneDrive/Quartus/FFT/VGA_Components.sv Line: 114
+Warning (10034): Output port "f11" at VGA_Components.sv(114) has no driver File: C:/Users/chank/OneDrive/Quartus/FFT/VGA_Components.sv Line: 114
+Warning (10034): Output port "f12" at VGA_Components.sv(115) has no driver File: C:/Users/chank/OneDrive/Quartus/FFT/VGA_Components.sv Line: 115
+Warning (10034): Output port "f13" at VGA_Components.sv(115) has no driver File: C:/Users/chank/OneDrive/Quartus/FFT/VGA_Components.sv Line: 115
+Warning (10034): Output port "f14" at VGA_Components.sv(115) has no driver File: C:/Users/chank/OneDrive/Quartus/FFT/VGA_Components.sv Line: 115
+Warning (10034): Output port "f15" at VGA_Components.sv(115) has no driver File: C:/Users/chank/OneDrive/Quartus/FFT/VGA_Components.sv Line: 115
 Warning (12011): Net is missing source, defaulting to GND
     Warning (12110): Net "t0[15]" is missing source, defaulting to GND File: C:/Users/chank/OneDrive/Quartus/FFT/FFT.sv Line: 5
     Warning (12110): Net "t0[14]" is missing source, defaulting to GND File: C:/Users/chank/OneDrive/Quartus/FFT/FFT.sv Line: 5
@@ -479,33 +561,29 @@ Warning (12011): Net is missing source, defaulting to GND
 Warning (12241): 1 hierarchies have connectivity warnings - see the Connectivity Checks report folder
 Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "BCLK" is stuck at GND File: C:/Users/chank/OneDrive/Quartus/FFT/FFT.sv Line: 1
-    Warning (13410): Pin "vsync" is stuck at GND File: C:/Users/chank/OneDrive/Quartus/FFT/FFT.sv Line: 2
-    Warning (13410): Pin "hsync" is stuck at GND File: C:/Users/chank/OneDrive/Quartus/FFT/FFT.sv Line: 2
     Warning (13410): Pin "r[0]" is stuck at GND File: C:/Users/chank/OneDrive/Quartus/FFT/FFT.sv Line: 2
     Warning (13410): Pin "r[1]" is stuck at GND File: C:/Users/chank/OneDrive/Quartus/FFT/FFT.sv Line: 2
     Warning (13410): Pin "r[2]" is stuck at GND File: C:/Users/chank/OneDrive/Quartus/FFT/FFT.sv Line: 2
-    Warning (13410): Pin "r[3]" is stuck at GND File: C:/Users/chank/OneDrive/Quartus/FFT/FFT.sv Line: 2
     Warning (13410): Pin "g[0]" is stuck at GND File: C:/Users/chank/OneDrive/Quartus/FFT/FFT.sv Line: 2
     Warning (13410): Pin "g[1]" is stuck at GND File: C:/Users/chank/OneDrive/Quartus/FFT/FFT.sv Line: 2
     Warning (13410): Pin "g[2]" is stuck at GND File: C:/Users/chank/OneDrive/Quartus/FFT/FFT.sv Line: 2
-    Warning (13410): Pin "g[3]" is stuck at GND File: C:/Users/chank/OneDrive/Quartus/FFT/FFT.sv Line: 2
     Warning (13410): Pin "b[0]" is stuck at GND File: C:/Users/chank/OneDrive/Quartus/FFT/FFT.sv Line: 2
     Warning (13410): Pin "b[1]" is stuck at GND File: C:/Users/chank/OneDrive/Quartus/FFT/FFT.sv Line: 2
     Warning (13410): Pin "b[2]" is stuck at GND File: C:/Users/chank/OneDrive/Quartus/FFT/FFT.sv Line: 2
-    Warning (13410): Pin "b[3]" is stuck at GND File: C:/Users/chank/OneDrive/Quartus/FFT/FFT.sv Line: 2
+Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Warning (21074): Design contains 3 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "clk" File: C:/Users/chank/OneDrive/Quartus/FFT/FFT.sv Line: 1
+Warning (21074): Design contains 2 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "DOUT" File: C:/Users/chank/OneDrive/Quartus/FFT/FFT.sv Line: 1
     Warning (15610): No output dependent on input pin "LRCLK" File: C:/Users/chank/OneDrive/Quartus/FFT/FFT.sv Line: 1
-Info (21057): Implemented 18 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 58 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 3 input pins
     Info (21059): Implemented 15 output pins
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 131 warnings
-    Info: Peak virtual memory: 4748 megabytes
-    Info: Processing ended: Sun Feb 09 02:43:22 2020
-    Info: Elapsed time: 00:00:09
-    Info: Total CPU time (on all processors): 00:00:18
+    Info (21061): Implemented 40 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 136 warnings
+    Info: Peak virtual memory: 4797 megabytes
+    Info: Processing ended: Wed Feb 26 02:14:38 2020
+    Info: Elapsed time: 00:00:10
+    Info: Total CPU time (on all processors): 00:00:19
 
 

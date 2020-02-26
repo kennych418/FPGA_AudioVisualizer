@@ -27,6 +27,15 @@ module FFT(input clk, input DOUT, input LRCLK, output BCLK,
 												.f12		(f12),	.f13		(f13),	.f14		(f14),	.f15		(f15),	
 												.done		(done)	);
 	
-	//video_sync_generator vga(clk, vsync, hsync, r, g, b);
+	video_sync_generator vga(	.clk50(clk), 
+										.vsync(vsync), 
+										.hsync(hsync), 
+										.r(r), 
+										.g(g), 
+										.b(b),
+										.f0		(f0),		.f1		(f1),		.f2		(f2),		.f3		(f3),
+										.f4		(f4),		.f5		(f5),		.f6		(f6),		.f7		(f7),
+										.f8		(f8),		.f9		(f9),		.f10		(f10),	.f11		(f11),
+										.f12		(f12),	.f13		(f13),	.f14		(f14),	.f15		(f15)	);
 	
 endmodule

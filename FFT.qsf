@@ -54,7 +54,7 @@ set_location_assignment PIN_N2 -to b[3]
 set_location_assignment PIN_P4 -to b[2]
 set_location_assignment PIN_T1 -to b[1]
 set_location_assignment PIN_P1 -to b[0]
-set_location_assignment PIN_N5 -to clk
+set_location_assignment PIN_P11 -to clk
 set_location_assignment PIN_R1 -to g[3]
 set_location_assignment PIN_R2 -to g[2]
 set_location_assignment PIN_T2 -to g[1]

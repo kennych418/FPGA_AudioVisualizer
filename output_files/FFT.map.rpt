@@ -1,5 +1,5 @@
 Analysis & Synthesis report for FFT
-Wed Feb 26 02:14:38 2020
+Wed Mar 04 18:30:12 2020
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -48,15 +48,15 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Wed Feb 26 02:14:38 2020       ;
+; Analysis & Synthesis Status        ; Successful - Wed Mar 04 18:30:12 2020       ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; FFT                                         ;
 ; Top-level Entity Name              ; FFT                                         ;
 ; Family                             ; MAX 10                                      ;
-; Total logic elements               ; 39                                          ;
+; Total logic elements               ; 38                                          ;
 ;     Total combinational functions  ; 37                                          ;
-;     Dedicated logic registers      ; 29                                          ;
-; Total registers                    ; 29                                          ;
+;     Dedicated logic registers      ; 28                                          ;
+; Total registers                    ; 28                                          ;
 ; Total pins                         ; 18                                          ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 0                                           ;
@@ -158,15 +158,15 @@ refer to the applicable agreement for further details.
 +----------------------------+-------------+
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
-; Number detected on machine ; 12          ;
-; Maximum allowed            ; 6           ;
+; Number detected on machine ; 4           ;
+; Maximum allowed            ; 2           ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
-; Maximum used               ; 6           ;
+; Maximum used               ; 2           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processors 2-6         ;   0.0%      ;
+;     Processor 2            ;   0.0%      ;
 +----------------------------+-------------+
 
 
@@ -193,7 +193,7 @@ refer to the applicable agreement for further details.
 +---------------------------------------------+----------------------------------------------------+
 ; Resource                                    ; Usage                                              ;
 +---------------------------------------------+----------------------------------------------------+
-; Estimated Total logic elements              ; 39                                                 ;
+; Estimated Total logic elements              ; 38                                                 ;
 ;                                             ;                                                    ;
 ; Total combinational functions               ; 37                                                 ;
 ; Logic element usage by number of LUT inputs ;                                                    ;
@@ -205,8 +205,8 @@ refer to the applicable agreement for further details.
 ;     -- normal mode                          ; 19                                                 ;
 ;     -- arithmetic mode                      ; 18                                                 ;
 ;                                             ;                                                    ;
-; Total registers                             ; 29                                                 ;
-;     -- Dedicated logic registers            ; 29                                                 ;
+; Total registers                             ; 28                                                 ;
+;     -- Dedicated logic registers            ; 28                                                 ;
 ;     -- I/O registers                        ; 0                                                  ;
 ;                                             ;                                                    ;
 ; I/O pins                                    ; 18                                                 ;
@@ -214,9 +214,9 @@ refer to the applicable agreement for further details.
 ; Embedded Multiplier 9-bit elements          ; 0                                                  ;
 ;                                             ;                                                    ;
 ; Maximum fan-out node                        ; video_sync_generator:vga|PLL:clockdivider|pixelclk ;
-; Maximum fan-out                             ; 17                                                 ;
-; Total fan-out                               ; 195                                                ;
-; Average fan-out                             ; 1.91                                               ;
+; Maximum fan-out                             ; 16                                                 ;
+; Total fan-out                               ; 192                                                ;
+; Average fan-out                             ; 1.90                                               ;
 +---------------------------------------------+----------------------------------------------------+
 
 
@@ -225,10 +225,10 @@ refer to the applicable agreement for further details.
 +-------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+------------------------------------------------+----------------------+--------------+
 ; Compilation Hierarchy Node    ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; ADC blocks ; Full Hierarchy Name                            ; Entity Name          ; Library Name ;
 +-------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+------------------------------------------------+----------------------+--------------+
-; |FFT                          ; 37 (0)              ; 29 (0)                    ; 0           ; 0          ; 0            ; 0       ; 0         ; 18   ; 0            ; 0          ; |FFT                                           ; FFT                  ; work         ;
-;    |video_sync_generator:vga| ; 37 (0)              ; 29 (0)                    ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |FFT|video_sync_generator:vga                  ; video_sync_generator ; work         ;
+; |FFT                          ; 37 (0)              ; 28 (0)                    ; 0           ; 0          ; 0            ; 0       ; 0         ; 18   ; 0            ; 0          ; |FFT                                           ; FFT                  ; work         ;
+;    |video_sync_generator:vga| ; 37 (0)              ; 28 (0)                    ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |FFT|video_sync_generator:vga                  ; video_sync_generator ; work         ;
 ;       |PLL:clockdivider|      ; 1 (1)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |FFT|video_sync_generator:vga|PLL:clockdivider ; PLL                  ; work         ;
-;       |data:display|          ; 1 (1)               ; 3 (3)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |FFT|video_sync_generator:vga|data:display     ; data                 ; work         ;
+;       |data:display|          ; 1 (1)               ; 2 (2)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |FFT|video_sync_generator:vga|data:display     ; data                 ; work         ;
 ;       |hsync:horizontal|      ; 18 (18)             ; 13 (13)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |FFT|video_sync_generator:vga|hsync:horizontal ; hsync                ; work         ;
 ;       |vsync:vertical|        ; 17 (17)             ; 12 (12)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |FFT|video_sync_generator:vga|vsync:vertical   ; vsync                ; work         ;
 +-------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+------------------------------------------------+----------------------+--------------+
@@ -241,9 +241,9 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Register name                                 ; Reason for Removal                     ;
 +-----------------------------------------------+----------------------------------------+
 ; video_sync_generator:vga|data:display|b[0..2] ; Stuck at GND due to stuck port data_in ;
-; video_sync_generator:vga|data:display|g[0..2] ; Stuck at GND due to stuck port data_in ;
+; video_sync_generator:vga|data:display|g[0..3] ; Stuck at GND due to stuck port data_in ;
 ; video_sync_generator:vga|data:display|r[0..2] ; Stuck at GND due to stuck port data_in ;
-; Total Number of Removed Registers = 9         ;                                        ;
+; Total Number of Removed Registers = 10        ;                                        ;
 +-----------------------------------------------+----------------------------------------+
 
 
@@ -252,7 +252,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 29    ;
+; Total registers                              ; 28    ;
 ; Number of registers using Synchronous Clear  ; 20    ;
 ; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 0     ;
@@ -356,9 +356,9 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
 ; boundary_port         ; 18                          ;
-; cycloneiii_ff         ; 29                          ;
+; cycloneiii_ff         ; 28                          ;
 ;     SCLR              ; 20                          ;
-;     plain             ; 9                           ;
+;     plain             ; 8                           ;
 ; cycloneiii_lcell_comb ; 38                          ;
 ;     arith             ; 18                          ;
 ;         2 data inputs ; 18                          ;
@@ -370,7 +370,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 ;         4 data inputs ; 10                          ;
 ;                       ;                             ;
 ; Max LUT depth         ; 2.00                        ;
-; Average LUT depth     ; 1.58                        ;
+; Average LUT depth     ; 1.59                        ;
 +-----------------------+-----------------------------+
 
 
@@ -379,7 +379,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:00     ;
+; Top            ; 00:00:01     ;
 +----------------+--------------+
 
 
@@ -389,10 +389,10 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Wed Feb 26 02:14:28 2020
+    Info: Processing started: Wed Mar 04 18:29:48 2020
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off FFT -c FFT
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
-Info (20030): Parallel compilation is enabled and will use 6 of the 6 processors detected
+Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file fft.sv
     Info (12023): Found entity 1: FFT File: C:/Users/chank/OneDrive/Quartus/FFT/FFT.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file butterflyunit.sv
@@ -567,6 +567,7 @@ Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "g[0]" is stuck at GND File: C:/Users/chank/OneDrive/Quartus/FFT/FFT.sv Line: 2
     Warning (13410): Pin "g[1]" is stuck at GND File: C:/Users/chank/OneDrive/Quartus/FFT/FFT.sv Line: 2
     Warning (13410): Pin "g[2]" is stuck at GND File: C:/Users/chank/OneDrive/Quartus/FFT/FFT.sv Line: 2
+    Warning (13410): Pin "g[3]" is stuck at GND File: C:/Users/chank/OneDrive/Quartus/FFT/FFT.sv Line: 2
     Warning (13410): Pin "b[0]" is stuck at GND File: C:/Users/chank/OneDrive/Quartus/FFT/FFT.sv Line: 2
     Warning (13410): Pin "b[1]" is stuck at GND File: C:/Users/chank/OneDrive/Quartus/FFT/FFT.sv Line: 2
     Warning (13410): Pin "b[2]" is stuck at GND File: C:/Users/chank/OneDrive/Quartus/FFT/FFT.sv Line: 2
@@ -576,14 +577,14 @@ Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
 Warning (21074): Design contains 2 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "DOUT" File: C:/Users/chank/OneDrive/Quartus/FFT/FFT.sv Line: 1
     Warning (15610): No output dependent on input pin "LRCLK" File: C:/Users/chank/OneDrive/Quartus/FFT/FFT.sv Line: 1
-Info (21057): Implemented 58 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 57 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 3 input pins
     Info (21059): Implemented 15 output pins
-    Info (21061): Implemented 40 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 136 warnings
-    Info: Peak virtual memory: 4797 megabytes
-    Info: Processing ended: Wed Feb 26 02:14:38 2020
-    Info: Elapsed time: 00:00:10
-    Info: Total CPU time (on all processors): 00:00:19
+    Info (21061): Implemented 39 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 137 warnings
+    Info: Peak virtual memory: 4751 megabytes
+    Info: Processing ended: Wed Mar 04 18:30:13 2020
+    Info: Elapsed time: 00:00:25
+    Info: Total CPU time (on all processors): 00:00:47
 
 

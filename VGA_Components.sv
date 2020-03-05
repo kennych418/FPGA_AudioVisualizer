@@ -122,7 +122,7 @@ module data(input clk, input hblank, input vblank, output [3:0] r, output [3:0] 
 		end
 		else begin
 			r <= 4'b1000;
-			g <= 4'b1000;
+			g <= 4'b0000;
 			b <= 4'b1000;
 			//=======Handled Arduino Side=========//
 		end

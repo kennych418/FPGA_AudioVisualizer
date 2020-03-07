@@ -5,8 +5,8 @@ module FFT(input clk, input DOUT, input LRCLK, output BCLK,
 	wire [15:0] t0, t1, t2, t3, t4, t5, t6, t7, t8, t9, t10, t11, t12, t13, t14, t15;	//16 bit amplitudes
 	wire [15:0] f0, f1, f2, f3, f4, f5, f6, f7, f8, f9, f10, f11, f12, f13, f14, f15;
 	
-	
-	mic_translator main_translator(	.DOUT		(DOUT),
+	mic_translator main_translator(	.clk		(clk),
+												.DOUT		(DOUT),
 												.LRCLK 	(LRCLK),
 												.BCLK		(BCLK),
 												.new_t	(new_t),

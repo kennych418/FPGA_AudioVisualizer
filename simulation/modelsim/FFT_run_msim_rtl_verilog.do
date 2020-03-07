@@ -11,5 +11,8 @@ vlog -sv -work work +incdir+C:/Users/chank/OneDrive/Quartus/FFT {C:/Users/chank/
 vlog -sv -work work +incdir+C:/Users/chank/OneDrive/Quartus/FFT {C:/Users/chank/OneDrive/Quartus/FFT/complexadder.sv}
 vlog -sv -work work +incdir+C:/Users/chank/OneDrive/Quartus/FFT {C:/Users/chank/OneDrive/Quartus/FFT/simplemultiplier.sv}
 vlog -sv -work work +incdir+C:/Users/chank/OneDrive/Quartus/FFT {C:/Users/chank/OneDrive/Quartus/FFT/complexsubtractor.sv}
+vlog -sv -work work +incdir+C:/Users/chank/OneDrive/Quartus/FFT {C:/Users/chank/OneDrive/Quartus/FFT/butterflyunit_TB.sv}
+vlog -sv -work work +incdir+C:/Users/chank/OneDrive/Quartus/FFT {C:/Users/chank/OneDrive/Quartus/FFT/mic_translator.sv}
+vlog -sv -work work +incdir+C:/Users/chank/OneDrive/Quartus/FFT {C:/Users/chank/OneDrive/Quartus/FFT/VGA_Components.sv}
 vlog -sv -work work +incdir+C:/Users/chank/OneDrive/Quartus/FFT {C:/Users/chank/OneDrive/Quartus/FFT/FFT_Processor.sv}
 

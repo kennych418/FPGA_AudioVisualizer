@@ -1,25 +1,26 @@
 |FFT
-clk => clk.IN2
+clk => clk.IN3
 DOUT => DOUT.IN1
 LRCLK => LRCLK.IN1
-BCLK << mic_translator:main_translator.BCLK
-vsync << video_sync_generator:vga.vsync
-hsync << video_sync_generator:vga.hsync
-r[0] << video_sync_generator:vga.r
-r[1] << video_sync_generator:vga.r
-r[2] << video_sync_generator:vga.r
-r[3] << video_sync_generator:vga.r
-g[0] << video_sync_generator:vga.g
-g[1] << video_sync_generator:vga.g
-g[2] << video_sync_generator:vga.g
-g[3] << video_sync_generator:vga.g
-b[0] << video_sync_generator:vga.b
-b[1] << video_sync_generator:vga.b
-b[2] << video_sync_generator:vga.b
-b[3] << video_sync_generator:vga.b
+BCLK <= mic_translator:main_translator.BCLK
+vsync <= video_sync_generator:vga.vsync
+hsync <= video_sync_generator:vga.hsync
+r[0] <= video_sync_generator:vga.r
+r[1] <= video_sync_generator:vga.r
+r[2] <= video_sync_generator:vga.r
+r[3] <= video_sync_generator:vga.r
+g[0] <= video_sync_generator:vga.g
+g[1] <= video_sync_generator:vga.g
+g[2] <= video_sync_generator:vga.g
+g[3] <= video_sync_generator:vga.g
+b[0] <= video_sync_generator:vga.b
+b[1] <= video_sync_generator:vga.b
+b[2] <= video_sync_generator:vga.b
+b[3] <= video_sync_generator:vga.b
 
 
 |FFT|mic_translator:main_translator
+clk => clk.IN1
 DOUT => t15[0].DATAIN
 DOUT => t0[9].DATAIN
 DOUT => t0[8].DATAIN
@@ -180,8 +181,8 @@ DOUT => t15[4].DATAIN
 DOUT => t15[3].DATAIN
 DOUT => t15[2].DATAIN
 DOUT => t15[1].DATAIN
-LRCLK => ~NO_FANOUT~
-BCLK <= <GND>
+LRCLK <= <GND>
+BCLK <= clkdiv50to4:clkdiv.port1
 new_t <= <GND>
 t0[0] <= DOUT.DB_MAX_OUTPUT_PORT_TYPE
 t0[1] <= DOUT.DB_MAX_OUTPUT_PORT_TYPE
@@ -343,6 +344,14 @@ t15[6] <= DOUT.DB_MAX_OUTPUT_PORT_TYPE
 t15[7] <= DOUT.DB_MAX_OUTPUT_PORT_TYPE
 t15[8] <= DOUT.DB_MAX_OUTPUT_PORT_TYPE
 t15[9] <= DOUT.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|FFT|mic_translator:main_translator|clkdiv50to4:clkdiv
+clk50 => slowclk.CLK
+clk50 => clk_counter[0].CLK
+clk50 => clk_counter[1].CLK
+clk50 => clk_counter[2].CLK
+clk4 <= slowclk.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |FFT|FFT_Processor:main_professor

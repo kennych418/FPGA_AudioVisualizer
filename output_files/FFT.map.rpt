@@ -1,5 +1,5 @@
 Analysis & Synthesis report for FFT
-Wed Mar 04 18:30:12 2020
+Fri Mar 06 00:44:23 2020
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -48,15 +48,15 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Wed Mar 04 18:30:12 2020       ;
+; Analysis & Synthesis Status        ; Successful - Fri Mar 06 00:44:23 2020       ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; FFT                                         ;
 ; Top-level Entity Name              ; FFT                                         ;
 ; Family                             ; MAX 10                                      ;
-; Total logic elements               ; 38                                          ;
-;     Total combinational functions  ; 37                                          ;
-;     Dedicated logic registers      ; 28                                          ;
-; Total registers                    ; 28                                          ;
+; Total logic elements               ; 42                                          ;
+;     Total combinational functions  ; 41                                          ;
+;     Dedicated logic registers      ; 32                                          ;
+; Total registers                    ; 32                                          ;
 ; Total pins                         ; 18                                          ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 0                                           ;
@@ -185,6 +185,7 @@ refer to the applicable agreement for further details.
 ; FFT_Processor.sv                 ; yes             ; User SystemVerilog HDL File  ; C:/Users/chank/OneDrive/Quartus/FFT/FFT_Processor.sv     ;         ;
 ; mic_translator.sv                ; yes             ; User SystemVerilog HDL File  ; C:/Users/chank/OneDrive/Quartus/FFT/mic_translator.sv    ;         ;
 ; VGA_Components.sv                ; yes             ; User SystemVerilog HDL File  ; C:/Users/chank/OneDrive/Quartus/FFT/VGA_Components.sv    ;         ;
+; clkdiv50to4.sv                   ; yes             ; User SystemVerilog HDL File  ; C:/Users/chank/OneDrive/Quartus/FFT/clkdiv50to4.sv       ;         ;
 +----------------------------------+-----------------+------------------------------+----------------------------------------------------------+---------+
 
 
@@ -193,20 +194,20 @@ refer to the applicable agreement for further details.
 +---------------------------------------------+----------------------------------------------------+
 ; Resource                                    ; Usage                                              ;
 +---------------------------------------------+----------------------------------------------------+
-; Estimated Total logic elements              ; 38                                                 ;
+; Estimated Total logic elements              ; 42                                                 ;
 ;                                             ;                                                    ;
-; Total combinational functions               ; 37                                                 ;
+; Total combinational functions               ; 41                                                 ;
 ; Logic element usage by number of LUT inputs ;                                                    ;
-;     -- 4 input functions                    ; 10                                                 ;
-;     -- 3 input functions                    ; 3                                                  ;
+;     -- 4 input functions                    ; 11                                                 ;
+;     -- 3 input functions                    ; 6                                                  ;
 ;     -- <=2 input functions                  ; 24                                                 ;
 ;                                             ;                                                    ;
 ; Logic elements by mode                      ;                                                    ;
-;     -- normal mode                          ; 19                                                 ;
+;     -- normal mode                          ; 23                                                 ;
 ;     -- arithmetic mode                      ; 18                                                 ;
 ;                                             ;                                                    ;
-; Total registers                             ; 28                                                 ;
-;     -- Dedicated logic registers            ; 28                                                 ;
+; Total registers                             ; 32                                                 ;
+;     -- Dedicated logic registers            ; 32                                                 ;
 ;     -- I/O registers                        ; 0                                                  ;
 ;                                             ;                                                    ;
 ; I/O pins                                    ; 18                                                 ;
@@ -215,23 +216,25 @@ refer to the applicable agreement for further details.
 ;                                             ;                                                    ;
 ; Maximum fan-out node                        ; video_sync_generator:vga|PLL:clockdivider|pixelclk ;
 ; Maximum fan-out                             ; 16                                                 ;
-; Total fan-out                               ; 192                                                ;
-; Average fan-out                             ; 1.90                                               ;
+; Total fan-out                               ; 214                                                ;
+; Average fan-out                             ; 1.96                                               ;
 +---------------------------------------------+----------------------------------------------------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                       ;
-+-------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+------------------------------------------------+----------------------+--------------+
-; Compilation Hierarchy Node    ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; ADC blocks ; Full Hierarchy Name                            ; Entity Name          ; Library Name ;
-+-------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+------------------------------------------------+----------------------+--------------+
-; |FFT                          ; 37 (0)              ; 28 (0)                    ; 0           ; 0          ; 0            ; 0       ; 0         ; 18   ; 0            ; 0          ; |FFT                                           ; FFT                  ; work         ;
-;    |video_sync_generator:vga| ; 37 (0)              ; 28 (0)                    ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |FFT|video_sync_generator:vga                  ; video_sync_generator ; work         ;
-;       |PLL:clockdivider|      ; 1 (1)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |FFT|video_sync_generator:vga|PLL:clockdivider ; PLL                  ; work         ;
-;       |data:display|          ; 1 (1)               ; 2 (2)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |FFT|video_sync_generator:vga|data:display     ; data                 ; work         ;
-;       |hsync:horizontal|      ; 18 (18)             ; 13 (13)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |FFT|video_sync_generator:vga|hsync:horizontal ; hsync                ; work         ;
-;       |vsync:vertical|        ; 17 (17)             ; 12 (12)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |FFT|video_sync_generator:vga|vsync:vertical   ; vsync                ; work         ;
-+-------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+------------------------------------------------+----------------------+--------------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                     ;
++-------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+--------------------------------------------------------+----------------------+--------------+
+; Compilation Hierarchy Node          ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; ADC blocks ; Full Hierarchy Name                                    ; Entity Name          ; Library Name ;
++-------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+--------------------------------------------------------+----------------------+--------------+
+; |FFT                                ; 41 (0)              ; 32 (0)                    ; 0           ; 0          ; 0            ; 0       ; 0         ; 18   ; 0            ; 0          ; |FFT                                                   ; FFT                  ; work         ;
+;    |mic_translator:main_translator| ; 4 (0)               ; 4 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |FFT|mic_translator:main_translator                    ; mic_translator       ; work         ;
+;       |clkdiv50to4:clkdiv|          ; 4 (4)               ; 4 (4)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |FFT|mic_translator:main_translator|clkdiv50to4:clkdiv ; clkdiv50to4          ; work         ;
+;    |video_sync_generator:vga|       ; 37 (0)              ; 28 (0)                    ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |FFT|video_sync_generator:vga                          ; video_sync_generator ; work         ;
+;       |PLL:clockdivider|            ; 1 (1)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |FFT|video_sync_generator:vga|PLL:clockdivider         ; PLL                  ; work         ;
+;       |data:display|                ; 1 (1)               ; 2 (2)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |FFT|video_sync_generator:vga|data:display             ; data                 ; work         ;
+;       |hsync:horizontal|            ; 18 (18)             ; 13 (13)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |FFT|video_sync_generator:vga|hsync:horizontal         ; hsync                ; work         ;
+;       |vsync:vertical|              ; 17 (17)             ; 12 (12)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |FFT|video_sync_generator:vga|vsync:vertical           ; vsync                ; work         ;
++-------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+--------------------------------------------------------+----------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
@@ -252,7 +255,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 28    ;
+; Total registers                              ; 32    ;
 ; Number of registers using Synchronous Clear  ; 20    ;
 ; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 0     ;
@@ -326,28 +329,29 @@ Note: In order to hide this table in the UI and the text report file, please set
 +------+--------+----------+-------------------------------------------------------------------------------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "mic_translator:main_translator"                                                                                                                                         ;
-+------+--------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port ; Type   ; Severity ; Details                                                                                                                                                                 ;
-+------+--------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; t0   ; Output ; Warning  ; Output or bidir port (10 bits) is smaller than the port expression (16 bits) it drives.  The 6 most-significant bit(s) in the port expression will be connected to GND. ;
-; t1   ; Output ; Warning  ; Output or bidir port (10 bits) is smaller than the port expression (16 bits) it drives.  The 6 most-significant bit(s) in the port expression will be connected to GND. ;
-; t2   ; Output ; Warning  ; Output or bidir port (10 bits) is smaller than the port expression (16 bits) it drives.  The 6 most-significant bit(s) in the port expression will be connected to GND. ;
-; t3   ; Output ; Warning  ; Output or bidir port (10 bits) is smaller than the port expression (16 bits) it drives.  The 6 most-significant bit(s) in the port expression will be connected to GND. ;
-; t4   ; Output ; Warning  ; Output or bidir port (10 bits) is smaller than the port expression (16 bits) it drives.  The 6 most-significant bit(s) in the port expression will be connected to GND. ;
-; t5   ; Output ; Warning  ; Output or bidir port (10 bits) is smaller than the port expression (16 bits) it drives.  The 6 most-significant bit(s) in the port expression will be connected to GND. ;
-; t6   ; Output ; Warning  ; Output or bidir port (10 bits) is smaller than the port expression (16 bits) it drives.  The 6 most-significant bit(s) in the port expression will be connected to GND. ;
-; t7   ; Output ; Warning  ; Output or bidir port (10 bits) is smaller than the port expression (16 bits) it drives.  The 6 most-significant bit(s) in the port expression will be connected to GND. ;
-; t8   ; Output ; Warning  ; Output or bidir port (10 bits) is smaller than the port expression (16 bits) it drives.  The 6 most-significant bit(s) in the port expression will be connected to GND. ;
-; t9   ; Output ; Warning  ; Output or bidir port (10 bits) is smaller than the port expression (16 bits) it drives.  The 6 most-significant bit(s) in the port expression will be connected to GND. ;
-; t10  ; Output ; Warning  ; Output or bidir port (10 bits) is smaller than the port expression (16 bits) it drives.  The 6 most-significant bit(s) in the port expression will be connected to GND. ;
-; t11  ; Output ; Warning  ; Output or bidir port (10 bits) is smaller than the port expression (16 bits) it drives.  The 6 most-significant bit(s) in the port expression will be connected to GND. ;
-; t12  ; Output ; Warning  ; Output or bidir port (10 bits) is smaller than the port expression (16 bits) it drives.  The 6 most-significant bit(s) in the port expression will be connected to GND. ;
-; t13  ; Output ; Warning  ; Output or bidir port (10 bits) is smaller than the port expression (16 bits) it drives.  The 6 most-significant bit(s) in the port expression will be connected to GND. ;
-; t14  ; Output ; Warning  ; Output or bidir port (10 bits) is smaller than the port expression (16 bits) it drives.  The 6 most-significant bit(s) in the port expression will be connected to GND. ;
-; t15  ; Output ; Warning  ; Output or bidir port (10 bits) is smaller than the port expression (16 bits) it drives.  The 6 most-significant bit(s) in the port expression will be connected to GND. ;
-+------+--------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "mic_translator:main_translator"                                                                                                                                          ;
++-------+--------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port  ; Type   ; Severity ; Details                                                                                                                                                                 ;
++-------+--------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; LRCLK ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                                                     ;
+; t0    ; Output ; Warning  ; Output or bidir port (10 bits) is smaller than the port expression (16 bits) it drives.  The 6 most-significant bit(s) in the port expression will be connected to GND. ;
+; t1    ; Output ; Warning  ; Output or bidir port (10 bits) is smaller than the port expression (16 bits) it drives.  The 6 most-significant bit(s) in the port expression will be connected to GND. ;
+; t2    ; Output ; Warning  ; Output or bidir port (10 bits) is smaller than the port expression (16 bits) it drives.  The 6 most-significant bit(s) in the port expression will be connected to GND. ;
+; t3    ; Output ; Warning  ; Output or bidir port (10 bits) is smaller than the port expression (16 bits) it drives.  The 6 most-significant bit(s) in the port expression will be connected to GND. ;
+; t4    ; Output ; Warning  ; Output or bidir port (10 bits) is smaller than the port expression (16 bits) it drives.  The 6 most-significant bit(s) in the port expression will be connected to GND. ;
+; t5    ; Output ; Warning  ; Output or bidir port (10 bits) is smaller than the port expression (16 bits) it drives.  The 6 most-significant bit(s) in the port expression will be connected to GND. ;
+; t6    ; Output ; Warning  ; Output or bidir port (10 bits) is smaller than the port expression (16 bits) it drives.  The 6 most-significant bit(s) in the port expression will be connected to GND. ;
+; t7    ; Output ; Warning  ; Output or bidir port (10 bits) is smaller than the port expression (16 bits) it drives.  The 6 most-significant bit(s) in the port expression will be connected to GND. ;
+; t8    ; Output ; Warning  ; Output or bidir port (10 bits) is smaller than the port expression (16 bits) it drives.  The 6 most-significant bit(s) in the port expression will be connected to GND. ;
+; t9    ; Output ; Warning  ; Output or bidir port (10 bits) is smaller than the port expression (16 bits) it drives.  The 6 most-significant bit(s) in the port expression will be connected to GND. ;
+; t10   ; Output ; Warning  ; Output or bidir port (10 bits) is smaller than the port expression (16 bits) it drives.  The 6 most-significant bit(s) in the port expression will be connected to GND. ;
+; t11   ; Output ; Warning  ; Output or bidir port (10 bits) is smaller than the port expression (16 bits) it drives.  The 6 most-significant bit(s) in the port expression will be connected to GND. ;
+; t12   ; Output ; Warning  ; Output or bidir port (10 bits) is smaller than the port expression (16 bits) it drives.  The 6 most-significant bit(s) in the port expression will be connected to GND. ;
+; t13   ; Output ; Warning  ; Output or bidir port (10 bits) is smaller than the port expression (16 bits) it drives.  The 6 most-significant bit(s) in the port expression will be connected to GND. ;
+; t14   ; Output ; Warning  ; Output or bidir port (10 bits) is smaller than the port expression (16 bits) it drives.  The 6 most-significant bit(s) in the port expression will be connected to GND. ;
+; t15   ; Output ; Warning  ; Output or bidir port (10 bits) is smaller than the port expression (16 bits) it drives.  The 6 most-significant bit(s) in the port expression will be connected to GND. ;
++-------+--------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 
 +-----------------------------------------------------+
@@ -356,21 +360,21 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
 ; boundary_port         ; 18                          ;
-; cycloneiii_ff         ; 28                          ;
+; cycloneiii_ff         ; 32                          ;
 ;     SCLR              ; 20                          ;
-;     plain             ; 8                           ;
-; cycloneiii_lcell_comb ; 38                          ;
+;     plain             ; 12                          ;
+; cycloneiii_lcell_comb ; 42                          ;
 ;     arith             ; 18                          ;
 ;         2 data inputs ; 18                          ;
-;     normal            ; 20                          ;
+;     normal            ; 24                          ;
 ;         0 data inputs ; 1                           ;
 ;         1 data inputs ; 3                           ;
 ;         2 data inputs ; 3                           ;
-;         3 data inputs ; 3                           ;
-;         4 data inputs ; 10                          ;
+;         3 data inputs ; 6                           ;
+;         4 data inputs ; 11                          ;
 ;                       ;                             ;
 ; Max LUT depth         ; 2.00                        ;
-; Average LUT depth     ; 1.59                        ;
+; Average LUT depth     ; 1.54                        ;
 +-----------------------+-----------------------------+
 
 
@@ -379,7 +383,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:01     ;
+; Top            ; 00:00:00     ;
 +----------------+--------------+
 
 
@@ -389,7 +393,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Wed Mar 04 18:29:48 2020
+    Info: Processing started: Fri Mar 06 00:44:02 2020
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off FFT -c FFT
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
@@ -427,10 +431,18 @@ Info (12021): Found 5 design units, including 5 entities, in source file vga_com
     Info (12023): Found entity 3: vsync File: C:/Users/chank/OneDrive/Quartus/FFT/VGA_Components.sv Line: 71
     Info (12023): Found entity 4: data File: C:/Users/chank/OneDrive/Quartus/FFT/VGA_Components.sv Line: 111
     Info (12023): Found entity 5: video_sync_generator File: C:/Users/chank/OneDrive/Quartus/FFT/VGA_Components.sv Line: 133
+Info (12021): Found 1 design units, including 1 entities, in source file mic_translator_tb.sv
+    Info (12023): Found entity 1: mic_translator_TB File: C:/Users/chank/OneDrive/Quartus/FFT/mic_translator_tb.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file clkdiv50to4.sv
+    Info (12023): Found entity 1: clkdiv50to4 File: C:/Users/chank/OneDrive/Quartus/FFT/clkdiv50to4.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file clkdiv50to4_tb.sv
+    Info (12023): Found entity 1: clkdiv50to4_TB File: C:/Users/chank/OneDrive/Quartus/FFT/clkdiv50to4_TB.sv Line: 1
 Info (12127): Elaborating entity "FFT" for the top level hierarchy
 Info (12128): Elaborating entity "mic_translator" for hierarchy "mic_translator:main_translator" File: C:/Users/chank/OneDrive/Quartus/FFT/FFT.sv Line: 16
-Warning (10034): Output port "BCLK" at mic_translator.sv(1) has no driver File: C:/Users/chank/OneDrive/Quartus/FFT/mic_translator.sv Line: 1
+Warning (10034): Output port "LRCLK" at mic_translator.sv(1) has no driver File: C:/Users/chank/OneDrive/Quartus/FFT/mic_translator.sv Line: 1
 Warning (10034): Output port "new_t" at mic_translator.sv(1) has no driver File: C:/Users/chank/OneDrive/Quartus/FFT/mic_translator.sv Line: 1
+Info (12128): Elaborating entity "clkdiv50to4" for hierarchy "mic_translator:main_translator|clkdiv50to4:clkdiv" File: C:/Users/chank/OneDrive/Quartus/FFT/mic_translator.sv Line: 9
+Warning (10230): Verilog HDL assignment warning at clkdiv50to4.sv(19): truncated value with size 32 to match size of target (3) File: C:/Users/chank/OneDrive/Quartus/FFT/clkdiv50to4.sv Line: 19
 Info (12128): Elaborating entity "FFT_Processor" for hierarchy "FFT_Processor:main_professor" File: C:/Users/chank/OneDrive/Quartus/FFT/FFT.sv Line: 28
 Warning (10230): Verilog HDL assignment warning at FFT_Processor.sv(177): truncated value with size 32 to match size of target (3) File: C:/Users/chank/OneDrive/Quartus/FFT/FFT_Processor.sv Line: 177
 Info (12128): Elaborating entity "butterflyunit" for hierarchy "FFT_Processor:main_professor|butterflyunit:BFU0" File: C:/Users/chank/OneDrive/Quartus/FFT/FFT_Processor.sv Line: 205
@@ -560,7 +572,6 @@ Warning (12011): Net is missing source, defaulting to GND
     Warning (12110): Net "t15[10]" is missing source, defaulting to GND File: C:/Users/chank/OneDrive/Quartus/FFT/FFT.sv Line: 5
 Warning (12241): 1 hierarchies have connectivity warnings - see the Connectivity Checks report folder
 Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "BCLK" is stuck at GND File: C:/Users/chank/OneDrive/Quartus/FFT/FFT.sv Line: 1
     Warning (13410): Pin "r[0]" is stuck at GND File: C:/Users/chank/OneDrive/Quartus/FFT/FFT.sv Line: 2
     Warning (13410): Pin "r[1]" is stuck at GND File: C:/Users/chank/OneDrive/Quartus/FFT/FFT.sv Line: 2
     Warning (13410): Pin "r[2]" is stuck at GND File: C:/Users/chank/OneDrive/Quartus/FFT/FFT.sv Line: 2
@@ -577,14 +588,14 @@ Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
 Warning (21074): Design contains 2 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "DOUT" File: C:/Users/chank/OneDrive/Quartus/FFT/FFT.sv Line: 1
     Warning (15610): No output dependent on input pin "LRCLK" File: C:/Users/chank/OneDrive/Quartus/FFT/FFT.sv Line: 1
-Info (21057): Implemented 57 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 61 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 3 input pins
     Info (21059): Implemented 15 output pins
-    Info (21061): Implemented 39 logic cells
+    Info (21061): Implemented 43 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 137 warnings
-    Info: Peak virtual memory: 4751 megabytes
-    Info: Processing ended: Wed Mar 04 18:30:13 2020
-    Info: Elapsed time: 00:00:25
-    Info: Total CPU time (on all processors): 00:00:47
+    Info: Peak virtual memory: 4762 megabytes
+    Info: Processing ended: Fri Mar 06 00:44:23 2020
+    Info: Elapsed time: 00:00:21
+    Info: Total CPU time (on all processors): 00:00:40
 
 

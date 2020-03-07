@@ -1,4 +1,4 @@
-# Reading C:/intelFPGA_lite/18.1/modelsim_ase/tcl/vsim/pref.tcl
+# Reading C:/intelFPGA/18.1/modelsim_ase/tcl/vsim/pref.tcl
 # do FFT_run_msim_rtl_verilog.do
 # if {[file exists rtl_work]} {
 # 	vdel -lib rtl_work -all
@@ -7,641 +7,459 @@
 # vmap work rtl_work
 # Model Technology ModelSim - Intel FPGA Edition vmap 10.5b Lib Mapping Utility 2016.10 Oct  5 2016
 # vmap work rtl_work 
-# Copying C:/intelFPGA_lite/18.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
+# Copying C:/intelFPGA/18.1/modelsim_ase/win32aloem/../modelsim.ini to modelsim.ini
 # Modifying modelsim.ini
 # 
 # vlog -sv -work work +incdir+C:/Users/chank/OneDrive/Quartus/FFT {C:/Users/chank/OneDrive/Quartus/FFT/FFT.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 21:41:21 on Feb 06,2020
+# Start time: 00:10:48 on Mar 06,2020
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/chank/OneDrive/Quartus/FFT" C:/Users/chank/OneDrive/Quartus/FFT/FFT.sv 
 # -- Compiling module FFT
 # 
 # Top level modules:
 # 	FFT
-# End time: 21:41:21 on Feb 06,2020, Elapsed time: 0:00:00
+# End time: 00:10:48 on Mar 06,2020, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/chank/OneDrive/Quartus/FFT {C:/Users/chank/OneDrive/Quartus/FFT/butterflyunit.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 21:41:21 on Feb 06,2020
+# Start time: 00:10:48 on Mar 06,2020
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/chank/OneDrive/Quartus/FFT" C:/Users/chank/OneDrive/Quartus/FFT/butterflyunit.sv 
 # -- Compiling module butterflyunit
 # 
 # Top level modules:
 # 	butterflyunit
-# End time: 21:41:21 on Feb 06,2020, Elapsed time: 0:00:00
+# End time: 00:10:48 on Mar 06,2020, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/chank/OneDrive/Quartus/FFT {C:/Users/chank/OneDrive/Quartus/FFT/complexmultiplier.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 21:41:21 on Feb 06,2020
+# Start time: 00:10:49 on Mar 06,2020
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/chank/OneDrive/Quartus/FFT" C:/Users/chank/OneDrive/Quartus/FFT/complexmultiplier.sv 
 # -- Compiling module complexmultiplier
 # 
 # Top level modules:
 # 	complexmultiplier
-# End time: 21:41:21 on Feb 06,2020, Elapsed time: 0:00:00
+# End time: 00:10:49 on Mar 06,2020, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/chank/OneDrive/Quartus/FFT {C:/Users/chank/OneDrive/Quartus/FFT/complexadder.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 21:41:22 on Feb 06,2020
+# Start time: 00:10:49 on Mar 06,2020
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/chank/OneDrive/Quartus/FFT" C:/Users/chank/OneDrive/Quartus/FFT/complexadder.sv 
 # -- Compiling module complexadder
 # 
 # Top level modules:
 # 	complexadder
-# End time: 21:41:22 on Feb 06,2020, Elapsed time: 0:00:00
+# End time: 00:10:49 on Mar 06,2020, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/chank/OneDrive/Quartus/FFT {C:/Users/chank/OneDrive/Quartus/FFT/simplemultiplier.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 21:41:22 on Feb 06,2020
+# Start time: 00:10:49 on Mar 06,2020
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/chank/OneDrive/Quartus/FFT" C:/Users/chank/OneDrive/Quartus/FFT/simplemultiplier.sv 
 # -- Compiling module simplemultiplier
 # 
 # Top level modules:
 # 	simplemultiplier
-# End time: 21:41:22 on Feb 06,2020, Elapsed time: 0:00:00
+# End time: 00:10:49 on Mar 06,2020, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vlog -sv -work work +incdir+C:/Users/chank/OneDrive/Quartus/FFT {C:/Users/chank/OneDrive/Quartus/FFT/complexsubtractor.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 21:41:22 on Feb 06,2020
+# Start time: 00:10:49 on Mar 06,2020
 # vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/chank/OneDrive/Quartus/FFT" C:/Users/chank/OneDrive/Quartus/FFT/complexsubtractor.sv 
 # -- Compiling module complexsubtractor
 # 
 # Top level modules:
 # 	complexsubtractor
-# End time: 21:41:22 on Feb 06,2020, Elapsed time: 0:00:00
+# End time: 00:10:49 on Mar 06,2020, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vlog -sv -work work +incdir+C:/Users/chank/OneDrive/Quartus/FFT {C:/Users/chank/OneDrive/Quartus/FFT/FFT_Processor.sv}
+# vlog -sv -work work +incdir+C:/Users/chank/OneDrive/Quartus/FFT {C:/Users/chank/OneDrive/Quartus/FFT/butterflyunit_TB.sv}
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 21:41:22 on Feb 06,2020
-# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/chank/OneDrive/Quartus/FFT" C:/Users/chank/OneDrive/Quartus/FFT/FFT_Processor.sv 
-# -- Compiling module FFT_Processor
+# Start time: 00:10:49 on Mar 06,2020
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/chank/OneDrive/Quartus/FFT" C:/Users/chank/OneDrive/Quartus/FFT/butterflyunit_TB.sv 
+# -- Compiling module butterflyunit_TB
 # 
 # Top level modules:
-# 	FFT_Processor
-# End time: 21:41:22 on Feb 06,2020, Elapsed time: 0:00:00
+# 	butterflyunit_TB
+# End time: 00:10:49 on Mar 06,2020, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/chank/OneDrive/Quartus/FFT {C:/Users/chank/OneDrive/Quartus/FFT/mic_translator.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 00:10:49 on Mar 06,2020
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/chank/OneDrive/Quartus/FFT" C:/Users/chank/OneDrive/Quartus/FFT/mic_translator.sv 
+# -- Compiling module mic_translator
 # 
+# Top level modules:
+# 	mic_translator
+# End time: 00:10:50 on Mar 06,2020, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+C:/Users/chank/OneDrive/Quartus/FFT {C:/Users/chank/OneDrive/Quartus/FFT/VGA_Components.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 00:10:50 on Mar 06,2020
+# vlog -reportprogress 300 -sv -work work "+incdir+C:/Users/chank/OneDrive/Quartus/FFT" C:/Users/chank/OneDrive/Quartus/FFT/VGA_Components.sv 
+# -- Compiling module PLL
+# -- Compiling module hsync
+# -- Compiling module vsync
+# -- Compiling module data
+# ** Error: C:/Users/chank/OneDrive/Quartus/FFT/VGA_Components.sv(119): (vlog-2110) Illegal reference to net "r".
+# ** Error: C:/Users/chank/OneDrive/Quartus/FFT/VGA_Components.sv(120): (vlog-2110) Illegal reference to net "g".
+# ** Error: C:/Users/chank/OneDrive/Quartus/FFT/VGA_Components.sv(121): (vlog-2110) Illegal reference to net "b".
+# ** Error: C:/Users/chank/OneDrive/Quartus/FFT/VGA_Components.sv(124): (vlog-2110) Illegal reference to net "r".
+# ** Error: C:/Users/chank/OneDrive/Quartus/FFT/VGA_Components.sv(125): (vlog-2110) Illegal reference to net "g".
+# ** Error: C:/Users/chank/OneDrive/Quartus/FFT/VGA_Components.sv(126): (vlog-2110) Illegal reference to net "b".
+# -- Compiling module video_sync_generator
+# End time: 00:10:50 on Mar 06,2020, Elapsed time: 0:00:00
+# Errors: 6, Warnings: 0
+# ** Error: C:/intelFPGA/18.1/modelsim_ase/win32aloem/vlog failed.
+# Error in macro ./FFT_run_msim_rtl_verilog.do line 16
+# C:/intelFPGA/18.1/modelsim_ase/win32aloem/vlog failed.
+#     while executing
+# "vlog -sv -work work +incdir+C:/Users/chank/OneDrive/Quartus/FFT {C:/Users/chank/OneDrive/Quartus/FFT/VGA_Components.sv}"
 vlog -reportprogress 300 -work work C:/Users/chank/OneDrive/Quartus/FFT/butterflyunit.sv
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 21:41:34 on Feb 06,2020
+# Start time: 00:11:21 on Mar 06,2020
 # vlog -reportprogress 300 -work work C:/Users/chank/OneDrive/Quartus/FFT/butterflyunit.sv 
 # -- Compiling module butterflyunit
 # 
 # Top level modules:
 # 	butterflyunit
-# End time: 21:41:34 on Feb 06,2020, Elapsed time: 0:00:00
+# End time: 00:11:21 on Mar 06,2020, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 vlog -reportprogress 300 -work work C:/Users/chank/OneDrive/Quartus/FFT/butterflyunit_TB.sv
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 21:41:34 on Feb 06,2020
+# Start time: 00:11:21 on Mar 06,2020
 # vlog -reportprogress 300 -work work C:/Users/chank/OneDrive/Quartus/FFT/butterflyunit_TB.sv 
 # -- Compiling module butterflyunit_TB
 # 
 # Top level modules:
 # 	butterflyunit_TB
-# End time: 21:41:34 on Feb 06,2020, Elapsed time: 0:00:00
+# End time: 00:11:22 on Mar 06,2020, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+vlog -reportprogress 300 -work work C:/Users/chank/OneDrive/Quartus/FFT/clkdiv50to4.sv
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 00:11:22 on Mar 06,2020
+# vlog -reportprogress 300 -work work C:/Users/chank/OneDrive/Quartus/FFT/clkdiv50to4.sv 
+# -- Compiling module clkdiv50to4
+# ** Error (suppressible): C:/Users/chank/OneDrive/Quartus/FFT/clkdiv50to4.sv(4): (vlog-2388) 'clk4' already declared in this scope (clkdiv50to4).
+# End time: 00:11:22 on Mar 06,2020, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 0
+vlog -reportprogress 300 -work work C:/Users/chank/OneDrive/Quartus/FFT/clkdiv50to4_TB.sv
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 00:11:22 on Mar 06,2020
+# vlog -reportprogress 300 -work work C:/Users/chank/OneDrive/Quartus/FFT/clkdiv50to4_TB.sv 
+# -- Compiling module clkdiv50to4_TB
+# 
+# Top level modules:
+# 	clkdiv50to4_TB
+# End time: 00:11:22 on Mar 06,2020, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 vlog -reportprogress 300 -work work C:/Users/chank/OneDrive/Quartus/FFT/complexadder.sv
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 21:41:34 on Feb 06,2020
+# Start time: 00:11:22 on Mar 06,2020
 # vlog -reportprogress 300 -work work C:/Users/chank/OneDrive/Quartus/FFT/complexadder.sv 
 # -- Compiling module complexadder
 # 
 # Top level modules:
 # 	complexadder
-# End time: 21:41:34 on Feb 06,2020, Elapsed time: 0:00:00
+# End time: 00:11:22 on Mar 06,2020, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 vlog -reportprogress 300 -work work C:/Users/chank/OneDrive/Quartus/FFT/complexadder_TB.sv
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 21:41:34 on Feb 06,2020
+# Start time: 00:11:22 on Mar 06,2020
 # vlog -reportprogress 300 -work work C:/Users/chank/OneDrive/Quartus/FFT/complexadder_TB.sv 
 # -- Compiling module complexadder_TB
 # 
 # Top level modules:
 # 	complexadder_TB
-# End time: 21:41:34 on Feb 06,2020, Elapsed time: 0:00:00
+# End time: 00:11:22 on Mar 06,2020, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 vlog -reportprogress 300 -work work C:/Users/chank/OneDrive/Quartus/FFT/complexmultiplier.sv
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 21:41:34 on Feb 06,2020
+# Start time: 00:11:22 on Mar 06,2020
 # vlog -reportprogress 300 -work work C:/Users/chank/OneDrive/Quartus/FFT/complexmultiplier.sv 
 # -- Compiling module complexmultiplier
 # 
 # Top level modules:
 # 	complexmultiplier
-# End time: 21:41:34 on Feb 06,2020, Elapsed time: 0:00:00
+# End time: 00:11:22 on Mar 06,2020, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 vlog -reportprogress 300 -work work C:/Users/chank/OneDrive/Quartus/FFT/complexsubtractor.sv
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 21:41:34 on Feb 06,2020
+# Start time: 00:11:22 on Mar 06,2020
 # vlog -reportprogress 300 -work work C:/Users/chank/OneDrive/Quartus/FFT/complexsubtractor.sv 
 # -- Compiling module complexsubtractor
 # 
 # Top level modules:
 # 	complexsubtractor
-# End time: 21:41:34 on Feb 06,2020, Elapsed time: 0:00:00
+# End time: 00:11:23 on Mar 06,2020, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 vlog -reportprogress 300 -work work C:/Users/chank/OneDrive/Quartus/FFT/complexsubtractor_TB.sv
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 21:41:35 on Feb 06,2020
+# Start time: 00:11:23 on Mar 06,2020
 # vlog -reportprogress 300 -work work C:/Users/chank/OneDrive/Quartus/FFT/complexsubtractor_TB.sv 
 # -- Compiling module complexsubtractor_TB
 # 
 # Top level modules:
 # 	complexsubtractor_TB
-# End time: 21:41:35 on Feb 06,2020, Elapsed time: 0:00:00
+# End time: 00:11:23 on Mar 06,2020, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 vlog -reportprogress 300 -work work C:/Users/chank/OneDrive/Quartus/FFT/FFT.sv
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 21:41:35 on Feb 06,2020
+# Start time: 00:11:23 on Mar 06,2020
 # vlog -reportprogress 300 -work work C:/Users/chank/OneDrive/Quartus/FFT/FFT.sv 
 # -- Compiling module FFT
 # 
 # Top level modules:
 # 	FFT
-# End time: 21:41:35 on Feb 06,2020, Elapsed time: 0:00:00
+# End time: 00:11:23 on Mar 06,2020, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 vlog -reportprogress 300 -work work C:/Users/chank/OneDrive/Quartus/FFT/FFT_Processor.sv
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 21:41:35 on Feb 06,2020
+# Start time: 00:11:23 on Mar 06,2020
 # vlog -reportprogress 300 -work work C:/Users/chank/OneDrive/Quartus/FFT/FFT_Processor.sv 
 # -- Compiling module FFT_Processor
 # 
 # Top level modules:
 # 	FFT_Processor
-# End time: 21:41:35 on Feb 06,2020, Elapsed time: 0:00:00
+# End time: 00:11:23 on Mar 06,2020, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 vlog -reportprogress 300 -work work C:/Users/chank/OneDrive/Quartus/FFT/FFT_Processor_TB.sv
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 21:41:35 on Feb 06,2020
+# Start time: 00:11:23 on Mar 06,2020
 # vlog -reportprogress 300 -work work C:/Users/chank/OneDrive/Quartus/FFT/FFT_Processor_TB.sv 
 # -- Compiling module FFT_Processor_TB
 # 
 # Top level modules:
 # 	FFT_Processor_TB
-# End time: 21:41:35 on Feb 06,2020, Elapsed time: 0:00:00
+# End time: 00:11:23 on Mar 06,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -reportprogress 300 -work work C:/Users/chank/OneDrive/Quartus/FFT/mic_translator.sv
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 00:11:23 on Mar 06,2020
+# vlog -reportprogress 300 -work work C:/Users/chank/OneDrive/Quartus/FFT/mic_translator.sv 
+# -- Compiling module mic_translator
+# 
+# Top level modules:
+# 	mic_translator
+# End time: 00:11:23 on Mar 06,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -reportprogress 300 -work work C:/Users/chank/OneDrive/Quartus/FFT/mic_translator_tb.sv
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 00:11:23 on Mar 06,2020
+# vlog -reportprogress 300 -work work C:/Users/chank/OneDrive/Quartus/FFT/mic_translator_tb.sv 
+# -- Compiling module mic_translator_TB
+# 
+# Top level modules:
+# 	mic_translator_TB
+# End time: 00:11:24 on Mar 06,2020, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 vlog -reportprogress 300 -work work C:/Users/chank/OneDrive/Quartus/FFT/multiplier_TB.sv
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 21:41:35 on Feb 06,2020
+# Start time: 00:11:24 on Mar 06,2020
 # vlog -reportprogress 300 -work work C:/Users/chank/OneDrive/Quartus/FFT/multiplier_TB.sv 
 # -- Compiling module multiplier_TB
 # 
 # Top level modules:
 # 	multiplier_TB
-# End time: 21:41:35 on Feb 06,2020, Elapsed time: 0:00:00
+# End time: 00:11:24 on Mar 06,2020, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 vlog -reportprogress 300 -work work C:/Users/chank/OneDrive/Quartus/FFT/simplemultiplier.sv
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 21:41:35 on Feb 06,2020
+# Start time: 00:11:24 on Mar 06,2020
 # vlog -reportprogress 300 -work work C:/Users/chank/OneDrive/Quartus/FFT/simplemultiplier.sv 
 # -- Compiling module simplemultiplier
 # 
 # Top level modules:
 # 	simplemultiplier
-# End time: 21:41:35 on Feb 06,2020, Elapsed time: 0:00:00
+# End time: 00:11:24 on Mar 06,2020, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 vlog -reportprogress 300 -work work C:/Users/chank/OneDrive/Quartus/FFT/VGA_Components.sv
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 21:41:35 on Feb 06,2020
+# Start time: 00:11:24 on Mar 06,2020
 # vlog -reportprogress 300 -work work C:/Users/chank/OneDrive/Quartus/FFT/VGA_Components.sv 
 # -- Compiling module PLL
 # -- Compiling module hsync
 # -- Compiling module vsync
 # -- Compiling module data
+# ** Error: C:/Users/chank/OneDrive/Quartus/FFT/VGA_Components.sv(119): (vlog-2110) Illegal reference to net "r".
+# ** Error: C:/Users/chank/OneDrive/Quartus/FFT/VGA_Components.sv(120): (vlog-2110) Illegal reference to net "g".
+# ** Error: C:/Users/chank/OneDrive/Quartus/FFT/VGA_Components.sv(121): (vlog-2110) Illegal reference to net "b".
+# ** Error: C:/Users/chank/OneDrive/Quartus/FFT/VGA_Components.sv(124): (vlog-2110) Illegal reference to net "r".
+# ** Error: C:/Users/chank/OneDrive/Quartus/FFT/VGA_Components.sv(125): (vlog-2110) Illegal reference to net "g".
+# ** Error: C:/Users/chank/OneDrive/Quartus/FFT/VGA_Components.sv(126): (vlog-2110) Illegal reference to net "b".
 # -- Compiling module video_sync_generator
-# 
-# Top level modules:
-# 	video_sync_generator
-# End time: 21:41:35 on Feb 06,2020, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-vsim work.butterflyunit_TB
-# vsim work.butterflyunit_TB 
-# Start time: 21:41:45 on Feb 06,2020
+# End time: 00:11:24 on Mar 06,2020, Elapsed time: 0:00:00
+# Errors: 6, Warnings: 0
+vsim work.clkdiv50to4_TB
+# vsim work.clkdiv50to4_TB 
+# Start time: 00:11:30 on Mar 06,2020
 # Loading sv_std.std
-# Loading work.butterflyunit_TB
-# Loading work.butterflyunit
-# Loading work.complexadder
-# Loading work.complexsubtractor
-# Loading work.complexmultiplier
-# Loading work.simplemultiplier
-add wave -position insertpoint sim:/butterflyunit_TB/*
-run -all
-vlog -work work C:/Users/chank/OneDrive/Quartus/FFT/butterflyunit_TB.sv
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 21:51:49 on Feb 06,2020
-# vlog -reportprogress 300 -work work C:/Users/chank/OneDrive/Quartus/FFT/butterflyunit_TB.sv 
-# -- Compiling module butterflyunit_TB
-# 
-# Top level modules:
-# 	butterflyunit_TB
-# End time: 21:51:49 on Feb 06,2020, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-vsim work.butterflyunit_TB
-# End time: 21:51:57 on Feb 06,2020, Elapsed time: 0:10:12
-# Errors: 0, Warnings: 0
-# vsim work.butterflyunit_TB 
-# Start time: 21:51:57 on Feb 06,2020
-# Loading sv_std.std
-# Loading work.butterflyunit_TB
-# Loading work.butterflyunit
-# Loading work.complexadder
-# Loading work.complexsubtractor
-# Loading work.complexmultiplier
-# Loading work.simplemultiplier
-add wave -position insertpoint sim:/butterflyunit_TB/*
-run -all
-vlog -work work C:/Users/chank/OneDrive/Quartus/FFT/FFT_Processor_TB.sv
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 22:22:56 on Feb 06,2020
-# vlog -reportprogress 300 -work work C:/Users/chank/OneDrive/Quartus/FFT/FFT_Processor_TB.sv 
-# -- Compiling module FFT_Processor_TB
-# 
-# Top level modules:
-# 	FFT_Processor_TB
-# End time: 22:22:56 on Feb 06,2020, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-vsim work.FFT_Processor_TB
-# End time: 22:22:59 on Feb 06,2020, Elapsed time: 0:31:02
-# Errors: 0, Warnings: 0
-# vsim work.FFT_Processor_TB 
-# Start time: 22:22:59 on Feb 06,2020
-# Loading sv_std.std
-# Loading work.FFT_Processor_TB
-# Loading work.FFT_Processor
-# Loading work.butterflyunit
-# Loading work.complexadder
-# Loading work.complexsubtractor
-# Loading work.complexmultiplier
-# Loading work.simplemultiplier
-add wave -position insertpoint sim:/FFT_Processor_TB/*
-run -all
-vlog -work work C:/Users/chank/OneDrive/Quartus/FFT/FFT_Processor_TB.sv
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 22:25:07 on Feb 06,2020
-# vlog -reportprogress 300 -work work C:/Users/chank/OneDrive/Quartus/FFT/FFT_Processor_TB.sv 
-# -- Compiling module FFT_Processor_TB
-# 
-# Top level modules:
-# 	FFT_Processor_TB
-# End time: 22:25:07 on Feb 06,2020, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-vsim work.FFT_Processor_TB
-# End time: 22:25:09 on Feb 06,2020, Elapsed time: 0:02:10
-# Errors: 0, Warnings: 0
-# vsim work.FFT_Processor_TB 
-# Start time: 22:25:10 on Feb 06,2020
-# Loading sv_std.std
-# Loading work.FFT_Processor_TB
-# Loading work.FFT_Processor
-# Loading work.butterflyunit
-# Loading work.complexadder
-# Loading work.complexsubtractor
-# Loading work.complexmultiplier
-# Loading work.simplemultiplier
-add wave -position insertpoint sim:/FFT_Processor_TB/*
-run -all
-vlog -work work C:/Users/chank/OneDrive/Quartus/FFT/FFT_Processor_TB.sv
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 23:14:07 on Feb 06,2020
-# vlog -reportprogress 300 -work work C:/Users/chank/OneDrive/Quartus/FFT/FFT_Processor_TB.sv 
-# -- Compiling module FFT_Processor_TB
-# 
-# Top level modules:
-# 	FFT_Processor_TB
-# End time: 23:14:07 on Feb 06,2020, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-vsim work.FFT_Processor_TB
-# End time: 23:14:11 on Feb 06,2020, Elapsed time: 0:49:01
-# Errors: 0, Warnings: 0
-# vsim work.FFT_Processor_TB 
-# Start time: 23:14:11 on Feb 06,2020
-# Loading sv_std.std
-# Loading work.FFT_Processor_TB
-# Loading work.FFT_Processor
-# Loading work.butterflyunit
-# Loading work.complexadder
-# Loading work.complexsubtractor
-# Loading work.complexmultiplier
-# Loading work.simplemultiplier
-add wave -position insertpoint sim:/FFT_Processor_TB/*
-run -all
-vlog -work work C:/Users/chank/OneDrive/Quartus/FFT/FFT_Processor_TB.sv
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 23:15:11 on Feb 06,2020
-# vlog -reportprogress 300 -work work C:/Users/chank/OneDrive/Quartus/FFT/FFT_Processor_TB.sv 
-# -- Compiling module FFT_Processor_TB
-# 
-# Top level modules:
-# 	FFT_Processor_TB
-# End time: 23:15:11 on Feb 06,2020, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-vsim work.FFT_Processor_TB
-# End time: 23:15:13 on Feb 06,2020, Elapsed time: 0:01:02
-# Errors: 0, Warnings: 0
-# vsim work.FFT_Processor_TB 
-# Start time: 23:15:13 on Feb 06,2020
-# Loading sv_std.std
-# Loading work.FFT_Processor_TB
-# Loading work.FFT_Processor
-# Loading work.butterflyunit
-# Loading work.complexadder
-# Loading work.complexsubtractor
-# Loading work.complexmultiplier
-# Loading work.simplemultiplier
-add wave -position insertpoint sim:/FFT_Processor_TB/*
-run -all
-vlog -work work C:/Users/chank/OneDrive/Quartus/FFT/FFT_Processor_TB.sv
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 23:31:16 on Feb 06,2020
-# vlog -reportprogress 300 -work work C:/Users/chank/OneDrive/Quartus/FFT/FFT_Processor_TB.sv 
-# -- Compiling module FFT_Processor_TB
-# 
-# Top level modules:
-# 	FFT_Processor_TB
-# End time: 23:31:16 on Feb 06,2020, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-vlog -work work C:/Users/chank/OneDrive/Quartus/FFT/FFT_Processor.sv
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 23:31:19 on Feb 06,2020
-# vlog -reportprogress 300 -work work C:/Users/chank/OneDrive/Quartus/FFT/FFT_Processor.sv 
-# -- Compiling module FFT_Processor
-# 
-# Top level modules:
-# 	FFT_Processor
-# End time: 23:31:19 on Feb 06,2020, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-vsim work.FFT_Processor_TB
-# End time: 23:31:24 on Feb 06,2020, Elapsed time: 0:16:11
-# Errors: 0, Warnings: 0
-# vsim work.FFT_Processor_TB 
-# Start time: 23:31:24 on Feb 06,2020
-# Loading sv_std.std
-# Loading work.FFT_Processor_TB
-# Loading work.FFT_Processor
-# Loading work.butterflyunit
-# Loading work.complexadder
-# Loading work.complexsubtractor
-# Loading work.complexmultiplier
-# Loading work.simplemultiplier
-add wave -position insertpoint sim:/FFT_Processor_TB/*
-run -all
-vsim work.FFT_Processor_TB
-# End time: 23:58:13 on Feb 06,2020, Elapsed time: 0:26:49
-# Errors: 0, Warnings: 0
-# vsim work.FFT_Processor_TB 
-# Start time: 23:58:13 on Feb 06,2020
-# Loading sv_std.std
-# Loading work.FFT_Processor_TB
-# Loading work.FFT_Processor
-# Loading work.butterflyunit
-# Loading work.complexadder
-# Loading work.complexsubtractor
-# Loading work.complexmultiplier
-# Loading work.simplemultiplier
-add wave -position insertpoint sim:/FFT_Processor_TB/*
-add wave -position insertpoint sim:/FFT_Processor_TB/UUT/BFU0/*
-add wave -position insertpoint sim:/FFT_Processor_TB/UUT/BFU1/*
-run -all
-add wave -position insertpoint sim:/FFT_Processor_TB/UUT/BFU2/*
-run -all
-run -all
-vsim work.FFT_Processor_TB
-# End time: 00:01:07 on Feb 07,2020, Elapsed time: 0:02:54
-# Errors: 0, Warnings: 0
-# vsim work.FFT_Processor_TB 
-# Start time: 00:01:07 on Feb 07,2020
-# Loading sv_std.std
-# Loading work.FFT_Processor_TB
-# Loading work.FFT_Processor
-# Loading work.butterflyunit
-# Loading work.complexadder
-# Loading work.complexsubtractor
-# Loading work.complexmultiplier
-# Loading work.simplemultiplier
-add wave -position insertpoint sim:/FFT_Processor_TB/*
-add wave -position insertpoint sim:/FFT_Processor_TB/UUT/BFU0/*
-add wave -position insertpoint sim:/FFT_Processor_TB/UUT/BFU1/*
-# Can't move the Now cursor.
-add wave -position insertpoint sim:/FFT_Processor_TB/UUT/BFU2/*
-add wave -position insertpoint sim:/FFT_Processor_TB/UUT/BFU3/*
-add wave -position insertpoint sim:/FFT_Processor_TB/UUT/BFU4/*
-add wave -position insertpoint sim:/FFT_Processor_TB/UUT/BFU5/*
-add wave -position insertpoint sim:/FFT_Processor_TB/UUT/BFU6/*
-add wave -position insertpoint sim:/FFT_Processor_TB/UUT/BFU7/*
-run -all
-vlog -work work C:/Users/chank/OneDrive/Quartus/FFT/FFT_Processor.sv
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 00:10:38 on Feb 07,2020
-# vlog -reportprogress 300 -work work C:/Users/chank/OneDrive/Quartus/FFT/FFT_Processor.sv 
-# -- Compiling module FFT_Processor
-# 
-# Top level modules:
-# 	FFT_Processor
-# End time: 00:10:38 on Feb 07,2020, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-vsim work.FFT_Processor_TB
-# End time: 00:10:42 on Feb 07,2020, Elapsed time: 0:09:35
+# Loading work.clkdiv50to4_TB
+# ** Error: (vsim-3033) C:/Users/chank/OneDrive/Quartus/FFT/clkdiv50to4_TB.sv(6): Instantiation of 'clkdiv50to4' failed. The design unit was not found.
+#    Time: 0 ps  Iteration: 0  Instance: /clkdiv50to4_TB File: C:/Users/chank/OneDrive/Quartus/FFT/clkdiv50to4_TB.sv
+#         Searched libraries:
+#             C:/Users/chank/OneDrive/Quartus/FFT/simulation/modelsim/rtl_work
+# Error loading design
+# End time: 00:11:30 on Mar 06,2020, Elapsed time: 0:00:00
 # Errors: 1, Warnings: 0
-# vsim work.FFT_Processor_TB 
-# Start time: 00:10:42 on Feb 07,2020
+vsim work.clkdiv50to4_TB
+# vsim work.clkdiv50to4_TB 
+# Start time: 00:11:35 on Mar 06,2020
 # Loading sv_std.std
-# Loading work.FFT_Processor_TB
-# Loading work.FFT_Processor
-# Loading work.butterflyunit
-# Loading work.complexadder
-# Loading work.complexsubtractor
-# Loading work.complexmultiplier
-# Loading work.simplemultiplier
-add wave -position insertpoint sim:/FFT_Processor_TB/*
-run -all
-vsim work.FFT_Processor_TB
-# End time: 00:13:45 on Feb 07,2020, Elapsed time: 0:03:03
+# Loading work.clkdiv50to4_TB
+# ** Error: (vsim-3033) C:/Users/chank/OneDrive/Quartus/FFT/clkdiv50to4_TB.sv(6): Instantiation of 'clkdiv50to4' failed. The design unit was not found.
+#    Time: 0 ps  Iteration: 0  Instance: /clkdiv50to4_TB File: C:/Users/chank/OneDrive/Quartus/FFT/clkdiv50to4_TB.sv
+#         Searched libraries:
+#             C:/Users/chank/OneDrive/Quartus/FFT/simulation/modelsim/rtl_work
+# Error loading design
+# End time: 00:11:36 on Mar 06,2020, Elapsed time: 0:00:01
+# Errors: 1, Warnings: 0
+vlog -reportprogress 300 -work work C:/Users/chank/OneDrive/Quartus/FFT/clkdiv50to4_TB.sv
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 00:12:58 on Mar 06,2020
+# vlog -reportprogress 300 -work work C:/Users/chank/OneDrive/Quartus/FFT/clkdiv50to4_TB.sv 
+# -- Compiling module clkdiv50to4_TB
+# 
+# Top level modules:
+# 	clkdiv50to4_TB
+# End time: 00:12:58 on Mar 06,2020, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vsim work.FFT_Processor_TB 
-# Start time: 00:13:45 on Feb 07,2020
+vsim work.clkdiv50to4_TB
+# vsim work.clkdiv50to4_TB 
+# Start time: 00:13:01 on Mar 06,2020
 # Loading sv_std.std
-# Loading work.FFT_Processor_TB
-# Loading work.FFT_Processor
-# Loading work.butterflyunit
-# Loading work.complexadder
-# Loading work.complexsubtractor
-# Loading work.complexmultiplier
-# Loading work.simplemultiplier
-add wave -position insertpoint sim:/FFT_Processor_TB/*
-add wave -position insertpoint sim:/FFT_Processor_TB/UUT/BFU0/*
-add wave -position insertpoint sim:/FFT_Processor_TB/UUT/BFU1/*
-add wave -position insertpoint sim:/FFT_Processor_TB/UUT/BFU2/*
-add wave -position insertpoint sim:/FFT_Processor_TB/UUT/BFU3/*
-add wave -position insertpoint sim:/FFT_Processor_TB/UUT/BFU4/*
-add wave -position insertpoint sim:/FFT_Processor_TB/UUT/BFU5/*
-add wave -position insertpoint sim:/FFT_Processor_TB/UUT/BFU6/*
-add wave -position insertpoint sim:/FFT_Processor_TB/UUT/BFU7/*
-run -all
-vlog -work work C:/Users/chank/OneDrive/Quartus/FFT/FFT_Processor.sv
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 00:50:42 on Feb 07,2020
-# vlog -reportprogress 300 -work work C:/Users/chank/OneDrive/Quartus/FFT/FFT_Processor.sv 
-# -- Compiling module FFT_Processor
-# 
-# Top level modules:
-# 	FFT_Processor
-# End time: 00:50:42 on Feb 07,2020, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-vlog -work work C:/Users/chank/OneDrive/Quartus/FFT/FFT_Processor_TB.sv
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 00:50:44 on Feb 07,2020
-# vlog -reportprogress 300 -work work C:/Users/chank/OneDrive/Quartus/FFT/FFT_Processor_TB.sv 
-# -- Compiling module FFT_Processor_TB
-# 
-# Top level modules:
-# 	FFT_Processor_TB
-# End time: 00:50:44 on Feb 07,2020, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-vsim work.FFT_Processor_TB
-# End time: 00:50:46 on Feb 07,2020, Elapsed time: 0:37:01
-# Errors: 0, Warnings: 0
-# vsim work.FFT_Processor_TB 
-# Start time: 00:50:46 on Feb 07,2020
+# Loading work.clkdiv50to4_TB
+# ** Error: (vsim-3033) C:/Users/chank/OneDrive/Quartus/FFT/clkdiv50to4_TB.sv(6): Instantiation of 'clkdiv50to4' failed. The design unit was not found.
+#    Time: 0 ps  Iteration: 0  Instance: /clkdiv50to4_TB File: C:/Users/chank/OneDrive/Quartus/FFT/clkdiv50to4_TB.sv
+#         Searched libraries:
+#             C:/Users/chank/OneDrive/Quartus/FFT/simulation/modelsim/rtl_work
+# Error loading design
+# End time: 00:13:01 on Mar 06,2020, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 0
+vsim work.clkdiv50to4_TB
+# vsim work.clkdiv50to4_TB 
+# Start time: 00:13:03 on Mar 06,2020
 # Loading sv_std.std
-# Loading work.FFT_Processor_TB
-# Loading work.FFT_Processor
-# Loading work.butterflyunit
-# Loading work.complexadder
-# Loading work.complexsubtractor
-# Loading work.complexmultiplier
-# Loading work.simplemultiplier
-add wave -position insertpoint sim:/FFT_Processor_TB/*
-run -all
-vlog -work work C:/Users/chank/OneDrive/Quartus/FFT/FFT_Processor.sv
+# Loading work.clkdiv50to4_TB
+# ** Error: (vsim-3033) C:/Users/chank/OneDrive/Quartus/FFT/clkdiv50to4_TB.sv(6): Instantiation of 'clkdiv50to4' failed. The design unit was not found.
+#    Time: 0 ps  Iteration: 0  Instance: /clkdiv50to4_TB File: C:/Users/chank/OneDrive/Quartus/FFT/clkdiv50to4_TB.sv
+#         Searched libraries:
+#             C:/Users/chank/OneDrive/Quartus/FFT/simulation/modelsim/rtl_work
+# Error loading design
+# End time: 00:13:03 on Mar 06,2020, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 0
+vlog -reportprogress 300 -work work C:/Users/chank/OneDrive/Quartus/FFT/clkdiv50to4_TB.sv
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 01:41:08 on Feb 07,2020
-# vlog -reportprogress 300 -work work C:/Users/chank/OneDrive/Quartus/FFT/FFT_Processor.sv 
-# -- Compiling module FFT_Processor
+# Start time: 00:13:56 on Mar 06,2020
+# vlog -reportprogress 300 -work work C:/Users/chank/OneDrive/Quartus/FFT/clkdiv50to4_TB.sv 
+# -- Compiling module clkdiv50to4_TB
 # 
 # Top level modules:
-# 	FFT_Processor
-# End time: 01:41:08 on Feb 07,2020, Elapsed time: 0:00:00
+# 	clkdiv50to4_TB
+# End time: 00:13:57 on Mar 06,2020, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
-vlog -work work C:/Users/chank/OneDrive/Quartus/FFT/FFT_Processor_TB.sv
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 01:41:10 on Feb 07,2020
-# vlog -reportprogress 300 -work work C:/Users/chank/OneDrive/Quartus/FFT/FFT_Processor_TB.sv 
-# -- Compiling module FFT_Processor_TB
-# 
-# Top level modules:
-# 	FFT_Processor_TB
-# End time: 01:41:10 on Feb 07,2020, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-vsim work.FFT_Processor_TB
-# End time: 01:41:12 on Feb 07,2020, Elapsed time: 0:50:26
-# Errors: 0, Warnings: 0
-# vsim work.FFT_Processor_TB 
-# Start time: 01:41:12 on Feb 07,2020
+vsim work.clkdiv50to4_TB
+# vsim work.clkdiv50to4_TB 
+# Start time: 00:14:00 on Mar 06,2020
 # Loading sv_std.std
-# Loading work.FFT_Processor_TB
-# Loading work.FFT_Processor
-# Loading work.butterflyunit
-# Loading work.complexadder
-# Loading work.complexsubtractor
-# Loading work.complexmultiplier
-# Loading work.simplemultiplier
-add wave -position insertpoint sim:/FFT_Processor_TB/*
-run -all
-vlog -work work C:/Users/chank/OneDrive/Quartus/FFT/FFT_Processor.sv
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 01:44:20 on Feb 07,2020
-# vlog -reportprogress 300 -work work C:/Users/chank/OneDrive/Quartus/FFT/FFT_Processor.sv 
-# -- Compiling module FFT_Processor
-# 
-# Top level modules:
-# 	FFT_Processor
-# End time: 01:44:20 on Feb 07,2020, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-vlog -work work C:/Users/chank/OneDrive/Quartus/FFT/FFT_Processor_TB.sv
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 01:44:21 on Feb 07,2020
-# vlog -reportprogress 300 -work work C:/Users/chank/OneDrive/Quartus/FFT/FFT_Processor_TB.sv 
-# -- Compiling module FFT_Processor_TB
-# 
-# Top level modules:
-# 	FFT_Processor_TB
-# End time: 01:44:22 on Feb 07,2020, Elapsed time: 0:00:01
-# Errors: 0, Warnings: 0
-vsim work.FFT_Processor_TB
-# End time: 01:44:23 on Feb 07,2020, Elapsed time: 0:03:11
-# Errors: 0, Warnings: 0
-# vsim work.FFT_Processor_TB 
-# Start time: 01:44:23 on Feb 07,2020
+# Loading work.clkdiv50to4_TB
+# ** Error: (vsim-3033) C:/Users/chank/OneDrive/Quartus/FFT/clkdiv50to4_TB.sv(6): Instantiation of 'clkdiv50to4' failed. The design unit was not found.
+#    Time: 0 ps  Iteration: 0  Instance: /clkdiv50to4_TB File: C:/Users/chank/OneDrive/Quartus/FFT/clkdiv50to4_TB.sv
+#         Searched libraries:
+#             C:/Users/chank/OneDrive/Quartus/FFT/simulation/modelsim/rtl_work
+# Error loading design
+# End time: 00:14:00 on Mar 06,2020, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 0
+vsim work.complexadder_TB
+# vsim work.complexadder_TB 
+# Start time: 00:14:12 on Mar 06,2020
 # Loading sv_std.std
-# Loading work.FFT_Processor_TB
-# Loading work.FFT_Processor
-# Loading work.butterflyunit
+# Loading work.complexadder_TB
 # Loading work.complexadder
-# Loading work.complexsubtractor
-# Loading work.complexmultiplier
-# Loading work.simplemultiplier
-add wave -position insertpoint sim:/FFT_Processor_TB/*
-run -all
-vlog -work work C:/Users/chank/OneDrive/Quartus/FFT/FFT_Processor_TB.sv
-# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 01:53:35 on Feb 07,2020
-# vlog -reportprogress 300 -work work C:/Users/chank/OneDrive/Quartus/FFT/FFT_Processor_TB.sv 
-# -- Compiling module FFT_Processor_TB
-# 
-# Top level modules:
-# 	FFT_Processor_TB
-# End time: 01:53:36 on Feb 07,2020, Elapsed time: 0:00:01
+vsim work.clkdiv50to4_TB
+# End time: 00:14:18 on Mar 06,2020, Elapsed time: 0:00:06
 # Errors: 0, Warnings: 0
-vsim work.FFT_Processor_TB
-# End time: 01:53:37 on Feb 07,2020, Elapsed time: 0:09:14
-# Errors: 0, Warnings: 0
-# vsim work.FFT_Processor_TB 
-# Start time: 01:53:37 on Feb 07,2020
+# vsim work.clkdiv50to4_TB 
+# Start time: 00:14:18 on Mar 06,2020
 # Loading sv_std.std
-# Loading work.FFT_Processor_TB
-# Loading work.FFT_Processor
-# Loading work.butterflyunit
-# Loading work.complexadder
-# Loading work.complexsubtractor
-# Loading work.complexmultiplier
-# Loading work.simplemultiplier
-add wave -position insertpoint sim:/FFT_Processor_TB/*
-run -all
-vlog -work work C:/Users/chank/OneDrive/Quartus/FFT/FFT_Processor.sv
+# Loading work.clkdiv50to4_TB
+# ** Error: (vsim-3033) C:/Users/chank/OneDrive/Quartus/FFT/clkdiv50to4_TB.sv(6): Instantiation of 'clkdiv50to4' failed. The design unit was not found.
+#    Time: 0 ps  Iteration: 0  Instance: /clkdiv50to4_TB File: C:/Users/chank/OneDrive/Quartus/FFT/clkdiv50to4_TB.sv
+#         Searched libraries:
+#             C:/Users/chank/OneDrive/Quartus/FFT/simulation/modelsim/rtl_work
+# Error loading design
+# End time: 00:14:19 on Mar 06,2020, Elapsed time: 0:00:01
+# Errors: 1, Warnings: 0
+vlog -work work C:/Users/chank/OneDrive/Quartus/FFT/clkdiv50to4_TB.sv
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 01:56:13 on Feb 07,2020
-# vlog -reportprogress 300 -work work C:/Users/chank/OneDrive/Quartus/FFT/FFT_Processor.sv 
-# -- Compiling module FFT_Processor
+# Start time: 00:14:24 on Mar 06,2020
+# vlog -reportprogress 300 -work work C:/Users/chank/OneDrive/Quartus/FFT/clkdiv50to4_TB.sv 
+# -- Compiling module clkdiv50to4_TB
 # 
 # Top level modules:
-# 	FFT_Processor
-# End time: 01:56:13 on Feb 07,2020, Elapsed time: 0:00:00
+# 	clkdiv50to4_TB
+# End time: 00:14:24 on Mar 06,2020, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-vlog -work work C:/Users/chank/OneDrive/Quartus/FFT/FFT_Processor_TB.sv
+vlog -reportprogress 300 -work work C:/Users/chank/OneDrive/Quartus/FFT/clkdiv50to4.sv
 # Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 01:56:14 on Feb 07,2020
-# vlog -reportprogress 300 -work work C:/Users/chank/OneDrive/Quartus/FFT/FFT_Processor_TB.sv 
-# -- Compiling module FFT_Processor_TB
+# Start time: 00:16:44 on Mar 06,2020
+# vlog -reportprogress 300 -work work C:/Users/chank/OneDrive/Quartus/FFT/clkdiv50to4.sv 
+# -- Compiling module clkdiv50to4
+# ** Error (suppressible): C:/Users/chank/OneDrive/Quartus/FFT/clkdiv50to4.sv(4): (vlog-2388) 'clk4' already declared in this scope (clkdiv50to4).
+# End time: 00:16:44 on Mar 06,2020, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 0
+vlog -reportprogress 300 -work work C:/Users/chank/OneDrive/Quartus/FFT/clkdiv50to4.sv
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 00:17:19 on Mar 06,2020
+# vlog -reportprogress 300 -work work C:/Users/chank/OneDrive/Quartus/FFT/clkdiv50to4.sv 
+# -- Compiling module clkdiv50to4
+# ** Error: C:/Users/chank/OneDrive/Quartus/FFT/clkdiv50to4.sv(8): (vlog-2110) Illegal reference to net "clk4".
+# End time: 00:17:19 on Mar 06,2020, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 0
+vlog -reportprogress 300 -work work C:/Users/chank/OneDrive/Quartus/FFT/clkdiv50to4.sv
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 00:18:47 on Mar 06,2020
+# vlog -reportprogress 300 -work work C:/Users/chank/OneDrive/Quartus/FFT/clkdiv50to4.sv 
+# -- Compiling module clkdiv50to4
 # 
 # Top level modules:
-# 	FFT_Processor_TB
-# End time: 01:56:14 on Feb 07,2020, Elapsed time: 0:00:00
+# 	clkdiv50to4
+# End time: 00:18:47 on Mar 06,2020, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-vsim work.FFT_Processor_TB
-# End time: 01:56:16 on Feb 07,2020, Elapsed time: 0:02:39
-# Errors: 0, Warnings: 0
-# vsim work.FFT_Processor_TB 
-# Start time: 01:56:16 on Feb 07,2020
+vsim work.clkdiv50to4_TB
+# vsim work.clkdiv50to4_TB 
+# Start time: 00:18:53 on Mar 06,2020
 # Loading sv_std.std
-# Loading work.FFT_Processor_TB
-# Loading work.FFT_Processor
-# Loading work.butterflyunit
-# Loading work.complexadder
-# Loading work.complexsubtractor
-# Loading work.complexmultiplier
-# Loading work.simplemultiplier
-add wave -position insertpoint sim:/FFT_Processor_TB/*
+# Loading work.clkdiv50to4_TB
+# Loading work.clkdiv50to4
+add wave -position insertpoint sim:/clkdiv50to4_TB/*
 run -all
-# End time: 02:25:10 on Feb 07,2020, Elapsed time: 0:28:54
+vlog -work work C:/Users/chank/OneDrive/Quartus/FFT/clkdiv50to4_TB.sv
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 00:20:07 on Mar 06,2020
+# vlog -reportprogress 300 -work work C:/Users/chank/OneDrive/Quartus/FFT/clkdiv50to4_TB.sv 
+# -- Compiling module clkdiv50to4_TB
+# 
+# Top level modules:
+# 	clkdiv50to4_TB
+# End time: 00:20:07 on Mar 06,2020, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -work work C:/Users/chank/OneDrive/Quartus/FFT/clkdiv50to4.sv
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 00:20:09 on Mar 06,2020
+# vlog -reportprogress 300 -work work C:/Users/chank/OneDrive/Quartus/FFT/clkdiv50to4.sv 
+# -- Compiling module clkdiv50to4
+# 
+# Top level modules:
+# 	clkdiv50to4
+# End time: 00:20:10 on Mar 06,2020, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+vsim work.clkdiv50to4_TB
+# End time: 00:20:13 on Mar 06,2020, Elapsed time: 0:01:20
+# Errors: 0, Warnings: 0
+# vsim work.clkdiv50to4_TB 
+# Start time: 00:20:13 on Mar 06,2020
+# Loading sv_std.std
+# Loading work.clkdiv50to4_TB
+# Loading work.clkdiv50to4
+add wave -position insertpoint sim:/clkdiv50to4_TB/*
+run -all
+# End time: 00:24:04 on Mar 06,2020, Elapsed time: 0:03:51
 # Errors: 0, Warnings: 0

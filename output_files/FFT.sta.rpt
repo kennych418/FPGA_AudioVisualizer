@@ -1,5 +1,5 @@
 Timing Analyzer report for FFT
-Wed Mar 04 18:30:49 2020
+Fri Mar 06 00:44:53 2020
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -94,7 +94,7 @@ refer to the applicable agreement for further details.
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   0.7%      ;
+;     Processor 2            ;   0.9%      ;
 +----------------------------+-------------+
 
 
@@ -109,14 +109,15 @@ refer to the applicable agreement for further details.
 +-------------------------------------------------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+-----------------------------------------------------------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------+
-; Slow 1200mV 85C Model Fmax Summary                                                                                                    ;
-+------------+-----------------+-------------------------------------------------------+------------------------------------------------+
-; Fmax       ; Restricted Fmax ; Clock Name                                            ; Note                                           ;
-+------------+-----------------+-------------------------------------------------------+------------------------------------------------+
-; 415.11 MHz ; 415.11 MHz      ; video_sync_generator:vga|hsync:horizontal|newline_out ;                                                ;
-; 437.64 MHz ; 416.15 MHz      ; video_sync_generator:vga|PLL:clockdivider|pixelclk    ; limit due to minimum period restriction (tmin) ;
-+------------+-----------------+-------------------------------------------------------+------------------------------------------------+
++------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 85C Model Fmax Summary                                                                                                                   ;
++------------+-----------------+-------------------------------------------------------+---------------------------------------------------------------+
+; Fmax       ; Restricted Fmax ; Clock Name                                            ; Note                                                          ;
++------------+-----------------+-------------------------------------------------------+---------------------------------------------------------------+
+; 409.5 MHz  ; 409.5 MHz       ; video_sync_generator:vga|PLL:clockdivider|pixelclk    ;                                                               ;
+; 411.18 MHz ; 411.18 MHz      ; video_sync_generator:vga|hsync:horizontal|newline_out ;                                                               ;
+; 793.65 MHz ; 250.0 MHz       ; clk                                                   ; limit due to minimum period restriction (max I/O toggle rate) ;
++------------+-----------------+-------------------------------------------------------+---------------------------------------------------------------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
 
@@ -125,9 +126,9 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +-------------------------------------------------------+--------+---------------+
 ; Clock                                                 ; Slack  ; End Point TNS ;
 +-------------------------------------------------------+--------+---------------+
-; video_sync_generator:vga|hsync:horizontal|newline_out ; -1.409 ; -15.637       ;
-; video_sync_generator:vga|PLL:clockdivider|pixelclk    ; -1.285 ; -16.318       ;
-; clk                                                   ; -0.920 ; -0.920        ;
+; clk                                                   ; -1.589 ; -2.329        ;
+; video_sync_generator:vga|PLL:clockdivider|pixelclk    ; -1.442 ; -18.920       ;
+; video_sync_generator:vga|hsync:horizontal|newline_out ; -1.432 ; -15.786       ;
 +-------------------------------------------------------+--------+---------------+
 
 
@@ -136,9 +137,9 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +-------------------------------------------------------+-------+---------------+
 ; Clock                                                 ; Slack ; End Point TNS ;
 +-------------------------------------------------------+-------+---------------+
-; video_sync_generator:vga|hsync:horizontal|newline_out ; 0.435 ; 0.000         ;
-; video_sync_generator:vga|PLL:clockdivider|pixelclk    ; 0.446 ; 0.000         ;
-; clk                                                   ; 0.740 ; 0.000         ;
+; clk                                                   ; 0.341 ; 0.000         ;
+; video_sync_generator:vga|PLL:clockdivider|pixelclk    ; 0.639 ; 0.000         ;
+; video_sync_generator:vga|hsync:horizontal|newline_out ; 0.641 ; 0.000         ;
 +-------------------------------------------------------+-------+---------------+
 
 
@@ -159,7 +160,7 @@ No paths to report.
 +-------------------------------------------------------+--------+---------------+
 ; Clock                                                 ; Slack  ; End Point TNS ;
 +-------------------------------------------------------+--------+---------------+
-; clk                                                   ; -3.000 ; -4.403        ;
+; clk                                                   ; -3.000 ; -10.015       ;
 ; video_sync_generator:vga|PLL:clockdivider|pixelclk    ; -1.403 ; -21.045       ;
 ; video_sync_generator:vga|hsync:horizontal|newline_out ; -1.403 ; -16.836       ;
 +-------------------------------------------------------+--------+---------------+
@@ -171,14 +172,15 @@ No paths to report.
 No synchronizer chains to report.
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------+
-; Slow 1200mV 0C Model Fmax Summary                                                                                                     ;
-+------------+-----------------+-------------------------------------------------------+------------------------------------------------+
-; Fmax       ; Restricted Fmax ; Clock Name                                            ; Note                                           ;
-+------------+-----------------+-------------------------------------------------------+------------------------------------------------+
-; 451.47 MHz ; 416.15 MHz      ; video_sync_generator:vga|hsync:horizontal|newline_out ; limit due to minimum period restriction (tmin) ;
-; 483.79 MHz ; 416.15 MHz      ; video_sync_generator:vga|PLL:clockdivider|pixelclk    ; limit due to minimum period restriction (tmin) ;
-+------------+-----------------+-------------------------------------------------------+------------------------------------------------+
++------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow 1200mV 0C Model Fmax Summary                                                                                                                    ;
++------------+-----------------+-------------------------------------------------------+---------------------------------------------------------------+
+; Fmax       ; Restricted Fmax ; Clock Name                                            ; Note                                                          ;
++------------+-----------------+-------------------------------------------------------+---------------------------------------------------------------+
+; 446.63 MHz ; 416.15 MHz      ; video_sync_generator:vga|PLL:clockdivider|pixelclk    ; limit due to minimum period restriction (tmin)                ;
+; 447.03 MHz ; 416.15 MHz      ; video_sync_generator:vga|hsync:horizontal|newline_out ; limit due to minimum period restriction (tmin)                ;
+; 874.89 MHz ; 250.0 MHz       ; clk                                                   ; limit due to minimum period restriction (max I/O toggle rate) ;
++------------+-----------------+-------------------------------------------------------+---------------------------------------------------------------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
 
@@ -187,9 +189,9 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +-------------------------------------------------------+--------+---------------+
 ; Clock                                                 ; Slack  ; End Point TNS ;
 +-------------------------------------------------------+--------+---------------+
-; video_sync_generator:vga|hsync:horizontal|newline_out ; -1.215 ; -13.387       ;
-; video_sync_generator:vga|PLL:clockdivider|pixelclk    ; -1.067 ; -13.773       ;
-; clk                                                   ; -0.799 ; -0.799        ;
+; clk                                                   ; -1.421 ; -1.737        ;
+; video_sync_generator:vga|PLL:clockdivider|pixelclk    ; -1.239 ; -16.100       ;
+; video_sync_generator:vga|hsync:horizontal|newline_out ; -1.237 ; -13.513       ;
 +-------------------------------------------------------+--------+---------------+
 
 
@@ -198,9 +200,9 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +-------------------------------------------------------+-------+---------------+
 ; Clock                                                 ; Slack ; End Point TNS ;
 +-------------------------------------------------------+-------+---------------+
-; video_sync_generator:vga|hsync:horizontal|newline_out ; 0.400 ; 0.000         ;
-; video_sync_generator:vga|PLL:clockdivider|pixelclk    ; 0.410 ; 0.000         ;
-; clk                                                   ; 0.654 ; 0.000         ;
+; clk                                                   ; 0.306 ; 0.000         ;
+; video_sync_generator:vga|PLL:clockdivider|pixelclk    ; 0.593 ; 0.000         ;
+; video_sync_generator:vga|hsync:horizontal|newline_out ; 0.593 ; 0.000         ;
 +-------------------------------------------------------+-------+---------------+
 
 
@@ -221,7 +223,7 @@ No paths to report.
 +-------------------------------------------------------+--------+---------------+
 ; Clock                                                 ; Slack  ; End Point TNS ;
 +-------------------------------------------------------+--------+---------------+
-; clk                                                   ; -3.000 ; -4.403        ;
+; clk                                                   ; -3.000 ; -10.015       ;
 ; video_sync_generator:vga|PLL:clockdivider|pixelclk    ; -1.403 ; -21.045       ;
 ; video_sync_generator:vga|hsync:horizontal|newline_out ; -1.403 ; -16.836       ;
 +-------------------------------------------------------+--------+---------------+
@@ -238,9 +240,9 @@ No synchronizer chains to report.
 +-------------------------------------------------------+--------+---------------+
 ; Clock                                                 ; Slack  ; End Point TNS ;
 +-------------------------------------------------------+--------+---------------+
-; clk                                                   ; -0.047 ; -0.047        ;
-; video_sync_generator:vga|hsync:horizontal|newline_out ; -0.006 ; -0.060        ;
-; video_sync_generator:vga|PLL:clockdivider|pixelclk    ; 0.077  ; 0.000         ;
+; clk                                                   ; -0.351 ; -0.351        ;
+; video_sync_generator:vga|PLL:clockdivider|pixelclk    ; -0.017 ; -0.170        ;
+; video_sync_generator:vga|hsync:horizontal|newline_out ; 0.008  ; 0.000         ;
 +-------------------------------------------------------+--------+---------------+
 
 
@@ -249,9 +251,9 @@ No synchronizer chains to report.
 +-------------------------------------------------------+-------+---------------+
 ; Clock                                                 ; Slack ; End Point TNS ;
 +-------------------------------------------------------+-------+---------------+
-; video_sync_generator:vga|hsync:horizontal|newline_out ; 0.174 ; 0.000         ;
-; video_sync_generator:vga|PLL:clockdivider|pixelclk    ; 0.181 ; 0.000         ;
-; clk                                                   ; 0.219 ; 0.000         ;
+; clk                                                   ; 0.148 ; 0.000         ;
+; video_sync_generator:vga|PLL:clockdivider|pixelclk    ; 0.248 ; 0.000         ;
+; video_sync_generator:vga|hsync:horizontal|newline_out ; 0.249 ; 0.000         ;
 +-------------------------------------------------------+-------+---------------+
 
 
@@ -272,7 +274,7 @@ No paths to report.
 +-------------------------------------------------------+--------+---------------+
 ; Clock                                                 ; Slack  ; End Point TNS ;
 +-------------------------------------------------------+--------+---------------+
-; clk                                                   ; -3.000 ; -4.010        ;
+; clk                                                   ; -3.000 ; -8.162        ;
 ; video_sync_generator:vga|PLL:clockdivider|pixelclk    ; -1.000 ; -15.000       ;
 ; video_sync_generator:vga|hsync:horizontal|newline_out ; -1.000 ; -12.000       ;
 +-------------------------------------------------------+--------+---------------+
@@ -289,14 +291,14 @@ No synchronizer chains to report.
 +--------------------------------------------------------+---------+-------+----------+---------+---------------------+
 ; Clock                                                  ; Setup   ; Hold  ; Recovery ; Removal ; Minimum Pulse Width ;
 +--------------------------------------------------------+---------+-------+----------+---------+---------------------+
-; Worst-case Slack                                       ; -1.409  ; 0.174 ; N/A      ; N/A     ; -3.000              ;
-;  clk                                                   ; -0.920  ; 0.219 ; N/A      ; N/A     ; -3.000              ;
-;  video_sync_generator:vga|PLL:clockdivider|pixelclk    ; -1.285  ; 0.181 ; N/A      ; N/A     ; -1.403              ;
-;  video_sync_generator:vga|hsync:horizontal|newline_out ; -1.409  ; 0.174 ; N/A      ; N/A     ; -1.403              ;
-; Design-wide TNS                                        ; -32.875 ; 0.0   ; 0.0      ; 0.0     ; -42.284             ;
-;  clk                                                   ; -0.920  ; 0.000 ; N/A      ; N/A     ; -4.403              ;
-;  video_sync_generator:vga|PLL:clockdivider|pixelclk    ; -16.318 ; 0.000 ; N/A      ; N/A     ; -21.045             ;
-;  video_sync_generator:vga|hsync:horizontal|newline_out ; -15.637 ; 0.000 ; N/A      ; N/A     ; -16.836             ;
+; Worst-case Slack                                       ; -1.589  ; 0.148 ; N/A      ; N/A     ; -3.000              ;
+;  clk                                                   ; -1.589  ; 0.148 ; N/A      ; N/A     ; -3.000              ;
+;  video_sync_generator:vga|PLL:clockdivider|pixelclk    ; -1.442  ; 0.248 ; N/A      ; N/A     ; -1.403              ;
+;  video_sync_generator:vga|hsync:horizontal|newline_out ; -1.432  ; 0.249 ; N/A      ; N/A     ; -1.403              ;
+; Design-wide TNS                                        ; -37.035 ; 0.0   ; 0.0      ; 0.0     ; -47.896             ;
+;  clk                                                   ; -2.329  ; 0.000 ; N/A      ; N/A     ; -10.015             ;
+;  video_sync_generator:vga|PLL:clockdivider|pixelclk    ; -18.920 ; 0.000 ; N/A      ; N/A     ; -21.045             ;
+;  video_sync_generator:vga|hsync:horizontal|newline_out ; -15.786 ; 0.000 ; N/A      ; N/A     ; -16.836             ;
 +--------------------------------------------------------+---------+-------+----------+---------+---------------------+
 
 
@@ -347,7 +349,7 @@ No synchronizer chains to report.
 +--------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
 ; Pin          ; I/O Standard ; Board Delay on Rise ; Board Delay on Fall ; Steady State Voh at FPGA Pin ; Steady State Vol at FPGA Pin ; Voh Max at FPGA Pin ; Vol Min at FPGA Pin ; Ringback Voltage on Rise at FPGA Pin ; Ringback Voltage on Fall at FPGA Pin ; 10-90 Rise Time at FPGA Pin ; 90-10 Fall Time at FPGA Pin ; Monotonic Rise at FPGA Pin ; Monotonic Fall at FPGA Pin ; Steady State Voh at Far-end ; Steady State Vol at Far-end ; Voh Max at Far-end ; Vol Min at Far-end ; Ringback Voltage on Rise at Far-end ; Ringback Voltage on Fall at Far-end ; 10-90 Rise Time at Far-end ; 90-10 Fall Time at Far-end ; Monotonic Rise at Far-end ; Monotonic Fall at Far-end ;
 +--------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
-; BCLK         ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 8.25e-09 V                   ; 2.41 V              ; -0.0871 V           ; 0.291 V                              ; 0.138 V                              ; 3.15e-10 s                  ; 4.16e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 8.25e-09 V                  ; 2.41 V             ; -0.0871 V          ; 0.291 V                             ; 0.138 V                             ; 3.15e-10 s                 ; 4.16e-10 s                 ; No                        ; Yes                       ;
+; BCLK         ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 8.26e-09 V                   ; 2.4 V               ; -0.0773 V           ; 0.156 V                              ; 0.166 V                              ; 4.55e-10 s                  ; 4.33e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 8.26e-09 V                  ; 2.4 V              ; -0.0773 V          ; 0.156 V                             ; 0.166 V                             ; 4.55e-10 s                 ; 4.33e-10 s                 ; No                        ; Yes                       ;
 ; vsync        ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 8.25e-09 V                   ; 2.41 V              ; -0.0871 V           ; 0.291 V                              ; 0.138 V                              ; 3.15e-10 s                  ; 4.16e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 8.25e-09 V                  ; 2.41 V             ; -0.0871 V          ; 0.291 V                             ; 0.138 V                             ; 3.15e-10 s                 ; 4.16e-10 s                 ; No                        ; Yes                       ;
 ; hsync        ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 8.25e-09 V                   ; 2.41 V              ; -0.0859 V           ; 0.289 V                              ; 0.136 V                              ; 3.15e-10 s                  ; 4.16e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 8.25e-09 V                  ; 2.41 V             ; -0.0859 V          ; 0.289 V                             ; 0.136 V                             ; 3.15e-10 s                 ; 4.16e-10 s                 ; No                        ; Yes                       ;
 ; r[0]         ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 8.25e-09 V                   ; 2.41 V              ; -0.0859 V           ; 0.289 V                              ; 0.136 V                              ; 3.15e-10 s                  ; 4.16e-10 s                  ; No                         ; Yes                        ; 2.32 V                      ; 8.25e-09 V                  ; 2.41 V             ; -0.0859 V          ; 0.289 V                             ; 0.136 V                             ; 3.15e-10 s                 ; 4.16e-10 s                 ; No                        ; Yes                       ;
@@ -371,7 +373,7 @@ No synchronizer chains to report.
 +--------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
 ; Pin          ; I/O Standard ; Board Delay on Rise ; Board Delay on Fall ; Steady State Voh at FPGA Pin ; Steady State Vol at FPGA Pin ; Voh Max at FPGA Pin ; Vol Min at FPGA Pin ; Ringback Voltage on Rise at FPGA Pin ; Ringback Voltage on Fall at FPGA Pin ; 10-90 Rise Time at FPGA Pin ; 90-10 Fall Time at FPGA Pin ; Monotonic Rise at FPGA Pin ; Monotonic Fall at FPGA Pin ; Steady State Voh at Far-end ; Steady State Vol at Far-end ; Voh Max at Far-end ; Vol Min at Far-end ; Ringback Voltage on Rise at Far-end ; Ringback Voltage on Fall at Far-end ; 10-90 Rise Time at Far-end ; 90-10 Fall Time at Far-end ; Monotonic Rise at Far-end ; Monotonic Fall at Far-end ;
 +--------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
-; BCLK         ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.16e-06 V                   ; 2.37 V              ; -0.0508 V           ; 0.153 V                              ; 0.187 V                              ; 4.63e-10 s                  ; 4.49e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 1.16e-06 V                  ; 2.37 V             ; -0.0508 V          ; 0.153 V                             ; 0.187 V                             ; 4.63e-10 s                 ; 4.49e-10 s                 ; Yes                       ; Yes                       ;
+; BCLK         ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.16e-06 V                   ; 2.37 V              ; -0.0449 V           ; 0.201 V                              ; 0.093 V                              ; 4.89e-10 s                  ; 5.81e-10 s                  ; Yes                        ; No                         ; 2.32 V                      ; 1.16e-06 V                  ; 2.37 V             ; -0.0449 V          ; 0.201 V                             ; 0.093 V                             ; 4.89e-10 s                 ; 5.81e-10 s                 ; Yes                       ; No                        ;
 ; vsync        ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.16e-06 V                   ; 2.37 V              ; -0.0508 V           ; 0.153 V                              ; 0.187 V                              ; 4.63e-10 s                  ; 4.49e-10 s                  ; Yes                        ; Yes                        ; 2.32 V                      ; 1.16e-06 V                  ; 2.37 V             ; -0.0508 V          ; 0.153 V                             ; 0.187 V                             ; 4.63e-10 s                 ; 4.49e-10 s                 ; Yes                       ; Yes                       ;
 ; hsync        ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.16e-06 V                   ; 2.37 V              ; -0.049 V            ; 0.154 V                              ; 0.186 V                              ; 4.63e-10 s                  ; 4.5e-10 s                   ; Yes                        ; Yes                        ; 2.32 V                      ; 1.16e-06 V                  ; 2.37 V             ; -0.049 V           ; 0.154 V                             ; 0.186 V                             ; 4.63e-10 s                 ; 4.5e-10 s                  ; Yes                       ; Yes                       ;
 ; r[0]         ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.32 V                       ; 1.16e-06 V                   ; 2.37 V              ; -0.049 V            ; 0.154 V                              ; 0.186 V                              ; 4.63e-10 s                  ; 4.5e-10 s                   ; Yes                        ; Yes                        ; 2.32 V                      ; 1.16e-06 V                  ; 2.37 V             ; -0.049 V           ; 0.154 V                             ; 0.186 V                             ; 4.63e-10 s                 ; 4.5e-10 s                  ; Yes                       ; Yes                       ;
@@ -395,7 +397,7 @@ No synchronizer chains to report.
 +--------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
 ; Pin          ; I/O Standard ; Board Delay on Rise ; Board Delay on Fall ; Steady State Voh at FPGA Pin ; Steady State Vol at FPGA Pin ; Voh Max at FPGA Pin ; Vol Min at FPGA Pin ; Ringback Voltage on Rise at FPGA Pin ; Ringback Voltage on Fall at FPGA Pin ; 10-90 Rise Time at FPGA Pin ; 90-10 Fall Time at FPGA Pin ; Monotonic Rise at FPGA Pin ; Monotonic Fall at FPGA Pin ; Steady State Voh at Far-end ; Steady State Vol at Far-end ; Voh Max at Far-end ; Vol Min at Far-end ; Ringback Voltage on Rise at Far-end ; Ringback Voltage on Fall at Far-end ; 10-90 Rise Time at Far-end ; 90-10 Fall Time at Far-end ; Monotonic Rise at Far-end ; Monotonic Fall at Far-end ;
 +--------------+--------------+---------------------+---------------------+------------------------------+------------------------------+---------------------+---------------------+--------------------------------------+--------------------------------------+-----------------------------+-----------------------------+----------------------------+----------------------------+-----------------------------+-----------------------------+--------------------+--------------------+-------------------------------------+-------------------------------------+----------------------------+----------------------------+---------------------------+---------------------------+
-; BCLK         ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 9.94e-08 V                   ; 2.78 V              ; -0.0444 V           ; 0.25 V                               ; 0.107 V                              ; 2.67e-10 s                  ; 2.75e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 9.94e-08 V                  ; 2.78 V             ; -0.0444 V          ; 0.25 V                              ; 0.107 V                             ; 2.67e-10 s                 ; 2.75e-10 s                 ; No                        ; Yes                       ;
+; BCLK         ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 9.95e-08 V                   ; 2.77 V              ; -0.0486 V           ; 0.285 V                              ; 0.06 V                               ; 2.8e-10 s                   ; 3.04e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 9.95e-08 V                  ; 2.77 V             ; -0.0486 V          ; 0.285 V                             ; 0.06 V                              ; 2.8e-10 s                  ; 3.04e-10 s                 ; No                        ; Yes                       ;
 ; vsync        ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 9.94e-08 V                   ; 2.78 V              ; -0.0444 V           ; 0.25 V                               ; 0.107 V                              ; 2.67e-10 s                  ; 2.75e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 9.94e-08 V                  ; 2.78 V             ; -0.0444 V          ; 0.25 V                              ; 0.107 V                             ; 2.67e-10 s                 ; 2.75e-10 s                 ; No                        ; Yes                       ;
 ; hsync        ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 9.95e-08 V                   ; 2.78 V              ; -0.0452 V           ; 0.248 V                              ; 0.108 V                              ; 2.67e-10 s                  ; 2.75e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 9.95e-08 V                  ; 2.78 V             ; -0.0452 V          ; 0.248 V                             ; 0.108 V                             ; 2.67e-10 s                 ; 2.75e-10 s                 ; No                        ; Yes                       ;
 ; r[0]         ; 2.5 V        ; 0 s                 ; 0 s                 ; 2.62 V                       ; 9.95e-08 V                   ; 2.78 V              ; -0.0452 V           ; 0.248 V                              ; 0.108 V                              ; 2.67e-10 s                  ; 2.75e-10 s                  ; No                         ; Yes                        ; 2.62 V                      ; 9.95e-08 V                  ; 2.78 V             ; -0.0452 V          ; 0.248 V                             ; 0.108 V                             ; 2.67e-10 s                 ; 2.75e-10 s                 ; No                        ; Yes                       ;
@@ -419,6 +421,7 @@ No synchronizer chains to report.
 +-------------------------------------------------------+-------------------------------------------------------+----------+----------+----------+----------+
 ; From Clock                                            ; To Clock                                              ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
 +-------------------------------------------------------+-------------------------------------------------------+----------+----------+----------+----------+
+; clk                                                   ; clk                                                   ; 13       ; 0        ; 0        ; 0        ;
 ; video_sync_generator:vga|PLL:clockdivider|pixelclk    ; clk                                                   ; 1        ; 1        ; 0        ; 0        ;
 ; video_sync_generator:vga|hsync:horizontal|newline_out ; video_sync_generator:vga|hsync:horizontal|newline_out ; 169      ; 0        ; 0        ; 0        ;
 ; video_sync_generator:vga|hsync:horizontal|newline_out ; video_sync_generator:vga|PLL:clockdivider|pixelclk    ; 2        ; 0        ; 0        ; 0        ;
@@ -432,6 +435,7 @@ Entries labeled "false path" only account for clock-to-clock false paths and not
 +-------------------------------------------------------+-------------------------------------------------------+----------+----------+----------+----------+
 ; From Clock                                            ; To Clock                                              ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
 +-------------------------------------------------------+-------------------------------------------------------+----------+----------+----------+----------+
+; clk                                                   ; clk                                                   ; 13       ; 0        ; 0        ; 0        ;
 ; video_sync_generator:vga|PLL:clockdivider|pixelclk    ; clk                                                   ; 1        ; 1        ; 0        ; 0        ;
 ; video_sync_generator:vga|hsync:horizontal|newline_out ; video_sync_generator:vga|hsync:horizontal|newline_out ; 169      ; 0        ; 0        ; 0        ;
 ; video_sync_generator:vga|hsync:horizontal|newline_out ; video_sync_generator:vga|PLL:clockdivider|pixelclk    ; 2        ; 0        ; 0        ; 0        ;
@@ -461,8 +465,8 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 ; Unconstrained Clocks            ; 0     ; 0    ;
 ; Unconstrained Input Ports       ; 0     ; 0    ;
 ; Unconstrained Input Port Paths  ; 0     ; 0    ;
-; Unconstrained Output Ports      ; 4     ; 4    ;
-; Unconstrained Output Port Paths ; 4     ; 4    ;
+; Unconstrained Output Ports      ; 5     ; 5    ;
+; Unconstrained Output Port Paths ; 5     ; 5    ;
 +---------------------------------+-------+------+
 
 
@@ -482,6 +486,7 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 +-------------+---------------------------------------------------------------------------------------+
 ; Output Port ; Comment                                                                               ;
 +-------------+---------------------------------------------------------------------------------------+
+; BCLK        ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; b[3]        ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; hsync       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; r[3]        ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
@@ -494,6 +499,7 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 +-------------+---------------------------------------------------------------------------------------+
 ; Output Port ; Comment                                                                               ;
 +-------------+---------------------------------------------------------------------------------------+
+; BCLK        ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; b[3]        ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; hsync       ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
 ; r[3]        ; No output delay, min/max delays, false-path exceptions, or max skew assignments found ;
@@ -507,7 +513,7 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 Info: *******************************************************************
 Info: Running Quartus Prime Timing Analyzer
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Wed Mar 04 18:30:42 2020
+    Info: Processing started: Fri Mar 06 00:44:48 2020
 Info: Command: quartus_sta FFT -c FFT
 Info: qsta_default_script.tcl version: #1
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
@@ -526,24 +532,24 @@ Info: Found TIMING_ANALYZER_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
 Info: Analyzing Slow 1200mV 85C Model
 Info: Can't run Report Timing Closure Recommendations. The current device family is not supported.
 Critical Warning (332148): Timing requirements not met
-Info (332146): Worst-case setup slack is -1.409
+Info (332146): Worst-case setup slack is -1.589
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -1.409             -15.637 video_sync_generator:vga|hsync:horizontal|newline_out 
-    Info (332119):    -1.285             -16.318 video_sync_generator:vga|PLL:clockdivider|pixelclk 
-    Info (332119):    -0.920              -0.920 clk 
-Info (332146): Worst-case hold slack is 0.435
+    Info (332119):    -1.589              -2.329 clk 
+    Info (332119):    -1.442             -18.920 video_sync_generator:vga|PLL:clockdivider|pixelclk 
+    Info (332119):    -1.432             -15.786 video_sync_generator:vga|hsync:horizontal|newline_out 
+Info (332146): Worst-case hold slack is 0.341
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.435               0.000 video_sync_generator:vga|hsync:horizontal|newline_out 
-    Info (332119):     0.446               0.000 video_sync_generator:vga|PLL:clockdivider|pixelclk 
-    Info (332119):     0.740               0.000 clk 
+    Info (332119):     0.341               0.000 clk 
+    Info (332119):     0.639               0.000 video_sync_generator:vga|PLL:clockdivider|pixelclk 
+    Info (332119):     0.641               0.000 video_sync_generator:vga|hsync:horizontal|newline_out 
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
 Info (332146): Worst-case minimum pulse width slack is -3.000
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -3.000              -4.403 clk 
+    Info (332119):    -3.000             -10.015 clk 
     Info (332119):    -1.403             -21.045 video_sync_generator:vga|PLL:clockdivider|pixelclk 
     Info (332119):    -1.403             -16.836 video_sync_generator:vga|hsync:horizontal|newline_out 
 Info: Analyzing Slow 1200mV 0C Model
@@ -551,55 +557,55 @@ Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
 Critical Warning (332148): Timing requirements not met
-Info (332146): Worst-case setup slack is -1.215
+Info (332146): Worst-case setup slack is -1.421
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -1.215             -13.387 video_sync_generator:vga|hsync:horizontal|newline_out 
-    Info (332119):    -1.067             -13.773 video_sync_generator:vga|PLL:clockdivider|pixelclk 
-    Info (332119):    -0.799              -0.799 clk 
-Info (332146): Worst-case hold slack is 0.400
+    Info (332119):    -1.421              -1.737 clk 
+    Info (332119):    -1.239             -16.100 video_sync_generator:vga|PLL:clockdivider|pixelclk 
+    Info (332119):    -1.237             -13.513 video_sync_generator:vga|hsync:horizontal|newline_out 
+Info (332146): Worst-case hold slack is 0.306
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.400               0.000 video_sync_generator:vga|hsync:horizontal|newline_out 
-    Info (332119):     0.410               0.000 video_sync_generator:vga|PLL:clockdivider|pixelclk 
-    Info (332119):     0.654               0.000 clk 
+    Info (332119):     0.306               0.000 clk 
+    Info (332119):     0.593               0.000 video_sync_generator:vga|PLL:clockdivider|pixelclk 
+    Info (332119):     0.593               0.000 video_sync_generator:vga|hsync:horizontal|newline_out 
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
 Info (332146): Worst-case minimum pulse width slack is -3.000
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -3.000              -4.403 clk 
+    Info (332119):    -3.000             -10.015 clk 
     Info (332119):    -1.403             -21.045 video_sync_generator:vga|PLL:clockdivider|pixelclk 
     Info (332119):    -1.403             -16.836 video_sync_generator:vga|hsync:horizontal|newline_out 
 Info: Analyzing Fast 1200mV 0C Model
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
 Critical Warning (332148): Timing requirements not met
-Info (332146): Worst-case setup slack is -0.047
+Info (332146): Worst-case setup slack is -0.351
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -0.047              -0.047 clk 
-    Info (332119):    -0.006              -0.060 video_sync_generator:vga|hsync:horizontal|newline_out 
-    Info (332119):     0.077               0.000 video_sync_generator:vga|PLL:clockdivider|pixelclk 
-Info (332146): Worst-case hold slack is 0.174
+    Info (332119):    -0.351              -0.351 clk 
+    Info (332119):    -0.017              -0.170 video_sync_generator:vga|PLL:clockdivider|pixelclk 
+    Info (332119):     0.008               0.000 video_sync_generator:vga|hsync:horizontal|newline_out 
+Info (332146): Worst-case hold slack is 0.148
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.174               0.000 video_sync_generator:vga|hsync:horizontal|newline_out 
-    Info (332119):     0.181               0.000 video_sync_generator:vga|PLL:clockdivider|pixelclk 
-    Info (332119):     0.219               0.000 clk 
+    Info (332119):     0.148               0.000 clk 
+    Info (332119):     0.248               0.000 video_sync_generator:vga|PLL:clockdivider|pixelclk 
+    Info (332119):     0.249               0.000 video_sync_generator:vga|hsync:horizontal|newline_out 
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
 Info (332146): Worst-case minimum pulse width slack is -3.000
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -3.000              -4.010 clk 
+    Info (332119):    -3.000              -8.162 clk 
     Info (332119):    -1.000             -15.000 video_sync_generator:vga|PLL:clockdivider|pixelclk 
     Info (332119):    -1.000             -12.000 video_sync_generator:vga|hsync:horizontal|newline_out 
 Info (332102): Design is not fully constrained for setup requirements
 Info (332102): Design is not fully constrained for hold requirements
 Info: Quartus Prime Timing Analyzer was successful. 0 errors, 5 warnings
-    Info: Peak virtual memory: 4795 megabytes
-    Info: Processing ended: Wed Mar 04 18:30:49 2020
-    Info: Elapsed time: 00:00:07
-    Info: Total CPU time (on all processors): 00:00:06
+    Info: Peak virtual memory: 4806 megabytes
+    Info: Processing ended: Fri Mar 06 00:44:53 2020
+    Info: Elapsed time: 00:00:05
+    Info: Total CPU time (on all processors): 00:00:05
 
 

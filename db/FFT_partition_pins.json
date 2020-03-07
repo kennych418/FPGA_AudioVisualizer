@@ -4,6 +4,10 @@
 			"name" : "Top",
 			"pins" : [
 				{
+					"name" : "BCLK",
+					"strict" : false
+				},
+				{
 					"name" : "vsync",
 					"strict" : false
 				},

@@ -7,7 +7,7 @@
 `define twiddle6 32'ha57e_a57e //-135 deg
 `define twiddle7 32'h89bf_cf05 //-157.5 deg
 
-module FFT_Processor(input clk, input new_t,
+module FFT_Processor(input clk, input reset, input new_t,
 							input [15:0] t0, input [15:0] t1, input [15:0] t2, input [15:0] t3, 
 							input [15:0] t4, input [15:0] t5, input [15:0] t6, input [15:0] t7,
 							input [15:0] t8, input [15:0] t9, input [15:0] t10, input [15:0] t11,
@@ -39,130 +39,52 @@ module FFT_Processor(input clk, input new_t,
 	end
 	
 	always @ (posedge clk) begin
-		if (new_t && cycles_counter == 4) begin
-			mem0 <= {t0, 16'b0};
-			mem1 <= {t8, 16'b0};
-			mem2 <= {t4, 16'b0};
-			mem3 <= {t12, 16'b0};
-			mem4 <= {t2, 16'b0};
-			mem5 <= {t10, 16'b0};
-			mem6 <= {t6, 16'b0};
-			mem7 <= {t14, 16'b0};
-			mem8 <= {t1, 16'b0};
-			mem9 <= {t9, 16'b0};
-			mem10 <= {t5, 16'b0};
-			mem11 <= {t13, 16'b0};
-			mem12 <= {t3, 16'b0};
-			mem13 <= {t11, 16'b0};
-			mem14 <= {t7, 16'b0};
-			mem15 <= {t15, 16'b0};
-			W0 <= `twiddle0;
-			W1 <= `twiddle0;
-			W2 <= `twiddle0;
-			W3 <= `twiddle0;
-			W4 <= `twiddle0;
-			W5 <= `twiddle0;
-			W6 <= `twiddle0;
-			W7 <= `twiddle0;
-			cycles_counter <= 0;
-			done_reg <= 0;
+		if (reset == 0) begin
+			mem0 <= {16'd1000, 16'b0};//32'b0;
+			mem1 <= {16'd3000, 16'b0};//32'b0;
+			mem2 <= {16'd5000, 16'b0};//32'b0;
+			mem3 <= {16'd7000, 16'b0};//32'b0;
+			mem4 <= {16'd9000, 16'b0};//32'b0;
+			mem5 <= {16'd11000, 16'b0};//32'b0;
+			mem6 <= {16'd13000, 16'b0};//32'b0;
+			mem7 <= {16'd15000, 16'b0};//32'b0;
+			mem8 <= {16'd17000, 16'b0};//32'b0;
+			mem9 <= {16'd19000, 16'b0};//32'b0;
+			mem10 <= {16'd21000, 16'b0};//32'b0;
+			mem11 <= {16'd23000, 16'b0};//32'b0;
+			mem12 <= {16'd25000, 16'b0};//32'b0;
+			mem13 <= {16'd27000, 16'b0};//32'b0;
+			mem14 <= {16'd29000, 16'b0};//32'b0;
+			mem15 <= {16'd31000, 16'b0};//32'b0;
+			W0 <= 32'b0;
+			W1 <= 32'b0;
+			W2 <= 32'b0;
+			W3 <= 32'b0;
+			W4 <= 32'b0;
+			W5 <= 32'b0;
+			W6 <= 32'b0;
+			W7 <= 32'b0;
+			cycles_counter <= 4;
+			done_reg <= 1;			/////////////////SHOULD REALLY BE 0
 		end
 		else begin
-			if(cycles_counter == 0) begin
-				mem0 <= BFU_out0;
-				mem1 <= BFU_out2;
-				mem2 <= BFU_out1;
-				mem3 <= BFU_out3;
-				mem4 <= BFU_out4;
-				mem5 <= BFU_out6;
-				mem6 <= BFU_out5;
-				mem7 <= BFU_out7;
-				mem8 <= BFU_out8;
-				mem9 <= BFU_out10;
-				mem10 <= BFU_out9;
-				mem11 <= BFU_out11;
-				mem12 <= BFU_out12;
-				mem13 <= BFU_out14;
-				mem14 <= BFU_out13;
-				mem15 <= BFU_out15;
-				W0 <= `twiddle0;
-				W1 <= `twiddle4;
-				W2 <= `twiddle0;
-				W3 <= `twiddle4;
-				W4 <= `twiddle0;
-				W5 <= `twiddle4;
-				W6 <= `twiddle0;
-				W7 <= `twiddle4;
-			end
-			else if(cycles_counter == 1) begin
-				mem0 <= BFU_out0;
-				mem1 <= BFU_out4;
-				mem2 <= BFU_out2;
-				mem3 <= BFU_out6;
-				mem4 <= BFU_out1;
-				mem5 <= BFU_out5;
-				mem6 <= BFU_out3;
-				mem7 <= BFU_out7;
-				mem8 <= BFU_out8;
-				mem9 <= BFU_out12;
-				mem10 <= BFU_out10;
-				mem11 <= BFU_out14;
-				mem12 <= BFU_out9;
-				mem13 <= BFU_out13;
-				mem14 <= BFU_out11;
-				mem15 <= BFU_out15;
-				W0 <= `twiddle0;
-				W1 <= `twiddle2;
-				W2 <= `twiddle4;
-				W3 <= `twiddle6;
-				W4 <= `twiddle0;
-				W5 <= `twiddle2;
-				W6 <= `twiddle4;
-				W7 <= `twiddle6;
-			end
-			else if(cycles_counter == 2) begin
-				mem0 <= BFU_out0;
-				mem1 <= BFU_out8;
-				mem2 <= BFU_out2;
-				mem3 <= BFU_out10;
-				mem4 <= BFU_out4;
-				mem5 <= BFU_out12;
-				mem6 <= BFU_out6;
-				mem7 <= BFU_out14;
-				mem8 <= BFU_out1;
-				mem9 <= BFU_out9;
-				mem10 <= BFU_out3;
-				mem11 <= BFU_out11;
-				mem12 <= BFU_out5;
-				mem13 <= BFU_out13;
-				mem14 <= BFU_out7;
-				mem15 <= BFU_out15;
-				W0 <= `twiddle0;
-				W1 <= `twiddle1;
-				W2 <= `twiddle2;
-				W3 <= `twiddle3;
-				W4 <= `twiddle4;
-				W5 <= `twiddle5;
-				W6 <= `twiddle6;
-				W7 <= `twiddle7;
-			end
-			else if(cycles_counter == 3) begin
-				mem0 <= BFU_out0;
-				mem1 <= BFU_out2;
-				mem2 <= BFU_out4;
-				mem3 <= BFU_out6;
-				mem4 <= BFU_out8;
-				mem5 <= BFU_out10;
-				mem6 <= BFU_out12;
-				mem7 <= BFU_out14;
-				mem8 <= BFU_out1;
-				mem9 <= BFU_out3;
-				mem10 <= BFU_out5;
-				mem11 <= BFU_out7;
-				mem12 <= BFU_out9;
-				mem13 <= BFU_out11;
-				mem14 <= BFU_out13;
-				mem15 <= BFU_out15;
+			if (new_t && cycles_counter == 4) begin
+				mem0 <= {t0, 16'b0};
+				mem1 <= {t8, 16'b0};
+				mem2 <= {t4, 16'b0};
+				mem3 <= {t12, 16'b0};
+				mem4 <= {t2, 16'b0};
+				mem5 <= {t10, 16'b0};
+				mem6 <= {t6, 16'b0};
+				mem7 <= {t14, 16'b0};
+				mem8 <= {t1, 16'b0};
+				mem9 <= {t9, 16'b0};
+				mem10 <= {t5, 16'b0};
+				mem11 <= {t13, 16'b0};
+				mem12 <= {t3, 16'b0};
+				mem13 <= {t11, 16'b0};
+				mem14 <= {t7, 16'b0};
+				mem15 <= {t15, 16'b0};
 				W0 <= `twiddle0;
 				W1 <= `twiddle0;
 				W2 <= `twiddle0;
@@ -171,10 +93,118 @@ module FFT_Processor(input clk, input new_t,
 				W5 <= `twiddle0;
 				W6 <= `twiddle0;
 				W7 <= `twiddle0;
-				done_reg <= 1;
-			end		
-			if (cycles_counter < 4) begin
-				cycles_counter <= cycles_counter + 1;
+				cycles_counter <= 0;
+				done_reg <= 0;
+			end
+			else begin
+				if(cycles_counter == 0) begin
+					mem0 <= BFU_out0;
+					mem1 <= BFU_out2;
+					mem2 <= BFU_out1;
+					mem3 <= BFU_out3;
+					mem4 <= BFU_out4;
+					mem5 <= BFU_out6;
+					mem6 <= BFU_out5;
+					mem7 <= BFU_out7;
+					mem8 <= BFU_out8;
+					mem9 <= BFU_out10;
+					mem10 <= BFU_out9;
+					mem11 <= BFU_out11;
+					mem12 <= BFU_out12;
+					mem13 <= BFU_out14;
+					mem14 <= BFU_out13;
+					mem15 <= BFU_out15;
+					W0 <= `twiddle0;
+					W1 <= `twiddle4;
+					W2 <= `twiddle0;
+					W3 <= `twiddle4;
+					W4 <= `twiddle0;
+					W5 <= `twiddle4;
+					W6 <= `twiddle0;
+					W7 <= `twiddle4;
+				end
+				else if(cycles_counter == 1) begin
+					mem0 <= BFU_out0;
+					mem1 <= BFU_out4;
+					mem2 <= BFU_out2;
+					mem3 <= BFU_out6;
+					mem4 <= BFU_out1;
+					mem5 <= BFU_out5;
+					mem6 <= BFU_out3;
+					mem7 <= BFU_out7;
+					mem8 <= BFU_out8;
+					mem9 <= BFU_out12;
+					mem10 <= BFU_out10;
+					mem11 <= BFU_out14;
+					mem12 <= BFU_out9;
+					mem13 <= BFU_out13;
+					mem14 <= BFU_out11;
+					mem15 <= BFU_out15;
+					W0 <= `twiddle0;
+					W1 <= `twiddle2;
+					W2 <= `twiddle4;
+					W3 <= `twiddle6;
+					W4 <= `twiddle0;
+					W5 <= `twiddle2;
+					W6 <= `twiddle4;
+					W7 <= `twiddle6;
+				end
+				else if(cycles_counter == 2) begin
+					mem0 <= BFU_out0;
+					mem1 <= BFU_out8;
+					mem2 <= BFU_out2;
+					mem3 <= BFU_out10;
+					mem4 <= BFU_out4;
+					mem5 <= BFU_out12;
+					mem6 <= BFU_out6;
+					mem7 <= BFU_out14;
+					mem8 <= BFU_out1;
+					mem9 <= BFU_out9;
+					mem10 <= BFU_out3;
+					mem11 <= BFU_out11;
+					mem12 <= BFU_out5;
+					mem13 <= BFU_out13;
+					mem14 <= BFU_out7;
+					mem15 <= BFU_out15;
+					W0 <= `twiddle0;
+					W1 <= `twiddle1;
+					W2 <= `twiddle2;
+					W3 <= `twiddle3;
+					W4 <= `twiddle4;
+					W5 <= `twiddle5;
+					W6 <= `twiddle6;
+					W7 <= `twiddle7;
+				end
+				else if(cycles_counter == 3) begin
+					mem0 <= BFU_out0;
+					mem1 <= BFU_out2;
+					mem2 <= BFU_out4;
+					mem3 <= BFU_out6;
+					mem4 <= BFU_out8;
+					mem5 <= BFU_out10;
+					mem6 <= BFU_out12;
+					mem7 <= BFU_out14;
+					mem8 <= BFU_out1;
+					mem9 <= BFU_out3;
+					mem10 <= BFU_out5;
+					mem11 <= BFU_out7;
+					mem12 <= BFU_out9;
+					mem13 <= BFU_out11;
+					mem14 <= BFU_out13;
+					mem15 <= BFU_out15;
+					W0 <= `twiddle0;
+					W1 <= `twiddle0;
+					W2 <= `twiddle0;
+					W3 <= `twiddle0;
+					W4 <= `twiddle0;
+					W5 <= `twiddle0;
+					W6 <= `twiddle0;
+					W7 <= `twiddle0;
+					done_reg <= 1;
+				end		
+				if (cycles_counter < 4) begin
+					cycles_counter <= cycles_counter + 3'b1;
+				end
 			end
 		end
 	end

@@ -1,0 +1,1 @@
+Warning (10268): Verilog HDL information at clkdiv50to4.sv(10): always construct contains both blocking and non-blocking assignments File: C:/Users/chank/OneDrive/Quartus/FFT/clkdiv50to4.sv Line: 10

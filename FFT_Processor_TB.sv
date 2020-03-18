@@ -1,5 +1,5 @@
-`define tmax 511
-`define tmin -512
+`define tmax_FFT 511
+`define tmin_FFT -512
 
 module FFT_Processor_TB;
 
@@ -21,9 +21,9 @@ module FFT_Processor_TB;
 	
 		clk = 0;
 		new_t = 0;
-		t0 = `tmax; t1 = `tmax; t2 = `tmax; t3 = `tmax;
+		t0 = `tmax_FFT; t1 = `tmax_FFT; t2 = `tmax_FFT; t3 = `tmax_FFT;
 		t4 = 0; t5 = 0; t6 = 0; t7 = 0;
-		t8 = `tmin; t9 = `tmin; t10 = `tmin; t11 = `tmin;
+		t8 = `tmin_FFT; t9 = `tmin_FFT; t10 = `tmin_FFT; t11 = `tmin_FFT;
 		t12 = 0; t13 = 0; t14 = 0; t15 = 0;
 		#100;
 		new_t = 1;
@@ -49,10 +49,10 @@ module FFT_Processor_TB;
 		#10;
 		clk = 0;
 		#100;
-		t0 = `tmin; t1 = `tmax; t2 = `tmin; t3 = `tmax;
-		t4 = `tmin; t5 = `tmax; t6 = `tmax; t7 = `tmin;
-		t8 = `tmax; t9 = `tmin; t10 = `tmin; t11 = `tmax;
-		t12 = `tmax; t13 = `tmin; t14 = `tmin; t15 = `tmax;
+		t0 = `tmin_FFT; t1 = `tmax_FFT; t2 = `tmin_FFT; t3 = `tmax_FFT;
+		t4 = `tmin_FFT; t5 = `tmax_FFT; t6 = `tmax_FFT; t7 = `tmin_FFT;
+		t8 = `tmax_FFT; t9 = `tmin_FFT; t10 = `tmin_FFT; t11 = `tmax_FFT;
+		t12 = `tmax_FFT; t13 = `tmin_FFT; t14 = `tmin_FFT; t15 = `tmax_FFT;
 		#100;
 		new_t = 1;
 		clk = 1;

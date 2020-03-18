@@ -1,5 +1,5 @@
 Flow report for FFT
-Fri Mar 06 00:44:56 2020
+Wed Mar 18 00:37:25 2020
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -40,21 +40,21 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Flow Summary                                                                     ;
 +------------------------------------+---------------------------------------------+
-; Flow Status                        ; Successful - Fri Mar 06 00:44:56 2020       ;
+; Flow Status                        ; Successful - Wed Mar 18 00:37:25 2020       ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; FFT                                         ;
 ; Top-level Entity Name              ; FFT                                         ;
 ; Family                             ; MAX 10                                      ;
 ; Device                             ; 10M50DAF484C7G                              ;
 ; Timing Models                      ; Final                                       ;
-; Total logic elements               ; 45 / 49,760 ( < 1 % )                       ;
-;     Total combinational functions  ; 42 / 49,760 ( < 1 % )                       ;
-;     Dedicated logic registers      ; 32 / 49,760 ( < 1 % )                       ;
-; Total registers                    ; 32                                          ;
-; Total pins                         ; 18 / 360 ( 5 % )                            ;
+; Total logic elements               ; 4,028 / 49,760 ( 8 % )                      ;
+;     Total combinational functions  ; 3,940 / 49,760 ( 8 % )                      ;
+;     Dedicated logic registers      ; 973 / 49,760 ( 2 % )                        ;
+; Total registers                    ; 973                                         ;
+; Total pins                         ; 19 / 360 ( 5 % )                            ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 0 / 1,677,312 ( 0 % )                       ;
-; Embedded Multiplier 9-bit elements ; 0 / 288 ( 0 % )                             ;
+; Embedded Multiplier 9-bit elements ; 76 / 288 ( 26 % )                           ;
 ; Total PLLs                         ; 0 / 4 ( 0 % )                               ;
 ; UFM blocks                         ; 0 / 1 ( 0 % )                               ;
 ; ADC blocks                         ; 0 / 2 ( 0 % )                               ;
@@ -66,7 +66,7 @@ refer to the applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 03/06/2020 00:44:03 ;
+; Start date & time ; 03/18/2020 00:36:28 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; FFT                 ;
 +-------------------+---------------------+
@@ -77,7 +77,7 @@ refer to the applicable agreement for further details.
 +-------------------------------------+----------------------------------------+---------------+-------------+----------------+
 ; Assignment Name                     ; Value                                  ; Default Value ; Entity Name ; Section Id     ;
 +-------------------------------------+----------------------------------------+---------------+-------------+----------------+
-; COMPILER_SIGNATURE_ID               ; 55331182888473.158348424301012         ; --            ; --          ; --             ;
+; COMPILER_SIGNATURE_ID               ; 13870907198271.158451698824116         ; --            ; --          ; --             ;
 ; EDA_OUTPUT_DATA_FORMAT              ; Verilog Hdl                            ; --            ; --          ; eda_simulation ;
 ; EDA_SIMULATION_TOOL                 ; ModelSim-Altera (Verilog)              ; <None>        ; --          ; --             ;
 ; EDA_TIME_SCALE                      ; 1 ps                                   ; --            ; --          ; eda_simulation ;
@@ -97,12 +97,12 @@ refer to the applicable agreement for further details.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:21     ; 1.0                     ; 4754 MB             ; 00:00:40                           ;
-; Fitter               ; 00:00:15     ; 1.0                     ; 5376 MB             ; 00:00:19                           ;
-; Assembler            ; 00:00:05     ; 1.0                     ; 4684 MB             ; 00:00:05                           ;
-; Timing Analyzer      ; 00:00:05     ; 1.0                     ; 4806 MB             ; 00:00:05                           ;
-; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4647 MB             ; 00:00:02                           ;
-; Total                ; 00:00:47     ; --                      ; --                  ; 00:01:11                           ;
+; Analysis & Synthesis ; 00:00:19     ; 1.0                     ; 4854 MB             ; 00:00:28                           ;
+; Fitter               ; 00:00:26     ; 1.6                     ; 5833 MB             ; 00:00:57                           ;
+; Assembler            ; 00:00:03     ; 1.0                     ; 4704 MB             ; 00:00:03                           ;
+; Timing Analyzer      ; 00:00:04     ; 2.4                     ; 4889 MB             ; 00:00:09                           ;
+; EDA Netlist Writer   ; 00:00:02     ; 1.0                     ; 4693 MB             ; 00:00:01                           ;
+; Total                ; 00:00:54     ; --                      ; --                  ; 00:01:38                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
@@ -111,11 +111,11 @@ refer to the applicable agreement for further details.
 +----------------------+------------------+------------+------------+----------------+
 ; Module Name          ; Machine Hostname ; OS Name    ; OS Version ; Processor type ;
 +----------------------+------------------+------------+------------+----------------+
-; Analysis & Synthesis ; DESKTOP-4FIN3D4  ; Windows 10 ; 10.0       ; x86_64         ;
-; Fitter               ; DESKTOP-4FIN3D4  ; Windows 10 ; 10.0       ; x86_64         ;
-; Assembler            ; DESKTOP-4FIN3D4  ; Windows 10 ; 10.0       ; x86_64         ;
-; Timing Analyzer      ; DESKTOP-4FIN3D4  ; Windows 10 ; 10.0       ; x86_64         ;
-; EDA Netlist Writer   ; DESKTOP-4FIN3D4  ; Windows 10 ; 10.0       ; x86_64         ;
+; Analysis & Synthesis ; DESKTOP-UA7J532  ; Windows 10 ; 10.0       ; x86_64         ;
+; Fitter               ; DESKTOP-UA7J532  ; Windows 10 ; 10.0       ; x86_64         ;
+; Assembler            ; DESKTOP-UA7J532  ; Windows 10 ; 10.0       ; x86_64         ;
+; Timing Analyzer      ; DESKTOP-UA7J532  ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer   ; DESKTOP-UA7J532  ; Windows 10 ; 10.0       ; x86_64         ;
 +----------------------+------------------+------------+------------+----------------+
 
 

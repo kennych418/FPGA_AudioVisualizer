@@ -1,5 +1,5 @@
 Flow report for FFT
-Tue Mar 24 18:45:31 2020
+Tue Mar 24 19:19:04 2020
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -40,17 +40,17 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Flow Summary                                                                     ;
 +------------------------------------+---------------------------------------------+
-; Flow Status                        ; Successful - Tue Mar 24 18:45:31 2020       ;
+; Flow Status                        ; Successful - Tue Mar 24 19:19:04 2020       ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; FFT                                         ;
 ; Top-level Entity Name              ; FFT                                         ;
 ; Family                             ; MAX 10                                      ;
 ; Device                             ; 10M50DAF484C7G                              ;
 ; Timing Models                      ; Final                                       ;
-; Total logic elements               ; 5,465 / 49,760 ( 11 % )                     ;
-;     Total combinational functions  ; 4,734 / 49,760 ( 10 % )                     ;
-;     Dedicated logic registers      ; 1,911 / 49,760 ( 4 % )                      ;
-; Total registers                    ; 1911                                        ;
+; Total logic elements               ; 5,484 / 49,760 ( 11 % )                     ;
+;     Total combinational functions  ; 4,742 / 49,760 ( 10 % )                     ;
+;     Dedicated logic registers      ; 1,919 / 49,760 ( 4 % )                      ;
+; Total registers                    ; 1919                                        ;
 ; Total pins                         ; 19 / 360 ( 5 % )                            ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 983,040 / 1,677,312 ( 59 % )                ;
@@ -66,7 +66,7 @@ refer to the applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 03/24/2020 18:43:54 ;
+; Start date & time ; 03/24/2020 19:17:29 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; FFT                 ;
 +-------------------+---------------------+
@@ -77,7 +77,7 @@ refer to the applicable agreement for further details.
 +--------------------------------------+---------------------------------------------------------------------+---------------+-------------+------------------+
 ; Assignment Name                      ; Value                                                               ; Default Value ; Entity Name ; Section Id       ;
 +--------------------------------------+---------------------------------------------------------------------+---------------+-------------+------------------+
-; COMPILER_SIGNATURE_ID                ; 13870907198271.158510063418380                                      ; --            ; --          ; --               ;
+; COMPILER_SIGNATURE_ID                ; 13870907198271.158510264825444                                      ; --            ; --          ; --               ;
 ; CYCLONEII_OPTIMIZATION_TECHNIQUE     ; Speed                                                               ; Balanced      ; --          ; --               ;
 ; EDA_OUTPUT_DATA_FORMAT               ; Verilog Hdl                                                         ; --            ; --          ; eda_simulation   ;
 ; EDA_SIMULATION_TOOL                  ; ModelSim-Altera (Verilog)                                           ; <None>        ; --          ; --               ;
@@ -135,13 +135,13 @@ refer to the applicable agreement for further details.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:35     ; 1.0                     ; 4986 MB             ; 00:00:53                           ;
-; Partition Merge      ; 00:00:02     ; 1.0                     ; 4718 MB             ; 00:00:02                           ;
-; Fitter               ; 00:00:39     ; 1.5                     ; 5930 MB             ; 00:01:28                           ;
-; Assembler            ; 00:00:04     ; 1.0                     ; 4719 MB             ; 00:00:03                           ;
-; Timing Analyzer      ; 00:00:06     ; 2.6                     ; 4912 MB             ; 00:00:13                           ;
-; EDA Netlist Writer   ; 00:00:03     ; 1.0                     ; 4736 MB             ; 00:00:04                           ;
-; Total                ; 00:01:29     ; --                      ; --                  ; 00:02:43                           ;
+; Analysis & Synthesis ; 00:00:36     ; 1.0                     ; 4985 MB             ; 00:00:55                           ;
+; Partition Merge      ; 00:00:02     ; 1.0                     ; 4718 MB             ; 00:00:01                           ;
+; Fitter               ; 00:00:37     ; 1.5                     ; 5930 MB             ; 00:01:28                           ;
+; Assembler            ; 00:00:04     ; 1.0                     ; 4716 MB             ; 00:00:03                           ;
+; Timing Analyzer      ; 00:00:05     ; 2.6                     ; 4912 MB             ; 00:00:12                           ;
+; EDA Netlist Writer   ; 00:00:03     ; 1.0                     ; 4729 MB             ; 00:00:03                           ;
+; Total                ; 00:01:27     ; --                      ; --                  ; 00:02:42                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

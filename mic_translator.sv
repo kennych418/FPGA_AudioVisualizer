@@ -1,23 +1,24 @@
 `define _NUM_DATA_BITS 31
-`define _CALIBRATION 10'd29
+`define _NUM_SAMPLE_BITS 18
+`define _CALIBRATION {10'd29, 8'd0}
 
 module mic_translator(input clk, input reset, input DOUT, output LRCLK, output BCLK, output new_t,
-							 output [15:0] t0, output [15:0] t1, output [15:0] t2, output [15:0] t3, 
-							 output [15:0] t4, output [15:0] t5, output [15:0] t6, output [15:0] t7, 
-							 output [15:0] t8, output [15:0] t9, output [15:0] t10, output [15:0] t11, 
-							 output [15:0] t12, output [15:0] t13, output [15:0] t14, output [15:0] t15);
+							 output [17:0] t0, output [17:0] t1, output [17:0] t2, output [17:0] t3, 
+							 output [17:0] t4, output [17:0] t5, output [17:0] t6, output [17:0] t7, 
+							 output [17:0] t8, output [17:0] t9, output [17:0] t10, output [17:0] t11, 
+							 output [17:0] t12, output [17:0] t13, output [17:0] t14, output [17:0] t15);
 	
-	reg [9:0] data_buffer;
+	reg [17:0] data_buffer;
 	reg [6:0] data_counter;
 	reg [31:0] bit_cnt;
+	reg [17:0] calibrated_data_buffer;
 	wire BCLK_out;
-	reg [9:0] calibrated_data_buffer;
 	
 	//Dumb shit i have to do for the simulator to work
-	reg [15:0] t0_reg, t1_reg, t2_reg, t3_reg,
-				  t4_reg, t5_reg, t6_reg, t7_reg,
-				  t8_reg, t9_reg, t10_reg, t11_reg,
-				  t12_reg, t13_reg, t14_reg, t15_reg;
+	reg [17:0] t0_reg, t1_reg, t2_reg, t3_reg,
+				  					t4_reg, t5_reg, t6_reg, t7_reg,
+				  					t8_reg, t9_reg, t10_reg, t11_reg,
+				  					t12_reg, t13_reg, t14_reg, t15_reg;
 	reg LRCLK_reg, new_t_reg;
 	assign t0 = t0_reg;
 	assign t1 = t1_reg;
@@ -50,23 +51,23 @@ module mic_translator(input clk, input reset, input DOUT, output LRCLK, output B
 	
 	always @ (negedge clk) begin
 		if (reset == 1'b0) begin
-			LRCLK_reg <= 1;
-			bit_cnt <= 0;
+			LRCLK_reg <= 1'b1;
+			bit_cnt <= 32'b0;
 		end
 		else if (bit_cnt < `_NUM_DATA_BITS) begin
 			LRCLK_reg <= LRCLK_reg;
-			bit_cnt <= bit_cnt + 1;
+			bit_cnt <= bit_cnt + 32'b1;
 		end
 		else begin
 			LRCLK_reg <= ~LRCLK_reg;
-			bit_cnt <= 0;
+			bit_cnt <= 32'b0;
 		end
 	end
 	
 	always @ (posedge clk) begin
 		if (reset == 1'b0) begin
-			data_counter <= 0;
-			data_buffer <= 0;
+			data_counter <= 7'b0;
+			data_buffer <= 17'b0;
 			new_t_reg <= 1'b0;
 			t15_reg <= 16'b0;
 			t14_reg <= 16'b0;
@@ -85,9 +86,9 @@ module mic_translator(input clk, input reset, input DOUT, output LRCLK, output B
 			t1_reg <= 16'b0;
 			t0_reg <= 16'b0;
 		end
-		else if (data_counter < 10) begin
+		else if (data_counter < `_NUM_SAMPLE_BITS) begin
 			data_counter <= data_counter + 6'b1;
-			data_buffer <= {data_buffer[8:0], DOUT};
+			data_buffer <= {data_buffer[16:0], DOUT};
 			new_t_reg <= 1'b0;
 			t15_reg <= t15_reg;
 			t14_reg <= t14_reg;
@@ -106,9 +107,9 @@ module mic_translator(input clk, input reset, input DOUT, output LRCLK, output B
 			t1_reg <= t1_reg;
 			t0_reg <= t0_reg;
 		end
-		else if (data_counter == 10) begin
+		else if (data_counter == `_NUM_SAMPLE_BITS) begin
 			data_counter <= data_counter + 6'b1;
-			data_buffer <= 10'b0;
+			data_buffer <= 17'b0;
 			if (LRCLK_reg == 0) begin
 				new_t_reg <= 1'b1;
 				t15_reg <= t14_reg;
@@ -126,7 +127,7 @@ module mic_translator(input clk, input reset, input DOUT, output LRCLK, output B
 				t3_reg <= t2_reg;
 				t2_reg <= t1_reg;
 				t1_reg <= t0_reg;
-				t0_reg <= {6'b0, calibrated_data_buffer}; //FFT Processor takes 10 bit 2's complement //use calibrated to remove base offset
+				t0_reg <= calibrated_data_buffer; //FFT Processor takes 18 bit 2's complement //use calibrated to remove base offset
 			end
 			else begin
 				new_t_reg <= 1'b0;

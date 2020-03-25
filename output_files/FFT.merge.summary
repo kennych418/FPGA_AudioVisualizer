@@ -1,12 +1,12 @@
-Partition Merge Status : Successful - Tue Mar 24 18:44:34 2020
+Partition Merge Status : Successful - Tue Mar 24 19:18:09 2020
 Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 Revision Name : FFT
 Top-level Entity Name : FFT
 Family : MAX 10
-Total logic elements : 5,391
-    Total combinational functions : 4,636
-    Dedicated logic registers : 2,151
-Total registers : 2151
+Total logic elements : 5,399
+    Total combinational functions : 4,644
+    Dedicated logic registers : 2,159
+Total registers : 2159
 Total pins : 19
 Total virtual pins : 0
 Total memory bits : 983,040

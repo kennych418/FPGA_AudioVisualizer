@@ -10,7 +10,7 @@ cModel Technology
 Z0 dC:/Users/chank/OneDrive/Quartus/FFT/simulation/modelsim
 vbutterflyunit
 Z1 DXx6 sv_std 3 std 0 22 AD7iAPLo6nTIKk<N0eo=D3
-Z2 !s110 1585077743
+Z2 !s110 1585119134
 !i10b 1
 !s100 hTIoKcfT09OM<A<VN:h4H2
 IFlWi5KmMV^UC<XFZfUc[=1
@@ -26,7 +26,7 @@ Z4 OV;L;10.5b;63
 r1
 !s85 0
 31
-Z5 !s108 1585077743.000000
+Z5 !s108 1585119134.000000
 !s107 C:/Users/chank/OneDrive/Quartus/FFT/butterflyunit.sv|
 !s90 -reportprogress|300|-work|work|C:/Users/chank/OneDrive/Quartus/FFT/butterflyunit.sv|
 !i113 1
@@ -181,7 +181,7 @@ R6
 R7
 vcomplexsubtractor
 R1
-Z8 !s110 1585077744
+R2
 !i10b 1
 !s100 R3lANX7K;z]<BhnjTiMVR0
 IlmG<HD`O6IQT6:UAGgCae3
@@ -205,7 +205,7 @@ R6
 R7
 vcomplexsubtractor_TB
 R1
-R8
+R2
 !i10b 1
 !s100 I6B718CRHdJLfCPYl7P5B3
 IGcbJY=O_O@`U5;EVZJ^g=2
@@ -221,7 +221,7 @@ R4
 r1
 !s85 0
 31
-Z9 !s108 1585077744.000000
+R5
 !s107 C:/Users/chank/OneDrive/Quartus/FFT/complexsubtractor_TB.sv|
 !s90 -reportprogress|300|-work|work|C:/Users/chank/OneDrive/Quartus/FFT/complexsubtractor_TB.sv|
 !i113 1
@@ -230,23 +230,23 @@ R7
 ncomplexsubtractor_@t@b
 vdata
 R1
-R8
+Z8 !s110 1585119135
 !i10b 1
 !s100 2be66keSkNE1oI=g`Slon3
 IZ]]nXTTEWfm0^ZSaRfS_h3
 R3
-Z10 !s105 VGA_Components_sv_unit
+Z9 !s105 VGA_Components_sv_unit
 S1
 R0
-Z11 w1584603717
-Z12 8C:/Users/chank/OneDrive/Quartus/FFT/VGA_Components.sv
-Z13 FC:/Users/chank/OneDrive/Quartus/FFT/VGA_Components.sv
+Z10 w1585082423
+Z11 8C:/Users/chank/OneDrive/Quartus/FFT/VGA_Components.sv
+Z12 FC:/Users/chank/OneDrive/Quartus/FFT/VGA_Components.sv
 L0 121
 R4
 r1
 !s85 0
 31
-R9
+Z13 !s108 1585119135.000000
 Z14 !s107 C:/Users/chank/OneDrive/Quartus/FFT/VGA_Components.sv|
 Z15 !s90 -reportprogress|300|-work|work|C:/Users/chank/OneDrive/Quartus/FFT/VGA_Components.sv|
 !i113 1
@@ -254,15 +254,15 @@ R6
 R7
 vFFT
 R1
-R8
+R2
 !i10b 1
-!s100 I<=Kd@gJEG^7k@5XD6R8E3
-I`fhn_:z<>i^Jbaf62;do23
+!s100 z8=H6Z1=l=NLXEH5eLGh83
+IMXKC`6H;AeQ88NA]MAeN70
 R3
 !s105 FFT_sv_unit
 S1
 R0
-w1584903591
+w1585116686
 8C:/Users/chank/OneDrive/Quartus/FFT/FFT.sv
 FC:/Users/chank/OneDrive/Quartus/FFT/FFT.sv
 L0 1
@@ -270,7 +270,7 @@ R4
 r1
 !s85 0
 31
-R9
+R5
 !s107 C:/Users/chank/OneDrive/Quartus/FFT/FFT.sv|
 !s90 -reportprogress|300|-work|work|C:/Users/chank/OneDrive/Quartus/FFT/FFT.sv|
 !i113 1
@@ -279,15 +279,15 @@ R7
 n@f@f@t
 vFFT_Processor
 R1
-R8
+R2
 !i10b 1
-!s100 :eWO=76DmlJoELSTOQ7e;3
-IGDOVgYJen]dg7XNGInnBJ0
+!s100 9DSV0j[NiSoXC_KWn:G2R1
+IU`P2Wf?NDF>`NFJKc@cX21
 R3
 !s105 FFT_Processor_sv_unit
 S1
 R0
-w1584562837
+w1585116952
 8C:/Users/chank/OneDrive/Quartus/FFT/FFT_Processor.sv
 FC:/Users/chank/OneDrive/Quartus/FFT/FFT_Processor.sv
 L0 10
@@ -295,7 +295,7 @@ R4
 r1
 !s85 0
 31
-R9
+R5
 !s107 C:/Users/chank/OneDrive/Quartus/FFT/FFT_Processor.sv|
 !s90 -reportprogress|300|-work|work|C:/Users/chank/OneDrive/Quartus/FFT/FFT_Processor.sv|
 !i113 1
@@ -306,13 +306,13 @@ vFFT_Processor_TB
 R1
 R8
 !i10b 1
-!s100 8TePQiQD>Fc:IaKNZ[nMG3
-I7CWjJOjSQlWi@af<Ub_0T1
+!s100 >X1AP4kBeo1l[ShL@g8oY3
+ImODQJWZ0ZCoY6:C<_Y?YB0
 R3
 !s105 FFT_Processor_TB_sv_unit
 S1
 R0
-w1584575340
+w1585119029
 8C:/Users/chank/OneDrive/Quartus/FFT/FFT_Processor_TB.sv
 FC:/Users/chank/OneDrive/Quartus/FFT/FFT_Processor_TB.sv
 L0 4
@@ -320,7 +320,7 @@ R4
 r1
 !s85 0
 31
-R9
+R13
 !s107 C:/Users/chank/OneDrive/Quartus/FFT/FFT_Processor_TB.sv|
 !s90 -reportprogress|300|-work|work|C:/Users/chank/OneDrive/Quartus/FFT/FFT_Processor_TB.sv|
 !i113 1
@@ -345,7 +345,7 @@ R4
 r1
 !s85 0
 31
-R9
+R13
 !s107 C:/Users/chank/OneDrive/Quartus/FFT/FFT_TB.sv|
 !s90 -reportprogress|300|-work|work|C:/Users/chank/OneDrive/Quartus/FFT/FFT_TB.sv|
 !i113 1
@@ -359,18 +359,18 @@ R8
 !s100 88R;RzoE6[omG6XKB7I?[1
 IfIX5::LO_^4ACg;o7^`5n1
 R3
-R10
+R9
 S1
 R0
+R10
 R11
 R12
-R13
 L0 20
 R4
 r1
 !s85 0
 31
-R9
+R13
 R14
 R15
 !i113 1
@@ -380,21 +380,21 @@ vmic_translator
 R1
 R8
 !i10b 1
-!s100 PK_JIhh:6hC76J8o_DYoF0
-Im6d_Q?b[1ZJoie5`bb29l0
+!s100 TIhI3G?4l;:JmeYfbU5Wz2
+I;o50XHh0LVn]X1M2h]AL<2
 R3
 !s105 mic_translator_sv_unit
 S1
 R0
-w1584606600
+w1585116693
 8C:/Users/chank/OneDrive/Quartus/FFT/mic_translator.sv
 FC:/Users/chank/OneDrive/Quartus/FFT/mic_translator.sv
-L0 4
+L0 5
 R4
 r1
 !s85 0
 31
-R9
+R13
 !s107 C:/Users/chank/OneDrive/Quartus/FFT/mic_translator.sv|
 !s90 -reportprogress|300|-work|work|C:/Users/chank/OneDrive/Quartus/FFT/mic_translator.sv|
 !i113 1
@@ -418,7 +418,7 @@ R4
 r1
 !s85 0
 31
-R9
+R13
 !s107 C:/Users/chank/OneDrive/Quartus/FFT/mic_translator_tb.sv|
 !s90 -reportprogress|300|-work|work|C:/Users/chank/OneDrive/Quartus/FFT/mic_translator_tb.sv|
 !i113 1
@@ -443,7 +443,7 @@ R4
 r1
 !s85 0
 31
-R9
+R13
 !s107 C:/Users/chank/OneDrive/Quartus/FFT/multiplier_TB.sv|
 !s90 -reportprogress|300|-work|work|C:/Users/chank/OneDrive/Quartus/FFT/multiplier_TB.sv|
 !i113 1
@@ -457,18 +457,18 @@ R8
 !s100 I[;eG0B3>:Y?a@;7S@I222
 I6KF7SdcKN0g11ooZnS8N:2
 R3
-R10
+R9
 S1
 R0
+R10
 R11
 R12
-R13
 L0 3
 R4
 r1
 !s85 0
 31
-R9
+R13
 R14
 R15
 !i113 1
@@ -493,7 +493,7 @@ R4
 r1
 !s85 0
 31
-R9
+R13
 !s107 C:/Users/chank/OneDrive/Quartus/FFT/simplemultiplier.sv|
 !s90 -reportprogress|300|-work|work|C:/Users/chank/OneDrive/Quartus/FFT/simplemultiplier.sv|
 !i113 1
@@ -517,7 +517,7 @@ R4
 r1
 !s85 0
 31
-R9
+R13
 !s107 C:/Users/chank/OneDrive/Quartus/FFT/VGA_Components_TB.sv|
 !s90 -reportprogress|30|-work|work|C:/Users/chank/OneDrive/Quartus/FFT/VGA_Components_TB.sv|
 !i113 1
@@ -528,21 +528,21 @@ vvideo_sync_generator
 R1
 R8
 !i10b 1
-!s100 Cj0hlT0XJSgmSmR_OO68a1
-IWYOLlez^ij^6WEh?Za32h2
+!s100 DVkjLXF?Y^]jkk6eihhfT1
+I;fS?5>=`SAc?OC_9XFE6Q0
 R3
-R10
+R9
 S1
 R0
+R10
 R11
 R12
-R13
 L0 259
 R4
 r1
 !s85 0
 31
-R9
+R13
 R14
 R15
 !i113 1
@@ -555,18 +555,18 @@ R8
 !s100 k5X1`ELFQ<0QOQ6IIk7cA1
 II?en]`:07OlSkVHX0:W7R0
 R3
-R10
+R9
 S1
 R0
+R10
 R11
 R12
-R13
 L0 78
 R4
 r1
 !s85 0
 31
-R9
+R13
 R14
 R15
 !i113 1

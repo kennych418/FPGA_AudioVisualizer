@@ -1,5 +1,5 @@
 Partition Merge report for FFT
-Tue Mar 24 19:18:09 2020
+Tue Mar 24 23:46:56 2020
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -41,18 +41,18 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Partition Merge Summary                                                          ;
 +------------------------------------+---------------------------------------------+
-; Partition Merge Status             ; Successful - Tue Mar 24 19:18:09 2020       ;
+; Partition Merge Status             ; Successful - Tue Mar 24 23:46:56 2020       ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; FFT                                         ;
 ; Top-level Entity Name              ; FFT                                         ;
 ; Family                             ; MAX 10                                      ;
-; Total logic elements               ; 5,399                                       ;
-;     Total combinational functions  ; 4,644                                       ;
-;     Dedicated logic registers      ; 2,159                                       ;
-; Total registers                    ; 2159                                        ;
+; Total logic elements               ; 5,491                                       ;
+;     Total combinational functions  ; 4,701                                       ;
+;     Dedicated logic registers      ; 2,202                                       ;
+; Total registers                    ; 2202                                        ;
 ; Total pins                         ; 19                                          ;
 ; Total virtual pins                 ; 0                                           ;
-; Total memory bits                  ; 983,040                                     ;
+; Total memory bits                  ; 1,097,728                                   ;
 ; Embedded Multiplier 9-bit elements ; 140                                         ;
 ; Total PLLs                         ; 0                                           ;
 ; UFM blocks                         ; 0                                           ;
@@ -78,6 +78,53 @@ refer to the applicable agreement for further details.
 ; Name                                           ; Type         ; Status    ; Partition Name                 ; Netlist Type Used ; Actual Connection                              ; Details ;
 +------------------------------------------------+--------------+-----------+--------------------------------+-------------------+------------------------------------------------+---------+
 ; DOUT                                           ; post-fitting ; connected ; Top                            ; post-synthesis    ; DOUT                                           ; N/A     ;
+; FFT_Processor:main_professor|mem0[16]          ; post-fitting ; connected ; Top                            ; post-synthesis    ; FFT_Processor:main_professor|mem0[16]          ; N/A     ;
+; FFT_Processor:main_professor|mem0[17]          ; post-fitting ; connected ; Top                            ; post-synthesis    ; FFT_Processor:main_professor|mem0[17]          ; N/A     ;
+; FFT_Processor:main_professor|mem0[18]          ; post-fitting ; connected ; Top                            ; post-synthesis    ; FFT_Processor:main_professor|mem0[18]          ; N/A     ;
+; FFT_Processor:main_professor|mem0[19]          ; post-fitting ; connected ; Top                            ; post-synthesis    ; FFT_Processor:main_professor|mem0[19]          ; N/A     ;
+; FFT_Processor:main_professor|mem0[20]          ; post-fitting ; connected ; Top                            ; post-synthesis    ; FFT_Processor:main_professor|mem0[20]          ; N/A     ;
+; FFT_Processor:main_professor|mem0[21]          ; post-fitting ; connected ; Top                            ; post-synthesis    ; FFT_Processor:main_professor|mem0[21]          ; N/A     ;
+; FFT_Processor:main_professor|mem0[22]          ; post-fitting ; connected ; Top                            ; post-synthesis    ; FFT_Processor:main_professor|mem0[22]          ; N/A     ;
+; FFT_Processor:main_professor|mem0[23]          ; post-fitting ; connected ; Top                            ; post-synthesis    ; FFT_Processor:main_professor|mem0[23]          ; N/A     ;
+; FFT_Processor:main_professor|mem0[24]          ; post-fitting ; connected ; Top                            ; post-synthesis    ; FFT_Processor:main_professor|mem0[24]          ; N/A     ;
+; FFT_Processor:main_professor|mem0[25]          ; post-fitting ; connected ; Top                            ; post-synthesis    ; FFT_Processor:main_professor|mem0[25]          ; N/A     ;
+; FFT_Processor:main_professor|mem0[26]          ; post-fitting ; connected ; Top                            ; post-synthesis    ; FFT_Processor:main_professor|mem0[26]          ; N/A     ;
+; FFT_Processor:main_professor|mem0[27]          ; post-fitting ; connected ; Top                            ; post-synthesis    ; FFT_Processor:main_professor|mem0[27]          ; N/A     ;
+; FFT_Processor:main_professor|mem0[28]          ; post-fitting ; connected ; Top                            ; post-synthesis    ; FFT_Processor:main_professor|mem0[28]          ; N/A     ;
+; FFT_Processor:main_professor|mem0[29]          ; post-fitting ; connected ; Top                            ; post-synthesis    ; FFT_Processor:main_professor|mem0[29]          ; N/A     ;
+; FFT_Processor:main_professor|mem0[30]          ; post-fitting ; connected ; Top                            ; post-synthesis    ; FFT_Processor:main_professor|mem0[30]          ; N/A     ;
+; FFT_Processor:main_professor|mem0[31]          ; post-fitting ; connected ; Top                            ; post-synthesis    ; FFT_Processor:main_professor|mem0[31]          ; N/A     ;
+; FFT_Processor:main_professor|mem1[16]          ; post-fitting ; connected ; Top                            ; post-synthesis    ; FFT_Processor:main_professor|mem1[16]          ; N/A     ;
+; FFT_Processor:main_professor|mem1[17]          ; post-fitting ; connected ; Top                            ; post-synthesis    ; FFT_Processor:main_professor|mem1[17]          ; N/A     ;
+; FFT_Processor:main_professor|mem1[18]          ; post-fitting ; connected ; Top                            ; post-synthesis    ; FFT_Processor:main_professor|mem1[18]          ; N/A     ;
+; FFT_Processor:main_professor|mem1[19]          ; post-fitting ; connected ; Top                            ; post-synthesis    ; FFT_Processor:main_professor|mem1[19]          ; N/A     ;
+; FFT_Processor:main_professor|mem1[20]          ; post-fitting ; connected ; Top                            ; post-synthesis    ; FFT_Processor:main_professor|mem1[20]          ; N/A     ;
+; FFT_Processor:main_professor|mem1[21]          ; post-fitting ; connected ; Top                            ; post-synthesis    ; FFT_Processor:main_professor|mem1[21]          ; N/A     ;
+; FFT_Processor:main_professor|mem1[22]          ; post-fitting ; connected ; Top                            ; post-synthesis    ; FFT_Processor:main_professor|mem1[22]          ; N/A     ;
+; FFT_Processor:main_professor|mem1[23]          ; post-fitting ; connected ; Top                            ; post-synthesis    ; FFT_Processor:main_professor|mem1[23]          ; N/A     ;
+; FFT_Processor:main_professor|mem1[24]          ; post-fitting ; connected ; Top                            ; post-synthesis    ; FFT_Processor:main_professor|mem1[24]          ; N/A     ;
+; FFT_Processor:main_professor|mem1[25]          ; post-fitting ; connected ; Top                            ; post-synthesis    ; FFT_Processor:main_professor|mem1[25]          ; N/A     ;
+; FFT_Processor:main_professor|mem1[26]          ; post-fitting ; connected ; Top                            ; post-synthesis    ; FFT_Processor:main_professor|mem1[26]          ; N/A     ;
+; FFT_Processor:main_professor|mem1[27]          ; post-fitting ; connected ; Top                            ; post-synthesis    ; FFT_Processor:main_professor|mem1[27]          ; N/A     ;
+; FFT_Processor:main_professor|mem1[28]          ; post-fitting ; connected ; Top                            ; post-synthesis    ; FFT_Processor:main_professor|mem1[28]          ; N/A     ;
+; FFT_Processor:main_professor|mem1[29]          ; post-fitting ; connected ; Top                            ; post-synthesis    ; FFT_Processor:main_professor|mem1[29]          ; N/A     ;
+; FFT_Processor:main_professor|mem1[30]          ; post-fitting ; connected ; Top                            ; post-synthesis    ; FFT_Processor:main_professor|mem1[30]          ; N/A     ;
+; FFT_Processor:main_professor|mem2[16]          ; post-fitting ; connected ; Top                            ; post-synthesis    ; FFT_Processor:main_professor|mem2[16]          ; N/A     ;
+; FFT_Processor:main_professor|mem2[17]          ; post-fitting ; connected ; Top                            ; post-synthesis    ; FFT_Processor:main_professor|mem2[17]          ; N/A     ;
+; FFT_Processor:main_professor|mem2[18]          ; post-fitting ; connected ; Top                            ; post-synthesis    ; FFT_Processor:main_professor|mem2[18]          ; N/A     ;
+; FFT_Processor:main_professor|mem2[19]          ; post-fitting ; connected ; Top                            ; post-synthesis    ; FFT_Processor:main_professor|mem2[19]          ; N/A     ;
+; FFT_Processor:main_professor|mem2[20]          ; post-fitting ; connected ; Top                            ; post-synthesis    ; FFT_Processor:main_professor|mem2[20]          ; N/A     ;
+; FFT_Processor:main_professor|mem2[21]          ; post-fitting ; connected ; Top                            ; post-synthesis    ; FFT_Processor:main_professor|mem2[21]          ; N/A     ;
+; FFT_Processor:main_professor|mem2[22]          ; post-fitting ; connected ; Top                            ; post-synthesis    ; FFT_Processor:main_professor|mem2[22]          ; N/A     ;
+; FFT_Processor:main_professor|mem2[23]          ; post-fitting ; connected ; Top                            ; post-synthesis    ; FFT_Processor:main_professor|mem2[23]          ; N/A     ;
+; FFT_Processor:main_professor|mem2[24]          ; post-fitting ; connected ; Top                            ; post-synthesis    ; FFT_Processor:main_professor|mem2[24]          ; N/A     ;
+; FFT_Processor:main_professor|mem2[25]          ; post-fitting ; connected ; Top                            ; post-synthesis    ; FFT_Processor:main_professor|mem2[25]          ; N/A     ;
+; FFT_Processor:main_professor|mem2[26]          ; post-fitting ; connected ; Top                            ; post-synthesis    ; FFT_Processor:main_professor|mem2[26]          ; N/A     ;
+; FFT_Processor:main_professor|mem2[27]          ; post-fitting ; connected ; Top                            ; post-synthesis    ; FFT_Processor:main_professor|mem2[27]          ; N/A     ;
+; FFT_Processor:main_professor|mem2[28]          ; post-fitting ; connected ; Top                            ; post-synthesis    ; FFT_Processor:main_professor|mem2[28]          ; N/A     ;
+; FFT_Processor:main_professor|mem2[29]          ; post-fitting ; connected ; Top                            ; post-synthesis    ; FFT_Processor:main_professor|mem2[29]          ; N/A     ;
+; FFT_Processor:main_professor|mem2[30]          ; post-fitting ; connected ; Top                            ; post-synthesis    ; FFT_Processor:main_professor|mem2[30]          ; N/A     ;
+; FFT_Processor:main_professor|mem2[31]          ; post-fitting ; connected ; Top                            ; post-synthesis    ; FFT_Processor:main_professor|mem2[31]          ; N/A     ;
 ; Mic_20Translator|gnd                           ; post-fitting ; connected ; sld_signaltap:Mic_20Translator ; post-synthesis    ; sld_signaltap:Mic_20Translator|~GND            ; N/A     ;
 ; Mic_20Translator|gnd                           ; post-fitting ; connected ; sld_signaltap:Mic_20Translator ; post-synthesis    ; sld_signaltap:Mic_20Translator|~GND            ; N/A     ;
 ; Mic_20Translator|gnd                           ; post-fitting ; connected ; sld_signaltap:Mic_20Translator ; post-synthesis    ; sld_signaltap:Mic_20Translator|~GND            ; N/A     ;
@@ -91,12 +138,12 @@ refer to the applicable agreement for further details.
 ; Mic_20Translator|gnd                           ; post-fitting ; connected ; sld_signaltap:Mic_20Translator ; post-synthesis    ; sld_signaltap:Mic_20Translator|~GND            ; N/A     ;
 ; Mic_20Translator|gnd                           ; post-fitting ; connected ; sld_signaltap:Mic_20Translator ; post-synthesis    ; sld_signaltap:Mic_20Translator|~GND            ; N/A     ;
 ; Mic_20Translator|gnd                           ; post-fitting ; connected ; sld_signaltap:Mic_20Translator ; post-synthesis    ; sld_signaltap:Mic_20Translator|~GND            ; N/A     ;
-; Mic_20Translator|gnd                           ; post-fitting ; connected ; sld_signaltap:Mic_20Translator ; post-synthesis    ; sld_signaltap:Mic_20Translator|~GND            ; N/A     ;
-; Mic_20Translator|gnd                           ; post-fitting ; connected ; sld_signaltap:Mic_20Translator ; post-synthesis    ; sld_signaltap:Mic_20Translator|~GND            ; N/A     ;
-; Mic_20Translator|gnd                           ; post-fitting ; connected ; sld_signaltap:Mic_20Translator ; post-synthesis    ; sld_signaltap:Mic_20Translator|~GND            ; N/A     ;
-; Mic_20Translator|gnd                           ; post-fitting ; connected ; sld_signaltap:Mic_20Translator ; post-synthesis    ; sld_signaltap:Mic_20Translator|~GND            ; N/A     ;
-; Mic_20Translator|gnd                           ; post-fitting ; connected ; sld_signaltap:Mic_20Translator ; post-synthesis    ; sld_signaltap:Mic_20Translator|~GND            ; N/A     ;
-; Mic_20Translator|gnd                           ; post-fitting ; connected ; sld_signaltap:Mic_20Translator ; post-synthesis    ; sld_signaltap:Mic_20Translator|~GND            ; N/A     ;
+; Mic_20Translator|vcc                           ; post-fitting ; connected ; sld_signaltap:Mic_20Translator ; post-synthesis    ; sld_signaltap:Mic_20Translator|~VCC            ; N/A     ;
+; Mic_20Translator|vcc                           ; post-fitting ; connected ; sld_signaltap:Mic_20Translator ; post-synthesis    ; sld_signaltap:Mic_20Translator|~VCC            ; N/A     ;
+; Mic_20Translator|vcc                           ; post-fitting ; connected ; sld_signaltap:Mic_20Translator ; post-synthesis    ; sld_signaltap:Mic_20Translator|~VCC            ; N/A     ;
+; Mic_20Translator|vcc                           ; post-fitting ; connected ; sld_signaltap:Mic_20Translator ; post-synthesis    ; sld_signaltap:Mic_20Translator|~VCC            ; N/A     ;
+; Mic_20Translator|vcc                           ; post-fitting ; connected ; sld_signaltap:Mic_20Translator ; post-synthesis    ; sld_signaltap:Mic_20Translator|~VCC            ; N/A     ;
+; Mic_20Translator|vcc                           ; post-fitting ; connected ; sld_signaltap:Mic_20Translator ; post-synthesis    ; sld_signaltap:Mic_20Translator|~VCC            ; N/A     ;
 ; Mic_20Translator|vcc                           ; post-fitting ; connected ; sld_signaltap:Mic_20Translator ; post-synthesis    ; sld_signaltap:Mic_20Translator|~VCC            ; N/A     ;
 ; Mic_20Translator|vcc                           ; post-fitting ; connected ; sld_signaltap:Mic_20Translator ; post-synthesis    ; sld_signaltap:Mic_20Translator|~VCC            ; N/A     ;
 ; Mic_20Translator|vcc                           ; post-fitting ; connected ; sld_signaltap:Mic_20Translator ; post-synthesis    ; sld_signaltap:Mic_20Translator|~VCC            ; N/A     ;
@@ -131,46 +178,6 @@ refer to the applicable agreement for further details.
 ; mic_translator:main_translator|data_counter[5] ; post-fitting ; connected ; Top                            ; post-synthesis    ; mic_translator:main_translator|data_counter[5] ; N/A     ;
 ; mic_translator:main_translator|data_counter[6] ; post-fitting ; connected ; Top                            ; post-synthesis    ; mic_translator:main_translator|data_counter[6] ; N/A     ;
 ; mic_translator:main_translator|new_t_reg       ; post-fitting ; connected ; Top                            ; post-synthesis    ; mic_translator:main_translator|new_t_reg       ; N/A     ;
-; mic_translator:main_translator|t0_reg[10]      ; post-fitting ; connected ; Top                            ; post-synthesis    ; mic_translator:main_translator|t0_reg[10]      ; N/A     ;
-; mic_translator:main_translator|t0_reg[11]      ; post-fitting ; connected ; Top                            ; post-synthesis    ; mic_translator:main_translator|t0_reg[11]      ; N/A     ;
-; mic_translator:main_translator|t0_reg[12]      ; post-fitting ; connected ; Top                            ; post-synthesis    ; mic_translator:main_translator|t0_reg[12]      ; N/A     ;
-; mic_translator:main_translator|t0_reg[13]      ; post-fitting ; connected ; Top                            ; post-synthesis    ; mic_translator:main_translator|t0_reg[13]      ; N/A     ;
-; mic_translator:main_translator|t0_reg[14]      ; post-fitting ; connected ; Top                            ; post-synthesis    ; mic_translator:main_translator|t0_reg[14]      ; N/A     ;
-; mic_translator:main_translator|t0_reg[15]      ; post-fitting ; connected ; Top                            ; post-synthesis    ; mic_translator:main_translator|t0_reg[15]      ; N/A     ;
-; mic_translator:main_translator|t0_reg[16]      ; post-fitting ; connected ; Top                            ; post-synthesis    ; mic_translator:main_translator|t0_reg[16]      ; N/A     ;
-; mic_translator:main_translator|t0_reg[17]      ; post-fitting ; connected ; Top                            ; post-synthesis    ; mic_translator:main_translator|t0_reg[17]      ; N/A     ;
-; mic_translator:main_translator|t0_reg[8]       ; post-fitting ; connected ; Top                            ; post-synthesis    ; mic_translator:main_translator|t0_reg[8]       ; N/A     ;
-; mic_translator:main_translator|t0_reg[9]       ; post-fitting ; connected ; Top                            ; post-synthesis    ; mic_translator:main_translator|t0_reg[9]       ; N/A     ;
-; mic_translator:main_translator|t1_reg[10]      ; post-fitting ; connected ; Top                            ; post-synthesis    ; mic_translator:main_translator|t1_reg[10]      ; N/A     ;
-; mic_translator:main_translator|t1_reg[11]      ; post-fitting ; connected ; Top                            ; post-synthesis    ; mic_translator:main_translator|t1_reg[11]      ; N/A     ;
-; mic_translator:main_translator|t1_reg[12]      ; post-fitting ; connected ; Top                            ; post-synthesis    ; mic_translator:main_translator|t1_reg[12]      ; N/A     ;
-; mic_translator:main_translator|t1_reg[13]      ; post-fitting ; connected ; Top                            ; post-synthesis    ; mic_translator:main_translator|t1_reg[13]      ; N/A     ;
-; mic_translator:main_translator|t1_reg[14]      ; post-fitting ; connected ; Top                            ; post-synthesis    ; mic_translator:main_translator|t1_reg[14]      ; N/A     ;
-; mic_translator:main_translator|t1_reg[15]      ; post-fitting ; connected ; Top                            ; post-synthesis    ; mic_translator:main_translator|t1_reg[15]      ; N/A     ;
-; mic_translator:main_translator|t1_reg[16]      ; post-fitting ; connected ; Top                            ; post-synthesis    ; mic_translator:main_translator|t1_reg[16]      ; N/A     ;
-; mic_translator:main_translator|t1_reg[17]      ; post-fitting ; connected ; Top                            ; post-synthesis    ; mic_translator:main_translator|t1_reg[17]      ; N/A     ;
-; mic_translator:main_translator|t1_reg[8]       ; post-fitting ; connected ; Top                            ; post-synthesis    ; mic_translator:main_translator|t1_reg[8]       ; N/A     ;
-; mic_translator:main_translator|t1_reg[9]       ; post-fitting ; connected ; Top                            ; post-synthesis    ; mic_translator:main_translator|t1_reg[9]       ; N/A     ;
-; mic_translator:main_translator|t2_reg[10]      ; post-fitting ; connected ; Top                            ; post-synthesis    ; mic_translator:main_translator|t2_reg[10]      ; N/A     ;
-; mic_translator:main_translator|t2_reg[11]      ; post-fitting ; connected ; Top                            ; post-synthesis    ; mic_translator:main_translator|t2_reg[11]      ; N/A     ;
-; mic_translator:main_translator|t2_reg[12]      ; post-fitting ; connected ; Top                            ; post-synthesis    ; mic_translator:main_translator|t2_reg[12]      ; N/A     ;
-; mic_translator:main_translator|t2_reg[13]      ; post-fitting ; connected ; Top                            ; post-synthesis    ; mic_translator:main_translator|t2_reg[13]      ; N/A     ;
-; mic_translator:main_translator|t2_reg[14]      ; post-fitting ; connected ; Top                            ; post-synthesis    ; mic_translator:main_translator|t2_reg[14]      ; N/A     ;
-; mic_translator:main_translator|t2_reg[15]      ; post-fitting ; connected ; Top                            ; post-synthesis    ; mic_translator:main_translator|t2_reg[15]      ; N/A     ;
-; mic_translator:main_translator|t2_reg[16]      ; post-fitting ; connected ; Top                            ; post-synthesis    ; mic_translator:main_translator|t2_reg[16]      ; N/A     ;
-; mic_translator:main_translator|t2_reg[17]      ; post-fitting ; connected ; Top                            ; post-synthesis    ; mic_translator:main_translator|t2_reg[17]      ; N/A     ;
-; mic_translator:main_translator|t2_reg[8]       ; post-fitting ; connected ; Top                            ; post-synthesis    ; mic_translator:main_translator|t2_reg[8]       ; N/A     ;
-; mic_translator:main_translator|t2_reg[9]       ; post-fitting ; connected ; Top                            ; post-synthesis    ; mic_translator:main_translator|t2_reg[9]       ; N/A     ;
-; mic_translator:main_translator|t3_reg[10]      ; post-fitting ; connected ; Top                            ; post-synthesis    ; mic_translator:main_translator|t3_reg[10]      ; N/A     ;
-; mic_translator:main_translator|t3_reg[11]      ; post-fitting ; connected ; Top                            ; post-synthesis    ; mic_translator:main_translator|t3_reg[11]      ; N/A     ;
-; mic_translator:main_translator|t3_reg[12]      ; post-fitting ; connected ; Top                            ; post-synthesis    ; mic_translator:main_translator|t3_reg[12]      ; N/A     ;
-; mic_translator:main_translator|t3_reg[13]      ; post-fitting ; connected ; Top                            ; post-synthesis    ; mic_translator:main_translator|t3_reg[13]      ; N/A     ;
-; mic_translator:main_translator|t3_reg[14]      ; post-fitting ; connected ; Top                            ; post-synthesis    ; mic_translator:main_translator|t3_reg[14]      ; N/A     ;
-; mic_translator:main_translator|t3_reg[15]      ; post-fitting ; connected ; Top                            ; post-synthesis    ; mic_translator:main_translator|t3_reg[15]      ; N/A     ;
-; mic_translator:main_translator|t3_reg[16]      ; post-fitting ; connected ; Top                            ; post-synthesis    ; mic_translator:main_translator|t3_reg[16]      ; N/A     ;
-; mic_translator:main_translator|t3_reg[17]      ; post-fitting ; connected ; Top                            ; post-synthesis    ; mic_translator:main_translator|t3_reg[17]      ; N/A     ;
-; mic_translator:main_translator|t3_reg[8]       ; post-fitting ; connected ; Top                            ; post-synthesis    ; mic_translator:main_translator|t3_reg[8]       ; N/A     ;
-; mic_translator:main_translator|t3_reg[9]       ; post-fitting ; connected ; Top                            ; post-synthesis    ; mic_translator:main_translator|t3_reg[9]       ; N/A     ;
 +------------------------------------------------+--------------+-----------+--------------------------------+-------------------+------------------------------------------------+---------+
 
 
@@ -179,63 +186,63 @@ refer to the applicable agreement for further details.
 +---------------------------------------------+-------+------------------+--------------------------------+--------------------------------+
 ; Statistic                                   ; Top   ; sld_hub:auto_hub ; sld_signaltap:Mic_20Translator ; hard_block:auto_generated_inst ;
 +---------------------------------------------+-------+------------------+--------------------------------+--------------------------------+
-; Estimated Total logic elements              ; 4317  ; 160              ; 922                            ; 0                              ;
+; Estimated Total logic elements              ; 4365  ; 160              ; 966                            ; 0                              ;
 ;                                             ;       ;                  ;                                ;                                ;
-; Total combinational functions               ; 4051  ; 133              ; 460                            ; 0                              ;
+; Total combinational functions               ; 4099  ; 133              ; 469                            ; 0                              ;
 ; Logic element usage by number of LUT inputs ;       ;                  ;                                ;                                ;
-;     -- 4 input functions                    ; 1210  ; 57               ; 139                            ; 0                              ;
-;     -- 3 input functions                    ; 1583  ; 39               ; 215                            ; 0                              ;
-;     -- <=2 input functions                  ; 1258  ; 37               ; 106                            ; 0                              ;
+;     -- 4 input functions                    ; 1255  ; 57               ; 139                            ; 0                              ;
+;     -- 3 input functions                    ; 1576  ; 41               ; 222                            ; 0                              ;
+;     -- <=2 input functions                  ; 1268  ; 35               ; 108                            ; 0                              ;
 ;                                             ;       ;                  ;                                ;                                ;
 ; Logic elements by mode                      ;       ;                  ;                                ;                                ;
-;     -- normal mode                          ; 2163  ; 125              ; 364                            ; 0                              ;
-;     -- arithmetic mode                      ; 1888  ; 8                ; 96                             ; 0                              ;
+;     -- normal mode                          ; 2211  ; 125              ; 372                            ; 0                              ;
+;     -- arithmetic mode                      ; 1888  ; 8                ; 97                             ; 0                              ;
 ;                                             ;       ;                  ;                                ;                                ;
-; Total registers                             ; 1290  ; 91               ; 778                            ; 0                              ;
-;     -- Dedicated logic registers            ; 1290  ; 91               ; 778                            ; 0                              ;
+; Total registers                             ; 1290  ; 91               ; 821                            ; 0                              ;
+;     -- Dedicated logic registers            ; 1290  ; 91               ; 821                            ; 0                              ;
 ;     -- I/O registers                        ; 0     ; 0                ; 0                              ; 0                              ;
 ;                                             ;       ;                  ;                                ;                                ;
 ; Virtual pins                                ; 0     ; 0                ; 0                              ; 0                              ;
 ; I/O pins                                    ; 19    ; 0                ; 0                              ; 0                              ;
 ; Embedded Multiplier 9-bit elements          ; 140   ; 0                ; 0                              ; 0                              ;
-; Total memory bits                           ; 0     ; 0                ; 983040                         ; 0                              ;
+; Total memory bits                           ; 0     ; 0                ; 1097728                        ; 0                              ;
 ; Total RAM block bits                        ; 0     ; 0                ; 0                              ; 0                              ;
 ; JTAG                                        ; 1     ; 0                ; 0                              ; 0                              ;
 ;                                             ;       ;                  ;                                ;                                ;
 ; Connections                                 ;       ;                  ;                                ;                                ;
-;     -- Input Connections                    ; 1     ; 134              ; 1379                           ; 0                              ;
-;     -- Registered Input Connections         ; 0     ; 101              ; 873                            ; 0                              ;
-;     -- Output Connections                   ; 1207  ; 273              ; 34                             ; 0                              ;
-;     -- Registered Output Connections        ; 60    ; 273              ; 0                              ; 0                              ;
+;     -- Input Connections                    ; 1     ; 134              ; 1471                           ; 0                              ;
+;     -- Registered Input Connections         ; 0     ; 101              ; 923                            ; 0                              ;
+;     -- Output Connections                   ; 1285  ; 287              ; 34                             ; 0                              ;
+;     -- Registered Output Connections        ; 67    ; 287              ; 0                              ; 0                              ;
 ;                                             ;       ;                  ;                                ;                                ;
 ; Internal Connections                        ;       ;                  ;                                ;                                ;
-;     -- Total Connections                    ; 21290 ; 976              ; 7537                           ; 0                              ;
-;     -- Registered Connections               ; 6372  ; 750              ; 5450                           ; 0                              ;
+;     -- Total Connections                    ; 21547 ; 992              ; 8119                           ; 0                              ;
+;     -- Registered Connections               ; 6512  ; 766              ; 5929                           ; 0                              ;
 ;                                             ;       ;                  ;                                ;                                ;
 ; External Connections                        ;       ;                  ;                                ;                                ;
-;     -- Top                                  ; 0     ; 123              ; 1085                           ; 0                              ;
-;     -- sld_hub:auto_hub                     ; 123   ; 20               ; 264                            ; 0                              ;
-;     -- sld_signaltap:Mic_20Translator       ; 1085  ; 264              ; 64                             ; 0                              ;
+;     -- Top                                  ; 0     ; 123              ; 1163                           ; 0                              ;
+;     -- sld_hub:auto_hub                     ; 123   ; 20               ; 278                            ; 0                              ;
+;     -- sld_signaltap:Mic_20Translator       ; 1163  ; 278              ; 64                             ; 0                              ;
 ;     -- hard_block:auto_generated_inst       ; 0     ; 0                ; 0                              ; 0                              ;
 ;                                             ;       ;                  ;                                ;                                ;
 ; Partition Interface                         ;       ;                  ;                                ;                                ;
-;     -- Input Ports                          ; 6     ; 45               ; 191                            ; 0                              ;
-;     -- Output Ports                         ; 17    ; 62               ; 76                             ; 0                              ;
+;     -- Input Ports                          ; 6     ; 45               ; 205                            ; 0                              ;
+;     -- Output Ports                         ; 17    ; 62               ; 83                             ; 0                              ;
 ;     -- Bidir Ports                          ; 0     ; 0                ; 0                              ; 0                              ;
 ;                                             ;       ;                  ;                                ;                                ;
 ; Registered Ports                            ;       ;                  ;                                ;                                ;
-;     -- Registered Input Ports               ; 0     ; 4                ; 67                             ; 0                              ;
-;     -- Registered Output Ports              ; 0     ; 29               ; 62                             ; 0                              ;
+;     -- Registered Input Ports               ; 0     ; 4                ; 74                             ; 0                              ;
+;     -- Registered Output Ports              ; 0     ; 29               ; 69                             ; 0                              ;
 ;                                             ;       ;                  ;                                ;                                ;
 ; Port Connectivity                           ;       ;                  ;                                ;                                ;
-;     -- Input Ports driven by GND            ; 0     ; 0                ; 19                             ; 0                              ;
+;     -- Input Ports driven by GND            ; 0     ; 0                ; 13                             ; 0                              ;
 ;     -- Output Ports driven by GND           ; 0     ; 28               ; 2                              ; 0                              ;
-;     -- Input Ports driven by VCC            ; 0     ; 0                ; 13                             ; 0                              ;
+;     -- Input Ports driven by VCC            ; 0     ; 0                ; 19                             ; 0                              ;
 ;     -- Output Ports driven by VCC           ; 0     ; 0                ; 1                              ; 0                              ;
-;     -- Input Ports with no Source           ; 0     ; 25               ; 65                             ; 0                              ;
+;     -- Input Ports with no Source           ; 0     ; 25               ; 72                             ; 0                              ;
 ;     -- Output Ports with no Source          ; 0     ; 0                ; 0                              ; 0                              ;
-;     -- Input Ports with no Fanout           ; 0     ; 30               ; 79                             ; 0                              ;
-;     -- Output Ports with no Fanout          ; 0     ; 29               ; 64                             ; 0                              ;
+;     -- Input Ports with no Fanout           ; 0     ; 30               ; 86                             ; 0                              ;
+;     -- Output Ports with no Fanout          ; 0     ; 29               ; 71                             ; 0                              ;
 +---------------------------------------------+-------+------------------+--------------------------------+--------------------------------+
 Note: Resource usage numbers presented for Partitions containing post-synthesis logic are estimates.  For Partitions containing post-fit logic, resource usage numbers are accurate based on previous placement information.  Actual Fitter results may vary depending on current Fitter Preservation Level assignments.
 
@@ -345,41 +352,41 @@ Note: Resource usage numbers presented for Partitions containing post-synthesis 
 +---------------------------------------------+-------------------------------+
 ; Resource                                    ; Usage                         ;
 +---------------------------------------------+-------------------------------+
-; Estimated Total logic elements              ; 5,399                         ;
+; Estimated Total logic elements              ; 5,491                         ;
 ;                                             ;                               ;
-; Total combinational functions               ; 4644                          ;
+; Total combinational functions               ; 4701                          ;
 ; Logic element usage by number of LUT inputs ;                               ;
-;     -- 4 input functions                    ; 1406                          ;
-;     -- 3 input functions                    ; 1837                          ;
-;     -- <=2 input functions                  ; 1401                          ;
+;     -- 4 input functions                    ; 1451                          ;
+;     -- 3 input functions                    ; 1839                          ;
+;     -- <=2 input functions                  ; 1411                          ;
 ;                                             ;                               ;
 ; Logic elements by mode                      ;                               ;
-;     -- normal mode                          ; 2652                          ;
-;     -- arithmetic mode                      ; 1992                          ;
+;     -- normal mode                          ; 2708                          ;
+;     -- arithmetic mode                      ; 1993                          ;
 ;                                             ;                               ;
-; Total registers                             ; 2159                          ;
-;     -- Dedicated logic registers            ; 2159                          ;
+; Total registers                             ; 2202                          ;
+;     -- Dedicated logic registers            ; 2202                          ;
 ;     -- I/O registers                        ; 0                             ;
 ;                                             ;                               ;
 ; I/O pins                                    ; 19                            ;
-; Total memory bits                           ; 983040                        ;
+; Total memory bits                           ; 1097728                       ;
 ;                                             ;                               ;
 ; Embedded Multiplier 9-bit elements          ; 140                           ;
 ;                                             ;                               ;
 ; Maximum fan-out node                        ; clkdiv:main_clock|clk_out_reg ;
 ; Maximum fan-out                             ; 749                           ;
-; Total fan-out                               ; 25560                         ;
-; Average fan-out                             ; 3.59                          ;
+; Total fan-out                               ; 26305                         ;
+; Average fan-out                             ; 3.64                          ;
 +---------------------------------------------+-------------------------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Partition Merge RAM Summary                                                                                                                                                                                                                                                                                 ;
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+--------+------+
-; Name                                                                                                                                                                                                  ; Type ; Mode             ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Size   ; MIF  ;
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+--------+------+
-; sld_signaltap:Mic_20Translator|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|altsyncram:\stp_non_zero_ram_gen:stp_buffer_ram|altsyncram_ap14:auto_generated|ALTSYNCRAM ; AUTO ; Simple Dual Port ; 16384        ; 60           ; 16384        ; 60           ; 983040 ; None ;
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+--------+------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Partition Merge RAM Summary                                                                                                                                                                                                                                                                                  ;
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+---------+------+
+; Name                                                                                                                                                                                                  ; Type ; Mode             ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Size    ; MIF  ;
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+---------+------+
+; sld_signaltap:Mic_20Translator|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|altsyncram:\stp_non_zero_ram_gen:stp_buffer_ram|altsyncram_pp14:auto_generated|ALTSYNCRAM ; AUTO ; Simple Dual Port ; 16384        ; 67           ; 16384        ; 67           ; 1097728 ; None ;
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+---------+------+
 
 
 +-----------------------------------------------------+
@@ -406,27 +413,27 @@ Note: number of Embedded Multiplier Blocks used is only available after a succes
 Info: *******************************************************************
 Info: Running Quartus Prime Partition Merge
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Tue Mar 24 19:18:07 2020
+    Info: Processing started: Tue Mar 24 23:46:55 2020
 Info: Command: quartus_cdb --read_settings_files=off --write_settings_files=off FFT -c FFT --merge=on
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (35007): Using synthesis netlist for partition "Top"
 Info (35007): Using synthesis netlist for partition "sld_hub:auto_hub"
 Info (35007): Using synthesis netlist for partition "sld_signaltap:Mic_20Translator"
-Info (35024): Successfully connected in-system debug instance "Mic_20Translator" to all 94 required data inputs, trigger inputs, acquisition clocks, and dynamic pins
+Info (35024): Successfully connected in-system debug instance "Mic_20Translator" to all 101 required data inputs, trigger inputs, acquisition clocks, and dynamic pins
 Info (35002): Resolved and merged 3 partition(s)
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
 Critical Warning (138067): Current license file does not support incremental compilation. The Quartus Prime software removes all the user-specified design partitions in the design automatically.
-Info (21057): Implemented 5704 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 5810 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 6 input pins
     Info (21059): Implemented 17 output pins
-    Info (21061): Implemented 5420 logic cells
-    Info (21064): Implemented 120 RAM segments
+    Info (21061): Implemented 5512 logic cells
+    Info (21064): Implemented 134 RAM segments
     Info (21062): Implemented 140 DSP elements
 Info: Quartus Prime Partition Merge was successful. 0 errors, 2 warnings
-    Info: Peak virtual memory: 4718 megabytes
-    Info: Processing ended: Tue Mar 24 19:18:09 2020
-    Info: Elapsed time: 00:00:02
+    Info: Peak virtual memory: 4720 megabytes
+    Info: Processing ended: Tue Mar 24 23:46:56 2020
+    Info: Elapsed time: 00:00:01
     Info: Total CPU time (on all processors): 00:00:02
 
 

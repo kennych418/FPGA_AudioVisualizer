@@ -1,5 +1,5 @@
-`define tmax_FFT 511
-`define tmin_FFT -512
+`define tmax_FFT {16'd511, 8'd0}
+`define tmin_FFT {-16'd512, 8'd0}
 
 module FFT_Processor_TB;
 
@@ -7,7 +7,7 @@ module FFT_Processor_TB;
 
 	reg clk, new_t, reset; 
 	wire done;
-	reg [15:0] t0, t1, t2, t3, t4, t5, t6, t7, 
+	reg [23:0] t0, t1, t2, t3, t4, t5, t6, t7, 
 				  t8, t9, t10, t11, t12, t13, t14, t15;
 	wire [15:0] f0, f1, f2, f3, f4, f5, f6, f7, 
 				   f8, f9, f10, f11, f12, f13, f14, f15;

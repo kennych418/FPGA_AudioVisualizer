@@ -1,5 +1,5 @@
 Analysis & Synthesis report for FFT
-Tue Mar 24 19:18:06 2020
+Tue Mar 24 23:46:54 2020
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -74,13 +74,11 @@ Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
  66. Parameter Settings for Inferred Entity Instance: FFT_Processor:main_professor|butterflyunit:BFU0|complexmultiplier:twiddlemult|simplemultiplier:mult_ai_br|lpm_mult:Mult0
  67. lpm_mult Parameter Settings by Entity Instance
  68. Port Connectivity Checks: "FFT_Processor:main_professor|butterflyunit:BFU0|complexmultiplier:twiddlemult"
- 69. Port Connectivity Checks: "FFT_Processor:main_professor"
- 70. Port Connectivity Checks: "mic_translator:main_translator"
- 71. Signal Tap Logic Analyzer Settings
- 72. Post-Synthesis Netlist Statistics for Top Partition
- 73. Elapsed Time Per Partition
- 74. Connections to In-System Debugging Instance "Mic_20Translator"
- 75. Analysis & Synthesis Messages
+ 69. Signal Tap Logic Analyzer Settings
+ 70. Post-Synthesis Netlist Statistics for Top Partition
+ 71. Elapsed Time Per Partition
+ 72. Connections to In-System Debugging Instance "Mic_20Translator"
+ 73. Analysis & Synthesis Messages
 
 
 
@@ -106,18 +104,18 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Tue Mar 24 19:18:06 2020       ;
+; Analysis & Synthesis Status        ; Successful - Tue Mar 24 23:46:54 2020       ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; FFT                                         ;
 ; Top-level Entity Name              ; FFT                                         ;
 ; Family                             ; MAX 10                                      ;
-; Total logic elements               ; 5,399                                       ;
-;     Total combinational functions  ; 4,644                                       ;
-;     Dedicated logic registers      ; 2,159                                       ;
-; Total registers                    ; 2159                                        ;
+; Total logic elements               ; 5,491                                       ;
+;     Total combinational functions  ; 4,701                                       ;
+;     Dedicated logic registers      ; 2,202                                       ;
+; Total registers                    ; 2202                                        ;
 ; Total pins                         ; 19                                          ;
 ; Total virtual pins                 ; 0                                           ;
-; Total memory bits                  ; 983,040                                     ;
+; Total memory bits                  ; 1,097,728                                   ;
 ; Embedded Multiplier 9-bit elements ; 140                                         ;
 ; Total PLLs                         ; 0                                           ;
 ; UFM blocks                         ; 0                                           ;
@@ -270,9 +268,9 @@ refer to the applicable agreement for further details.
 ; altrom.inc                                                         ; yes             ; Megafunction                                 ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altrom.inc                                      ;             ;
 ; altram.inc                                                         ; yes             ; Megafunction                                 ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altram.inc                                      ;             ;
 ; altdpram.inc                                                       ; yes             ; Megafunction                                 ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altdpram.inc                                    ;             ;
-; db/altsyncram_ap14.tdf                                             ; yes             ; Auto-Generated Megafunction                  ; C:/Users/chank/OneDrive/Quartus/FFT/db/altsyncram_ap14.tdf                                             ;             ;
+; db/altsyncram_pp14.tdf                                             ; yes             ; Auto-Generated Megafunction                  ; C:/Users/chank/OneDrive/Quartus/FFT/db/altsyncram_pp14.tdf                                             ;             ;
 ; db/decode_97a.tdf                                                  ; yes             ; Auto-Generated Megafunction                  ; C:/Users/chank/OneDrive/Quartus/FFT/db/decode_97a.tdf                                                  ;             ;
-; db/mux_73b.tdf                                                     ; yes             ; Auto-Generated Megafunction                  ; C:/Users/chank/OneDrive/Quartus/FFT/db/mux_73b.tdf                                                     ;             ;
+; db/mux_f3b.tdf                                                     ; yes             ; Auto-Generated Megafunction                  ; C:/Users/chank/OneDrive/Quartus/FFT/db/mux_f3b.tdf                                                     ;             ;
 ; altdpram.tdf                                                       ; yes             ; Megafunction                                 ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/altdpram.tdf                                    ;             ;
 ; memmodes.inc                                                       ; yes             ; Megafunction                                 ; c:/intelfpga_lite/18.1/quartus/libraries/others/maxplus2/memmodes.inc                                  ;             ;
 ; a_hdffe.inc                                                        ; yes             ; Megafunction                                 ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/a_hdffe.inc                                     ;             ;
@@ -292,8 +290,8 @@ refer to the applicable agreement for further details.
 ; cmpconst.inc                                                       ; yes             ; Megafunction                                 ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/cmpconst.inc                                    ;             ;
 ; lpm_counter.inc                                                    ; yes             ; Megafunction                                 ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/lpm_counter.inc                                 ;             ;
 ; alt_counter_stratix.inc                                            ; yes             ; Megafunction                                 ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/alt_counter_stratix.inc                         ;             ;
-; db/cntr_6rh.tdf                                                    ; yes             ; Auto-Generated Megafunction                  ; C:/Users/chank/OneDrive/Quartus/FFT/db/cntr_6rh.tdf                                                    ;             ;
-; db/cmpr_irb.tdf                                                    ; yes             ; Auto-Generated Megafunction                  ; C:/Users/chank/OneDrive/Quartus/FFT/db/cmpr_irb.tdf                                                    ;             ;
+; db/cntr_erh.tdf                                                    ; yes             ; Auto-Generated Megafunction                  ; C:/Users/chank/OneDrive/Quartus/FFT/db/cntr_erh.tdf                                                    ;             ;
+; db/cmpr_jrb.tdf                                                    ; yes             ; Auto-Generated Megafunction                  ; C:/Users/chank/OneDrive/Quartus/FFT/db/cmpr_jrb.tdf                                                    ;             ;
 ; db/cntr_1mi.tdf                                                    ; yes             ; Auto-Generated Megafunction                  ; C:/Users/chank/OneDrive/Quartus/FFT/db/cntr_1mi.tdf                                                    ;             ;
 ; db/cntr_arh.tdf                                                    ; yes             ; Auto-Generated Megafunction                  ; C:/Users/chank/OneDrive/Quartus/FFT/db/cntr_arh.tdf                                                    ;             ;
 ; db/cmpr_hrb.tdf                                                    ; yes             ; Auto-Generated Megafunction                  ; C:/Users/chank/OneDrive/Quartus/FFT/db/cmpr_hrb.tdf                                                    ;             ;
@@ -323,31 +321,31 @@ refer to the applicable agreement for further details.
 +---------------------------------------------+-------------------------------+
 ; Resource                                    ; Usage                         ;
 +---------------------------------------------+-------------------------------+
-; Estimated Total logic elements              ; 5,399                         ;
+; Estimated Total logic elements              ; 5,491                         ;
 ;                                             ;                               ;
-; Total combinational functions               ; 4644                          ;
+; Total combinational functions               ; 4701                          ;
 ; Logic element usage by number of LUT inputs ;                               ;
-;     -- 4 input functions                    ; 1406                          ;
-;     -- 3 input functions                    ; 1837                          ;
-;     -- <=2 input functions                  ; 1401                          ;
+;     -- 4 input functions                    ; 1451                          ;
+;     -- 3 input functions                    ; 1839                          ;
+;     -- <=2 input functions                  ; 1411                          ;
 ;                                             ;                               ;
 ; Logic elements by mode                      ;                               ;
-;     -- normal mode                          ; 2652                          ;
-;     -- arithmetic mode                      ; 1992                          ;
+;     -- normal mode                          ; 2708                          ;
+;     -- arithmetic mode                      ; 1993                          ;
 ;                                             ;                               ;
-; Total registers                             ; 2159                          ;
-;     -- Dedicated logic registers            ; 2159                          ;
+; Total registers                             ; 2202                          ;
+;     -- Dedicated logic registers            ; 2202                          ;
 ;     -- I/O registers                        ; 0                             ;
 ;                                             ;                               ;
 ; I/O pins                                    ; 19                            ;
-; Total memory bits                           ; 983040                        ;
+; Total memory bits                           ; 1097728                       ;
 ;                                             ;                               ;
 ; Embedded Multiplier 9-bit elements          ; 140                           ;
 ;                                             ;                               ;
 ; Maximum fan-out node                        ; clkdiv:main_clock|clk_out_reg ;
 ; Maximum fan-out                             ; 749                           ;
-; Total fan-out                               ; 25560                         ;
-; Average fan-out                             ; 3.59                          ;
+; Total fan-out                               ; 26305                         ;
+; Average fan-out                             ; 3.64                          ;
 +---------------------------------------------+-------------------------------+
 
 
@@ -356,8 +354,8 @@ refer to the applicable agreement for further details.
 +-----------------------------------------------------------------------------------------------------------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------------------------+--------------+
 ; Compilation Hierarchy Node                                                                                                              ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; ADC blocks ; Full Hierarchy Name                                                                                                                                                                                                                                                                                                                                                                ; Entity Name                            ; Library Name ;
 +-----------------------------------------------------------------------------------------------------------------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+----------------------------------------+--------------+
-; |FFT                                                                                                                                    ; 4644 (1)            ; 2159 (0)                  ; 983040      ; 0          ; 140          ; 0       ; 70        ; 19   ; 0            ; 0          ; |FFT                                                                                                                                                                                                                                                                                                                                                                               ; FFT                                    ; work         ;
-;    |FFT_Processor:main_professor|                                                                                                       ; 2775 (1420)         ; 528 (528)                 ; 0           ; 0          ; 76           ; 0       ; 38        ; 0    ; 0            ; 0          ; |FFT|FFT_Processor:main_professor                                                                                                                                                                                                                                                                                                                                                  ; FFT_Processor                          ; work         ;
+; |FFT                                                                                                                                    ; 4701 (1)            ; 2202 (0)                  ; 1097728     ; 0          ; 140          ; 0       ; 70        ; 19   ; 0            ; 0          ; |FFT                                                                                                                                                                                                                                                                                                                                                                               ; FFT                                    ; work         ;
+;    |FFT_Processor:main_professor|                                                                                                       ; 2823 (1468)         ; 528 (528)                 ; 0           ; 0          ; 76           ; 0       ; 38        ; 0    ; 0            ; 0          ; |FFT|FFT_Processor:main_professor                                                                                                                                                                                                                                                                                                                                                  ; FFT_Processor                          ; work         ;
 ;       |butterflyunit:BFU0|                                                                                                              ; 177 (0)             ; 0 (0)                     ; 0           ; 0          ; 8            ; 0       ; 4         ; 0    ; 0            ; 0          ; |FFT|FFT_Processor:main_professor|butterflyunit:BFU0                                                                                                                                                                                                                                                                                                                               ; butterflyunit                          ; work         ;
 ;          |complexadder:topadder|                                                                                                        ; 58 (58)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |FFT|FFT_Processor:main_professor|butterflyunit:BFU0|complexadder:topadder                                                                                                                                                                                                                                                                                                         ; complexadder                           ; work         ;
 ;          |complexmultiplier:twiddlemult|                                                                                                ; 87 (61)             ; 0 (0)                     ; 0           ; 0          ; 8            ; 0       ; 4         ; 0    ; 0            ; 0          ; |FFT|FFT_Processor:main_professor|butterflyunit:BFU0|complexmultiplier:twiddlemult                                                                                                                                                                                                                                                                                                 ; complexmultiplier                      ; work         ;
@@ -492,17 +490,17 @@ refer to the applicable agreement for further details.
 ;                   |sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|                                                                        ; 119 (76)            ; 86 (58)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |FFT|sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub                                                              ; sld_jtag_hub                           ; work         ;
 ;                      |sld_rom_sr:hub_info_reg|                                                                                          ; 25 (25)             ; 9 (9)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |FFT|sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|sld_rom_sr:hub_info_reg                                      ; sld_rom_sr                             ; work         ;
 ;                      |sld_shadow_jsm:shadow_jsm|                                                                                        ; 18 (18)             ; 19 (19)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |FFT|sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|sld_shadow_jsm:shadow_jsm                                    ; sld_shadow_jsm                         ; altera_sld   ;
-;    |sld_signaltap:Mic_20Translator|                                                                                                     ; 460 (2)             ; 778 (61)                  ; 983040      ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |FFT|sld_signaltap:Mic_20Translator                                                                                                                                                                                                                                                                                                                                                ; sld_signaltap                          ; work         ;
-;       |sld_signaltap_impl:sld_signaltap_body|                                                                                           ; 458 (0)             ; 717 (0)                   ; 983040      ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |FFT|sld_signaltap:Mic_20Translator|sld_signaltap_impl:sld_signaltap_body                                                                                                                                                                                                                                                                                                          ; sld_signaltap_impl                     ; work         ;
-;          |sld_signaltap_implb:sld_signaltap_body|                                                                                       ; 458 (85)            ; 717 (328)                 ; 983040      ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |FFT|sld_signaltap:Mic_20Translator|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body                                                                                                                                                                                                                                                                   ; sld_signaltap_implb                    ; work         ;
+;    |sld_signaltap:Mic_20Translator|                                                                                                     ; 469 (2)             ; 821 (68)                  ; 1097728     ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |FFT|sld_signaltap:Mic_20Translator                                                                                                                                                                                                                                                                                                                                                ; sld_signaltap                          ; work         ;
+;       |sld_signaltap_impl:sld_signaltap_body|                                                                                           ; 467 (0)             ; 753 (0)                   ; 1097728     ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |FFT|sld_signaltap:Mic_20Translator|sld_signaltap_impl:sld_signaltap_body                                                                                                                                                                                                                                                                                                          ; sld_signaltap_impl                     ; work         ;
+;          |sld_signaltap_implb:sld_signaltap_body|                                                                                       ; 467 (85)            ; 753 (356)                 ; 1097728     ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |FFT|sld_signaltap:Mic_20Translator|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body                                                                                                                                                                                                                                                                   ; sld_signaltap_implb                    ; work         ;
 ;             |altdpram:\stp_non_zero_ram_gen:attribute_mem_gen:attribute_mem|                                                            ; 31 (0)              ; 88 (88)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |FFT|sld_signaltap:Mic_20Translator|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|altdpram:\stp_non_zero_ram_gen:attribute_mem_gen:attribute_mem                                                                                                                                                                                                    ; altdpram                               ; work         ;
 ;                |lpm_decode:wdecoder|                                                                                                    ; 2 (0)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |FFT|sld_signaltap:Mic_20Translator|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|altdpram:\stp_non_zero_ram_gen:attribute_mem_gen:attribute_mem|lpm_decode:wdecoder                                                                                                                                                                                ; lpm_decode                             ; work         ;
 ;                   |decode_3af:auto_generated|                                                                                           ; 2 (2)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |FFT|sld_signaltap:Mic_20Translator|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|altdpram:\stp_non_zero_ram_gen:attribute_mem_gen:attribute_mem|lpm_decode:wdecoder|decode_3af:auto_generated                                                                                                                                                      ; decode_3af                             ; work         ;
 ;                |lpm_mux:mux|                                                                                                            ; 29 (0)              ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |FFT|sld_signaltap:Mic_20Translator|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|altdpram:\stp_non_zero_ram_gen:attribute_mem_gen:attribute_mem|lpm_mux:mux                                                                                                                                                                                        ; lpm_mux                                ; work         ;
 ;                   |mux_n7c:auto_generated|                                                                                              ; 29 (29)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |FFT|sld_signaltap:Mic_20Translator|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|altdpram:\stp_non_zero_ram_gen:attribute_mem_gen:attribute_mem|lpm_mux:mux|mux_n7c:auto_generated                                                                                                                                                                 ; mux_n7c                                ; work         ;
-;             |altsyncram:\stp_non_zero_ram_gen:stp_buffer_ram|                                                                           ; 2 (0)               ; 1 (0)                     ; 983040      ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |FFT|sld_signaltap:Mic_20Translator|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|altsyncram:\stp_non_zero_ram_gen:stp_buffer_ram                                                                                                                                                                                                                   ; altsyncram                             ; work         ;
-;                |altsyncram_ap14:auto_generated|                                                                                         ; 2 (0)               ; 1 (1)                     ; 983040      ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |FFT|sld_signaltap:Mic_20Translator|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|altsyncram:\stp_non_zero_ram_gen:stp_buffer_ram|altsyncram_ap14:auto_generated                                                                                                                                                                                    ; altsyncram_ap14                        ; work         ;
-;                   |decode_97a:decode2|                                                                                                  ; 2 (2)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |FFT|sld_signaltap:Mic_20Translator|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|altsyncram:\stp_non_zero_ram_gen:stp_buffer_ram|altsyncram_ap14:auto_generated|decode_97a:decode2                                                                                                                                                                 ; decode_97a                             ; work         ;
+;             |altsyncram:\stp_non_zero_ram_gen:stp_buffer_ram|                                                                           ; 2 (0)               ; 1 (0)                     ; 1097728     ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |FFT|sld_signaltap:Mic_20Translator|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|altsyncram:\stp_non_zero_ram_gen:stp_buffer_ram                                                                                                                                                                                                                   ; altsyncram                             ; work         ;
+;                |altsyncram_pp14:auto_generated|                                                                                         ; 2 (0)               ; 1 (1)                     ; 1097728     ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |FFT|sld_signaltap:Mic_20Translator|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|altsyncram:\stp_non_zero_ram_gen:stp_buffer_ram|altsyncram_pp14:auto_generated                                                                                                                                                                                    ; altsyncram_pp14                        ; work         ;
+;                   |decode_97a:decode2|                                                                                                  ; 2 (2)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |FFT|sld_signaltap:Mic_20Translator|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|altsyncram:\stp_non_zero_ram_gen:stp_buffer_ram|altsyncram_pp14:auto_generated|decode_97a:decode2                                                                                                                                                                 ; decode_97a                             ; work         ;
 ;             |lpm_shiftreg:segment_offset_config_deserialize|                                                                            ; 0 (0)               ; 14 (14)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |FFT|sld_signaltap:Mic_20Translator|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|lpm_shiftreg:segment_offset_config_deserialize                                                                                                                                                                                                                    ; lpm_shiftreg                           ; work         ;
 ;             |lpm_shiftreg:status_register|                                                                                              ; 17 (17)             ; 17 (17)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |FFT|sld_signaltap:Mic_20Translator|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|lpm_shiftreg:status_register                                                                                                                                                                                                                                      ; lpm_shiftreg                           ; work         ;
 ;             |serial_crc_16:\tdo_crc_gen:tdo_crc_calc|                                                                                   ; 16 (16)             ; 13 (13)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |FFT|sld_signaltap:Mic_20Translator|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|serial_crc_16:\tdo_crc_gen:tdo_crc_calc                                                                                                                                                                                                                           ; serial_crc_16                          ; work         ;
@@ -520,9 +518,9 @@ refer to the applicable agreement for further details.
 ;                            |sld_sbpmg:\gen_sbpmg_pipeline_less_than_two:sm0:0:sm1|                                                      ; 2 (2)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |FFT|sld_signaltap:Mic_20Translator|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|sld_ela_control:ela_control|sld_ela_trigger:\multi_level_advanced_trigger_gen:advanced_trigger_wrapper|sld_ela_trigger_16o:auto_generated|sld_reserved_FFT_Mic_Translator_1_d1da:mgl_prim1|sld_mbpmg:mbpm_2|sld_sbpmg:\gen_sbpmg_pipeline_less_than_two:sm0:0:sm1 ; sld_sbpmg                              ; work         ;
 ;                |sld_ela_trigger_flow_mgr:\builtin:ela_trigger_flow_mgr_entity|                                                          ; 1 (1)               ; 11 (1)                    ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |FFT|sld_signaltap:Mic_20Translator|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|sld_ela_control:ela_control|sld_ela_trigger_flow_mgr:\builtin:ela_trigger_flow_mgr_entity                                                                                                                                                                         ; sld_ela_trigger_flow_mgr               ; work         ;
 ;                   |lpm_shiftreg:trigger_config_deserialize|                                                                             ; 0 (0)               ; 10 (10)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |FFT|sld_signaltap:Mic_20Translator|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|sld_ela_control:ela_control|sld_ela_trigger_flow_mgr:\builtin:ela_trigger_flow_mgr_entity|lpm_shiftreg:trigger_config_deserialize                                                                                                                                 ; lpm_shiftreg                           ; work         ;
-;             |sld_offload_buffer_mgr:\stp_non_zero_depth_offload_gen:stp_offload_buff_mgr_inst|                                          ; 160 (9)             ; 144 (0)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |FFT|sld_signaltap:Mic_20Translator|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|sld_offload_buffer_mgr:\stp_non_zero_depth_offload_gen:stp_offload_buff_mgr_inst                                                                                                                                                                                  ; sld_offload_buffer_mgr                 ; work         ;
-;                |lpm_counter:\adv_point_3_and_more:advance_pointer_counter|                                                              ; 8 (0)               ; 6 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |FFT|sld_signaltap:Mic_20Translator|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|sld_offload_buffer_mgr:\stp_non_zero_depth_offload_gen:stp_offload_buff_mgr_inst|lpm_counter:\adv_point_3_and_more:advance_pointer_counter                                                                                                                        ; lpm_counter                            ; work         ;
-;                   |cntr_6rh:auto_generated|                                                                                             ; 8 (8)               ; 6 (6)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |FFT|sld_signaltap:Mic_20Translator|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|sld_offload_buffer_mgr:\stp_non_zero_depth_offload_gen:stp_offload_buff_mgr_inst|lpm_counter:\adv_point_3_and_more:advance_pointer_counter|cntr_6rh:auto_generated                                                                                                ; cntr_6rh                               ; work         ;
+;             |sld_offload_buffer_mgr:\stp_non_zero_depth_offload_gen:stp_offload_buff_mgr_inst|                                          ; 169 (10)            ; 152 (0)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |FFT|sld_signaltap:Mic_20Translator|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|sld_offload_buffer_mgr:\stp_non_zero_depth_offload_gen:stp_offload_buff_mgr_inst                                                                                                                                                                                  ; sld_offload_buffer_mgr                 ; work         ;
+;                |lpm_counter:\adv_point_3_and_more:advance_pointer_counter|                                                              ; 9 (0)               ; 7 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |FFT|sld_signaltap:Mic_20Translator|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|sld_offload_buffer_mgr:\stp_non_zero_depth_offload_gen:stp_offload_buff_mgr_inst|lpm_counter:\adv_point_3_and_more:advance_pointer_counter                                                                                                                        ; lpm_counter                            ; work         ;
+;                   |cntr_erh:auto_generated|                                                                                             ; 9 (9)               ; 7 (7)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |FFT|sld_signaltap:Mic_20Translator|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|sld_offload_buffer_mgr:\stp_non_zero_depth_offload_gen:stp_offload_buff_mgr_inst|lpm_counter:\adv_point_3_and_more:advance_pointer_counter|cntr_erh:auto_generated                                                                                                ; cntr_erh                               ; work         ;
 ;                |lpm_counter:read_pointer_counter|                                                                                       ; 14 (0)              ; 14 (0)                    ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |FFT|sld_signaltap:Mic_20Translator|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|sld_offload_buffer_mgr:\stp_non_zero_depth_offload_gen:stp_offload_buff_mgr_inst|lpm_counter:read_pointer_counter                                                                                                                                                 ; lpm_counter                            ; work         ;
 ;                   |cntr_1mi:auto_generated|                                                                                             ; 14 (14)             ; 14 (14)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |FFT|sld_signaltap:Mic_20Translator|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|sld_offload_buffer_mgr:\stp_non_zero_depth_offload_gen:stp_offload_buff_mgr_inst|lpm_counter:read_pointer_counter|cntr_1mi:auto_generated                                                                                                                         ; cntr_1mi                               ; work         ;
 ;                |lpm_counter:status_advance_pointer_counter|                                                                             ; 7 (0)               ; 5 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |FFT|sld_signaltap:Mic_20Translator|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|sld_offload_buffer_mgr:\stp_non_zero_depth_offload_gen:stp_offload_buff_mgr_inst|lpm_counter:status_advance_pointer_counter                                                                                                                                       ; lpm_counter                            ; work         ;
@@ -530,7 +528,7 @@ refer to the applicable agreement for further details.
 ;                |lpm_counter:status_read_pointer_counter|                                                                                ; 4 (0)               ; 1 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |FFT|sld_signaltap:Mic_20Translator|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|sld_offload_buffer_mgr:\stp_non_zero_depth_offload_gen:stp_offload_buff_mgr_inst|lpm_counter:status_read_pointer_counter                                                                                                                                          ; lpm_counter                            ; work         ;
 ;                   |cntr_odi:auto_generated|                                                                                             ; 4 (4)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |FFT|sld_signaltap:Mic_20Translator|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|sld_offload_buffer_mgr:\stp_non_zero_depth_offload_gen:stp_offload_buff_mgr_inst|lpm_counter:status_read_pointer_counter|cntr_odi:auto_generated                                                                                                                  ; cntr_odi                               ; work         ;
 ;                |lpm_shiftreg:info_data_shift_out|                                                                                       ; 29 (29)             ; 29 (29)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |FFT|sld_signaltap:Mic_20Translator|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|sld_offload_buffer_mgr:\stp_non_zero_depth_offload_gen:stp_offload_buff_mgr_inst|lpm_shiftreg:info_data_shift_out                                                                                                                                                 ; lpm_shiftreg                           ; work         ;
-;                |lpm_shiftreg:ram_data_shift_out|                                                                                        ; 60 (60)             ; 60 (60)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |FFT|sld_signaltap:Mic_20Translator|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|sld_offload_buffer_mgr:\stp_non_zero_depth_offload_gen:stp_offload_buff_mgr_inst|lpm_shiftreg:ram_data_shift_out                                                                                                                                                  ; lpm_shiftreg                           ; work         ;
+;                |lpm_shiftreg:ram_data_shift_out|                                                                                        ; 67 (67)             ; 67 (67)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |FFT|sld_signaltap:Mic_20Translator|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|sld_offload_buffer_mgr:\stp_non_zero_depth_offload_gen:stp_offload_buff_mgr_inst|lpm_shiftreg:ram_data_shift_out                                                                                                                                                  ; lpm_shiftreg                           ; work         ;
 ;                |lpm_shiftreg:status_data_shift_out|                                                                                     ; 29 (29)             ; 29 (29)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |FFT|sld_signaltap:Mic_20Translator|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|sld_offload_buffer_mgr:\stp_non_zero_depth_offload_gen:stp_offload_buff_mgr_inst|lpm_shiftreg:status_data_shift_out                                                                                                                                               ; lpm_shiftreg                           ; work         ;
 ;             |sld_rom_sr:crc_rom_sr|                                                                                                     ; 35 (35)             ; 8 (8)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |FFT|sld_signaltap:Mic_20Translator|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|sld_rom_sr:crc_rom_sr                                                                                                                                                                                                                                             ; sld_rom_sr                             ; work         ;
 ;    |video_sync_generator:vga|                                                                                                           ; 1017 (246)          ; 535 (496)                 ; 0           ; 0          ; 64           ; 0       ; 32        ; 0    ; 0            ; 0          ; |FFT|video_sync_generator:vga                                                                                                                                                                                                                                                                                                                                                      ; video_sync_generator                   ; work         ;
@@ -573,13 +571,13 @@ refer to the applicable agreement for further details.
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis RAM Summary                                                                                                                                                                                                                                                                            ;
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+--------+------+
-; Name                                                                                                                                                                                                  ; Type ; Mode             ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Size   ; MIF  ;
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+--------+------+
-; sld_signaltap:Mic_20Translator|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|altsyncram:\stp_non_zero_ram_gen:stp_buffer_ram|altsyncram_ap14:auto_generated|ALTSYNCRAM ; AUTO ; Simple Dual Port ; 16384        ; 60           ; 16384        ; 60           ; 983040 ; None ;
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+--------+------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis RAM Summary                                                                                                                                                                                                                                                                             ;
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+---------+------+
+; Name                                                                                                                                                                                                  ; Type ; Mode             ; Port A Depth ; Port A Width ; Port B Depth ; Port B Width ; Size    ; MIF  ;
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+---------+------+
+; sld_signaltap:Mic_20Translator|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|altsyncram:\stp_non_zero_ram_gen:stp_buffer_ram|altsyncram_pp14:auto_generated|ALTSYNCRAM ; AUTO ; Simple Dual Port ; 16384        ; 67           ; 16384        ; 67           ; 1097728 ; None ;
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+------+------------------+--------------+--------------+--------------+--------------+---------+------+
 
 
 +-----------------------------------------------------+
@@ -614,82 +612,98 @@ Note: number of Embedded Multiplier Blocks used is only available after a succes
 +--------+--------------+---------+--------------+--------------+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+-----------------+
 
 
-+------------------------------------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                                                   ;
-+----------------------------------------------------+-------------------------------------------------+
-; Register name                                      ; Reason for Removal                              ;
-+----------------------------------------------------+-------------------------------------------------+
-; video_sync_generator:vga|f15_display[15]           ; Stuck at GND due to stuck port data_in          ;
-; video_sync_generator:vga|f14_display[15]           ; Stuck at GND due to stuck port data_in          ;
-; video_sync_generator:vga|f13_display[15]           ; Stuck at GND due to stuck port data_in          ;
-; video_sync_generator:vga|f12_display[15]           ; Stuck at GND due to stuck port data_in          ;
-; video_sync_generator:vga|f11_display[15]           ; Stuck at GND due to stuck port data_in          ;
-; video_sync_generator:vga|f10_display[15]           ; Stuck at GND due to stuck port data_in          ;
-; video_sync_generator:vga|f9_display[15]            ; Stuck at GND due to stuck port data_in          ;
-; video_sync_generator:vga|f8_display[15]            ; Stuck at GND due to stuck port data_in          ;
-; video_sync_generator:vga|f7_display[15]            ; Stuck at GND due to stuck port data_in          ;
-; video_sync_generator:vga|f6_display[15]            ; Stuck at GND due to stuck port data_in          ;
-; video_sync_generator:vga|f5_display[15]            ; Stuck at GND due to stuck port data_in          ;
-; video_sync_generator:vga|f4_display[15]            ; Stuck at GND due to stuck port data_in          ;
-; video_sync_generator:vga|f3_display[15]            ; Stuck at GND due to stuck port data_in          ;
-; video_sync_generator:vga|f2_display[15]            ; Stuck at GND due to stuck port data_in          ;
-; video_sync_generator:vga|f1_display[15]            ; Stuck at GND due to stuck port data_in          ;
-; video_sync_generator:vga|f0_display[15]            ; Stuck at GND due to stuck port data_in          ;
-; FFT_Processor:main_professor|W3[15]                ; Merged with FFT_Processor:main_professor|W1[15] ;
-; FFT_Processor:main_professor|W5[15]                ; Merged with FFT_Processor:main_professor|W1[15] ;
-; FFT_Processor:main_professor|W7[15]                ; Merged with FFT_Processor:main_professor|W1[15] ;
-; FFT_Processor:main_professor|W1[9,11,14]           ; Merged with FFT_Processor:main_professor|W1[0]  ;
-; FFT_Processor:main_professor|W2[1..6,8,10,13]      ; Merged with FFT_Processor:main_professor|W1[0]  ;
-; FFT_Processor:main_professor|W3[0,7,11]            ; Merged with FFT_Processor:main_professor|W1[0]  ;
-; FFT_Processor:main_professor|W4[15]                ; Merged with FFT_Processor:main_professor|W1[0]  ;
-; FFT_Processor:main_professor|W5[0,7,11,31]         ; Merged with FFT_Processor:main_professor|W1[0]  ;
-; FFT_Processor:main_professor|W6[1..6,8,10,13,31]   ; Merged with FFT_Processor:main_professor|W1[0]  ;
-; FFT_Processor:main_professor|W7[0,9,11,14]         ; Merged with FFT_Processor:main_professor|W1[0]  ;
-; FFT_Processor:main_professor|W1[1,3..6]            ; Merged with FFT_Processor:main_professor|W1[13] ;
-; FFT_Processor:main_professor|W3[6,10,13,31]        ; Merged with FFT_Processor:main_professor|W1[13] ;
-; FFT_Processor:main_professor|W5[6,10,13]           ; Merged with FFT_Processor:main_professor|W1[13] ;
-; FFT_Processor:main_professor|W7[1,3..6,13]         ; Merged with FFT_Processor:main_professor|W1[13] ;
-; FFT_Processor:main_professor|W0[1..15,31]          ; Merged with FFT_Processor:main_professor|W0[0]  ;
-; FFT_Processor:main_professor|W1[7,12,31]           ; Merged with FFT_Processor:main_professor|W0[0]  ;
-; FFT_Processor:main_professor|W2[0,7,9,11,12,14,31] ; Merged with FFT_Processor:main_professor|W0[0]  ;
-; FFT_Processor:main_professor|W3[9,12,14]           ; Merged with FFT_Processor:main_professor|W0[0]  ;
-; FFT_Processor:main_professor|W4[0..14,31]          ; Merged with FFT_Processor:main_professor|W0[0]  ;
-; FFT_Processor:main_professor|W5[9,12,14]           ; Merged with FFT_Processor:main_professor|W0[0]  ;
-; FFT_Processor:main_professor|W6[0,7,9,11,12,14]    ; Merged with FFT_Processor:main_professor|W0[0]  ;
-; FFT_Processor:main_professor|W7[7,12]              ; Merged with FFT_Processor:main_professor|W0[0]  ;
-; FFT_Processor:main_professor|W1[2,8]               ; Merged with FFT_Processor:main_professor|W1[10] ;
-; FFT_Processor:main_professor|W2[15]                ; Merged with FFT_Processor:main_professor|W1[10] ;
-; FFT_Processor:main_professor|W3[1..5,8]            ; Merged with FFT_Processor:main_professor|W1[10] ;
-; FFT_Processor:main_professor|W5[1..5,8]            ; Merged with FFT_Processor:main_professor|W1[10] ;
-; FFT_Processor:main_professor|W6[15]                ; Merged with FFT_Processor:main_professor|W1[10] ;
-; FFT_Processor:main_professor|W7[2,8,10,31]         ; Merged with FFT_Processor:main_professor|W1[10] ;
-; FFT_Processor:main_professor|W1[19..21,24]         ; Merged with FFT_Processor:main_professor|W1[18] ;
-; FFT_Processor:main_professor|W3[25,27,30]          ; Merged with FFT_Processor:main_professor|W1[18] ;
-; FFT_Processor:main_professor|W5[19..22,29]         ; Merged with FFT_Processor:main_professor|W1[18] ;
-; FFT_Processor:main_professor|W7[25,28,30]          ; Merged with FFT_Processor:main_professor|W1[18] ;
-; FFT_Processor:main_professor|W1[23,27]             ; Merged with FFT_Processor:main_professor|W1[17] ;
-; FFT_Processor:main_professor|W3[18,24,26]          ; Merged with FFT_Processor:main_professor|W1[17] ;
-; FFT_Processor:main_professor|W5[17,23,28]          ; Merged with FFT_Processor:main_professor|W1[17] ;
-; FFT_Processor:main_professor|W7[22,26,29]          ; Merged with FFT_Processor:main_professor|W1[17] ;
-; FFT_Processor:main_professor|W1[22,26,29]          ; Merged with FFT_Processor:main_professor|W1[16] ;
-; FFT_Processor:main_professor|W3[16,23,28]          ; Merged with FFT_Processor:main_professor|W1[16] ;
-; FFT_Processor:main_professor|W5[16,18,24,26]       ; Merged with FFT_Processor:main_professor|W1[16] ;
-; FFT_Processor:main_professor|W7[16,23,27]          ; Merged with FFT_Processor:main_professor|W1[16] ;
-; FFT_Processor:main_professor|W1[28,30]             ; Merged with FFT_Processor:main_professor|W1[25] ;
-; FFT_Processor:main_professor|W3[17,19..22,29]      ; Merged with FFT_Processor:main_professor|W1[25] ;
-; FFT_Processor:main_professor|W5[25,27,30]          ; Merged with FFT_Processor:main_professor|W1[25] ;
-; FFT_Processor:main_professor|W7[17..21,24]         ; Merged with FFT_Processor:main_professor|W1[25] ;
-; FFT_Processor:main_professor|W2[18..22,24,26,29]   ; Merged with FFT_Processor:main_professor|W2[16] ;
-; FFT_Processor:main_professor|W6[16,23,25,27,28,30] ; Merged with FFT_Processor:main_professor|W2[16] ;
-; FFT_Processor:main_professor|W2[23,25,27,28,30]    ; Merged with FFT_Processor:main_professor|W2[17] ;
-; FFT_Processor:main_professor|W6[17..22,24,26,29]   ; Merged with FFT_Processor:main_professor|W2[17] ;
-; FFT_Processor:main_professor|W4[17..30]            ; Merged with FFT_Processor:main_professor|W4[16] ;
-; FFT_Processor:main_professor|W0[17..30]            ; Merged with FFT_Processor:main_professor|W0[16] ;
-; FFT_Processor:main_professor|W0[0]                 ; Stuck at GND due to stuck port data_in          ;
-; clkdiv:vga_clock|clk_counter[0..5]                 ; Stuck at GND due to stuck port data_in          ;
-; FFT_Processor:main_professor|cycles_counter[3]     ; Stuck at GND due to stuck port data_in          ;
-; Total Number of Removed Registers = 267            ;                                                 ;
-+----------------------------------------------------+-------------------------------------------------+
++-------------------------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                                          ;
++----------------------------------------------------+--------------------------------------------------------+
+; Register name                                      ; Reason for Removal                                     ;
++----------------------------------------------------+--------------------------------------------------------+
+; video_sync_generator:vga|f15_display[15]           ; Stuck at GND due to stuck port data_in                 ;
+; video_sync_generator:vga|f14_display[15]           ; Stuck at GND due to stuck port data_in                 ;
+; video_sync_generator:vga|f13_display[15]           ; Stuck at GND due to stuck port data_in                 ;
+; video_sync_generator:vga|f12_display[15]           ; Stuck at GND due to stuck port data_in                 ;
+; video_sync_generator:vga|f11_display[15]           ; Stuck at GND due to stuck port data_in                 ;
+; video_sync_generator:vga|f10_display[15]           ; Stuck at GND due to stuck port data_in                 ;
+; video_sync_generator:vga|f9_display[15]            ; Stuck at GND due to stuck port data_in                 ;
+; video_sync_generator:vga|f8_display[15]            ; Stuck at GND due to stuck port data_in                 ;
+; video_sync_generator:vga|f7_display[15]            ; Stuck at GND due to stuck port data_in                 ;
+; video_sync_generator:vga|f6_display[15]            ; Stuck at GND due to stuck port data_in                 ;
+; video_sync_generator:vga|f5_display[15]            ; Stuck at GND due to stuck port data_in                 ;
+; video_sync_generator:vga|f4_display[15]            ; Stuck at GND due to stuck port data_in                 ;
+; video_sync_generator:vga|f3_display[15]            ; Stuck at GND due to stuck port data_in                 ;
+; video_sync_generator:vga|f2_display[15]            ; Stuck at GND due to stuck port data_in                 ;
+; video_sync_generator:vga|f1_display[15]            ; Stuck at GND due to stuck port data_in                 ;
+; video_sync_generator:vga|f0_display[15]            ; Stuck at GND due to stuck port data_in                 ;
+; FFT_Processor:main_professor|W3[15]                ; Merged with FFT_Processor:main_professor|W1[15]        ;
+; FFT_Processor:main_professor|W5[15]                ; Merged with FFT_Processor:main_professor|W1[15]        ;
+; FFT_Processor:main_professor|W7[15]                ; Merged with FFT_Processor:main_professor|W1[15]        ;
+; FFT_Processor:main_professor|W1[9,11,14]           ; Merged with FFT_Processor:main_professor|W1[0]         ;
+; FFT_Processor:main_professor|W2[1..6,8,10,13]      ; Merged with FFT_Processor:main_professor|W1[0]         ;
+; FFT_Processor:main_professor|W3[0,7,11]            ; Merged with FFT_Processor:main_professor|W1[0]         ;
+; FFT_Processor:main_professor|W4[15]                ; Merged with FFT_Processor:main_professor|W1[0]         ;
+; FFT_Processor:main_professor|W5[0,7,11,31]         ; Merged with FFT_Processor:main_professor|W1[0]         ;
+; FFT_Processor:main_professor|W6[1..6,8,10,13,31]   ; Merged with FFT_Processor:main_professor|W1[0]         ;
+; FFT_Processor:main_professor|W7[0,9,11,14]         ; Merged with FFT_Processor:main_professor|W1[0]         ;
+; FFT_Processor:main_professor|W1[1,3..6]            ; Merged with FFT_Processor:main_professor|W1[13]        ;
+; FFT_Processor:main_professor|W3[6,10,13,31]        ; Merged with FFT_Processor:main_professor|W1[13]        ;
+; FFT_Processor:main_professor|W5[6,10,13]           ; Merged with FFT_Processor:main_professor|W1[13]        ;
+; FFT_Processor:main_professor|W7[1,3..6,13]         ; Merged with FFT_Processor:main_professor|W1[13]        ;
+; FFT_Processor:main_professor|W0[1..15,31]          ; Merged with FFT_Processor:main_professor|W0[0]         ;
+; FFT_Processor:main_professor|W1[7,12,31]           ; Merged with FFT_Processor:main_professor|W0[0]         ;
+; FFT_Processor:main_professor|W2[0,7,9,11,12,14,31] ; Merged with FFT_Processor:main_professor|W0[0]         ;
+; FFT_Processor:main_professor|W3[9,12,14]           ; Merged with FFT_Processor:main_professor|W0[0]         ;
+; FFT_Processor:main_professor|W4[0..14,31]          ; Merged with FFT_Processor:main_professor|W0[0]         ;
+; FFT_Processor:main_professor|W5[9,12,14]           ; Merged with FFT_Processor:main_professor|W0[0]         ;
+; FFT_Processor:main_professor|W6[0,7,9,11,12,14]    ; Merged with FFT_Processor:main_professor|W0[0]         ;
+; FFT_Processor:main_professor|W7[7,12]              ; Merged with FFT_Processor:main_professor|W0[0]         ;
+; FFT_Processor:main_professor|W1[2,8]               ; Merged with FFT_Processor:main_professor|W1[10]        ;
+; FFT_Processor:main_professor|W2[15]                ; Merged with FFT_Processor:main_professor|W1[10]        ;
+; FFT_Processor:main_professor|W3[1..5,8]            ; Merged with FFT_Processor:main_professor|W1[10]        ;
+; FFT_Processor:main_professor|W5[1..5,8]            ; Merged with FFT_Processor:main_professor|W1[10]        ;
+; FFT_Processor:main_professor|W6[15]                ; Merged with FFT_Processor:main_professor|W1[10]        ;
+; FFT_Processor:main_professor|W7[2,8,10,31]         ; Merged with FFT_Processor:main_professor|W1[10]        ;
+; FFT_Processor:main_professor|W1[19..21,24]         ; Merged with FFT_Processor:main_professor|W1[18]        ;
+; FFT_Processor:main_professor|W3[25,27,30]          ; Merged with FFT_Processor:main_professor|W1[18]        ;
+; FFT_Processor:main_professor|W5[19..22,29]         ; Merged with FFT_Processor:main_professor|W1[18]        ;
+; FFT_Processor:main_professor|W7[25,28,30]          ; Merged with FFT_Processor:main_professor|W1[18]        ;
+; FFT_Processor:main_professor|W1[23,27]             ; Merged with FFT_Processor:main_professor|W1[17]        ;
+; FFT_Processor:main_professor|W3[18,24,26]          ; Merged with FFT_Processor:main_professor|W1[17]        ;
+; FFT_Processor:main_professor|W5[17,23,28]          ; Merged with FFT_Processor:main_professor|W1[17]        ;
+; FFT_Processor:main_professor|W7[22,26,29]          ; Merged with FFT_Processor:main_professor|W1[17]        ;
+; FFT_Processor:main_professor|W1[22,26,29]          ; Merged with FFT_Processor:main_professor|W1[16]        ;
+; FFT_Processor:main_professor|W3[16,23,28]          ; Merged with FFT_Processor:main_professor|W1[16]        ;
+; FFT_Processor:main_professor|W5[16,18,24,26]       ; Merged with FFT_Processor:main_professor|W1[16]        ;
+; FFT_Processor:main_professor|W7[16,23,27]          ; Merged with FFT_Processor:main_professor|W1[16]        ;
+; FFT_Processor:main_professor|W1[28,30]             ; Merged with FFT_Processor:main_professor|W1[25]        ;
+; FFT_Processor:main_professor|W3[17,19..22,29]      ; Merged with FFT_Processor:main_professor|W1[25]        ;
+; FFT_Processor:main_professor|W5[25,27,30]          ; Merged with FFT_Processor:main_professor|W1[25]        ;
+; FFT_Processor:main_professor|W7[17..21,24]         ; Merged with FFT_Processor:main_professor|W1[25]        ;
+; mic_translator:main_translator|t15_reg[18..23]     ; Merged with mic_translator:main_translator|t15_reg[17] ;
+; FFT_Processor:main_professor|W2[18..22,24,26,29]   ; Merged with FFT_Processor:main_professor|W2[16]        ;
+; FFT_Processor:main_professor|W6[16,23,25,27,28,30] ; Merged with FFT_Processor:main_professor|W2[16]        ;
+; FFT_Processor:main_professor|W2[23,25,27,28,30]    ; Merged with FFT_Processor:main_professor|W2[17]        ;
+; FFT_Processor:main_professor|W6[17..22,24,26,29]   ; Merged with FFT_Processor:main_professor|W2[17]        ;
+; FFT_Processor:main_professor|W4[17..30]            ; Merged with FFT_Processor:main_professor|W4[16]        ;
+; FFT_Processor:main_professor|W0[17..30]            ; Merged with FFT_Processor:main_professor|W0[16]        ;
+; mic_translator:main_translator|t1_reg[18..23]      ; Merged with mic_translator:main_translator|t1_reg[17]  ;
+; mic_translator:main_translator|t2_reg[18..23]      ; Merged with mic_translator:main_translator|t2_reg[17]  ;
+; mic_translator:main_translator|t0_reg[18..23]      ; Merged with mic_translator:main_translator|t0_reg[17]  ;
+; mic_translator:main_translator|t3_reg[18..23]      ; Merged with mic_translator:main_translator|t3_reg[17]  ;
+; mic_translator:main_translator|t4_reg[18..23]      ; Merged with mic_translator:main_translator|t4_reg[17]  ;
+; mic_translator:main_translator|t5_reg[18..23]      ; Merged with mic_translator:main_translator|t5_reg[17]  ;
+; mic_translator:main_translator|t6_reg[18..23]      ; Merged with mic_translator:main_translator|t6_reg[17]  ;
+; mic_translator:main_translator|t7_reg[18..23]      ; Merged with mic_translator:main_translator|t7_reg[17]  ;
+; mic_translator:main_translator|t8_reg[18..23]      ; Merged with mic_translator:main_translator|t8_reg[17]  ;
+; mic_translator:main_translator|t9_reg[18..23]      ; Merged with mic_translator:main_translator|t9_reg[17]  ;
+; mic_translator:main_translator|t10_reg[18..23]     ; Merged with mic_translator:main_translator|t10_reg[17] ;
+; mic_translator:main_translator|t11_reg[18..23]     ; Merged with mic_translator:main_translator|t11_reg[17] ;
+; mic_translator:main_translator|t12_reg[18..23]     ; Merged with mic_translator:main_translator|t12_reg[17] ;
+; mic_translator:main_translator|t13_reg[18..23]     ; Merged with mic_translator:main_translator|t13_reg[17] ;
+; mic_translator:main_translator|t14_reg[18..23]     ; Merged with mic_translator:main_translator|t14_reg[17] ;
+; FFT_Processor:main_professor|W0[0]                 ; Stuck at GND due to stuck port data_in                 ;
+; clkdiv:vga_clock|clk_counter[0..5]                 ; Stuck at GND due to stuck port data_in                 ;
+; FFT_Processor:main_professor|cycles_counter[3]     ; Stuck at GND due to stuck port data_in                 ;
+; Total Number of Removed Registers = 363            ;                                                        ;
++----------------------------------------------------+--------------------------------------------------------+
 
 
 +------------------------------------------------------+
@@ -697,10 +711,10 @@ Note: number of Embedded Multiplier Blocks used is only available after a succes
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 2159  ;
+; Total registers                              ; 2202  ;
 ; Number of registers using Synchronous Clear  ; 558   ;
-; Number of registers using Synchronous Load   ; 385   ;
-; Number of registers using Asynchronous Clear ; 259   ;
+; Number of registers using Synchronous Load   ; 393   ;
+; Number of registers using Asynchronous Clear ; 266   ;
 ; Number of registers using Asynchronous Load  ; 0     ;
 ; Number of registers using Clock Enable       ; 991   ;
 ; Number of registers using Preset             ; 0     ;
@@ -714,7 +728,7 @@ Note: number of Embedded Multiplier Blocks used is only available after a succes
 +---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------+
 ; clkdiv:main_clock|clk_out_reg                                                                                                                                                                                                                                                                                                   ; 749     ;
 ; clkdiv:vga_clock|clk_out_reg                                                                                                                                                                                                                                                                                                    ; 523     ;
-; FFT_Processor:main_professor|cycles_counter[2]                                                                                                                                                                                                                                                                                  ; 308     ;
+; FFT_Processor:main_professor|cycles_counter[2]                                                                                                                                                                                                                                                                                  ; 342     ;
 ; sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|jtag_ir_reg[2] ; 2       ;
 ; sld_hub:auto_hub|alt_sld_fab_with_jtag_input:\instrumentation_fabric_with_node_gen:fabric_gen_new_way:with_jtag_input_gen:instrumentation_fabric|alt_sld_fab:instrumentation_fabric|alt_sld_fab_alt_sld_fab:alt_sld_fab|alt_sld_fab_alt_sld_fab_sldfabric:sldfabric|sld_jtag_hub:\jtag_hub_gen:real_sld_jtag_hub|jtag_ir_reg[1] ; 3       ;
 ; sld_signaltap:Mic_20Translator|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|sld_buffer_manager:sld_buffer_manager_inst|modified_post_count[1]                                                                                                                                                   ; 1       ;
@@ -741,40 +755,40 @@ Note: number of Embedded Multiplier Blocks used is only available after a succes
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                          ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------+
-; 3:1                ; 160 bits  ; 320 LEs       ; 160 LEs              ; 160 LEs                ; Yes        ; |FFT|mic_translator:main_translator|t2_reg[15]      ;
-; 3:1                ; 7 bits    ; 14 LEs        ; 7 LEs                ; 7 LEs                  ; Yes        ; |FFT|mic_translator:main_translator|data_counter[4] ;
+; 3:1                ; 160 bits  ; 320 LEs       ; 160 LEs              ; 160 LEs                ; Yes        ; |FFT|mic_translator:main_translator|t4_reg[13]      ;
+; 3:1                ; 7 bits    ; 14 LEs        ; 7 LEs                ; 7 LEs                  ; Yes        ; |FFT|mic_translator:main_translator|data_counter[0] ;
 ; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |FFT|mic_translator:main_translator|bit_cnt[24]     ;
-; 4:1                ; 22 bits   ; 44 LEs        ; 22 LEs               ; 22 LEs                 ; Yes        ; |FFT|FFT_Processor:main_professor|mem0[8]           ;
-; 4:1                ; 10 bits   ; 20 LEs        ; 20 LEs               ; 0 LEs                  ; Yes        ; |FFT|FFT_Processor:main_professor|mem0[17]          ;
-; 4:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |FFT|FFT_Processor:main_professor|cycles_counter[3] ;
-; 5:1                ; 22 bits   ; 66 LEs        ; 44 LEs               ; 22 LEs                 ; Yes        ; |FFT|FFT_Processor:main_professor|mem8[4]           ;
-; 5:1                ; 10 bits   ; 30 LEs        ; 20 LEs               ; 10 LEs                 ; Yes        ; |FFT|FFT_Processor:main_professor|mem8[19]          ;
-; 5:1                ; 18 bits   ; 54 LEs        ; 18 LEs               ; 36 LEs                 ; Yes        ; |FFT|mic_translator:main_translator|data_buffer[17] ;
-; 6:1                ; 22 bits   ; 88 LEs        ; 66 LEs               ; 22 LEs                 ; Yes        ; |FFT|FFT_Processor:main_professor|mem2[4]           ;
-; 6:1                ; 10 bits   ; 40 LEs        ; 30 LEs               ; 10 LEs                 ; Yes        ; |FFT|FFT_Processor:main_professor|mem2[17]          ;
-; 7:1                ; 22 bits   ; 88 LEs        ; 66 LEs               ; 22 LEs                 ; Yes        ; |FFT|FFT_Processor:main_professor|mem4[8]           ;
-; 7:1                ; 18 bits   ; 72 LEs        ; 54 LEs               ; 18 LEs                 ; Yes        ; |FFT|FFT_Processor:main_professor|mem14[6]          ;
-; 7:1                ; 20 bits   ; 80 LEs        ; 60 LEs               ; 20 LEs                 ; Yes        ; |FFT|FFT_Processor:main_professor|mem12[11]         ;
-; 7:1                ; 40 bits   ; 160 LEs       ; 160 LEs              ; 0 LEs                  ; Yes        ; |FFT|FFT_Processor:main_professor|mem6[14]          ;
-; 7:1                ; 10 bits   ; 40 LEs        ; 30 LEs               ; 10 LEs                 ; Yes        ; |FFT|FFT_Processor:main_professor|mem4[16]          ;
-; 7:1                ; 14 bits   ; 56 LEs        ; 42 LEs               ; 14 LEs                 ; Yes        ; |FFT|FFT_Processor:main_professor|mem14[16]         ;
-; 7:1                ; 12 bits   ; 48 LEs        ; 36 LEs               ; 12 LEs                 ; Yes        ; |FFT|FFT_Processor:main_professor|mem12[21]         ;
-; 7:1                ; 24 bits   ; 96 LEs        ; 96 LEs               ; 0 LEs                  ; Yes        ; |FFT|FFT_Processor:main_professor|mem6[21]          ;
-; 4:1                ; 22 bits   ; 44 LEs        ; 44 LEs               ; 0 LEs                  ; Yes        ; |FFT|FFT_Processor:main_professor|mem15[9]          ;
-; 4:1                ; 10 bits   ; 20 LEs        ; 20 LEs               ; 0 LEs                  ; Yes        ; |FFT|FFT_Processor:main_professor|mem15[19]         ;
-; 5:1                ; 22 bits   ; 66 LEs        ; 44 LEs               ; 22 LEs                 ; Yes        ; |FFT|FFT_Processor:main_professor|mem7[8]           ;
-; 5:1                ; 10 bits   ; 30 LEs        ; 20 LEs               ; 10 LEs                 ; Yes        ; |FFT|FFT_Processor:main_professor|mem7[25]          ;
-; 6:1                ; 22 bits   ; 88 LEs        ; 66 LEs               ; 22 LEs                 ; Yes        ; |FFT|FFT_Processor:main_professor|mem13[13]         ;
-; 6:1                ; 10 bits   ; 40 LEs        ; 30 LEs               ; 10 LEs                 ; Yes        ; |FFT|FFT_Processor:main_professor|mem13[18]         ;
-; 7:1                ; 11 bits   ; 44 LEs        ; 44 LEs               ; 0 LEs                  ; Yes        ; |FFT|FFT_Processor:main_professor|W1[17]            ;
-; 7:1                ; 20 bits   ; 80 LEs        ; 60 LEs               ; 20 LEs                 ; Yes        ; |FFT|FFT_Processor:main_professor|mem11[11]         ;
-; 7:1                ; 22 bits   ; 88 LEs        ; 66 LEs               ; 22 LEs                 ; Yes        ; |FFT|FFT_Processor:main_professor|mem1[12]          ;
-; 7:1                ; 21 bits   ; 84 LEs        ; 63 LEs               ; 21 LEs                 ; Yes        ; |FFT|FFT_Processor:main_professor|mem3[28]          ;
-; 7:1                ; 43 bits   ; 172 LEs       ; 172 LEs              ; 0 LEs                  ; Yes        ; |FFT|FFT_Processor:main_professor|mem9[2]           ;
-; 7:1                ; 12 bits   ; 48 LEs        ; 36 LEs               ; 12 LEs                 ; Yes        ; |FFT|FFT_Processor:main_professor|mem11[16]         ;
-; 7:1                ; 10 bits   ; 40 LEs        ; 30 LEs               ; 10 LEs                 ; Yes        ; |FFT|FFT_Processor:main_professor|mem1[20]          ;
-; 7:1                ; 11 bits   ; 44 LEs        ; 33 LEs               ; 11 LEs                 ; Yes        ; |FFT|FFT_Processor:main_professor|mem3[20]          ;
-; 7:1                ; 21 bits   ; 84 LEs        ; 84 LEs               ; 0 LEs                  ; Yes        ; |FFT|FFT_Processor:main_professor|mem9[3]           ;
+; 4:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |FFT|FFT_Processor:main_professor|mem0[15]          ;
+; 4:1                ; 16 bits   ; 32 LEs        ; 32 LEs               ; 0 LEs                  ; Yes        ; |FFT|FFT_Processor:main_professor|mem0[23]          ;
+; 4:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |FFT|FFT_Processor:main_professor|cycles_counter[1] ;
+; 5:1                ; 16 bits   ; 48 LEs        ; 32 LEs               ; 16 LEs                 ; Yes        ; |FFT|FFT_Processor:main_professor|mem8[8]           ;
+; 5:1                ; 16 bits   ; 48 LEs        ; 32 LEs               ; 16 LEs                 ; Yes        ; |FFT|FFT_Processor:main_professor|mem8[17]          ;
+; 5:1                ; 18 bits   ; 54 LEs        ; 18 LEs               ; 36 LEs                 ; Yes        ; |FFT|mic_translator:main_translator|data_buffer[9]  ;
+; 6:1                ; 16 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |FFT|FFT_Processor:main_professor|mem2[1]           ;
+; 6:1                ; 16 bits   ; 64 LEs        ; 48 LEs               ; 16 LEs                 ; Yes        ; |FFT|FFT_Processor:main_professor|mem2[19]          ;
+; 7:1                ; 16 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |FFT|FFT_Processor:main_professor|mem4[1]           ;
+; 7:1                ; 12 bits   ; 48 LEs        ; 24 LEs               ; 24 LEs                 ; Yes        ; |FFT|FFT_Processor:main_professor|mem14[9]          ;
+; 7:1                ; 14 bits   ; 56 LEs        ; 28 LEs               ; 28 LEs                 ; Yes        ; |FFT|FFT_Processor:main_professor|mem12[5]          ;
+; 7:1                ; 28 bits   ; 112 LEs       ; 84 LEs               ; 28 LEs                 ; Yes        ; |FFT|FFT_Processor:main_professor|mem6[14]          ;
+; 7:1                ; 16 bits   ; 64 LEs        ; 48 LEs               ; 16 LEs                 ; Yes        ; |FFT|FFT_Processor:main_professor|mem4[30]          ;
+; 7:1                ; 20 bits   ; 80 LEs        ; 60 LEs               ; 20 LEs                 ; Yes        ; |FFT|FFT_Processor:main_professor|mem14[16]         ;
+; 7:1                ; 18 bits   ; 72 LEs        ; 54 LEs               ; 18 LEs                 ; Yes        ; |FFT|FFT_Processor:main_professor|mem12[20]         ;
+; 7:1                ; 36 bits   ; 144 LEs       ; 144 LEs              ; 0 LEs                  ; Yes        ; |FFT|FFT_Processor:main_professor|mem10[26]         ;
+; 4:1                ; 16 bits   ; 32 LEs        ; 16 LEs               ; 16 LEs                 ; Yes        ; |FFT|FFT_Processor:main_professor|mem15[10]         ;
+; 4:1                ; 16 bits   ; 32 LEs        ; 32 LEs               ; 0 LEs                  ; Yes        ; |FFT|FFT_Processor:main_professor|mem15[27]         ;
+; 5:1                ; 16 bits   ; 48 LEs        ; 32 LEs               ; 16 LEs                 ; Yes        ; |FFT|FFT_Processor:main_professor|mem7[2]           ;
+; 5:1                ; 16 bits   ; 48 LEs        ; 32 LEs               ; 16 LEs                 ; Yes        ; |FFT|FFT_Processor:main_professor|mem7[28]          ;
+; 6:1                ; 16 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |FFT|FFT_Processor:main_professor|mem13[2]          ;
+; 6:1                ; 16 bits   ; 64 LEs        ; 48 LEs               ; 16 LEs                 ; Yes        ; |FFT|FFT_Processor:main_professor|mem13[17]         ;
+; 7:1                ; 11 bits   ; 44 LEs        ; 44 LEs               ; 0 LEs                  ; Yes        ; |FFT|FFT_Processor:main_professor|W1[0]             ;
+; 7:1                ; 14 bits   ; 56 LEs        ; 28 LEs               ; 28 LEs                 ; Yes        ; |FFT|FFT_Processor:main_professor|mem11[14]         ;
+; 7:1                ; 16 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |FFT|FFT_Processor:main_professor|mem1[4]           ;
+; 7:1                ; 15 bits   ; 60 LEs        ; 30 LEs               ; 30 LEs                 ; Yes        ; |FFT|FFT_Processor:main_professor|mem3[4]           ;
+; 7:1                ; 31 bits   ; 124 LEs       ; 93 LEs               ; 31 LEs                 ; Yes        ; |FFT|FFT_Processor:main_professor|mem5[11]          ;
+; 7:1                ; 18 bits   ; 72 LEs        ; 54 LEs               ; 18 LEs                 ; Yes        ; |FFT|FFT_Processor:main_professor|mem11[18]         ;
+; 7:1                ; 16 bits   ; 64 LEs        ; 48 LEs               ; 16 LEs                 ; Yes        ; |FFT|FFT_Processor:main_professor|mem1[20]          ;
+; 7:1                ; 17 bits   ; 68 LEs        ; 51 LEs               ; 17 LEs                 ; Yes        ; |FFT|FFT_Processor:main_professor|mem3[17]          ;
+; 7:1                ; 33 bits   ; 132 LEs       ; 132 LEs              ; 0 LEs                  ; Yes        ; |FFT|FFT_Processor:main_professor|mem9[19]          ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------+
 
 
@@ -846,7 +860,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; SLD_IP_VERSION                                  ; 6                                       ; Signed Integer ;
 ; SLD_IP_MINOR_VERSION                            ; 0                                       ; Signed Integer ;
 ; SLD_COMMON_IP_VERSION                           ; 0                                       ; Signed Integer ;
-; sld_data_bits                                   ; 60                                      ; Untyped        ;
+; sld_data_bits                                   ; 67                                      ; Untyped        ;
 ; sld_trigger_bits                                ; 1                                       ; Untyped        ;
 ; SLD_NODE_CRC_BITS                               ; 32                                      ; Signed Integer ;
 ; SLD_NODE_CRC_HIWORD                             ; 41394                                   ; Signed Integer ;
@@ -888,7 +902,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; sld_state_flow_use_generated                    ; 0                                       ; Untyped        ;
 ; sld_current_resource_width                      ; 1                                       ; Untyped        ;
 ; sld_attribute_mem_mode                          ; OFF                                     ; Untyped        ;
-; sld_storage_qualifier_bits                      ; 61                                      ; Untyped        ;
+; sld_storage_qualifier_bits                      ; 68                                      ; Untyped        ;
 ; SLD_STORAGE_QUALIFIER_GAP_RECORD                ; 0                                       ; Signed Integer ;
 ; SLD_STORAGE_QUALIFIER_MODE                      ; OFF                                     ; String         ;
 ; SLD_STORAGE_QUALIFIER_ENABLE_ADVANCED_CONDITION ; 0                                       ; Signed Integer ;
@@ -3037,60 +3051,12 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------------+--------+----------+-------------------------------------------------------------------------------------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "FFT_Processor:main_professor"                                                                                                                  ;
-+------+-------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port ; Type  ; Severity ; Details                                                                                                                                         ;
-+------+-------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------+
-; t0   ; Input ; Warning  ; Input port expression (10 bits) is smaller than the input port (16 bits) it drives.  Extra input bit(s) "t0[15..10]" will be connected to GND.  ;
-; t1   ; Input ; Warning  ; Input port expression (10 bits) is smaller than the input port (16 bits) it drives.  Extra input bit(s) "t1[15..10]" will be connected to GND.  ;
-; t2   ; Input ; Warning  ; Input port expression (10 bits) is smaller than the input port (16 bits) it drives.  Extra input bit(s) "t2[15..10]" will be connected to GND.  ;
-; t3   ; Input ; Warning  ; Input port expression (10 bits) is smaller than the input port (16 bits) it drives.  Extra input bit(s) "t3[15..10]" will be connected to GND.  ;
-; t4   ; Input ; Warning  ; Input port expression (10 bits) is smaller than the input port (16 bits) it drives.  Extra input bit(s) "t4[15..10]" will be connected to GND.  ;
-; t5   ; Input ; Warning  ; Input port expression (10 bits) is smaller than the input port (16 bits) it drives.  Extra input bit(s) "t5[15..10]" will be connected to GND.  ;
-; t6   ; Input ; Warning  ; Input port expression (10 bits) is smaller than the input port (16 bits) it drives.  Extra input bit(s) "t6[15..10]" will be connected to GND.  ;
-; t7   ; Input ; Warning  ; Input port expression (10 bits) is smaller than the input port (16 bits) it drives.  Extra input bit(s) "t7[15..10]" will be connected to GND.  ;
-; t8   ; Input ; Warning  ; Input port expression (10 bits) is smaller than the input port (16 bits) it drives.  Extra input bit(s) "t8[15..10]" will be connected to GND.  ;
-; t9   ; Input ; Warning  ; Input port expression (10 bits) is smaller than the input port (16 bits) it drives.  Extra input bit(s) "t9[15..10]" will be connected to GND.  ;
-; t10  ; Input ; Warning  ; Input port expression (10 bits) is smaller than the input port (16 bits) it drives.  Extra input bit(s) "t10[15..10]" will be connected to GND. ;
-; t11  ; Input ; Warning  ; Input port expression (10 bits) is smaller than the input port (16 bits) it drives.  Extra input bit(s) "t11[15..10]" will be connected to GND. ;
-; t12  ; Input ; Warning  ; Input port expression (10 bits) is smaller than the input port (16 bits) it drives.  Extra input bit(s) "t12[15..10]" will be connected to GND. ;
-; t13  ; Input ; Warning  ; Input port expression (10 bits) is smaller than the input port (16 bits) it drives.  Extra input bit(s) "t13[15..10]" will be connected to GND. ;
-; t14  ; Input ; Warning  ; Input port expression (10 bits) is smaller than the input port (16 bits) it drives.  Extra input bit(s) "t14[15..10]" will be connected to GND. ;
-; t15  ; Input ; Warning  ; Input port expression (10 bits) is smaller than the input port (16 bits) it drives.  Extra input bit(s) "t15[15..10]" will be connected to GND. ;
-+------+-------+----------+-------------------------------------------------------------------------------------------------------------------------------------------------+
-
-
-+---------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "mic_translator:main_translator"                                                          ;
-+-----------+--------+----------+-------------------------------------------------------------------------------------+
-; Port      ; Type   ; Severity ; Details                                                                             ;
-+-----------+--------+----------+-------------------------------------------------------------------------------------+
-; t0[7..0]  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; t1[7..0]  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; t2[7..0]  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; t3[7..0]  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; t4[7..0]  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; t5[7..0]  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; t6[7..0]  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; t7[7..0]  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; t8[7..0]  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; t9[7..0]  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; t10[7..0] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; t11[7..0] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; t12[7..0] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; t13[7..0] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; t14[7..0] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; t15[7..0] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+-----------+--------+----------+-------------------------------------------------------------------------------------+
-
-
 +-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
 ; Signal Tap Logic Analyzer Settings                                                                                                                                                                                                                                      ;
 +----------------+------------------+---------------------+------------------+--------------+----------+------------------------+----------------------+--------------------+-----------------------------+-----------------+------------------+--------------------------+
 ; Instance Index ; Instance Name    ; Trigger Input Width ; Data Input Width ; Sample Depth ; Segments ; Storage Qualifier Type ; Trigger Flow Control ; Trigger Conditions ; Advanced Trigger Conditions ; Trigger In Used ; Trigger Out Used ; Power-Up Trigger Enabled ;
 +----------------+------------------+---------------------+------------------+--------------+----------+------------------------+----------------------+--------------------+-----------------------------+-----------------+------------------+--------------------------+
-; 0              ; Mic_20Translator ; 1                   ; 60               ; 16384        ; 1        ; continuous             ; sequential           ; 1                  ; 1                           ; no              ; no               ; no                       ;
+; 0              ; Mic_20Translator ; 1                   ; 67               ; 16384        ; 1        ; continuous             ; sequential           ; 1                  ; 1                           ; no              ; no               ; no                       ;
 +----------------+------------------+---------------------+------------------+--------------+----------+------------------------+----------------------+--------------------+-----------------------------+-----------------+------------------+--------------------------+
 
 
@@ -3107,21 +3073,21 @@ Note: In order to hide this table in the UI and the text report file, please set
 ;     SCLR SLD          ; 155                         ;
 ;     SLD               ; 103                         ;
 ;     plain             ; 22                          ;
-; cycloneiii_lcell_comb ; 4051                        ;
+; cycloneiii_lcell_comb ; 4099                        ;
 ;     arith             ; 1888                        ;
 ;         2 data inputs ; 550                         ;
 ;         3 data inputs ; 1338                        ;
-;     normal            ; 2163                        ;
+;     normal            ; 2211                        ;
 ;         0 data inputs ; 1                           ;
 ;         1 data inputs ; 32                          ;
-;         2 data inputs ; 675                         ;
-;         3 data inputs ; 245                         ;
-;         4 data inputs ; 1210                        ;
+;         2 data inputs ; 685                         ;
+;         3 data inputs ; 238                         ;
+;         4 data inputs ; 1255                        ;
 ; cycloneiii_mac_mult   ; 70                          ;
 ; cycloneiii_mac_out    ; 70                          ;
 ;                       ;                             ;
 ; Max LUT depth         ; 9.30                        ;
-; Average LUT depth     ; 4.51                        ;
+; Average LUT depth     ; 4.50                        ;
 +-----------------------+-----------------------------+
 
 
@@ -3140,6 +3106,53 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; Name                                           ; Type         ; Status    ; Partition Name                 ; Netlist Type Used ; Actual Connection                              ; Details ;
 +------------------------------------------------+--------------+-----------+--------------------------------+-------------------+------------------------------------------------+---------+
 ; DOUT                                           ; post-fitting ; connected ; Top                            ; post-synthesis    ; DOUT                                           ; N/A     ;
+; FFT_Processor:main_professor|mem0[16]          ; post-fitting ; connected ; Top                            ; post-synthesis    ; FFT_Processor:main_professor|mem0[16]          ; N/A     ;
+; FFT_Processor:main_professor|mem0[17]          ; post-fitting ; connected ; Top                            ; post-synthesis    ; FFT_Processor:main_professor|mem0[17]          ; N/A     ;
+; FFT_Processor:main_professor|mem0[18]          ; post-fitting ; connected ; Top                            ; post-synthesis    ; FFT_Processor:main_professor|mem0[18]          ; N/A     ;
+; FFT_Processor:main_professor|mem0[19]          ; post-fitting ; connected ; Top                            ; post-synthesis    ; FFT_Processor:main_professor|mem0[19]          ; N/A     ;
+; FFT_Processor:main_professor|mem0[20]          ; post-fitting ; connected ; Top                            ; post-synthesis    ; FFT_Processor:main_professor|mem0[20]          ; N/A     ;
+; FFT_Processor:main_professor|mem0[21]          ; post-fitting ; connected ; Top                            ; post-synthesis    ; FFT_Processor:main_professor|mem0[21]          ; N/A     ;
+; FFT_Processor:main_professor|mem0[22]          ; post-fitting ; connected ; Top                            ; post-synthesis    ; FFT_Processor:main_professor|mem0[22]          ; N/A     ;
+; FFT_Processor:main_professor|mem0[23]          ; post-fitting ; connected ; Top                            ; post-synthesis    ; FFT_Processor:main_professor|mem0[23]          ; N/A     ;
+; FFT_Processor:main_professor|mem0[24]          ; post-fitting ; connected ; Top                            ; post-synthesis    ; FFT_Processor:main_professor|mem0[24]          ; N/A     ;
+; FFT_Processor:main_professor|mem0[25]          ; post-fitting ; connected ; Top                            ; post-synthesis    ; FFT_Processor:main_professor|mem0[25]          ; N/A     ;
+; FFT_Processor:main_professor|mem0[26]          ; post-fitting ; connected ; Top                            ; post-synthesis    ; FFT_Processor:main_professor|mem0[26]          ; N/A     ;
+; FFT_Processor:main_professor|mem0[27]          ; post-fitting ; connected ; Top                            ; post-synthesis    ; FFT_Processor:main_professor|mem0[27]          ; N/A     ;
+; FFT_Processor:main_professor|mem0[28]          ; post-fitting ; connected ; Top                            ; post-synthesis    ; FFT_Processor:main_professor|mem0[28]          ; N/A     ;
+; FFT_Processor:main_professor|mem0[29]          ; post-fitting ; connected ; Top                            ; post-synthesis    ; FFT_Processor:main_professor|mem0[29]          ; N/A     ;
+; FFT_Processor:main_professor|mem0[30]          ; post-fitting ; connected ; Top                            ; post-synthesis    ; FFT_Processor:main_professor|mem0[30]          ; N/A     ;
+; FFT_Processor:main_professor|mem0[31]          ; post-fitting ; connected ; Top                            ; post-synthesis    ; FFT_Processor:main_professor|mem0[31]          ; N/A     ;
+; FFT_Processor:main_professor|mem1[16]          ; post-fitting ; connected ; Top                            ; post-synthesis    ; FFT_Processor:main_professor|mem1[16]          ; N/A     ;
+; FFT_Processor:main_professor|mem1[17]          ; post-fitting ; connected ; Top                            ; post-synthesis    ; FFT_Processor:main_professor|mem1[17]          ; N/A     ;
+; FFT_Processor:main_professor|mem1[18]          ; post-fitting ; connected ; Top                            ; post-synthesis    ; FFT_Processor:main_professor|mem1[18]          ; N/A     ;
+; FFT_Processor:main_professor|mem1[19]          ; post-fitting ; connected ; Top                            ; post-synthesis    ; FFT_Processor:main_professor|mem1[19]          ; N/A     ;
+; FFT_Processor:main_professor|mem1[20]          ; post-fitting ; connected ; Top                            ; post-synthesis    ; FFT_Processor:main_professor|mem1[20]          ; N/A     ;
+; FFT_Processor:main_professor|mem1[21]          ; post-fitting ; connected ; Top                            ; post-synthesis    ; FFT_Processor:main_professor|mem1[21]          ; N/A     ;
+; FFT_Processor:main_professor|mem1[22]          ; post-fitting ; connected ; Top                            ; post-synthesis    ; FFT_Processor:main_professor|mem1[22]          ; N/A     ;
+; FFT_Processor:main_professor|mem1[23]          ; post-fitting ; connected ; Top                            ; post-synthesis    ; FFT_Processor:main_professor|mem1[23]          ; N/A     ;
+; FFT_Processor:main_professor|mem1[24]          ; post-fitting ; connected ; Top                            ; post-synthesis    ; FFT_Processor:main_professor|mem1[24]          ; N/A     ;
+; FFT_Processor:main_professor|mem1[25]          ; post-fitting ; connected ; Top                            ; post-synthesis    ; FFT_Processor:main_professor|mem1[25]          ; N/A     ;
+; FFT_Processor:main_professor|mem1[26]          ; post-fitting ; connected ; Top                            ; post-synthesis    ; FFT_Processor:main_professor|mem1[26]          ; N/A     ;
+; FFT_Processor:main_professor|mem1[27]          ; post-fitting ; connected ; Top                            ; post-synthesis    ; FFT_Processor:main_professor|mem1[27]          ; N/A     ;
+; FFT_Processor:main_professor|mem1[28]          ; post-fitting ; connected ; Top                            ; post-synthesis    ; FFT_Processor:main_professor|mem1[28]          ; N/A     ;
+; FFT_Processor:main_professor|mem1[29]          ; post-fitting ; connected ; Top                            ; post-synthesis    ; FFT_Processor:main_professor|mem1[29]          ; N/A     ;
+; FFT_Processor:main_professor|mem1[30]          ; post-fitting ; connected ; Top                            ; post-synthesis    ; FFT_Processor:main_professor|mem1[30]          ; N/A     ;
+; FFT_Processor:main_professor|mem2[16]          ; post-fitting ; connected ; Top                            ; post-synthesis    ; FFT_Processor:main_professor|mem2[16]          ; N/A     ;
+; FFT_Processor:main_professor|mem2[17]          ; post-fitting ; connected ; Top                            ; post-synthesis    ; FFT_Processor:main_professor|mem2[17]          ; N/A     ;
+; FFT_Processor:main_professor|mem2[18]          ; post-fitting ; connected ; Top                            ; post-synthesis    ; FFT_Processor:main_professor|mem2[18]          ; N/A     ;
+; FFT_Processor:main_professor|mem2[19]          ; post-fitting ; connected ; Top                            ; post-synthesis    ; FFT_Processor:main_professor|mem2[19]          ; N/A     ;
+; FFT_Processor:main_professor|mem2[20]          ; post-fitting ; connected ; Top                            ; post-synthesis    ; FFT_Processor:main_professor|mem2[20]          ; N/A     ;
+; FFT_Processor:main_professor|mem2[21]          ; post-fitting ; connected ; Top                            ; post-synthesis    ; FFT_Processor:main_professor|mem2[21]          ; N/A     ;
+; FFT_Processor:main_professor|mem2[22]          ; post-fitting ; connected ; Top                            ; post-synthesis    ; FFT_Processor:main_professor|mem2[22]          ; N/A     ;
+; FFT_Processor:main_professor|mem2[23]          ; post-fitting ; connected ; Top                            ; post-synthesis    ; FFT_Processor:main_professor|mem2[23]          ; N/A     ;
+; FFT_Processor:main_professor|mem2[24]          ; post-fitting ; connected ; Top                            ; post-synthesis    ; FFT_Processor:main_professor|mem2[24]          ; N/A     ;
+; FFT_Processor:main_professor|mem2[25]          ; post-fitting ; connected ; Top                            ; post-synthesis    ; FFT_Processor:main_professor|mem2[25]          ; N/A     ;
+; FFT_Processor:main_professor|mem2[26]          ; post-fitting ; connected ; Top                            ; post-synthesis    ; FFT_Processor:main_professor|mem2[26]          ; N/A     ;
+; FFT_Processor:main_professor|mem2[27]          ; post-fitting ; connected ; Top                            ; post-synthesis    ; FFT_Processor:main_professor|mem2[27]          ; N/A     ;
+; FFT_Processor:main_professor|mem2[28]          ; post-fitting ; connected ; Top                            ; post-synthesis    ; FFT_Processor:main_professor|mem2[28]          ; N/A     ;
+; FFT_Processor:main_professor|mem2[29]          ; post-fitting ; connected ; Top                            ; post-synthesis    ; FFT_Processor:main_professor|mem2[29]          ; N/A     ;
+; FFT_Processor:main_professor|mem2[30]          ; post-fitting ; connected ; Top                            ; post-synthesis    ; FFT_Processor:main_professor|mem2[30]          ; N/A     ;
+; FFT_Processor:main_professor|mem2[31]          ; post-fitting ; connected ; Top                            ; post-synthesis    ; FFT_Processor:main_professor|mem2[31]          ; N/A     ;
 ; Mic_20Translator|gnd                           ; post-fitting ; connected ; sld_signaltap:Mic_20Translator ; post-synthesis    ; sld_signaltap:Mic_20Translator|~GND            ; N/A     ;
 ; Mic_20Translator|gnd                           ; post-fitting ; connected ; sld_signaltap:Mic_20Translator ; post-synthesis    ; sld_signaltap:Mic_20Translator|~GND            ; N/A     ;
 ; Mic_20Translator|gnd                           ; post-fitting ; connected ; sld_signaltap:Mic_20Translator ; post-synthesis    ; sld_signaltap:Mic_20Translator|~GND            ; N/A     ;
@@ -3153,12 +3166,12 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; Mic_20Translator|gnd                           ; post-fitting ; connected ; sld_signaltap:Mic_20Translator ; post-synthesis    ; sld_signaltap:Mic_20Translator|~GND            ; N/A     ;
 ; Mic_20Translator|gnd                           ; post-fitting ; connected ; sld_signaltap:Mic_20Translator ; post-synthesis    ; sld_signaltap:Mic_20Translator|~GND            ; N/A     ;
 ; Mic_20Translator|gnd                           ; post-fitting ; connected ; sld_signaltap:Mic_20Translator ; post-synthesis    ; sld_signaltap:Mic_20Translator|~GND            ; N/A     ;
-; Mic_20Translator|gnd                           ; post-fitting ; connected ; sld_signaltap:Mic_20Translator ; post-synthesis    ; sld_signaltap:Mic_20Translator|~GND            ; N/A     ;
-; Mic_20Translator|gnd                           ; post-fitting ; connected ; sld_signaltap:Mic_20Translator ; post-synthesis    ; sld_signaltap:Mic_20Translator|~GND            ; N/A     ;
-; Mic_20Translator|gnd                           ; post-fitting ; connected ; sld_signaltap:Mic_20Translator ; post-synthesis    ; sld_signaltap:Mic_20Translator|~GND            ; N/A     ;
-; Mic_20Translator|gnd                           ; post-fitting ; connected ; sld_signaltap:Mic_20Translator ; post-synthesis    ; sld_signaltap:Mic_20Translator|~GND            ; N/A     ;
-; Mic_20Translator|gnd                           ; post-fitting ; connected ; sld_signaltap:Mic_20Translator ; post-synthesis    ; sld_signaltap:Mic_20Translator|~GND            ; N/A     ;
-; Mic_20Translator|gnd                           ; post-fitting ; connected ; sld_signaltap:Mic_20Translator ; post-synthesis    ; sld_signaltap:Mic_20Translator|~GND            ; N/A     ;
+; Mic_20Translator|vcc                           ; post-fitting ; connected ; sld_signaltap:Mic_20Translator ; post-synthesis    ; sld_signaltap:Mic_20Translator|~VCC            ; N/A     ;
+; Mic_20Translator|vcc                           ; post-fitting ; connected ; sld_signaltap:Mic_20Translator ; post-synthesis    ; sld_signaltap:Mic_20Translator|~VCC            ; N/A     ;
+; Mic_20Translator|vcc                           ; post-fitting ; connected ; sld_signaltap:Mic_20Translator ; post-synthesis    ; sld_signaltap:Mic_20Translator|~VCC            ; N/A     ;
+; Mic_20Translator|vcc                           ; post-fitting ; connected ; sld_signaltap:Mic_20Translator ; post-synthesis    ; sld_signaltap:Mic_20Translator|~VCC            ; N/A     ;
+; Mic_20Translator|vcc                           ; post-fitting ; connected ; sld_signaltap:Mic_20Translator ; post-synthesis    ; sld_signaltap:Mic_20Translator|~VCC            ; N/A     ;
+; Mic_20Translator|vcc                           ; post-fitting ; connected ; sld_signaltap:Mic_20Translator ; post-synthesis    ; sld_signaltap:Mic_20Translator|~VCC            ; N/A     ;
 ; Mic_20Translator|vcc                           ; post-fitting ; connected ; sld_signaltap:Mic_20Translator ; post-synthesis    ; sld_signaltap:Mic_20Translator|~VCC            ; N/A     ;
 ; Mic_20Translator|vcc                           ; post-fitting ; connected ; sld_signaltap:Mic_20Translator ; post-synthesis    ; sld_signaltap:Mic_20Translator|~VCC            ; N/A     ;
 ; Mic_20Translator|vcc                           ; post-fitting ; connected ; sld_signaltap:Mic_20Translator ; post-synthesis    ; sld_signaltap:Mic_20Translator|~VCC            ; N/A     ;
@@ -3193,46 +3206,6 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; mic_translator:main_translator|data_counter[5] ; post-fitting ; connected ; Top                            ; post-synthesis    ; mic_translator:main_translator|data_counter[5] ; N/A     ;
 ; mic_translator:main_translator|data_counter[6] ; post-fitting ; connected ; Top                            ; post-synthesis    ; mic_translator:main_translator|data_counter[6] ; N/A     ;
 ; mic_translator:main_translator|new_t_reg       ; post-fitting ; connected ; Top                            ; post-synthesis    ; mic_translator:main_translator|new_t_reg       ; N/A     ;
-; mic_translator:main_translator|t0_reg[10]      ; post-fitting ; connected ; Top                            ; post-synthesis    ; mic_translator:main_translator|t0_reg[10]      ; N/A     ;
-; mic_translator:main_translator|t0_reg[11]      ; post-fitting ; connected ; Top                            ; post-synthesis    ; mic_translator:main_translator|t0_reg[11]      ; N/A     ;
-; mic_translator:main_translator|t0_reg[12]      ; post-fitting ; connected ; Top                            ; post-synthesis    ; mic_translator:main_translator|t0_reg[12]      ; N/A     ;
-; mic_translator:main_translator|t0_reg[13]      ; post-fitting ; connected ; Top                            ; post-synthesis    ; mic_translator:main_translator|t0_reg[13]      ; N/A     ;
-; mic_translator:main_translator|t0_reg[14]      ; post-fitting ; connected ; Top                            ; post-synthesis    ; mic_translator:main_translator|t0_reg[14]      ; N/A     ;
-; mic_translator:main_translator|t0_reg[15]      ; post-fitting ; connected ; Top                            ; post-synthesis    ; mic_translator:main_translator|t0_reg[15]      ; N/A     ;
-; mic_translator:main_translator|t0_reg[16]      ; post-fitting ; connected ; Top                            ; post-synthesis    ; mic_translator:main_translator|t0_reg[16]      ; N/A     ;
-; mic_translator:main_translator|t0_reg[17]      ; post-fitting ; connected ; Top                            ; post-synthesis    ; mic_translator:main_translator|t0_reg[17]      ; N/A     ;
-; mic_translator:main_translator|t0_reg[8]       ; post-fitting ; connected ; Top                            ; post-synthesis    ; mic_translator:main_translator|t0_reg[8]       ; N/A     ;
-; mic_translator:main_translator|t0_reg[9]       ; post-fitting ; connected ; Top                            ; post-synthesis    ; mic_translator:main_translator|t0_reg[9]       ; N/A     ;
-; mic_translator:main_translator|t1_reg[10]      ; post-fitting ; connected ; Top                            ; post-synthesis    ; mic_translator:main_translator|t1_reg[10]      ; N/A     ;
-; mic_translator:main_translator|t1_reg[11]      ; post-fitting ; connected ; Top                            ; post-synthesis    ; mic_translator:main_translator|t1_reg[11]      ; N/A     ;
-; mic_translator:main_translator|t1_reg[12]      ; post-fitting ; connected ; Top                            ; post-synthesis    ; mic_translator:main_translator|t1_reg[12]      ; N/A     ;
-; mic_translator:main_translator|t1_reg[13]      ; post-fitting ; connected ; Top                            ; post-synthesis    ; mic_translator:main_translator|t1_reg[13]      ; N/A     ;
-; mic_translator:main_translator|t1_reg[14]      ; post-fitting ; connected ; Top                            ; post-synthesis    ; mic_translator:main_translator|t1_reg[14]      ; N/A     ;
-; mic_translator:main_translator|t1_reg[15]      ; post-fitting ; connected ; Top                            ; post-synthesis    ; mic_translator:main_translator|t1_reg[15]      ; N/A     ;
-; mic_translator:main_translator|t1_reg[16]      ; post-fitting ; connected ; Top                            ; post-synthesis    ; mic_translator:main_translator|t1_reg[16]      ; N/A     ;
-; mic_translator:main_translator|t1_reg[17]      ; post-fitting ; connected ; Top                            ; post-synthesis    ; mic_translator:main_translator|t1_reg[17]      ; N/A     ;
-; mic_translator:main_translator|t1_reg[8]       ; post-fitting ; connected ; Top                            ; post-synthesis    ; mic_translator:main_translator|t1_reg[8]       ; N/A     ;
-; mic_translator:main_translator|t1_reg[9]       ; post-fitting ; connected ; Top                            ; post-synthesis    ; mic_translator:main_translator|t1_reg[9]       ; N/A     ;
-; mic_translator:main_translator|t2_reg[10]      ; post-fitting ; connected ; Top                            ; post-synthesis    ; mic_translator:main_translator|t2_reg[10]      ; N/A     ;
-; mic_translator:main_translator|t2_reg[11]      ; post-fitting ; connected ; Top                            ; post-synthesis    ; mic_translator:main_translator|t2_reg[11]      ; N/A     ;
-; mic_translator:main_translator|t2_reg[12]      ; post-fitting ; connected ; Top                            ; post-synthesis    ; mic_translator:main_translator|t2_reg[12]      ; N/A     ;
-; mic_translator:main_translator|t2_reg[13]      ; post-fitting ; connected ; Top                            ; post-synthesis    ; mic_translator:main_translator|t2_reg[13]      ; N/A     ;
-; mic_translator:main_translator|t2_reg[14]      ; post-fitting ; connected ; Top                            ; post-synthesis    ; mic_translator:main_translator|t2_reg[14]      ; N/A     ;
-; mic_translator:main_translator|t2_reg[15]      ; post-fitting ; connected ; Top                            ; post-synthesis    ; mic_translator:main_translator|t2_reg[15]      ; N/A     ;
-; mic_translator:main_translator|t2_reg[16]      ; post-fitting ; connected ; Top                            ; post-synthesis    ; mic_translator:main_translator|t2_reg[16]      ; N/A     ;
-; mic_translator:main_translator|t2_reg[17]      ; post-fitting ; connected ; Top                            ; post-synthesis    ; mic_translator:main_translator|t2_reg[17]      ; N/A     ;
-; mic_translator:main_translator|t2_reg[8]       ; post-fitting ; connected ; Top                            ; post-synthesis    ; mic_translator:main_translator|t2_reg[8]       ; N/A     ;
-; mic_translator:main_translator|t2_reg[9]       ; post-fitting ; connected ; Top                            ; post-synthesis    ; mic_translator:main_translator|t2_reg[9]       ; N/A     ;
-; mic_translator:main_translator|t3_reg[10]      ; post-fitting ; connected ; Top                            ; post-synthesis    ; mic_translator:main_translator|t3_reg[10]      ; N/A     ;
-; mic_translator:main_translator|t3_reg[11]      ; post-fitting ; connected ; Top                            ; post-synthesis    ; mic_translator:main_translator|t3_reg[11]      ; N/A     ;
-; mic_translator:main_translator|t3_reg[12]      ; post-fitting ; connected ; Top                            ; post-synthesis    ; mic_translator:main_translator|t3_reg[12]      ; N/A     ;
-; mic_translator:main_translator|t3_reg[13]      ; post-fitting ; connected ; Top                            ; post-synthesis    ; mic_translator:main_translator|t3_reg[13]      ; N/A     ;
-; mic_translator:main_translator|t3_reg[14]      ; post-fitting ; connected ; Top                            ; post-synthesis    ; mic_translator:main_translator|t3_reg[14]      ; N/A     ;
-; mic_translator:main_translator|t3_reg[15]      ; post-fitting ; connected ; Top                            ; post-synthesis    ; mic_translator:main_translator|t3_reg[15]      ; N/A     ;
-; mic_translator:main_translator|t3_reg[16]      ; post-fitting ; connected ; Top                            ; post-synthesis    ; mic_translator:main_translator|t3_reg[16]      ; N/A     ;
-; mic_translator:main_translator|t3_reg[17]      ; post-fitting ; connected ; Top                            ; post-synthesis    ; mic_translator:main_translator|t3_reg[17]      ; N/A     ;
-; mic_translator:main_translator|t3_reg[8]       ; post-fitting ; connected ; Top                            ; post-synthesis    ; mic_translator:main_translator|t3_reg[8]       ; N/A     ;
-; mic_translator:main_translator|t3_reg[9]       ; post-fitting ; connected ; Top                            ; post-synthesis    ; mic_translator:main_translator|t3_reg[9]       ; N/A     ;
 +------------------------------------------------+--------------+-----------+--------------------------------+-------------------+------------------------------------------------+---------+
 
 
@@ -3242,7 +3215,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Tue Mar 24 19:17:28 2020
+    Info: Processing started: Tue Mar 24 23:46:17 2020
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off FFT -c FFT
 Critical Warning (138067): Current license file does not support incremental compilation. The Quartus Prime software removes all the user-specified design partitions in the design automatically.
 Info (16303): Aggressive Performance optimization mode selected -- timing performance will be prioritized at the potential cost of increased logic area and compilation time
@@ -3310,20 +3283,20 @@ Info (12021): Found 1 design units, including 1 entities, in source file db/sld_
     Info (12023): Found entity 1: sld_ela_trigger_16o File: C:/Users/chank/OneDrive/Quartus/FFT/db/sld_ela_trigger_16o.tdf Line: 25
 Info (12021): Found 1 design units, including 1 entities, in source file db/sld_reserved_fft_mic_translator_1_d1da.v
     Info (12023): Found entity 1: sld_reserved_FFT_Mic_Translator_1_d1da File: C:/Users/chank/OneDrive/Quartus/FFT/db/sld_reserved_fft_mic_translator_1_d1da.v Line: 28
-Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_ap14.tdf
-    Info (12023): Found entity 1: altsyncram_ap14 File: C:/Users/chank/OneDrive/Quartus/FFT/db/altsyncram_ap14.tdf Line: 31
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_pp14.tdf
+    Info (12023): Found entity 1: altsyncram_pp14 File: C:/Users/chank/OneDrive/Quartus/FFT/db/altsyncram_pp14.tdf Line: 31
 Info (12021): Found 1 design units, including 1 entities, in source file db/decode_97a.tdf
     Info (12023): Found entity 1: decode_97a File: C:/Users/chank/OneDrive/Quartus/FFT/db/decode_97a.tdf Line: 22
-Info (12021): Found 1 design units, including 1 entities, in source file db/mux_73b.tdf
-    Info (12023): Found entity 1: mux_73b File: C:/Users/chank/OneDrive/Quartus/FFT/db/mux_73b.tdf Line: 22
+Info (12021): Found 1 design units, including 1 entities, in source file db/mux_f3b.tdf
+    Info (12023): Found entity 1: mux_f3b File: C:/Users/chank/OneDrive/Quartus/FFT/db/mux_f3b.tdf Line: 22
 Info (12021): Found 1 design units, including 1 entities, in source file db/mux_n7c.tdf
     Info (12023): Found entity 1: mux_n7c File: C:/Users/chank/OneDrive/Quartus/FFT/db/mux_n7c.tdf Line: 22
 Info (12021): Found 1 design units, including 1 entities, in source file db/decode_3af.tdf
     Info (12023): Found entity 1: decode_3af File: C:/Users/chank/OneDrive/Quartus/FFT/db/decode_3af.tdf Line: 22
-Info (12021): Found 1 design units, including 1 entities, in source file db/cntr_6rh.tdf
-    Info (12023): Found entity 1: cntr_6rh File: C:/Users/chank/OneDrive/Quartus/FFT/db/cntr_6rh.tdf Line: 27
-Info (12021): Found 1 design units, including 1 entities, in source file db/cmpr_irb.tdf
-    Info (12023): Found entity 1: cmpr_irb File: C:/Users/chank/OneDrive/Quartus/FFT/db/cmpr_irb.tdf Line: 22
+Info (12021): Found 1 design units, including 1 entities, in source file db/cntr_erh.tdf
+    Info (12023): Found entity 1: cntr_erh File: C:/Users/chank/OneDrive/Quartus/FFT/db/cntr_erh.tdf Line: 27
+Info (12021): Found 1 design units, including 1 entities, in source file db/cmpr_jrb.tdf
+    Info (12023): Found entity 1: cmpr_jrb File: C:/Users/chank/OneDrive/Quartus/FFT/db/cmpr_jrb.tdf Line: 22
 Info (12021): Found 1 design units, including 1 entities, in source file db/cntr_1mi.tdf
     Info (12023): Found entity 1: cntr_1mi File: C:/Users/chank/OneDrive/Quartus/FFT/db/cntr_1mi.tdf Line: 25
 Info (12021): Found 1 design units, including 1 entities, in source file db/cntr_arh.tdf
@@ -3336,7 +3309,7 @@ Info (12021): Found 1 design units, including 1 entities, in source file db/cmpr
     Info (12023): Found entity 1: cmpr_drb File: C:/Users/chank/OneDrive/Quartus/FFT/db/cmpr_drb.tdf Line: 22
 Info (12033): Analysis and Synthesis generated Signal Tap or debug node instance "Mic_20Translator"
 Info (11170): Starting IP generation for the debug fabric: alt_sld_fab.
-Info (11172): 2020.03.24.19:17:45 Progress: Loading sld3cba3e19/alt_sld_fab_wrapper_hw.tcl
+Info (11172): 2020.03.24.23:46:33 Progress: Loading sld3cba3e19/alt_sld_fab_wrapper_hw.tcl
 Info (11172): Alt_sld_fab.alt_sld_fab: SLD fabric agents which did not specify prefer_host were connected to JTAG
 Info (11172): Alt_sld_fab: Generating alt_sld_fab "alt_sld_fab" for QUARTUS_SYNTH
 Info (11172): Alt_sld_fab: "alt_sld_fab" instantiated alt_sld_fab "alt_sld_fab"
@@ -3522,7 +3495,6 @@ Info (12133): Instantiated megafunction "FFT_Processor:main_professor|butterflyu
     Info (12134): Parameter "INPUT_A_IS_CONSTANT" = "NO"
     Info (12134): Parameter "INPUT_B_IS_CONSTANT" = "NO"
     Info (12134): Parameter "MAXIMIZE_SPEED" = "5"
-Warning (12241): 1 hierarchies have connectivity warnings - see the Connectivity Checks report folder
 Info (13014): Ignored 984 buffer(s)
     Info (13019): Ignored 984 SOFT buffer(s)
 Info (286031): Timing-Driven Synthesis is running on partition "Top"
@@ -3541,19 +3513,19 @@ Info (128003): Physical synthesis algorithm register retiming complete: estimate
 Info (128002): Starting physical synthesis algorithm combinational resynthesis using boolean division
 Info (128003): Physical synthesis algorithm combinational resynthesis using boolean division complete: estimated slack improvement of 0 ps
 Info (128001): Physical synthesis optimizations for speed complete: elapsed time is 00:00:02
-Info (35024): Successfully connected in-system debug instance "Mic_20Translator" to all 94 required data inputs, trigger inputs, acquisition clocks, and dynamic pins
+Info (35024): Successfully connected in-system debug instance "Mic_20Translator" to all 101 required data inputs, trigger inputs, acquisition clocks, and dynamic pins
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 5704 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 5810 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 6 input pins
     Info (21059): Implemented 17 output pins
-    Info (21061): Implemented 5420 logic cells
-    Info (21064): Implemented 120 RAM segments
+    Info (21061): Implemented 5512 logic cells
+    Info (21064): Implemented 134 RAM segments
     Info (21062): Implemented 140 DSP elements
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 5 warnings
-    Info: Peak virtual memory: 4985 megabytes
-    Info: Processing ended: Tue Mar 24 19:18:06 2020
-    Info: Elapsed time: 00:00:38
-    Info: Total CPU time (on all processors): 00:00:58
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 4 warnings
+    Info: Peak virtual memory: 4986 megabytes
+    Info: Processing ended: Tue Mar 24 23:46:54 2020
+    Info: Elapsed time: 00:00:37
+    Info: Total CPU time (on all processors): 00:00:54
 
 

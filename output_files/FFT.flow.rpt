@@ -1,5 +1,5 @@
 Flow report for FFT
-Tue Mar 24 19:19:04 2020
+Tue Mar 24 23:47:51 2020
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -40,20 +40,20 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Flow Summary                                                                     ;
 +------------------------------------+---------------------------------------------+
-; Flow Status                        ; Successful - Tue Mar 24 19:19:04 2020       ;
+; Flow Status                        ; Successful - Tue Mar 24 23:47:51 2020       ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; FFT                                         ;
 ; Top-level Entity Name              ; FFT                                         ;
 ; Family                             ; MAX 10                                      ;
 ; Device                             ; 10M50DAF484C7G                              ;
 ; Timing Models                      ; Final                                       ;
-; Total logic elements               ; 5,484 / 49,760 ( 11 % )                     ;
-;     Total combinational functions  ; 4,742 / 49,760 ( 10 % )                     ;
-;     Dedicated logic registers      ; 1,919 / 49,760 ( 4 % )                      ;
-; Total registers                    ; 1919                                        ;
+; Total logic elements               ; 5,559 / 49,760 ( 11 % )                     ;
+;     Total combinational functions  ; 4,799 / 49,760 ( 10 % )                     ;
+;     Dedicated logic registers      ; 1,962 / 49,760 ( 4 % )                      ;
+; Total registers                    ; 1962                                        ;
 ; Total pins                         ; 19 / 360 ( 5 % )                            ;
 ; Total virtual pins                 ; 0                                           ;
-; Total memory bits                  ; 983,040 / 1,677,312 ( 59 % )                ;
+; Total memory bits                  ; 1,097,728 / 1,677,312 ( 65 % )              ;
 ; Embedded Multiplier 9-bit elements ; 140 / 288 ( 49 % )                          ;
 ; Total PLLs                         ; 0 / 4 ( 0 % )                               ;
 ; UFM blocks                         ; 0 / 1 ( 0 % )                               ;
@@ -66,7 +66,7 @@ refer to the applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 03/24/2020 19:17:29 ;
+; Start date & time ; 03/24/2020 23:46:18 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; FFT                 ;
 +-------------------+---------------------+
@@ -77,7 +77,7 @@ refer to the applicable agreement for further details.
 +--------------------------------------+---------------------------------------------------------------------+---------------+-------------+------------------+
 ; Assignment Name                      ; Value                                                               ; Default Value ; Entity Name ; Section Id       ;
 +--------------------------------------+---------------------------------------------------------------------+---------------+-------------+------------------+
-; COMPILER_SIGNATURE_ID                ; 13870907198271.158510264825444                                      ; --            ; --          ; --               ;
+; COMPILER_SIGNATURE_ID                ; 13870907198271.158511877803452                                      ; --            ; --          ; --               ;
 ; CYCLONEII_OPTIMIZATION_TECHNIQUE     ; Speed                                                               ; Balanced      ; --          ; --               ;
 ; EDA_OUTPUT_DATA_FORMAT               ; Verilog Hdl                                                         ; --            ; --          ; eda_simulation   ;
 ; EDA_SIMULATION_TOOL                  ; ModelSim-Altera (Verilog)                                           ; <None>        ; --          ; --               ;
@@ -124,8 +124,8 @@ refer to the applicable agreement for further details.
 ; SLD_NODE_PARAMETER_ASSIGNMENT        ; SLD_INVERSION_MASK_LENGTH=28                                        ; --            ; --          ; Mic_20Translator ;
 ; SLD_NODE_PARAMETER_ASSIGNMENT        ; SLD_SEGMENT_SIZE=16384                                              ; --            ; --          ; Mic_20Translator ;
 ; SLD_NODE_PARAMETER_ASSIGNMENT        ; SLD_SAMPLE_DEPTH=16384                                              ; --            ; --          ; Mic_20Translator ;
-; SLD_NODE_PARAMETER_ASSIGNMENT        ; SLD_DATA_BITS=60                                                    ; --            ; --          ; Mic_20Translator ;
-; SLD_NODE_PARAMETER_ASSIGNMENT        ; SLD_STORAGE_QUALIFIER_BITS=61                                       ; --            ; --          ; Mic_20Translator ;
+; SLD_NODE_PARAMETER_ASSIGNMENT        ; SLD_DATA_BITS=67                                                    ; --            ; --          ; Mic_20Translator ;
+; SLD_NODE_PARAMETER_ASSIGNMENT        ; SLD_STORAGE_QUALIFIER_BITS=68                                       ; --            ; --          ; Mic_20Translator ;
 ; USE_SIGNALTAP_FILE                   ; MicTranslatorTap.stp                                                ; --            ; --          ; --               ;
 +--------------------------------------+---------------------------------------------------------------------+---------------+-------------+------------------+
 
@@ -135,13 +135,13 @@ refer to the applicable agreement for further details.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:36     ; 1.0                     ; 4985 MB             ; 00:00:55                           ;
-; Partition Merge      ; 00:00:02     ; 1.0                     ; 4718 MB             ; 00:00:01                           ;
-; Fitter               ; 00:00:37     ; 1.5                     ; 5930 MB             ; 00:01:28                           ;
-; Assembler            ; 00:00:04     ; 1.0                     ; 4716 MB             ; 00:00:03                           ;
-; Timing Analyzer      ; 00:00:05     ; 2.6                     ; 4912 MB             ; 00:00:12                           ;
-; EDA Netlist Writer   ; 00:00:03     ; 1.0                     ; 4729 MB             ; 00:00:03                           ;
-; Total                ; 00:01:27     ; --                      ; --                  ; 00:02:42                           ;
+; Analysis & Synthesis ; 00:00:35     ; 1.0                     ; 4986 MB             ; 00:00:52                           ;
+; Partition Merge      ; 00:00:01     ; 1.0                     ; 4720 MB             ; 00:00:01                           ;
+; Fitter               ; 00:00:38     ; 1.5                     ; 5929 MB             ; 00:01:24                           ;
+; Assembler            ; 00:00:04     ; 1.0                     ; 4715 MB             ; 00:00:03                           ;
+; Timing Analyzer      ; 00:00:06     ; 2.6                     ; 4917 MB             ; 00:00:12                           ;
+; EDA Netlist Writer   ; 00:00:03     ; 1.0                     ; 4733 MB             ; 00:00:03                           ;
+; Total                ; 00:01:27     ; --                      ; --                  ; 00:02:35                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

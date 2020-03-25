@@ -8,10 +8,10 @@
 `define twiddle7 32'h89bf_cf05 //-157.5 deg
 
 module FFT_Processor(input clk, input reset, input new_t,
-							input [15:0] t0, input [15:0] t1, input [15:0] t2, input [15:0] t3, 
-							input [15:0] t4, input [15:0] t5, input [15:0] t6, input [15:0] t7,
-							input [15:0] t8, input [15:0] t9, input [15:0] t10, input [15:0] t11,
-							input [15:0] t12, input [15:0] t13, input [15:0] t14, input [15:0] t15,
+							input [23:0] t0, input [23:0] t1, input [23:0] t2, input [23:0] t3, 
+							input [23:0] t4, input [23:0] t5, input [23:0] t6, input [23:0] t7,
+							input [23:0] t8, input [23:0] t9, input [23:0] t10, input [23:0] t11,
+							input [23:0] t12, input [23:0] t13, input [23:0] t14, input [23:0] t15,
 							output [15:0] f0, output [15:0] f1, output [15:0] f2, output [15:0] f3,
 							output [15:0] f4, output [15:0] f5, output [15:0] f6, output [15:0] f7,
 							output [15:0] f8, output [15:0] f9, output [15:0] f10, output [15:0] f11,
@@ -69,22 +69,22 @@ module FFT_Processor(input clk, input reset, input new_t,
 		end
 		else begin
 			if (new_t && cycles_counter == 4) begin
-				mem0 <= {t0, 16'b0};
-				mem1 <= {t8, 16'b0};
-				mem2 <= {t4, 16'b0};
-				mem3 <= {t12, 16'b0};
-				mem4 <= {t2, 16'b0};
-				mem5 <= {t10, 16'b0};
-				mem6 <= {t6, 16'b0};
-				mem7 <= {t14, 16'b0};
-				mem8 <= {t1, 16'b0};
-				mem9 <= {t9, 16'b0};
-				mem10 <= {t5, 16'b0};
-				mem11 <= {t13, 16'b0};
-				mem12 <= {t3, 16'b0};
-				mem13 <= {t11, 16'b0};
-				mem14 <= {t7, 16'b0};
-				mem15 <= {t15, 16'b0};
+				mem0 <= {t0[23:8], 16'b0};
+				mem1 <= {t8[23:8], 16'b0};
+				mem2 <= {t4[23:8], 16'b0};
+				mem3 <= {t12[23:8], 16'b0};
+				mem4 <= {t2[23:8], 16'b0};
+				mem5 <= {t10[23:8], 16'b0};
+				mem6 <= {t6[23:8], 16'b0};
+				mem7 <= {t14[23:8], 16'b0};
+				mem8 <= {t1[23:8], 16'b0};
+				mem9 <= {t9[23:8], 16'b0};
+				mem10 <= {t5[23:8], 16'b0};
+				mem11 <= {t13[23:8], 16'b0};
+				mem12 <= {t3[23:8], 16'b0};
+				mem13 <= {t11[23:8], 16'b0};
+				mem14 <= {t7[23:8], 16'b0};
+				mem15 <= {t15[23:8], 16'b0};
 				W0 <= `twiddle0;
 				W1 <= `twiddle0;
 				W2 <= `twiddle0;

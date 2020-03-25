@@ -1,6 +1,6 @@
 <sld_project_info>
   <project>
-    <hash md5_digest_80b="e4e8e15f1eae7b12cb2d"/>
+    <hash md5_digest_80b="5a8774ba6a0c6db29546"/>
   </project>
   <file_info>
     <file device="10M50DAF484C7G" path="FFT.sof" usercode="0xFFFFFFFF"/>
@@ -15,7 +15,7 @@
         <parameter name="SLD_IP_VERSION" type="dec" value="6"/>
         <parameter name="SLD_IP_MINOR_VERSION" type="dec" value="0"/>
         <parameter name="SLD_COMMON_IP_VERSION" type="dec" value="0"/>
-        <parameter name="sld_data_bits" type="unknown" value="60"/>
+        <parameter name="sld_data_bits" type="unknown" value="67"/>
         <parameter name="sld_trigger_bits" type="unknown" value="1"/>
         <parameter name="SLD_NODE_CRC_BITS" type="dec" value="32"/>
         <parameter name="SLD_NODE_CRC_HIWORD" type="dec" value="41394"/>
@@ -57,7 +57,7 @@
         <parameter name="sld_state_flow_use_generated" type="unknown" value="0"/>
         <parameter name="sld_current_resource_width" type="unknown" value="1"/>
         <parameter name="sld_attribute_mem_mode" type="unknown" value="OFF"/>
-        <parameter name="sld_storage_qualifier_bits" type="unknown" value="61"/>
+        <parameter name="sld_storage_qualifier_bits" type="unknown" value="68"/>
         <parameter name="SLD_STORAGE_QUALIFIER_GAP_RECORD" type="dec" value="0"/>
         <parameter name="SLD_STORAGE_QUALIFIER_MODE" type="string" value="OFF"/>
         <parameter name="SLD_STORAGE_QUALIFIER_ENABLE_ADVANCED_CONDITION" type="dec" value="0"/>

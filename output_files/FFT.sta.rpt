@@ -1,5 +1,5 @@
 Timing Analyzer report for FFT
-Tue Mar 24 23:47:47 2020
+Wed Mar 25 02:45:39 2020
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -94,15 +94,15 @@ refer to the applicable agreement for further details.
 ; Number detected on machine ; 12          ;
 ; Maximum allowed            ; 6           ;
 ;                            ;             ;
-; Average used               ; 2.61        ;
+; Average used               ; 2.51        ;
 ; Maximum used               ; 6           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;  34.5%      ;
-;     Processor 3            ;  32.7%      ;
-;     Processor 4            ;  32.1%      ;
-;     Processors 5-6         ;  31.0%      ;
+;     Processor 2            ;  32.8%      ;
+;     Processor 3            ;  30.6%      ;
+;     Processor 4            ;  30.1%      ;
+;     Processors 5-6         ;  28.8%      ;
 +----------------------------+-------------+
 
 
@@ -111,7 +111,7 @@ refer to the applicable agreement for further details.
 +---------------+--------+--------------------------+
 ; SDC File Path ; Status ; Read at                  ;
 +---------------+--------+--------------------------+
-; clk.sdc       ; OK     ; Tue Mar 24 23:47:43 2020 ;
+; clk.sdc       ; OK     ; Wed Mar 25 02:45:35 2020 ;
 +---------------+--------+--------------------------+
 
 
@@ -134,11 +134,11 @@ refer to the applicable agreement for further details.
 +------------+-----------------+---------------------+------+
 ; Fmax       ; Restricted Fmax ; Clock Name          ; Note ;
 +------------+-----------------+---------------------+------+
-; 43.14 MHz  ; 43.14 MHz       ; system_clk          ;      ;
-; 58.55 MHz  ; 58.55 MHz       ; altera_reserved_tck ;      ;
-; 69.39 MHz  ; 69.39 MHz       ; vga_clk             ;      ;
-; 124.52 MHz ; 124.52 MHz      ; clk                 ;      ;
-; 230.73 MHz ; 230.73 MHz      ; newline             ;      ;
+; 43.02 MHz  ; 43.02 MHz       ; system_clk          ;      ;
+; 67.68 MHz  ; 67.68 MHz       ; vga_clk             ;      ;
+; 76.76 MHz  ; 76.76 MHz       ; altera_reserved_tck ;      ;
+; 185.74 MHz ; 185.74 MHz      ; clk                 ;      ;
+; 230.36 MHz ; 230.36 MHz      ; newline             ;      ;
 +------------+-----------------+---------------------+------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
@@ -148,11 +148,11 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +---------------------+-----------+---------------+
 ; Clock               ; Slack     ; End Point TNS ;
 +---------------------+-----------+---------------+
-; vga_clk             ; 9.289     ; 0.000         ;
-; clk                 ; 11.969    ; 0.000         ;
-; altera_reserved_tck ; 41.460    ; 0.000         ;
-; system_clk          ; 494.662   ; 0.000         ;
-; newline             ; 63995.666 ; 0.000         ;
+; vga_clk             ; 9.443     ; 0.000         ;
+; clk                 ; 13.893    ; 0.000         ;
+; altera_reserved_tck ; 43.486    ; 0.000         ;
+; system_clk          ; 493.949   ; 0.000         ;
+; newline             ; 63995.659 ; 0.000         ;
 +---------------------+-----------+---------------+
 
 
@@ -161,11 +161,11 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +---------------------+-------+---------------+
 ; Clock               ; Slack ; End Point TNS ;
 +---------------------+-------+---------------+
-; clk                 ; 0.243 ; 0.000         ;
-; altera_reserved_tck ; 0.300 ; 0.000         ;
+; clk                 ; 0.241 ; 0.000         ;
+; altera_reserved_tck ; 0.340 ; 0.000         ;
 ; system_clk          ; 0.342 ; 0.000         ;
-; vga_clk             ; 0.431 ; 0.000         ;
-; newline             ; 0.662 ; 0.000         ;
+; vga_clk             ; 0.429 ; 0.000         ;
+; newline             ; 0.887 ; 0.000         ;
 +---------------------+-------+---------------+
 
 
@@ -174,7 +174,7 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +---------------------+--------+---------------+
 ; Clock               ; Slack  ; End Point TNS ;
 +---------------------+--------+---------------+
-; altera_reserved_tck ; 95.829 ; 0.000         ;
+; altera_reserved_tck ; 96.130 ; 0.000         ;
 +---------------------+--------+---------------+
 
 
@@ -183,7 +183,7 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +---------------------+-------+---------------+
 ; Clock               ; Slack ; End Point TNS ;
 +---------------------+-------+---------------+
-; altera_reserved_tck ; 1.398 ; 0.000         ;
+; altera_reserved_tck ; 0.909 ; 0.000         ;
 +---------------------+-------+---------------+
 
 
@@ -192,11 +192,11 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +---------------------+-----------+-----------------+
 ; Clock               ; Slack     ; End Point TNS   ;
 +---------------------+-----------+-----------------+
-; clk                 ; 9.538     ; 0.000           ;
+; clk                 ; 9.549     ; 0.000           ;
 ; vga_clk             ; 19.611    ; 0.000           ;
-; altera_reserved_tck ; 49.524    ; 0.000           ;
-; system_clk          ; 499.587   ; 0.000           ;
-; newline             ; 31999.754 ; 0.000           ;
+; altera_reserved_tck ; 49.532    ; 0.000           ;
+; system_clk          ; 499.577   ; 0.000           ;
+; newline             ; 31999.735 ; 0.000           ;
 +---------------------+-----------+-----------------+
 
 
@@ -205,9 +205,9 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 -----------------------------------------------
 The design MTBF is not calculated because there are no specified synchronizers in the design.
 Number of Synchronizer Chains Found: 1
-Shortest Synchronizer Chain: 5 Registers
+Shortest Synchronizer Chain: 6 Registers
 Fraction of Chains for which MTBFs Could Not be Calculated: 1.000
-Worst Case Available Settling Time: 95.178 ns
+Worst Case Available Settling Time: 95.125 ns
 
 
 
@@ -217,11 +217,11 @@ Worst Case Available Settling Time: 95.178 ns
 +------------+-----------------+---------------------+------+
 ; Fmax       ; Restricted Fmax ; Clock Name          ; Note ;
 +------------+-----------------+---------------------+------+
-; 46.53 MHz  ; 46.53 MHz       ; system_clk          ;      ;
-; 63.36 MHz  ; 63.36 MHz       ; altera_reserved_tck ;      ;
-; 76.17 MHz  ; 76.17 MHz       ; vga_clk             ;      ;
-; 133.26 MHz ; 133.26 MHz      ; clk                 ;      ;
-; 250.06 MHz ; 250.06 MHz      ; newline             ;      ;
+; 46.57 MHz  ; 46.57 MHz       ; system_clk          ;      ;
+; 73.64 MHz  ; 73.64 MHz       ; vga_clk             ;      ;
+; 83.17 MHz  ; 83.17 MHz       ; altera_reserved_tck ;      ;
+; 198.02 MHz ; 198.02 MHz      ; clk                 ;      ;
+; 251.51 MHz ; 251.51 MHz      ; newline             ;      ;
 +------------+-----------------+---------------------+------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
@@ -231,11 +231,11 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +---------------------+-----------+---------------+
 ; Clock               ; Slack     ; End Point TNS ;
 +---------------------+-----------+---------------+
-; vga_clk             ; 10.279    ; 0.000         ;
-; clk                 ; 12.496    ; 0.000         ;
-; altera_reserved_tck ; 42.109    ; 0.000         ;
-; system_clk          ; 494.999   ; 0.000         ;
-; newline             ; 63996.001 ; 0.000         ;
+; vga_clk             ; 10.342    ; 0.000         ;
+; clk                 ; 14.413    ; 0.000         ;
+; altera_reserved_tck ; 43.988    ; 0.000         ;
+; system_clk          ; 494.349   ; 0.000         ;
+; newline             ; 63996.024 ; 0.000         ;
 +---------------------+-----------+---------------+
 
 
@@ -245,10 +245,10 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 ; Clock               ; Slack ; End Point TNS ;
 +---------------------+-------+---------------+
 ; clk                 ; 0.241 ; 0.000         ;
-; altera_reserved_tck ; 0.294 ; 0.000         ;
-; system_clk          ; 0.306 ; 0.000         ;
-; vga_clk             ; 0.395 ; 0.000         ;
-; newline             ; 0.619 ; 0.000         ;
+; altera_reserved_tck ; 0.305 ; 0.000         ;
+; system_clk          ; 0.305 ; 0.000         ;
+; vga_clk             ; 0.394 ; 0.000         ;
+; newline             ; 0.816 ; 0.000         ;
 +---------------------+-------+---------------+
 
 
@@ -257,7 +257,7 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +---------------------+--------+---------------+
 ; Clock               ; Slack  ; End Point TNS ;
 +---------------------+--------+---------------+
-; altera_reserved_tck ; 96.220 ; 0.000         ;
+; altera_reserved_tck ; 96.513 ; 0.000         ;
 +---------------------+--------+---------------+
 
 
@@ -266,7 +266,7 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +---------------------+-------+---------------+
 ; Clock               ; Slack ; End Point TNS ;
 +---------------------+-------+---------------+
-; altera_reserved_tck ; 1.292 ; 0.000         ;
+; altera_reserved_tck ; 0.833 ; 0.000         ;
 +---------------------+-------+---------------+
 
 
@@ -275,11 +275,11 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +---------------------+-----------+----------------+
 ; Clock               ; Slack     ; End Point TNS  ;
 +---------------------+-----------+----------------+
-; clk                 ; 9.566     ; 0.000          ;
-; vga_clk             ; 19.589    ; 0.000          ;
-; altera_reserved_tck ; 49.539    ; 0.000          ;
-; system_clk          ; 499.571   ; 0.000          ;
-; newline             ; 31999.753 ; 0.000          ;
+; clk                 ; 9.575     ; 0.000          ;
+; vga_clk             ; 19.597    ; 0.000          ;
+; altera_reserved_tck ; 49.547    ; 0.000          ;
+; system_clk          ; 499.530   ; 0.000          ;
+; newline             ; 31999.761 ; 0.000          ;
 +---------------------+-----------+----------------+
 
 
@@ -288,9 +288,9 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 ----------------------------------------------
 The design MTBF is not calculated because there are no specified synchronizers in the design.
 Number of Synchronizer Chains Found: 1
-Shortest Synchronizer Chain: 5 Registers
+Shortest Synchronizer Chain: 6 Registers
 Fraction of Chains for which MTBFs Could Not be Calculated: 1.000
-Worst Case Available Settling Time: 95.591 ns
+Worst Case Available Settling Time: 95.517 ns
 
 
 
@@ -300,11 +300,11 @@ Worst Case Available Settling Time: 95.591 ns
 +---------------------+-----------+---------------+
 ; Clock               ; Slack     ; End Point TNS ;
 +---------------------+-----------+---------------+
-; vga_clk             ; 15.144    ; 0.000         ;
-; clk                 ; 16.086    ; 0.000         ;
-; altera_reserved_tck ; 46.572    ; 0.000         ;
-; system_clk          ; 497.523   ; 0.000         ;
-; newline             ; 63998.151 ; 0.000         ;
+; vga_clk             ; 15.212    ; 0.000         ;
+; clk                 ; 16.948    ; 0.000         ;
+; altera_reserved_tck ; 47.433    ; 0.000         ;
+; system_clk          ; 497.240   ; 0.000         ;
+; newline             ; 63998.119 ; 0.000         ;
 +---------------------+-----------+---------------+
 
 
@@ -313,11 +313,11 @@ Worst Case Available Settling Time: 95.591 ns
 +---------------------+-------+---------------+
 ; Clock               ; Slack ; End Point TNS ;
 +---------------------+-------+---------------+
-; clk                 ; 0.091 ; 0.000         ;
-; altera_reserved_tck ; 0.117 ; 0.000         ;
+; clk                 ; 0.096 ; 0.000         ;
+; altera_reserved_tck ; 0.147 ; 0.000         ;
 ; system_clk          ; 0.147 ; 0.000         ;
-; vga_clk             ; 0.172 ; 0.000         ;
-; newline             ; 0.263 ; 0.000         ;
+; vga_clk             ; 0.169 ; 0.000         ;
+; newline             ; 0.368 ; 0.000         ;
 +---------------------+-------+---------------+
 
 
@@ -326,7 +326,7 @@ Worst Case Available Settling Time: 95.591 ns
 +---------------------+--------+---------------+
 ; Clock               ; Slack  ; End Point TNS ;
 +---------------------+--------+---------------+
-; altera_reserved_tck ; 97.877 ; 0.000         ;
+; altera_reserved_tck ; 98.059 ; 0.000         ;
 +---------------------+--------+---------------+
 
 
@@ -335,7 +335,7 @@ Worst Case Available Settling Time: 95.591 ns
 +---------------------+-------+---------------+
 ; Clock               ; Slack ; End Point TNS ;
 +---------------------+-------+---------------+
-; altera_reserved_tck ; 0.616 ; 0.000         ;
+; altera_reserved_tck ; 0.407 ; 0.000         ;
 +---------------------+-------+---------------+
 
 
@@ -344,11 +344,11 @@ Worst Case Available Settling Time: 95.591 ns
 +---------------------+-----------+----------------+
 ; Clock               ; Slack     ; End Point TNS  ;
 +---------------------+-----------+----------------+
-; clk                 ; 9.399     ; 0.000          ;
-; vga_clk             ; 19.709    ; 0.000          ;
+; clk                 ; 9.400     ; 0.000          ;
+; vga_clk             ; 19.713    ; 0.000          ;
 ; altera_reserved_tck ; 49.386    ; 0.000          ;
-; system_clk          ; 499.711   ; 0.000          ;
-; newline             ; 31999.704 ; 0.000          ;
+; system_clk          ; 499.647   ; 0.000          ;
+; newline             ; 31999.691 ; 0.000          ;
 +---------------------+-----------+----------------+
 
 
@@ -357,9 +357,9 @@ Worst Case Available Settling Time: 95.591 ns
 ----------------------------------------------
 The design MTBF is not calculated because there are no specified synchronizers in the design.
 Number of Synchronizer Chains Found: 1
-Shortest Synchronizer Chain: 5 Registers
+Shortest Synchronizer Chain: 6 Registers
 Fraction of Chains for which MTBFs Could Not be Calculated: 1.000
-Worst Case Available Settling Time: 97.901 ns
+Worst Case Available Settling Time: 97.830 ns
 
 
 
@@ -369,12 +369,12 @@ Worst Case Available Settling Time: 97.901 ns
 +----------------------+-----------+-------+----------+---------+---------------------+
 ; Clock                ; Setup     ; Hold  ; Recovery ; Removal ; Minimum Pulse Width ;
 +----------------------+-----------+-------+----------+---------+---------------------+
-; Worst-case Slack     ; 9.289     ; 0.091 ; 95.829   ; 0.616   ; 9.399               ;
-;  altera_reserved_tck ; 41.460    ; 0.117 ; 95.829   ; 0.616   ; 49.386              ;
-;  clk                 ; 11.969    ; 0.091 ; N/A      ; N/A     ; 9.399               ;
-;  newline             ; 63995.666 ; 0.263 ; N/A      ; N/A     ; 31999.704           ;
-;  system_clk          ; 494.662   ; 0.147 ; N/A      ; N/A     ; 499.571             ;
-;  vga_clk             ; 9.289     ; 0.172 ; N/A      ; N/A     ; 19.589              ;
+; Worst-case Slack     ; 9.443     ; 0.096 ; 96.130   ; 0.407   ; 9.400               ;
+;  altera_reserved_tck ; 43.486    ; 0.147 ; 96.130   ; 0.407   ; 49.386              ;
+;  clk                 ; 13.893    ; 0.096 ; N/A      ; N/A     ; 9.400               ;
+;  newline             ; 63995.659 ; 0.368 ; N/A      ; N/A     ; 31999.691           ;
+;  system_clk          ; 493.949   ; 0.147 ; N/A      ; N/A     ; 499.530             ;
+;  vga_clk             ; 9.443     ; 0.169 ; N/A      ; N/A     ; 19.597              ;
 ; Design-wide TNS      ; 0.0       ; 0.0   ; 0.0      ; 0.0     ; 0.0                 ;
 ;  altera_reserved_tck ; 0.000     ; 0.000 ; 0.000    ; 0.000   ; 0.000               ;
 ;  clk                 ; 0.000     ; 0.000 ; N/A      ; N/A     ; 0.000               ;
@@ -507,17 +507,17 @@ Worst Case Available Settling Time: 97.901 ns
 +---------------------+---------------------+------------+----------+----------+-----------+
 ; From Clock          ; To Clock            ; RR Paths   ; FR Paths ; RF Paths ; FF Paths  ;
 +---------------------+---------------------+------------+----------+----------+-----------+
-; altera_reserved_tck ; altera_reserved_tck ; 25197      ; 0        ; 54       ; 0         ;
+; altera_reserved_tck ; altera_reserved_tck ; 23764      ; 0        ; 54       ; 0         ;
 ; clk                 ; altera_reserved_tck ; false path ; 0        ; 0        ; 0         ;
 ; altera_reserved_tck ; clk                 ; false path ; 0        ; 0        ; 0         ;
-; clk                 ; clk                 ; 7412       ; 0        ; 0        ; 0         ;
-; system_clk          ; clk                 ; 3          ; 66       ; 0        ; 0         ;
+; clk                 ; clk                 ; 5837       ; 0        ; 0        ; 0         ;
+; system_clk          ; clk                 ; 3          ; 79       ; 0        ; 0         ;
 ; vga_clk             ; clk                 ; 1          ; 1        ; 0        ; 0         ;
 ; newline             ; newline             ; 203        ; 0        ; 0        ; 0         ;
-; system_clk          ; system_clk          ; 1585       ; 0        ; 161      ; 167218200 ;
+; system_clk          ; system_clk          ; 1585       ; 0        ; 161      ; 167218120 ;
 ; newline             ; vga_clk             ; 0          ; 0        ; 5644     ; 0         ;
 ; system_clk          ; vga_clk             ; 0          ; 0        ; 0        ; 512       ;
-; vga_clk             ; vga_clk             ; 0          ; 0        ; 0        ; 548954    ;
+; vga_clk             ; vga_clk             ; 0          ; 0        ; 0        ; 563830    ;
 +---------------------+---------------------+------------+----------+----------+-----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
 
@@ -527,17 +527,17 @@ Entries labeled "false path" only account for clock-to-clock false paths and not
 +---------------------+---------------------+------------+----------+----------+-----------+
 ; From Clock          ; To Clock            ; RR Paths   ; FR Paths ; RF Paths ; FF Paths  ;
 +---------------------+---------------------+------------+----------+----------+-----------+
-; altera_reserved_tck ; altera_reserved_tck ; 25197      ; 0        ; 54       ; 0         ;
+; altera_reserved_tck ; altera_reserved_tck ; 23764      ; 0        ; 54       ; 0         ;
 ; clk                 ; altera_reserved_tck ; false path ; 0        ; 0        ; 0         ;
 ; altera_reserved_tck ; clk                 ; false path ; 0        ; 0        ; 0         ;
-; clk                 ; clk                 ; 7412       ; 0        ; 0        ; 0         ;
-; system_clk          ; clk                 ; 3          ; 66       ; 0        ; 0         ;
+; clk                 ; clk                 ; 5837       ; 0        ; 0        ; 0         ;
+; system_clk          ; clk                 ; 3          ; 79       ; 0        ; 0         ;
 ; vga_clk             ; clk                 ; 1          ; 1        ; 0        ; 0         ;
 ; newline             ; newline             ; 203        ; 0        ; 0        ; 0         ;
-; system_clk          ; system_clk          ; 1585       ; 0        ; 161      ; 167218200 ;
+; system_clk          ; system_clk          ; 1585       ; 0        ; 161      ; 167218120 ;
 ; newline             ; vga_clk             ; 0          ; 0        ; 5644     ; 0         ;
 ; system_clk          ; vga_clk             ; 0          ; 0        ; 0        ; 512       ;
-; vga_clk             ; vga_clk             ; 0          ; 0        ; 0        ; 548954    ;
+; vga_clk             ; vga_clk             ; 0          ; 0        ; 0        ; 563830    ;
 +---------------------+---------------------+------------+----------+----------+-----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
 
@@ -547,7 +547,7 @@ Entries labeled "false path" only account for clock-to-clock false paths and not
 +---------------------+---------------------+------------+----------+----------+----------+
 ; From Clock          ; To Clock            ; RR Paths   ; FR Paths ; RF Paths ; FF Paths ;
 +---------------------+---------------------+------------+----------+----------+----------+
-; altera_reserved_tck ; altera_reserved_tck ; 199        ; 0        ; 0        ; 0        ;
+; altera_reserved_tck ; altera_reserved_tck ; 202        ; 0        ; 0        ; 0        ;
 ; altera_reserved_tck ; clk                 ; false path ; 0        ; 0        ; 0        ;
 +---------------------+---------------------+------------+----------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
@@ -558,7 +558,7 @@ Entries labeled "false path" only account for clock-to-clock false paths and not
 +---------------------+---------------------+------------+----------+----------+----------+
 ; From Clock          ; To Clock            ; RR Paths   ; FR Paths ; RF Paths ; FF Paths ;
 +---------------------+---------------------+------------+----------+----------+----------+
-; altera_reserved_tck ; altera_reserved_tck ; 199        ; 0        ; 0        ; 0        ;
+; altera_reserved_tck ; altera_reserved_tck ; 202        ; 0        ; 0        ; 0        ;
 ; altera_reserved_tck ; clk                 ; false path ; 0        ; 0        ; 0        ;
 +---------------------+---------------------+------------+----------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
@@ -584,7 +584,7 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 ; Illegal Clocks                  ; 0     ; 0    ;
 ; Unconstrained Clocks            ; 0     ; 0    ;
 ; Unconstrained Input Ports       ; 4     ; 4    ;
-; Unconstrained Input Port Paths  ; 1574  ; 1574 ;
+; Unconstrained Input Port Paths  ; 1571  ; 1571 ;
 ; Unconstrained Output Ports      ; 17    ; 17   ;
 ; Unconstrained Output Port Paths ; 18    ; 18   ;
 +---------------------------------+-------+------+
@@ -684,7 +684,7 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 Info: *******************************************************************
 Info: Running Quartus Prime Timing Analyzer
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Tue Mar 24 23:47:41 2020
+    Info: Processing started: Wed Mar 25 02:45:34 2020
 Info: Command: quartus_sta FFT -c FFT
 Info: qsta_default_script.tcl version: #1
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
@@ -717,44 +717,44 @@ Critical Warning (332168): The following clock transfers have no clock uncertain
 Info: Found TIMING_ANALYZER_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
 Info: Analyzing Slow 1200mV 85C Model
 Info: Can't run Report Timing Closure Recommendations. The current device family is not supported.
-Info (332146): Worst-case setup slack is 9.289
+Info (332146): Worst-case setup slack is 9.443
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     9.289               0.000 vga_clk 
-    Info (332119):    11.969               0.000 clk 
-    Info (332119):    41.460               0.000 altera_reserved_tck 
-    Info (332119):   494.662               0.000 system_clk 
-    Info (332119): 63995.666               0.000 newline 
-Info (332146): Worst-case hold slack is 0.243
+    Info (332119):     9.443               0.000 vga_clk 
+    Info (332119):    13.893               0.000 clk 
+    Info (332119):    43.486               0.000 altera_reserved_tck 
+    Info (332119):   493.949               0.000 system_clk 
+    Info (332119): 63995.659               0.000 newline 
+Info (332146): Worst-case hold slack is 0.241
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.243               0.000 clk 
-    Info (332119):     0.300               0.000 altera_reserved_tck 
+    Info (332119):     0.241               0.000 clk 
+    Info (332119):     0.340               0.000 altera_reserved_tck 
     Info (332119):     0.342               0.000 system_clk 
-    Info (332119):     0.431               0.000 vga_clk 
-    Info (332119):     0.662               0.000 newline 
-Info (332146): Worst-case recovery slack is 95.829
+    Info (332119):     0.429               0.000 vga_clk 
+    Info (332119):     0.887               0.000 newline 
+Info (332146): Worst-case recovery slack is 96.130
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    95.829               0.000 altera_reserved_tck 
-Info (332146): Worst-case removal slack is 1.398
+    Info (332119):    96.130               0.000 altera_reserved_tck 
+Info (332146): Worst-case removal slack is 0.909
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     1.398               0.000 altera_reserved_tck 
-Info (332146): Worst-case minimum pulse width slack is 9.538
+    Info (332119):     0.909               0.000 altera_reserved_tck 
+Info (332146): Worst-case minimum pulse width slack is 9.549
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     9.538               0.000 clk 
+    Info (332119):     9.549               0.000 clk 
     Info (332119):    19.611               0.000 vga_clk 
-    Info (332119):    49.524               0.000 altera_reserved_tck 
-    Info (332119):   499.587               0.000 system_clk 
-    Info (332119): 31999.754               0.000 newline 
+    Info (332119):    49.532               0.000 altera_reserved_tck 
+    Info (332119):   499.577               0.000 system_clk 
+    Info (332119): 31999.735               0.000 newline 
 Info (332114): Report Metastability: Found 1 synchronizer chains.
     Info (332114): The design MTBF is not calculated because there are no specified synchronizers in the design.
     Info (332114): Number of Synchronizer Chains Found: 1
-    Info (332114): Shortest Synchronizer Chain: 5 Registers
+    Info (332114): Shortest Synchronizer Chain: 6 Registers
     Info (332114): Fraction of Chains for which MTBFs Could Not be Calculated: 1.000
-    Info (332114): Worst Case Available Settling Time: 95.178 ns
+    Info (332114): Worst Case Available Settling Time: 95.125 ns
     Info (332114): 
 Info: Analyzing Slow 1200mV 0C Model
 Info (334003): Started post-fitting delay annotation
@@ -777,44 +777,44 @@ Critical Warning (332168): The following clock transfers have no clock uncertain
     Critical Warning (332169): From vga_clk (Fall) to vga_clk (Fall) (setup and hold)
     Critical Warning (332169): From newline (Rise) to vga_clk (Fall) (setup and hold)
     Critical Warning (332169): From newline (Rise) to newline (Rise) (setup and hold)
-Info (332146): Worst-case setup slack is 10.279
+Info (332146): Worst-case setup slack is 10.342
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    10.279               0.000 vga_clk 
-    Info (332119):    12.496               0.000 clk 
-    Info (332119):    42.109               0.000 altera_reserved_tck 
-    Info (332119):   494.999               0.000 system_clk 
-    Info (332119): 63996.001               0.000 newline 
+    Info (332119):    10.342               0.000 vga_clk 
+    Info (332119):    14.413               0.000 clk 
+    Info (332119):    43.988               0.000 altera_reserved_tck 
+    Info (332119):   494.349               0.000 system_clk 
+    Info (332119): 63996.024               0.000 newline 
 Info (332146): Worst-case hold slack is 0.241
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
     Info (332119):     0.241               0.000 clk 
-    Info (332119):     0.294               0.000 altera_reserved_tck 
-    Info (332119):     0.306               0.000 system_clk 
-    Info (332119):     0.395               0.000 vga_clk 
-    Info (332119):     0.619               0.000 newline 
-Info (332146): Worst-case recovery slack is 96.220
+    Info (332119):     0.305               0.000 altera_reserved_tck 
+    Info (332119):     0.305               0.000 system_clk 
+    Info (332119):     0.394               0.000 vga_clk 
+    Info (332119):     0.816               0.000 newline 
+Info (332146): Worst-case recovery slack is 96.513
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    96.220               0.000 altera_reserved_tck 
-Info (332146): Worst-case removal slack is 1.292
+    Info (332119):    96.513               0.000 altera_reserved_tck 
+Info (332146): Worst-case removal slack is 0.833
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     1.292               0.000 altera_reserved_tck 
-Info (332146): Worst-case minimum pulse width slack is 9.566
+    Info (332119):     0.833               0.000 altera_reserved_tck 
+Info (332146): Worst-case minimum pulse width slack is 9.575
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     9.566               0.000 clk 
-    Info (332119):    19.589               0.000 vga_clk 
-    Info (332119):    49.539               0.000 altera_reserved_tck 
-    Info (332119):   499.571               0.000 system_clk 
-    Info (332119): 31999.753               0.000 newline 
+    Info (332119):     9.575               0.000 clk 
+    Info (332119):    19.597               0.000 vga_clk 
+    Info (332119):    49.547               0.000 altera_reserved_tck 
+    Info (332119):   499.530               0.000 system_clk 
+    Info (332119): 31999.761               0.000 newline 
 Info (332114): Report Metastability: Found 1 synchronizer chains.
     Info (332114): The design MTBF is not calculated because there are no specified synchronizers in the design.
     Info (332114): Number of Synchronizer Chains Found: 1
-    Info (332114): Shortest Synchronizer Chain: 5 Registers
+    Info (332114): Shortest Synchronizer Chain: 6 Registers
     Info (332114): Fraction of Chains for which MTBFs Could Not be Calculated: 1.000
-    Info (332114): Worst Case Available Settling Time: 95.591 ns
+    Info (332114): Worst Case Available Settling Time: 95.517 ns
     Info (332114): 
 Info: Analyzing Fast 1200mV 0C Model
 Info (332097): The following timing edges are non-unate.  The Timing Analyzer will assume pos-unate behavior for these edges in the clock network.
@@ -835,51 +835,51 @@ Critical Warning (332168): The following clock transfers have no clock uncertain
     Critical Warning (332169): From vga_clk (Fall) to vga_clk (Fall) (setup and hold)
     Critical Warning (332169): From newline (Rise) to vga_clk (Fall) (setup and hold)
     Critical Warning (332169): From newline (Rise) to newline (Rise) (setup and hold)
-Info (332146): Worst-case setup slack is 15.144
+Info (332146): Worst-case setup slack is 15.212
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    15.144               0.000 vga_clk 
-    Info (332119):    16.086               0.000 clk 
-    Info (332119):    46.572               0.000 altera_reserved_tck 
-    Info (332119):   497.523               0.000 system_clk 
-    Info (332119): 63998.151               0.000 newline 
-Info (332146): Worst-case hold slack is 0.091
+    Info (332119):    15.212               0.000 vga_clk 
+    Info (332119):    16.948               0.000 clk 
+    Info (332119):    47.433               0.000 altera_reserved_tck 
+    Info (332119):   497.240               0.000 system_clk 
+    Info (332119): 63998.119               0.000 newline 
+Info (332146): Worst-case hold slack is 0.096
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.091               0.000 clk 
-    Info (332119):     0.117               0.000 altera_reserved_tck 
+    Info (332119):     0.096               0.000 clk 
+    Info (332119):     0.147               0.000 altera_reserved_tck 
     Info (332119):     0.147               0.000 system_clk 
-    Info (332119):     0.172               0.000 vga_clk 
-    Info (332119):     0.263               0.000 newline 
-Info (332146): Worst-case recovery slack is 97.877
+    Info (332119):     0.169               0.000 vga_clk 
+    Info (332119):     0.368               0.000 newline 
+Info (332146): Worst-case recovery slack is 98.059
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    97.877               0.000 altera_reserved_tck 
-Info (332146): Worst-case removal slack is 0.616
+    Info (332119):    98.059               0.000 altera_reserved_tck 
+Info (332146): Worst-case removal slack is 0.407
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.616               0.000 altera_reserved_tck 
-Info (332146): Worst-case minimum pulse width slack is 9.399
+    Info (332119):     0.407               0.000 altera_reserved_tck 
+Info (332146): Worst-case minimum pulse width slack is 9.400
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     9.399               0.000 clk 
-    Info (332119):    19.709               0.000 vga_clk 
+    Info (332119):     9.400               0.000 clk 
+    Info (332119):    19.713               0.000 vga_clk 
     Info (332119):    49.386               0.000 altera_reserved_tck 
-    Info (332119):   499.711               0.000 system_clk 
-    Info (332119): 31999.704               0.000 newline 
+    Info (332119):   499.647               0.000 system_clk 
+    Info (332119): 31999.691               0.000 newline 
 Info (332114): Report Metastability: Found 1 synchronizer chains.
     Info (332114): The design MTBF is not calculated because there are no specified synchronizers in the design.
     Info (332114): Number of Synchronizer Chains Found: 1
-    Info (332114): Shortest Synchronizer Chain: 5 Registers
+    Info (332114): Shortest Synchronizer Chain: 6 Registers
     Info (332114): Fraction of Chains for which MTBFs Could Not be Calculated: 1.000
-    Info (332114): Worst Case Available Settling Time: 97.901 ns
+    Info (332114): Worst Case Available Settling Time: 97.830 ns
     Info (332114): 
 Info (332102): Design is not fully constrained for setup requirements
 Info (332102): Design is not fully constrained for hold requirements
 Info: Quartus Prime Timing Analyzer was successful. 0 errors, 49 warnings
-    Info: Peak virtual memory: 4917 megabytes
-    Info: Processing ended: Tue Mar 24 23:47:47 2020
-    Info: Elapsed time: 00:00:06
-    Info: Total CPU time (on all processors): 00:00:12
+    Info: Peak virtual memory: 4910 megabytes
+    Info: Processing ended: Wed Mar 25 02:45:39 2020
+    Info: Elapsed time: 00:00:05
+    Info: Total CPU time (on all processors): 00:00:11
 
 

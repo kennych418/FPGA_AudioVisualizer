@@ -114,12 +114,8 @@ set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_BUFFER_FULL_STOP=
 set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_CURRENT_RESOURCE_WIDTH=1" -section_id Mic_20Translator
 set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_INCREMENTAL_ROUTING=1" -section_id Mic_20Translator
 set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[0] -to Mic_20Translator|vcc -section_id Mic_20Translator
-set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[16] -to Mic_20Translator|vcc -section_id Mic_20Translator
-set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[18] -to Mic_20Translator|gnd -section_id Mic_20Translator
 set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[19] -to Mic_20Translator|gnd -section_id Mic_20Translator
-set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[27] -to Mic_20Translator|gnd -section_id Mic_20Translator
 set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[29] -to Mic_20Translator|gnd -section_id Mic_20Translator
-set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[30] -to Mic_20Translator|vcc -section_id Mic_20Translator
 set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_TRIGGER_LEVEL=1" -section_id Mic_20Translator
 set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_TRIGGER_IN_ENABLED=0" -section_id Mic_20Translator
 set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_TRIGGER_PIPELINE=0" -section_id Mic_20Translator
@@ -127,104 +123,121 @@ set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_RAM_PIPELINE=0" -
 set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_COUNTER_PIPELINE=0" -section_id Mic_20Translator
 set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_TRIGGER_LEVEL_PIPELINE=1" -section_id Mic_20Translator
 set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_ENABLE_ADVANCED_TRIGGER=1" -section_id Mic_20Translator
-set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[17] -to Mic_20Translator|vcc -section_id Mic_20Translator
-set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[26] -to Mic_20Translator|gnd -section_id Mic_20Translator
 set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT acq_trigger_in[0] -to "mic_translator:main_translator|LRCLK_reg" -section_id Mic_20Translator
-set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[6] -to Mic_20Translator|vcc -section_id Mic_20Translator
-set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[12] -to Mic_20Translator|gnd -section_id Mic_20Translator
 set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[13] -to Mic_20Translator|vcc -section_id Mic_20Translator
-set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[22] -to Mic_20Translator|gnd -section_id Mic_20Translator
 set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[23] -to Mic_20Translator|gnd -section_id Mic_20Translator
 set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[28] -to Mic_20Translator|vcc -section_id Mic_20Translator
 set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[31] -to Mic_20Translator|vcc -section_id Mic_20Translator
 set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_ADVANCED_TRIGGER_ENTITY=sld_reserved_FFT_Mic_Translator_1_d1da," -section_id Mic_20Translator
 set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[7] -to Mic_20Translator|gnd -section_id Mic_20Translator
-set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[8] -to Mic_20Translator|vcc -section_id Mic_20Translator
 set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[24] -to Mic_20Translator|gnd -section_id Mic_20Translator
-set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_INVERSION_MASK=0000000000000000000000000000" -section_id Mic_20Translator
-set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_INVERSION_MASK_LENGTH=28" -section_id Mic_20Translator
-set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_SEGMENT_SIZE=16384" -section_id Mic_20Translator
-set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_SAMPLE_DEPTH=16384" -section_id Mic_20Translator
 set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[14] -to Mic_20Translator|vcc -section_id Mic_20Translator
-set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[1] -to Mic_20Translator|vcc -section_id Mic_20Translator
-set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[3] -to Mic_20Translator|gnd -section_id Mic_20Translator
-set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[4] -to Mic_20Translator|vcc -section_id Mic_20Translator
-set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[10] -to Mic_20Translator|gnd -section_id Mic_20Translator
 set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[25] -to Mic_20Translator|vcc -section_id Mic_20Translator
-set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[1] -to "FFT_Processor:main_professor|mem0[16]" -section_id Mic_20Translator
-set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[2] -to "FFT_Processor:main_professor|mem0[17]" -section_id Mic_20Translator
-set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[3] -to "FFT_Processor:main_professor|mem0[18]" -section_id Mic_20Translator
-set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[4] -to "FFT_Processor:main_professor|mem0[19]" -section_id Mic_20Translator
-set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[5] -to "FFT_Processor:main_professor|mem0[20]" -section_id Mic_20Translator
-set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[6] -to "FFT_Processor:main_professor|mem0[21]" -section_id Mic_20Translator
-set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[7] -to "FFT_Processor:main_professor|mem0[22]" -section_id Mic_20Translator
-set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[8] -to "FFT_Processor:main_professor|mem0[23]" -section_id Mic_20Translator
-set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[9] -to "FFT_Processor:main_professor|mem0[24]" -section_id Mic_20Translator
-set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[10] -to "FFT_Processor:main_professor|mem0[25]" -section_id Mic_20Translator
-set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[11] -to "FFT_Processor:main_professor|mem0[26]" -section_id Mic_20Translator
-set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[12] -to "FFT_Processor:main_professor|mem0[27]" -section_id Mic_20Translator
-set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[13] -to "FFT_Processor:main_professor|mem0[28]" -section_id Mic_20Translator
-set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[14] -to "FFT_Processor:main_professor|mem0[29]" -section_id Mic_20Translator
-set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[15] -to "FFT_Processor:main_professor|mem0[30]" -section_id Mic_20Translator
-set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[16] -to "FFT_Processor:main_professor|mem0[31]" -section_id Mic_20Translator
-set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[17] -to "FFT_Processor:main_professor|mem1[16]" -section_id Mic_20Translator
-set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[18] -to "FFT_Processor:main_professor|mem1[17]" -section_id Mic_20Translator
-set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[19] -to "FFT_Processor:main_professor|mem1[18]" -section_id Mic_20Translator
-set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[20] -to "FFT_Processor:main_professor|mem1[19]" -section_id Mic_20Translator
-set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[21] -to "FFT_Processor:main_professor|mem1[20]" -section_id Mic_20Translator
-set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[22] -to "FFT_Processor:main_professor|mem1[21]" -section_id Mic_20Translator
-set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[23] -to "FFT_Processor:main_professor|mem1[22]" -section_id Mic_20Translator
-set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[24] -to "FFT_Processor:main_professor|mem1[23]" -section_id Mic_20Translator
-set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[25] -to "FFT_Processor:main_professor|mem1[24]" -section_id Mic_20Translator
-set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[26] -to "FFT_Processor:main_professor|mem1[25]" -section_id Mic_20Translator
-set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[27] -to "FFT_Processor:main_professor|mem1[26]" -section_id Mic_20Translator
-set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[28] -to "FFT_Processor:main_professor|mem1[27]" -section_id Mic_20Translator
-set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[29] -to "FFT_Processor:main_professor|mem1[28]" -section_id Mic_20Translator
-set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[30] -to "FFT_Processor:main_professor|mem1[29]" -section_id Mic_20Translator
-set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[31] -to "FFT_Processor:main_professor|mem1[30]" -section_id Mic_20Translator
-set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[32] -to "FFT_Processor:main_professor|mem2[16]" -section_id Mic_20Translator
-set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[33] -to "FFT_Processor:main_professor|mem2[17]" -section_id Mic_20Translator
-set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[34] -to "FFT_Processor:main_professor|mem2[18]" -section_id Mic_20Translator
-set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[35] -to "FFT_Processor:main_professor|mem2[19]" -section_id Mic_20Translator
-set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[36] -to "FFT_Processor:main_professor|mem2[20]" -section_id Mic_20Translator
-set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[37] -to "FFT_Processor:main_professor|mem2[21]" -section_id Mic_20Translator
-set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[38] -to "FFT_Processor:main_professor|mem2[22]" -section_id Mic_20Translator
-set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[39] -to "FFT_Processor:main_professor|mem2[23]" -section_id Mic_20Translator
-set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[40] -to "FFT_Processor:main_professor|mem2[24]" -section_id Mic_20Translator
-set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[41] -to "FFT_Processor:main_professor|mem2[25]" -section_id Mic_20Translator
-set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[42] -to "FFT_Processor:main_professor|mem2[26]" -section_id Mic_20Translator
-set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[43] -to "FFT_Processor:main_professor|mem2[27]" -section_id Mic_20Translator
-set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[44] -to "FFT_Processor:main_professor|mem2[28]" -section_id Mic_20Translator
-set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[45] -to "FFT_Processor:main_professor|mem2[29]" -section_id Mic_20Translator
-set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[46] -to "FFT_Processor:main_professor|mem2[30]" -section_id Mic_20Translator
-set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[47] -to "FFT_Processor:main_professor|mem2[31]" -section_id Mic_20Translator
-set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[48] -to "mic_translator:main_translator|LRCLK_reg" -section_id Mic_20Translator
-set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[49] -to "mic_translator:main_translator|data_buffer[0]" -section_id Mic_20Translator
-set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[50] -to "mic_translator:main_translator|data_buffer[1]" -section_id Mic_20Translator
-set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[51] -to "mic_translator:main_translator|data_buffer[2]" -section_id Mic_20Translator
-set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[52] -to "mic_translator:main_translator|data_buffer[3]" -section_id Mic_20Translator
-set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[53] -to "mic_translator:main_translator|data_buffer[4]" -section_id Mic_20Translator
-set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[54] -to "mic_translator:main_translator|data_buffer[5]" -section_id Mic_20Translator
-set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[55] -to "mic_translator:main_translator|data_buffer[6]" -section_id Mic_20Translator
-set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[56] -to "mic_translator:main_translator|data_buffer[7]" -section_id Mic_20Translator
-set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[57] -to "mic_translator:main_translator|data_buffer[8]" -section_id Mic_20Translator
-set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[58] -to "mic_translator:main_translator|data_buffer[9]" -section_id Mic_20Translator
-set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[59] -to "mic_translator:main_translator|data_counter[0]" -section_id Mic_20Translator
-set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[60] -to "mic_translator:main_translator|data_counter[1]" -section_id Mic_20Translator
-set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[61] -to "mic_translator:main_translator|data_counter[2]" -section_id Mic_20Translator
-set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[62] -to "mic_translator:main_translator|data_counter[3]" -section_id Mic_20Translator
-set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[63] -to "mic_translator:main_translator|data_counter[4]" -section_id Mic_20Translator
-set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[64] -to "mic_translator:main_translator|data_counter[5]" -section_id Mic_20Translator
-set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[65] -to "mic_translator:main_translator|data_counter[6]" -section_id Mic_20Translator
-set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[66] -to "mic_translator:main_translator|new_t_reg" -section_id Mic_20Translator
-set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_DATA_BITS=67" -section_id Mic_20Translator
-set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_STORAGE_QUALIFIER_BITS=68" -section_id Mic_20Translator
-set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[2] -to Mic_20Translator|vcc -section_id Mic_20Translator
-set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[5] -to Mic_20Translator|gnd -section_id Mic_20Translator
-set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[9] -to Mic_20Translator|vcc -section_id Mic_20Translator
 set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[11] -to Mic_20Translator|vcc -section_id Mic_20Translator
-set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[15] -to Mic_20Translator|vcc -section_id Mic_20Translator
-set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[20] -to Mic_20Translator|vcc -section_id Mic_20Translator
 set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[21] -to Mic_20Translator|vcc -section_id Mic_20Translator
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[1] -to "mic_translator:main_translator|LRCLK_reg" -section_id Mic_20Translator
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[2] -to "mic_translator:main_translator|data_buffer[0]" -section_id Mic_20Translator
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[3] -to "mic_translator:main_translator|data_buffer[1]" -section_id Mic_20Translator
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[4] -to "mic_translator:main_translator|data_buffer[2]" -section_id Mic_20Translator
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[5] -to "mic_translator:main_translator|data_buffer[3]" -section_id Mic_20Translator
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[6] -to "mic_translator:main_translator|data_buffer[4]" -section_id Mic_20Translator
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[7] -to "mic_translator:main_translator|data_buffer[5]" -section_id Mic_20Translator
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[8] -to "mic_translator:main_translator|data_buffer[6]" -section_id Mic_20Translator
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[9] -to "mic_translator:main_translator|data_buffer[7]" -section_id Mic_20Translator
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[10] -to "mic_translator:main_translator|data_buffer[8]" -section_id Mic_20Translator
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[11] -to "mic_translator:main_translator|data_buffer[9]" -section_id Mic_20Translator
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[12] -to "mic_translator:main_translator|data_counter[0]" -section_id Mic_20Translator
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[13] -to "mic_translator:main_translator|data_counter[1]" -section_id Mic_20Translator
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[14] -to "mic_translator:main_translator|data_counter[2]" -section_id Mic_20Translator
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[15] -to "mic_translator:main_translator|data_counter[3]" -section_id Mic_20Translator
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[16] -to "mic_translator:main_translator|data_counter[4]" -section_id Mic_20Translator
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[17] -to "mic_translator:main_translator|data_counter[5]" -section_id Mic_20Translator
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[18] -to "mic_translator:main_translator|data_counter[6]" -section_id Mic_20Translator
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[19] -to "mic_translator:main_translator|new_t_reg" -section_id Mic_20Translator
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[20] -to "mic_translator:main_translator|t0_reg[10]" -section_id Mic_20Translator
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[21] -to "mic_translator:main_translator|t0_reg[11]" -section_id Mic_20Translator
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[22] -to "mic_translator:main_translator|t0_reg[12]" -section_id Mic_20Translator
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[23] -to "mic_translator:main_translator|t0_reg[13]" -section_id Mic_20Translator
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[24] -to "mic_translator:main_translator|t0_reg[14]" -section_id Mic_20Translator
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[26] -to "mic_translator:main_translator|t0_reg[6]" -section_id Mic_20Translator
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[27] -to "mic_translator:main_translator|t0_reg[7]" -section_id Mic_20Translator
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[28] -to "mic_translator:main_translator|t0_reg[8]" -section_id Mic_20Translator
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[29] -to "mic_translator:main_translator|t0_reg[9]" -section_id Mic_20Translator
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[30] -to "mic_translator:main_translator|t1_reg[10]" -section_id Mic_20Translator
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[31] -to "mic_translator:main_translator|t1_reg[11]" -section_id Mic_20Translator
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[32] -to "mic_translator:main_translator|t1_reg[12]" -section_id Mic_20Translator
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[33] -to "mic_translator:main_translator|t1_reg[13]" -section_id Mic_20Translator
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[34] -to "mic_translator:main_translator|t1_reg[14]" -section_id Mic_20Translator
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[36] -to "mic_translator:main_translator|t1_reg[6]" -section_id Mic_20Translator
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[37] -to "mic_translator:main_translator|t1_reg[7]" -section_id Mic_20Translator
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[38] -to "mic_translator:main_translator|t1_reg[8]" -section_id Mic_20Translator
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[39] -to "mic_translator:main_translator|t1_reg[9]" -section_id Mic_20Translator
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[40] -to "mic_translator:main_translator|t2_reg[10]" -section_id Mic_20Translator
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[41] -to "mic_translator:main_translator|t2_reg[11]" -section_id Mic_20Translator
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[42] -to "mic_translator:main_translator|t2_reg[12]" -section_id Mic_20Translator
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[43] -to "mic_translator:main_translator|t2_reg[13]" -section_id Mic_20Translator
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[44] -to "mic_translator:main_translator|t2_reg[14]" -section_id Mic_20Translator
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[46] -to "mic_translator:main_translator|t2_reg[6]" -section_id Mic_20Translator
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[47] -to "mic_translator:main_translator|t2_reg[7]" -section_id Mic_20Translator
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[48] -to "mic_translator:main_translator|t2_reg[8]" -section_id Mic_20Translator
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[49] -to "mic_translator:main_translator|t2_reg[9]" -section_id Mic_20Translator
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[50] -to "mic_translator:main_translator|t3_reg[10]" -section_id Mic_20Translator
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[51] -to "mic_translator:main_translator|t3_reg[11]" -section_id Mic_20Translator
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[52] -to "mic_translator:main_translator|t3_reg[12]" -section_id Mic_20Translator
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[53] -to "mic_translator:main_translator|t3_reg[13]" -section_id Mic_20Translator
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[54] -to "mic_translator:main_translator|t3_reg[14]" -section_id Mic_20Translator
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[56] -to "mic_translator:main_translator|t3_reg[6]" -section_id Mic_20Translator
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[57] -to "mic_translator:main_translator|t3_reg[7]" -section_id Mic_20Translator
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[58] -to "mic_translator:main_translator|t3_reg[8]" -section_id Mic_20Translator
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[59] -to "mic_translator:main_translator|t3_reg[9]" -section_id Mic_20Translator
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[60] -to "mic_translator:main_translator|t4_reg[10]" -section_id Mic_20Translator
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[61] -to "mic_translator:main_translator|t4_reg[11]" -section_id Mic_20Translator
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[62] -to "mic_translator:main_translator|t4_reg[12]" -section_id Mic_20Translator
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[63] -to "mic_translator:main_translator|t4_reg[13]" -section_id Mic_20Translator
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[64] -to "mic_translator:main_translator|t4_reg[14]" -section_id Mic_20Translator
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[66] -to "mic_translator:main_translator|t4_reg[6]" -section_id Mic_20Translator
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[67] -to "mic_translator:main_translator|t4_reg[7]" -section_id Mic_20Translator
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[68] -to "mic_translator:main_translator|t4_reg[8]" -section_id Mic_20Translator
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[69] -to "mic_translator:main_translator|t4_reg[9]" -section_id Mic_20Translator
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[70] -to "mic_translator:main_translator|t5_reg[10]" -section_id Mic_20Translator
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[71] -to "mic_translator:main_translator|t5_reg[11]" -section_id Mic_20Translator
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[72] -to "mic_translator:main_translator|t5_reg[12]" -section_id Mic_20Translator
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[73] -to "mic_translator:main_translator|t5_reg[13]" -section_id Mic_20Translator
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[74] -to "mic_translator:main_translator|t5_reg[14]" -section_id Mic_20Translator
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[76] -to "mic_translator:main_translator|t5_reg[6]" -section_id Mic_20Translator
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[77] -to "mic_translator:main_translator|t5_reg[7]" -section_id Mic_20Translator
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[78] -to "mic_translator:main_translator|t5_reg[8]" -section_id Mic_20Translator
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[79] -to "mic_translator:main_translator|t5_reg[9]" -section_id Mic_20Translator
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_DATA_BITS=80" -section_id Mic_20Translator
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_STORAGE_QUALIFIER_BITS=178" -section_id Mic_20Translator
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_INVERSION_MASK=00000000000000000000000000" -section_id Mic_20Translator
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_INVERSION_MASK_LENGTH=26" -section_id Mic_20Translator
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_SEGMENT_SIZE=4096" -section_id Mic_20Translator
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[1] -to Mic_20Translator|gnd -section_id Mic_20Translator
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[3] -to Mic_20Translator|vcc -section_id Mic_20Translator
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[4] -to Mic_20Translator|gnd -section_id Mic_20Translator
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[8] -to Mic_20Translator|gnd -section_id Mic_20Translator
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[12] -to Mic_20Translator|vcc -section_id Mic_20Translator
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[16] -to Mic_20Translator|gnd -section_id Mic_20Translator
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[17] -to Mic_20Translator|gnd -section_id Mic_20Translator
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[18] -to Mic_20Translator|vcc -section_id Mic_20Translator
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[20] -to Mic_20Translator|gnd -section_id Mic_20Translator
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[22] -to Mic_20Translator|vcc -section_id Mic_20Translator
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[26] -to Mic_20Translator|vcc -section_id Mic_20Translator
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[27] -to Mic_20Translator|vcc -section_id Mic_20Translator
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[30] -to Mic_20Translator|gnd -section_id Mic_20Translator
+set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_SAMPLE_DEPTH=4096" -section_id Mic_20Translator
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[25] -to "mic_translator:main_translator|t0_reg[5]" -section_id Mic_20Translator
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[35] -to "mic_translator:main_translator|t1_reg[5]" -section_id Mic_20Translator
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[45] -to "mic_translator:main_translator|t2_reg[5]" -section_id Mic_20Translator
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[55] -to "mic_translator:main_translator|t3_reg[5]" -section_id Mic_20Translator
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[65] -to "mic_translator:main_translator|t4_reg[5]" -section_id Mic_20Translator
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT acq_data_in[75] -to "mic_translator:main_translator|t5_reg[5]" -section_id Mic_20Translator
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[2] -to Mic_20Translator|gnd -section_id Mic_20Translator
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[5] -to Mic_20Translator|vcc -section_id Mic_20Translator
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[6] -to Mic_20Translator|gnd -section_id Mic_20Translator
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[9] -to Mic_20Translator|gnd -section_id Mic_20Translator
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[10] -to Mic_20Translator|vcc -section_id Mic_20Translator
+set_instance_assignment -name POST_FIT_CONNECT_TO_SLD_NODE_ENTITY_PORT crc[15] -to Mic_20Translator|gnd -section_id Mic_20Translator
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
 set_global_assignment -name SLD_FILE db/MicTranslatorTap_auto_stripped.stp

@@ -2,148 +2,208 @@
 Timing Analyzer Summary
 ------------------------------------------------------------
 
+Type  : Slow 1200mV 85C Model Setup 'vga_clk'
+Slack : 10.044
+TNS   : 0.000
+
 Type  : Slow 1200mV 85C Model Setup 'clk'
-Slack : -15.804
-TNS   : -10439.716
+Slack : 13.226
+TNS   : 0.000
 
-Type  : Slow 1200mV 85C Model Setup 'video_sync_generator:vga|PLL:clockdivider|pixelclk'
-Slack : -10.414
-TNS   : -1470.155
+Type  : Slow 1200mV 85C Model Setup 'altera_reserved_tck'
+Slack : 43.428
+TNS   : 0.000
 
-Type  : Slow 1200mV 85C Model Setup 'mic_translator:main_translator|clkdiv:BCLK_gen|clk_out_reg'
-Slack : -2.959
-TNS   : -536.901
+Type  : Slow 1200mV 85C Model Setup 'system_clk'
+Slack : 493.599
+TNS   : 0.000
 
-Type  : Slow 1200mV 85C Model Setup 'video_sync_generator:vga|hsync:horizontal|newline_out'
-Slack : -1.479
-TNS   : -17.041
+Type  : Slow 1200mV 85C Model Setup 'newline'
+Slack : 63994.840
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'altera_reserved_tck'
+Slack : 0.341
+TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Hold 'clk'
-Slack : 0.326
+Slack : 0.341
 TNS   : 0.000
 
-Type  : Slow 1200mV 85C Model Hold 'mic_translator:main_translator|clkdiv:BCLK_gen|clk_out_reg'
-Slack : 0.342
+Type  : Slow 1200mV 85C Model Hold 'system_clk'
+Slack : 0.341
 TNS   : 0.000
 
-Type  : Slow 1200mV 85C Model Hold 'video_sync_generator:vga|PLL:clockdivider|pixelclk'
-Slack : 0.441
+Type  : Slow 1200mV 85C Model Hold 'vga_clk'
+Slack : 0.420
 TNS   : 0.000
 
-Type  : Slow 1200mV 85C Model Hold 'video_sync_generator:vga|hsync:horizontal|newline_out'
-Slack : 0.446
+Type  : Slow 1200mV 85C Model Hold 'newline'
+Slack : 0.669
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Recovery 'altera_reserved_tck'
+Slack : 95.293
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Removal 'altera_reserved_tck'
+Slack : 0.907
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'clk'
-Slack : -3.166
-TNS   : -2350.103
-
-Type  : Slow 1200mV 85C Model Minimum Pulse Width 'video_sync_generator:vga|PLL:clockdivider|pixelclk'
-Slack : -1.403
-TNS   : -394.243
-
-Type  : Slow 1200mV 85C Model Minimum Pulse Width 'mic_translator:main_translator|clkdiv:BCLK_gen|clk_out_reg'
-Slack : -1.403
-TNS   : -296.033
-
-Type  : Slow 1200mV 85C Model Minimum Pulse Width 'video_sync_generator:vga|hsync:horizontal|newline_out'
-Slack : -1.403
-TNS   : -16.836
-
-Type  : Slow 1200mV 0C Model Setup 'clk'
-Slack : -14.443
-TNS   : -9517.386
-
-Type  : Slow 1200mV 0C Model Setup 'video_sync_generator:vga|PLL:clockdivider|pixelclk'
-Slack : -9.373
-TNS   : -1348.067
-
-Type  : Slow 1200mV 0C Model Setup 'mic_translator:main_translator|clkdiv:BCLK_gen|clk_out_reg'
-Slack : -2.678
-TNS   : -480.556
-
-Type  : Slow 1200mV 0C Model Setup 'video_sync_generator:vga|hsync:horizontal|newline_out'
-Slack : -1.275
-TNS   : -14.591
-
-Type  : Slow 1200mV 0C Model Hold 'clk'
-Slack : 0.293
+Slack : 9.549
 TNS   : 0.000
 
-Type  : Slow 1200mV 0C Model Hold 'mic_translator:main_translator|clkdiv:BCLK_gen|clk_out_reg'
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'vga_clk'
+Slack : 19.603
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'altera_reserved_tck'
+Slack : 49.533
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'system_clk'
+Slack : 499.569
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'newline'
+Slack : 31999.760
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Setup 'vga_clk'
+Slack : 10.967
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Setup 'clk'
+Slack : 13.884
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Setup 'altera_reserved_tck'
+Slack : 43.953
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Setup 'system_clk'
+Slack : 494.042
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Setup 'newline'
+Slack : 63995.309
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'clk'
+Slack : 0.305
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'system_clk'
+Slack : 0.305
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'altera_reserved_tck'
 Slack : 0.307
 TNS   : 0.000
 
-Type  : Slow 1200mV 0C Model Hold 'video_sync_generator:vga|PLL:clockdivider|pixelclk'
-Slack : 0.404
+Type  : Slow 1200mV 0C Model Hold 'vga_clk'
+Slack : 0.387
 TNS   : 0.000
 
-Type  : Slow 1200mV 0C Model Hold 'video_sync_generator:vga|hsync:horizontal|newline_out'
-Slack : 0.409
+Type  : Slow 1200mV 0C Model Hold 'newline'
+Slack : 0.625
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Recovery 'altera_reserved_tck'
+Slack : 95.740
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Removal 'altera_reserved_tck'
+Slack : 0.832
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'clk'
-Slack : -3.166
-TNS   : -2348.485
-
-Type  : Slow 1200mV 0C Model Minimum Pulse Width 'video_sync_generator:vga|PLL:clockdivider|pixelclk'
-Slack : -1.403
-TNS   : -394.243
-
-Type  : Slow 1200mV 0C Model Minimum Pulse Width 'mic_translator:main_translator|clkdiv:BCLK_gen|clk_out_reg'
-Slack : -1.403
-TNS   : -296.033
-
-Type  : Slow 1200mV 0C Model Minimum Pulse Width 'video_sync_generator:vga|hsync:horizontal|newline_out'
-Slack : -1.403
-TNS   : -16.836
-
-Type  : Fast 1200mV 0C Model Setup 'clk'
-Slack : -6.243
-TNS   : -4067.435
-
-Type  : Fast 1200mV 0C Model Setup 'video_sync_generator:vga|PLL:clockdivider|pixelclk'
-Slack : -3.684
-TNS   : -504.892
-
-Type  : Fast 1200mV 0C Model Setup 'mic_translator:main_translator|clkdiv:BCLK_gen|clk_out_reg'
-Slack : -0.707
-TNS   : -107.314
-
-Type  : Fast 1200mV 0C Model Setup 'video_sync_generator:vga|hsync:horizontal|newline_out'
-Slack : -0.035
-TNS   : -0.350
-
-Type  : Fast 1200mV 0C Model Hold 'clk'
-Slack : 0.143
+Slack : 9.575
 TNS   : 0.000
 
-Type  : Fast 1200mV 0C Model Hold 'mic_translator:main_translator|clkdiv:BCLK_gen|clk_out_reg'
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'vga_clk'
+Slack : 19.589
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'altera_reserved_tck'
+Slack : 49.548
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'system_clk'
+Slack : 499.548
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'newline'
+Slack : 31999.727
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Setup 'vga_clk'
+Slack : 15.512
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Setup 'clk'
+Slack : 16.627
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Setup 'altera_reserved_tck'
+Slack : 47.428
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Setup 'system_clk'
+Slack : 497.035
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Setup 'newline'
+Slack : 63997.749
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'system_clk'
+Slack : 0.146
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'clk'
+Slack : 0.147
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'altera_reserved_tck'
 Slack : 0.148
 TNS   : 0.000
 
-Type  : Fast 1200mV 0C Model Hold 'video_sync_generator:vga|PLL:clockdivider|pixelclk'
-Slack : 0.175
+Type  : Fast 1200mV 0C Model Hold 'vga_clk'
+Slack : 0.165
 TNS   : 0.000
 
-Type  : Fast 1200mV 0C Model Hold 'video_sync_generator:vga|hsync:horizontal|newline_out'
-Slack : 0.178
+Type  : Fast 1200mV 0C Model Hold 'newline'
+Slack : 0.257
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Recovery 'altera_reserved_tck'
+Slack : 97.645
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Removal 'altera_reserved_tck'
+Slack : 0.406
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'clk'
-Slack : -3.000
-TNS   : -1030.047
+Slack : 9.400
+TNS   : 0.000
 
-Type  : Fast 1200mV 0C Model Minimum Pulse Width 'video_sync_generator:vga|PLL:clockdivider|pixelclk'
-Slack : -1.000
-TNS   : -281.000
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'vga_clk'
+Slack : 19.712
+TNS   : 0.000
 
-Type  : Fast 1200mV 0C Model Minimum Pulse Width 'mic_translator:main_translator|clkdiv:BCLK_gen|clk_out_reg'
-Slack : -1.000
-TNS   : -211.000
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'altera_reserved_tck'
+Slack : 49.386
+TNS   : 0.000
 
-Type  : Fast 1200mV 0C Model Minimum Pulse Width 'video_sync_generator:vga|hsync:horizontal|newline_out'
-Slack : -1.000
-TNS   : -12.000
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'system_clk'
+Slack : 499.692
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'newline'
+Slack : 31999.721
+TNS   : 0.000
 
 ------------------------------------------------------------

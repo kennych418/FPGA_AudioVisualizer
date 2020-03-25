@@ -3,14 +3,16 @@
 
 module FFT_Processor_TB;
 
-	reg clk, new_t; 
+	integer i;
+
+	reg clk, new_t, reset; 
 	wire done;
 	reg [15:0] t0, t1, t2, t3, t4, t5, t6, t7, 
 				  t8, t9, t10, t11, t12, t13, t14, t15;
 	wire [15:0] f0, f1, f2, f3, f4, f5, f6, f7, 
 				   f8, f9, f10, f11, f12, f13, f14, f15;
 	
-	FFT_Processor UUT(clk, new_t,
+	FFT_Processor UUT(clk, reset, new_t,
 							t0, t1, t2, t3, t4, t5, t6, t7, 
 							t8, t9, t10, t11, t12, t13, t14, t15,
 							f0, f1, f2, f3, f4, f5, f6, f7, 
@@ -30,24 +32,26 @@ module FFT_Processor_TB;
 		#10;
 		clk = 1;
 		#10;
-		new_t = 0;
+		//new_t = 0;
+		
+		for (i=0; i < 10; i = i + 1) begin
+			clk = 0;
+			#10;
+			clk = 1;
+			#10;
+		end
 		clk = 0;
+		//new_t = 1;
 		#10;
 		clk = 1;
 		#10;
-		clk = 0;
-		#10;
-		clk = 1;
-		#10;
-		clk = 0;
-		#10;
-		clk = 1;
-		#10;
-		clk = 0;
-		#10;
-		clk = 1;
-		#10;
-		clk = 0;
+		//new_t = 0;
+		for (i=0; i < 10; i = i + 1) begin
+			clk = 0;
+			#10;
+			clk = 1;
+			#10;
+		end
 		#100;
 		t0 = `tmin_FFT; t1 = `tmax_FFT; t2 = `tmin_FFT; t3 = `tmax_FFT;
 		t4 = `tmin_FFT; t5 = `tmax_FFT; t6 = `tmax_FFT; t7 = `tmin_FFT;

@@ -20,7 +20,7 @@ module FFT_Processor(input clk, input reset, input new_t,
 
 	reg done_reg;
 	
-	reg [2:0] cycles_counter;
+	reg [3:0] cycles_counter;
 	
 	reg [31:0] W0, W1, W2, W3, W4, W5, W6, W7;
 	

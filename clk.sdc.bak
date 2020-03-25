@@ -1,0 +1,4 @@
+create_clock -name clk -period 20.000 [get_ports {clk}]
+create_clock -name clk_virt -period 20.000
+create_generated_clock -name BCLK -source [get_ports {clk}] -divide_by 62 [get_pins {main_translator|BCLK_gen|clk_out_reg|q}]
+create_generated_clock -name pixelclk -source [get_ports {clk}] -divide_by 2 [get_pins {vga|clockdivider|pixelclk|q}]

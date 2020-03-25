@@ -1,4 +1,5 @@
 `define _NUM_DATA_BITS 31
+`define _CALIBRATION 10'd29
 
 module mic_translator(input clk, input reset, input DOUT, output LRCLK, output BCLK, output new_t,
 							 output [15:0] t0, output [15:0] t1, output [15:0] t2, output [15:0] t3, 
@@ -10,6 +11,7 @@ module mic_translator(input clk, input reset, input DOUT, output LRCLK, output B
 	reg [6:0] data_counter;
 	reg [31:0] bit_cnt;
 	wire BCLK_out;
+	reg [9:0] calibrated_data_buffer;
 	
 	//Dumb shit i have to do for the simulator to work
 	reg [15:0] t0_reg, t1_reg, t2_reg, t3_reg,
@@ -36,13 +38,17 @@ module mic_translator(input clk, input reset, input DOUT, output LRCLK, output B
 	assign LRCLK = LRCLK_reg;
 	assign new_t = new_t_reg;
 	
-	//50MHz to 3MHz Clock Divider for generating BCLK
-	clkdiv #(30) BCLK_gen(	.clk_in	(clk),
-									.clk_out	(BCLK_out)	);
+	assign calibrated_data_buffer = data_buffer + `_CALIBRATION;
 	
-	assign BCLK = BCLK_out | (~reset);
+	//25MHz to 3MHz Clock Divider for generating BCLK
+	/*clkdiv #(0) BCLK_gen(	.clk_in	(clk),
+									.clk_out	(BCLK_out)	);*/
 	
-	always @ (negedge BCLK_out) begin
+	
+	
+	assign BCLK = clk | (~reset);
+	
+	always @ (negedge clk) begin
 		if (reset == 1'b0) begin
 			LRCLK_reg <= 1;
 			bit_cnt <= 0;
@@ -57,7 +63,7 @@ module mic_translator(input clk, input reset, input DOUT, output LRCLK, output B
 		end
 	end
 	
-	always @ (posedge BCLK_out) begin
+	always @ (posedge clk) begin
 		if (reset == 1'b0) begin
 			data_counter <= 0;
 			data_buffer <= 0;
@@ -83,34 +89,89 @@ module mic_translator(input clk, input reset, input DOUT, output LRCLK, output B
 			data_counter <= data_counter + 6'b1;
 			data_buffer <= {data_buffer[8:0], DOUT};
 			new_t_reg <= 1'b0;
+			t15_reg <= t15_reg;
+			t14_reg <= t14_reg;
+			t13_reg <= t13_reg;
+			t12_reg <= t12_reg;
+			t11_reg <= t11_reg;
+			t10_reg <= t10_reg;
+			t9_reg <= t9_reg;
+			t8_reg <= t8_reg;
+			t7_reg <= t7_reg;
+			t6_reg <= t6_reg;
+			t5_reg <= t5_reg;
+			t4_reg <= t4_reg;
+			t3_reg <= t3_reg;
+			t2_reg <= t2_reg;
+			t1_reg <= t1_reg;
+			t0_reg <= t0_reg;
 		end
 		else if (data_counter == 10) begin
-			t15_reg <= t14_reg;
-			t14_reg <= t13_reg;
-			t13_reg <= t12_reg;
-			t12_reg <= t11_reg;
-			t11_reg <= t10_reg;
-			t10_reg <= t9_reg;
-			t9_reg <= t8_reg;
-			t8_reg <= t7_reg;
-			t7_reg <= t6_reg;
-			t6_reg <= t5_reg;
-			t5_reg <= t4_reg;
-			t4_reg <= t3_reg;
-			t3_reg <= t2_reg;
-			t2_reg <= t1_reg;
-			t1_reg <= t0_reg;
-			t0_reg <= {6'b0, data_buffer}; //FFT Processor takes 10 bit 2's complement
 			data_counter <= data_counter + 6'b1;
-			new_t_reg <= 1'b1;
+			data_buffer <= 10'b0;
+			if (LRCLK_reg == 0) begin
+				new_t_reg <= 1'b1;
+				t15_reg <= t14_reg;
+				t14_reg <= t13_reg;
+				t13_reg <= t12_reg;
+				t12_reg <= t11_reg;
+				t11_reg <= t10_reg;
+				t10_reg <= t9_reg;
+				t9_reg <= t8_reg;
+				t8_reg <= t7_reg;
+				t7_reg <= t6_reg;
+				t6_reg <= t5_reg;
+				t5_reg <= t4_reg;
+				t4_reg <= t3_reg;
+				t3_reg <= t2_reg;
+				t2_reg <= t1_reg;
+				t1_reg <= t0_reg;
+				t0_reg <= {6'b0, calibrated_data_buffer}; //FFT Processor takes 10 bit 2's complement //use calibrated to remove base offset
+			end
+			else begin
+				new_t_reg <= 1'b0;
+				t15_reg <= t15_reg;
+				t14_reg <= t14_reg;
+				t13_reg <= t13_reg;
+				t12_reg <= t12_reg;
+				t11_reg <= t11_reg;
+				t10_reg <= t10_reg;
+				t9_reg <= t9_reg;
+				t8_reg <= t8_reg;
+				t7_reg <= t7_reg;
+				t6_reg <= t6_reg;
+				t5_reg <= t5_reg;
+				t4_reg <= t4_reg;
+				t3_reg <= t3_reg;
+				t2_reg <= t2_reg;
+				t1_reg <= t1_reg;
+				t0_reg <= t0_reg;
+			end
 		end
 		else if (data_counter >= `_NUM_DATA_BITS) begin
-			data_buffer <= 10'b0;
 			data_counter <= 0;
+			data_buffer <= 10'b0;
 			new_t_reg <= 1'b0;
 		end
-		else
+		else begin
 			data_counter <= data_counter + 6'b1;
+			t15_reg <= t15_reg;
+			t14_reg <= t14_reg;
+			t13_reg <= t13_reg;
+			t12_reg <= t12_reg;
+			t11_reg <= t11_reg;
+			t10_reg <= t10_reg;
+			t9_reg <= t9_reg;
+			t8_reg <= t8_reg;
+			t7_reg <= t7_reg;
+			t6_reg <= t6_reg;
+			t5_reg <= t5_reg;
+			t4_reg <= t4_reg;
+			t3_reg <= t3_reg;
+			t2_reg <= t2_reg;
+			t1_reg <= t1_reg;
+			t0_reg <= t0_reg;
+		end
 	end
 	
 endmodule

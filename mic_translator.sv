@@ -1,6 +1,6 @@
 `define _NUM_DATA_BITS 31
 `define _NUM_SAMPLE_BITS 18
-`define _CALIBRATION {10'd29, 8'd0}
+`define _CALIBRATION {13'd226, 5'd0}
 
 module mic_translator(input clk, input reset, input DOUT, output LRCLK, output BCLK, output new_t,
 							 output [17:0] t0, output [17:0] t1, output [17:0] t2, output [17:0] t3, 
@@ -15,10 +15,10 @@ module mic_translator(input clk, input reset, input DOUT, output LRCLK, output B
 	wire BCLK_out;
 	
 	//Dumb shit i have to do for the simulator to work
-	reg [17:0] t0_reg, t1_reg, t2_reg, t3_reg,
-				  					t4_reg, t5_reg, t6_reg, t7_reg,
-				  					t8_reg, t9_reg, t10_reg, t11_reg,
-				  					t12_reg, t13_reg, t14_reg, t15_reg;
+	reg [17:0] 	t0_reg, t1_reg, t2_reg, t3_reg,
+				  	t4_reg, t5_reg, t6_reg, t7_reg,
+				  	t8_reg, t9_reg, t10_reg, t11_reg,
+				  	t12_reg, t13_reg, t14_reg, t15_reg;
 	reg LRCLK_reg, new_t_reg;
 	assign t0 = t0_reg;
 	assign t1 = t1_reg;
@@ -40,12 +40,6 @@ module mic_translator(input clk, input reset, input DOUT, output LRCLK, output B
 	assign new_t = new_t_reg;
 	
 	assign calibrated_data_buffer = data_buffer + `_CALIBRATION;
-	
-	//25MHz to 3MHz Clock Divider for generating BCLK
-	/*clkdiv #(0) BCLK_gen(	.clk_in	(clk),
-									.clk_out	(BCLK_out)	);*/
-	
-	
 	
 	assign BCLK = clk | (~reset);
 	

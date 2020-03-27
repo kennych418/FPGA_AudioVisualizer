@@ -1,10 +1,10 @@
-Analysis & Synthesis Status : Successful - Wed Mar 25 02:44:48 2020
+Analysis & Synthesis Status : Successful - Thu Mar 26 21:07:24 2020
 Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 Revision Name : FFT
 Top-level Entity Name : FFT
 Family : MAX 10
-Total logic elements : 5,598
-    Total combinational functions : 4,762
+Total logic elements : 5,628
+    Total combinational functions : 4,792
     Dedicated logic registers : 2,264
 Total registers : 2264
 Total pins : 19

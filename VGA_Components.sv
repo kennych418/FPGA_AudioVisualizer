@@ -133,22 +133,22 @@ module data(input clk, input done, input hblank, input vblank, input [10:0] hori
 				   scaled_f12, scaled_f13, scaled_f14, scaled_f15;
 	
 	//Perform a linear transform to go from 0 to 32767 into 480 to 0, Y = (x / 32767) * (-480) + 480
-	assign scaled_f0 = ({{16{f0[15]}},f0} * (32'b1111_1111_1111_1111_1111_1110_0010_0000) + {5'b0, 16'd480, 11'b0}) >>> 11;
-	assign scaled_f1 = ({{16{f1[15]}},f1} * (32'b1111_1111_1111_1111_1111_1110_0010_0000) + {5'b0, 16'd480, 11'b0}) >>> 11;
-	assign scaled_f2 = ({{16{f2[15]}},f2} * (32'b1111_1111_1111_1111_1111_1110_0010_0000) + {5'b0, 16'd480, 11'b0}) >>> 11;
-	assign scaled_f3 = ({{16{f3[15]}},f3} * (32'b1111_1111_1111_1111_1111_1110_0010_0000) + {5'b0, 16'd480, 11'b0}) >>> 11;
-	assign scaled_f4 = ({{16{f4[15]}},f4} * (32'b1111_1111_1111_1111_1111_1110_0010_0000) + {5'b0, 16'd480, 11'b0}) >>> 11;
-	assign scaled_f5 = ({{16{f5[15]}},f5} * (32'b1111_1111_1111_1111_1111_1110_0010_0000) + {5'b0, 16'd480, 11'b0}) >>> 11;
-	assign scaled_f6 = ({{16{f6[15]}},f6} * (32'b1111_1111_1111_1111_1111_1110_0010_0000) + {5'b0, 16'd480, 11'b0}) >>> 11;
-	assign scaled_f7 = ({{16{f7[15]}},f7} * (32'b1111_1111_1111_1111_1111_1110_0010_0000) + {5'b0, 16'd480, 11'b0}) >>> 11;
-	assign scaled_f8 = ({{16{f8[15]}},f8} * (32'b1111_1111_1111_1111_1111_1110_0010_0000) + {5'b0, 16'd480, 11'b0}) >>> 11;
-	assign scaled_f9 = ({{16{f9[15]}},f9} * (32'b1111_1111_1111_1111_1111_1110_0010_0000) + {5'b0, 16'd480, 11'b0}) >>> 11;
-	assign scaled_f10 = ({{16{f10[15]}},f10} * (32'b1111_1111_1111_1111_1111_1110_0010_0000) + {5'b0, 16'd480, 11'b0}) >>> 11;
-	assign scaled_f11 = ({{16{f11[15]}},f11} * (32'b1111_1111_1111_1111_1111_1110_0010_0000) + {5'b0, 16'd480, 11'b0}) >>> 11;
-	assign scaled_f12 = ({{16{f12[15]}},f12} * (32'b1111_1111_1111_1111_1111_1110_0010_0000) + {5'b0, 16'd480, 11'b0}) >>> 11;
-	assign scaled_f13 = ({{16{f13[15]}},f13} * (32'b1111_1111_1111_1111_1111_1110_0010_0000) + {5'b0, 16'd480, 11'b0}) >>> 11;
-	assign scaled_f14 = ({{16{f14[15]}},f14} * (32'b1111_1111_1111_1111_1111_1110_0010_0000) + {5'b0, 16'd480, 11'b0}) >>> 11;
-	assign scaled_f15 = ({{16{f15[15]}},f15} * (32'b1111_1111_1111_1111_1111_1110_0010_0000) + {5'b0, 16'd480, 11'b0}) >>> 11;
+	assign scaled_f0 = ({{16{f0[15]}},f0} * (32'b1111_1111_1111_1111_1111_1110_0010_0000) + {7'b0, 16'd480, 9'b0}) >>> 9;
+	assign scaled_f1 = ({{16{f1[15]}},f1} * (32'b1111_1111_1111_1111_1111_1110_0010_0000) + {7'b0, 16'd480, 9'b0}) >>> 9;
+	assign scaled_f2 = ({{16{f2[15]}},f2} * (32'b1111_1111_1111_1111_1111_1110_0010_0000) + {7'b0, 16'd480, 9'b0}) >>> 9;
+	assign scaled_f3 = ({{16{f3[15]}},f3} * (32'b1111_1111_1111_1111_1111_1110_0010_0000) + {7'b0, 16'd480, 9'b0}) >>> 9;
+	assign scaled_f4 = ({{16{f4[15]}},f4} * (32'b1111_1111_1111_1111_1111_1110_0010_0000) + {7'b0, 16'd480, 9'b0}) >>> 9;
+	assign scaled_f5 = ({{16{f5[15]}},f5} * (32'b1111_1111_1111_1111_1111_1110_0010_0000) + {7'b0, 16'd480, 9'b0}) >>> 9;
+	assign scaled_f6 = ({{16{f6[15]}},f6} * (32'b1111_1111_1111_1111_1111_1110_0010_0000) + {7'b0, 16'd480, 9'b0}) >>> 9;
+	assign scaled_f7 = ({{16{f7[15]}},f7} * (32'b1111_1111_1111_1111_1111_1110_0010_0000) + {7'b0, 16'd480, 9'b0}) >>> 9;
+	assign scaled_f8 = ({{16{f8[15]}},f8} * (32'b1111_1111_1111_1111_1111_1110_0010_0000) + {7'b0, 16'd480, 9'b0}) >>> 9;
+	assign scaled_f9 = ({{16{f9[15]}},f9} * (32'b1111_1111_1111_1111_1111_1110_0010_0000) + {7'b0, 16'd480, 9'b0}) >>> 9;
+	assign scaled_f10 = ({{16{f10[15]}},f10} * (32'b1111_1111_1111_1111_1111_1110_0010_0000) + {7'b0, 16'd480, 9'b0}) >>> 9;
+	assign scaled_f11 = ({{16{f11[15]}},f11} * (32'b1111_1111_1111_1111_1111_1110_0010_0000) + {7'b0, 16'd480, 9'b0}) >>> 9;
+	assign scaled_f12 = ({{16{f12[15]}},f12} * (32'b1111_1111_1111_1111_1111_1110_0010_0000) + {7'b0, 16'd480, 9'b0}) >>> 9;
+	assign scaled_f13 = ({{16{f13[15]}},f13} * (32'b1111_1111_1111_1111_1111_1110_0010_0000) + {7'b0, 16'd480, 9'b0}) >>> 9;
+	assign scaled_f14 = ({{16{f14[15]}},f14} * (32'b1111_1111_1111_1111_1111_1110_0010_0000) + {7'b0, 16'd480, 9'b0}) >>> 9;
+	assign scaled_f15 = ({{16{f15[15]}},f15} * (32'b1111_1111_1111_1111_1111_1110_0010_0000) + {7'b0, 16'd480, 9'b0}) >>> 9;
 	
 	assign r = r_reg;
 	assign g = g_reg;
@@ -167,85 +167,101 @@ module data(input clk, input done, input hblank, input vblank, input [10:0] hori
 			b_reg <= {f11[5], f10[5], f9[5], f8[0]};
 		end
 		*/
+		//Column 0
 		else if (horizontal_count < 40) begin
-			r_reg <= (vertical_count > scaled_f0) ? 4'b1100 : 4'b0;
-			g_reg <= (vertical_count > scaled_f0) ? 4'b0000 : 4'b0;
-			b_reg <= (vertical_count > scaled_f0) ? 4'b0000 : 4'b0;
-		end
-		else if (horizontal_count > 40 && horizontal_count < 80) begin
-			r_reg <= (vertical_count > scaled_f1) ? 4'b1100 : 4'b0;
-			g_reg <= (vertical_count > scaled_f1) ? 4'b0000 : 4'b0;
-			b_reg <= (vertical_count > scaled_f1) ? 4'b0000 : 4'b0;
-		end
-		else if (horizontal_count > 80 && horizontal_count < 120) begin
-			r_reg <= (vertical_count > scaled_f2) ? 4'b1100 : 4'b0;
-			g_reg <= (vertical_count > scaled_f2) ? 4'b0000 : 4'b0;
-			b_reg <= (vertical_count > scaled_f2) ? 4'b0000 : 4'b0;
-		end
-		else if (horizontal_count > 120 && horizontal_count < 160) begin
-			r_reg <= (vertical_count > scaled_f3) ? 4'b1100 : 4'b0;
-			g_reg <= (vertical_count > scaled_f3) ? 4'b0000 : 4'b0;
-			b_reg <= (vertical_count > scaled_f3) ? 4'b0000 : 4'b0;
-		end
-		else if (horizontal_count > 160 && horizontal_count < 200) begin
-			r_reg <= (vertical_count > scaled_f4) ? 4'b1100 : 4'b0;
-			g_reg <= (vertical_count > scaled_f4) ? 4'b0000 : 4'b0;
-			b_reg <= (vertical_count > scaled_f4) ? 4'b0000 : 4'b0;
-		end
-		else if (horizontal_count > 200 && horizontal_count < 240) begin
-			r_reg <= (vertical_count > scaled_f5) ? 4'b1100 : 4'b0;
-			g_reg <= (vertical_count > scaled_f5) ? 4'b0000 : 4'b0;
-			b_reg <= (vertical_count > scaled_f5) ? 4'b0000 : 4'b0;
-		end
-		else if (horizontal_count > 240 && horizontal_count < 280) begin
-			r_reg <= (vertical_count > scaled_f6) ? 4'b1100 : 4'b0;
-			g_reg <= (vertical_count > scaled_f6) ? 4'b0000 : 4'b0;
-			b_reg <= (vertical_count > scaled_f6) ? 4'b0000 : 4'b0;
-		end
-		else if (horizontal_count > 280 && horizontal_count < 320) begin
-			r_reg <= (vertical_count > scaled_f7) ? 4'b1100 : 4'b0;
-			g_reg <= (vertical_count > scaled_f7) ? 4'b0000 : 4'b0;
-			b_reg <= (vertical_count > scaled_f7) ? 4'b0000 : 4'b0;
-		end
-		else if (horizontal_count > 320 && horizontal_count < 360) begin
 			r_reg <= (vertical_count > scaled_f8) ? 4'b1100 : 4'b0;
 			g_reg <= (vertical_count > scaled_f8) ? 4'b0000 : 4'b0;
 			b_reg <= (vertical_count > scaled_f8) ? 4'b0000 : 4'b0;
 		end
-		else if (horizontal_count > 360 && horizontal_count < 400) begin
+		//Column 1
+		else if (horizontal_count > 40 && horizontal_count < 80) begin
 			r_reg <= (vertical_count > scaled_f9) ? 4'b1100 : 4'b0;
 			g_reg <= (vertical_count > scaled_f9) ? 4'b0000 : 4'b0;
 			b_reg <= (vertical_count > scaled_f9) ? 4'b0000 : 4'b0;
 		end
-		else if (horizontal_count > 400 && horizontal_count < 440) begin
+		//Column 2
+		else if (horizontal_count > 80 && horizontal_count < 120) begin
 			r_reg <= (vertical_count > scaled_f10) ? 4'b1100 : 4'b0;
 			g_reg <= (vertical_count > scaled_f10) ? 4'b0000 : 4'b0;
 			b_reg <= (vertical_count > scaled_f10) ? 4'b0000 : 4'b0;
 		end
-		else if (horizontal_count > 440 && horizontal_count < 480) begin
+		//Column 3
+		else if (horizontal_count > 120 && horizontal_count < 160) begin
 			r_reg <= (vertical_count > scaled_f11) ? 4'b1100 : 4'b0;
 			g_reg <= (vertical_count > scaled_f11) ? 4'b0000 : 4'b0;
 			b_reg <= (vertical_count > scaled_f11) ? 4'b0000 : 4'b0;
 		end
-		else if (horizontal_count > 480 && horizontal_count < 520) begin
+		//Column 4
+		else if (horizontal_count > 160 && horizontal_count < 200) begin
 			r_reg <= (vertical_count > scaled_f12) ? 4'b1100 : 4'b0;
 			g_reg <= (vertical_count > scaled_f12) ? 4'b0000 : 4'b0;
 			b_reg <= (vertical_count > scaled_f12) ? 4'b0000 : 4'b0;
 		end
-		else if (horizontal_count > 520 && horizontal_count < 560) begin
+		//Column 5
+		else if (horizontal_count > 200 && horizontal_count < 240) begin
 			r_reg <= (vertical_count > scaled_f13) ? 4'b1100 : 4'b0;
 			g_reg <= (vertical_count > scaled_f13) ? 4'b0000 : 4'b0;
 			b_reg <= (vertical_count > scaled_f13) ? 4'b0000 : 4'b0;
 		end
-		else if (horizontal_count > 560 && horizontal_count < 600) begin
+		//Column 6
+		else if (horizontal_count > 240 && horizontal_count < 280) begin
 			r_reg <= (vertical_count > scaled_f14) ? 4'b1100 : 4'b0;
 			g_reg <= (vertical_count > scaled_f14) ? 4'b0000 : 4'b0;
 			b_reg <= (vertical_count > scaled_f14) ? 4'b0000 : 4'b0;
 		end
-		else if (horizontal_count > 600 && horizontal_count < 640) begin
+		//Column 7
+		else if (horizontal_count > 280 && horizontal_count < 320) begin
 			r_reg <= (vertical_count > scaled_f15) ? 4'b1100 : 4'b0;
 			g_reg <= (vertical_count > scaled_f15) ? 4'b0000 : 4'b0;
 			b_reg <= (vertical_count > scaled_f15) ? 4'b0000 : 4'b0;
+		end
+		//Column 8
+		else if (horizontal_count > 320 && horizontal_count < 360) begin
+			r_reg <= (vertical_count > scaled_f0) ? 4'b1100 : 4'b0;
+			g_reg <= (vertical_count > scaled_f0) ? 4'b0000 : 4'b0;
+			b_reg <= (vertical_count > scaled_f0) ? 4'b0000 : 4'b0;
+		end
+		//Column 9
+		else if (horizontal_count > 360 && horizontal_count < 400) begin
+			r_reg <= (vertical_count > scaled_f1) ? 4'b1100 : 4'b0;
+			g_reg <= (vertical_count > scaled_f1) ? 4'b0000 : 4'b0;
+			b_reg <= (vertical_count > scaled_f1) ? 4'b0000 : 4'b0;
+		end
+		//Column 10
+		else if (horizontal_count > 400 && horizontal_count < 440) begin
+			r_reg <= (vertical_count > scaled_f2) ? 4'b1100 : 4'b0;
+			g_reg <= (vertical_count > scaled_f2) ? 4'b0000 : 4'b0;
+			b_reg <= (vertical_count > scaled_f2) ? 4'b0000 : 4'b0;
+		end
+		//Column 11
+		else if (horizontal_count > 440 && horizontal_count < 480) begin
+			r_reg <= (vertical_count > scaled_f3) ? 4'b1100 : 4'b0;
+			g_reg <= (vertical_count > scaled_f3) ? 4'b0000 : 4'b0;
+			b_reg <= (vertical_count > scaled_f3) ? 4'b0000 : 4'b0;
+		end
+		//Column 12
+		else if (horizontal_count > 480 && horizontal_count < 520) begin
+			r_reg <= (vertical_count > scaled_f4) ? 4'b1100 : 4'b0;
+			g_reg <= (vertical_count > scaled_f4) ? 4'b0000 : 4'b0;
+			b_reg <= (vertical_count > scaled_f4) ? 4'b0000 : 4'b0;
+		end
+		//Column 13
+		else if (horizontal_count > 520 && horizontal_count < 560) begin
+			r_reg <= (vertical_count > scaled_f5) ? 4'b1100 : 4'b0;
+			g_reg <= (vertical_count > scaled_f5) ? 4'b0000 : 4'b0;
+			b_reg <= (vertical_count > scaled_f5) ? 4'b0000 : 4'b0;
+		end
+		//Column 14
+		else if (horizontal_count > 560 && horizontal_count < 600) begin
+			r_reg <= (vertical_count > scaled_f6) ? 4'b1100 : 4'b0;
+			g_reg <= (vertical_count > scaled_f6) ? 4'b0000 : 4'b0;
+			b_reg <= (vertical_count > scaled_f6) ? 4'b0000 : 4'b0;
+		end
+		//Column 15
+		else if (horizontal_count > 600 && horizontal_count < 640) begin
+			r_reg <= (vertical_count > scaled_f7) ? 4'b1100 : 4'b0;
+			g_reg <= (vertical_count > scaled_f7) ? 4'b0000 : 4'b0;
+			b_reg <= (vertical_count > scaled_f7) ? 4'b0000 : 4'b0;
 		end
 		else begin
 			r_reg <= 4'b1111;

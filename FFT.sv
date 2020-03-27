@@ -8,7 +8,7 @@ module FFT(input clk, input reset, input DOUT, output LRCLK, output BCLK,
 	clkdiv #(0) vga_clock(		.clk_in	(clk),
 										.clk_out	(vga_clk)	);
 										
-	clkdiv #(49) main_clock(	.clk_in	(clk),
+	clkdiv #(199) main_clock(	.clk_in	(clk),
 										.clk_out	(system_clk)	);
 								
 	

@@ -1,5 +1,5 @@
 Flow report for FFT
-Thu Mar 26 21:08:17 2020
+Fri Mar 27 02:49:23 2020
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -40,21 +40,21 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Flow Summary                                                                     ;
 +------------------------------------+---------------------------------------------+
-; Flow Status                        ; Successful - Thu Mar 26 21:08:17 2020       ;
+; Flow Status                        ; Successful - Fri Mar 27 02:49:23 2020       ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; FFT                                         ;
 ; Top-level Entity Name              ; FFT                                         ;
 ; Family                             ; MAX 10                                      ;
 ; Device                             ; 10M50DAF484C7G                              ;
 ; Timing Models                      ; Final                                       ;
-; Total logic elements               ; 5,712 / 49,760 ( 11 % )                     ;
-;     Total combinational functions  ; 4,915 / 49,760 ( 10 % )                     ;
-;     Dedicated logic registers      ; 2,008 / 49,760 ( 4 % )                      ;
-; Total registers                    ; 2008                                        ;
+; Total logic elements               ; 9,486 / 49,760 ( 19 % )                     ;
+;     Total combinational functions  ; 8,598 / 49,760 ( 17 % )                     ;
+;     Dedicated logic registers      ; 2,260 / 49,760 ( 5 % )                      ;
+; Total registers                    ; 2260                                        ;
 ; Total pins                         ; 19 / 360 ( 5 % )                            ;
 ; Total virtual pins                 ; 0                                           ;
 ; Total memory bits                  ; 327,680 / 1,677,312 ( 20 % )                ;
-; Embedded Multiplier 9-bit elements ; 140 / 288 ( 49 % )                          ;
+; Embedded Multiplier 9-bit elements ; 288 / 288 ( 100 % )                         ;
 ; Total PLLs                         ; 0 / 4 ( 0 % )                               ;
 ; UFM blocks                         ; 0 / 1 ( 0 % )                               ;
 ; ADC blocks                         ; 0 / 2 ( 0 % )                               ;
@@ -66,7 +66,7 @@ refer to the applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 03/26/2020 21:06:47 ;
+; Start date & time ; 03/27/2020 02:47:16 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; FFT                 ;
 +-------------------+---------------------+
@@ -77,7 +77,7 @@ refer to the applicable agreement for further details.
 +--------------------------------------+---------------------------------------------------------------------+---------------+-------------+------------------+
 ; Assignment Name                      ; Value                                                               ; Default Value ; Entity Name ; Section Id       ;
 +--------------------------------------+---------------------------------------------------------------------+---------------+-------------+------------------+
-; COMPILER_SIGNATURE_ID                ; 13870907198271.158528200709504                                      ; --            ; --          ; --               ;
+; COMPILER_SIGNATURE_ID                ; 13870907198271.158530243601592                                      ; --            ; --          ; --               ;
 ; CYCLONEII_OPTIMIZATION_TECHNIQUE     ; Speed                                                               ; Balanced      ; --          ; --               ;
 ; EDA_OUTPUT_DATA_FORMAT               ; Verilog Hdl                                                         ; --            ; --          ; eda_simulation   ;
 ; EDA_SIMULATION_TOOL                  ; ModelSim-Altera (Verilog)                                           ; <None>        ; --          ; --               ;
@@ -135,12 +135,12 @@ refer to the applicable agreement for further details.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:35     ; 1.0                     ; 4985 MB             ; 00:00:52                           ;
-; Fitter               ; 00:00:35     ; 1.5                     ; 5889 MB             ; 00:01:20                           ;
-; Assembler            ; 00:00:03     ; 1.0                     ; 4713 MB             ; 00:00:03                           ;
-; Timing Analyzer      ; 00:00:05     ; 2.5                     ; 4910 MB             ; 00:00:11                           ;
-; EDA Netlist Writer   ; 00:00:04     ; 1.0                     ; 4730 MB             ; 00:00:03                           ;
-; Total                ; 00:01:22     ; --                      ; --                  ; 00:02:29                           ;
+; Analysis & Synthesis ; 00:00:45     ; 1.0                     ; 5011 MB             ; 00:01:02                           ;
+; Fitter               ; 00:00:58     ; 1.5                     ; 6051 MB             ; 00:02:25                           ;
+; Assembler            ; 00:00:04     ; 1.0                     ; 4728 MB             ; 00:00:04                           ;
+; Timing Analyzer      ; 00:00:08     ; 3.0                     ; 4950 MB             ; 00:00:20                           ;
+; EDA Netlist Writer   ; 00:00:04     ; 1.0                     ; 4764 MB             ; 00:00:04                           ;
+; Total                ; 00:01:59     ; --                      ; --                  ; 00:03:55                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

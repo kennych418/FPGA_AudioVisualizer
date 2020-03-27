@@ -3,7 +3,7 @@ module FFT(input clk, input reset, input DOUT, output LRCLK, output BCLK,
 	
 	wire new_t, done, system_clk;
 	wire [17:0] t0, t1, t2, t3, t4, t5, t6, t7, t8, t9, t10, t11, t12, t13, t14, t15;	//16 bit amplitudes
-	wire [15:0] f0, f1, f2, f3, f4, f5, f6, f7, f8, f9, f10, f11, f12, f13, f14, f15;
+	wire [23:0] f0, f1, f2, f3, f4, f5, f6, f7, f8, f9, f10, f11, f12, f13, f14, f15;
 	
 	clkdiv #(0) vga_clock(		.clk_in	(clk),
 										.clk_out	(vga_clk)	);
@@ -43,9 +43,9 @@ module FFT(input clk, input reset, input DOUT, output LRCLK, output BCLK,
 										.r			(r), 
 										.g			(g), 
 										.b			(b),
-										.f0		(f0),		.f1		(f1),		.f2		(f2),		.f3		(f3),
-										.f4		(f4),		.f5		(f5),		.f6		(f6),		.f7		(f7),
-										.f8		(f8),		.f9		(f9),		.f10		(f10),	.f11		(f11),
-										.f12		(f12),	.f13		(f13),	.f14		(f14),	.f15		(f15)	);
+										.f0		(f0[15:0]),		.f1		(f1[15:0]),		.f2		(f2[15:0]),		.f3		(f3[15:0]),
+										.f4		(f4[15:0]),		.f5		(f5[15:0]),		.f6		(f6[15:0]),		.f7		(f7[15:0]),
+										.f8		(f8[15:0]),		.f9		(f9[15:0]),		.f10		(f10[15:0]),	.f11		(f11[15:0]),
+										.f12		(f12[15:0]),	.f13		(f13[15:0]),	.f14		(f14[15:0]),	.f15		(f15[15:0])	);
 	
 endmodule

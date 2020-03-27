@@ -1,11 +1,11 @@
-module simplemultiplier( input [15:0] multiplicand, input [15:0] multiplier, 
-								  output [31:0] product);
+module simplemultiplier( input [23:0] multiplicand, input [23:0] multiplier, 
+								  output [47:0] product);
 	
-	reg [31:0] multiplicand_extend;
-	reg [31:0] multiplier_extend;
+	reg [47:0] multiplicand_extend;
+	reg [47:0] multiplier_extend;
 	
-	assign multiplicand_extend = {{16{multiplicand[15]}}, multiplicand[15:0]};
-	assign multiplier_extend = {{16{multiplier[15]}}, multiplier[15:0]};
+	assign multiplicand_extend = {{24{multiplicand[23]}}, multiplicand[23:0]};
+	assign multiplier_extend = {{24{multiplier[23]}}, multiplier[23:0]};
 	assign product = multiplicand_extend * multiplier_extend;
 	
 endmodule 

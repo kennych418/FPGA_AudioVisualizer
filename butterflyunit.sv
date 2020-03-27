@@ -1,13 +1,13 @@
-module butterflyunit( input [31:0] A_t, input [31:0] B_t, input [31:0] W,		//31:16 real, 15:0 imag
-							 output [31:0] A_f, output [31:0] B_f);						//31:16 real, 15:0 imag
+module butterflyunit( input [47:0] A_t, input [47:0] B_t, input [47:0] W,		//47:24 real, 23:0 imag
+							 output [47:0] A_f, output [47:0] B_f);						//47:24 real, 23:0 imag
 	
-	//11 bit 2's complement signed real and imag numbers
-	//32 point FFT (2^5) requires 5 extra bits for bit growth
+	//18 bit 2's complement signed real and imag numbers for time domain input
+	//16 point FFT requires 6 extra bits for bit growth
 	
-	wire [63:0] multout;	//63:32 real, 31:0 imag
-	wire [31:0] truncated_prod;
+	wire [95:0] multout;	//95:48 real, 47:0 imag
+	wire [47:0] truncated_prod;
 	
-	assign truncated_prod = {multout[62:47], multout[30:15]};		//range set to avoid extra sign bit that results from signed multiplication, truncation avoids unneeded LSB's
+	assign truncated_prod = {multout[94:71], multout[46:23]};		//range set to avoid extra sign bit that results from signed multiplication, truncation avoids unneeded LSB's
 																						//15 bits truncated out, therefore to improve accuracy W is format b16.b15b14b13...
 	complexadder topadder(				.comp_augend		(A_t), 
 												.comp_addend		(truncated_prod), 

@@ -1,14 +1,14 @@
-Fitter Status : Successful - Fri Mar 27 02:49:02 2020
+Fitter Status : Successful - Mon Mar 30 02:35:09 2020
 Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 Revision Name : FFT
 Top-level Entity Name : FFT
 Family : MAX 10
 Device : 10M50DAF484C7G
 Timing Models : Final
-Total logic elements : 9,486 / 49,760 ( 19 % )
-    Total combinational functions : 8,598 / 49,760 ( 17 % )
-    Dedicated logic registers : 2,260 / 49,760 ( 5 % )
-Total registers : 2260
+Total logic elements : 14,583 / 49,760 ( 29 % )
+    Total combinational functions : 13,593 / 49,760 ( 27 % )
+    Dedicated logic registers : 2,601 / 49,760 ( 5 % )
+Total registers : 2601
 Total pins : 19 / 360 ( 5 % )
 Total virtual pins : 0
 Total memory bits : 327,680 / 1,677,312 ( 20 % )

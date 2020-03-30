@@ -1,14 +1,14 @@
 `define tmax 1023
 `define tmin -1024
 
-`define twiddle0 32'h7fff_0000 //0 deg
-`define twiddle1 32'h7641_cf05 //-22.5 deg
-`define twiddle2 32'h5a82_a57e //-45 deg
-`define twiddle3 32'h30fb_89bf //-67.5 deg
-`define twiddle4 32'h0000_8000 //-90 deg
-`define twiddle5 32'hcf05_89bf //-112.5 deg
-`define twiddle6 32'ha57e_a57e //-135 deg
-`define twiddle7 32'h89bf_cf05 //-157.5 deg
+//`define twiddle0 32'h7fff_0000 //0 deg
+//`define twiddle1 32'h7641_cf05 //-22.5 deg
+//`define twiddle2 32'h5a82_a57e //-45 deg
+//`define twiddle3 32'h30fb_89bf //-67.5 deg
+//`define twiddle4 32'h0000_8000 //-90 deg
+//`define twiddle5 32'hcf05_89bf //-112.5 deg
+//`define twiddle6 32'ha57e_a57e //-135 deg
+//`define twiddle7 32'h89bf_cf05 //-157.5 deg
 
 module butterflyunit_TB;
 	
@@ -21,7 +21,7 @@ module butterflyunit_TB;
 	butterflyunit UUT( {A_t_real, A_t_imag}, {B_t_real, B_t_imag}, {W_real, W_imag}, {A_f_real, A_f_imag}, {B_f_real, B_f_imag});
 	
 	initial begin
-	
+	/*
 		A_t_real = 16383;
 		A_t_imag = 16383;
 		B_t_real = 16383;
@@ -138,7 +138,8 @@ module butterflyunit_TB;
 		W_imag = 16'b0101_1010_1000_0010;	//PASS
 		#100; 
 		
-	
+	*/
+	#10;
 	end
 							 
 endmodule 

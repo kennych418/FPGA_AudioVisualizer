@@ -120,35 +120,35 @@ endmodule
 
 module data(input clk, input done, input hblank, input vblank, input [10:0] horizontal_count, input [10:0] vertical_count, 
 				output [3:0] r, output [3:0] g, output [3:0] b,
-				input [15:0] f0, input [15:0] f1, input [15:0] f2, input [15:0] f3,
-				input [15:0] f4, input [15:0] f5, input [15:0] f6, input [15:0] f7,
-				input [15:0] f8, input [15:0] f9, input [15:0] f10, input [15:0] f11,
-				input [15:0] f12, input [15:0] f13, input [15:0] f14, input [15:0] f15);
+				input [23:0] f0, input [23:0] f1, input [23:0] f2, input [23:0] f3,
+				input [23:0] f4, input [23:0] f5, input [23:0] f6, input [23:0] f7,
+				input [23:0] f8, input [23:0] f9, input [23:0] f10, input [23:0] f11,
+				input [23:0] f12, input [23:0] f13, input [23:0] f14, input [23:0] f15);
 	
 	reg [3:0] r_reg, g_reg, b_reg;
 	
-	wire [31:0] scaled_f0, scaled_f1, scaled_f2, scaled_f3, 
+	wire [47:0] scaled_f0, scaled_f1, scaled_f2, scaled_f3, 
 				   scaled_f4, scaled_f5, scaled_f6, scaled_f7, 
 				   scaled_f8, scaled_f9, scaled_f10, scaled_f11, 
 				   scaled_f12, scaled_f13, scaled_f14, scaled_f15;
 	
 	//Perform a linear transform to go from 0 to 32767 into 480 to 0, Y = (x / 32767) * (-480) + 480
-	assign scaled_f0 = ({{16{f0[15]}},f0} * (32'b1111_1111_1111_1111_1111_1110_0010_0000) + {7'b0, 16'd480, 9'b0}) >>> 9;
-	assign scaled_f1 = ({{16{f1[15]}},f1} * (32'b1111_1111_1111_1111_1111_1110_0010_0000) + {7'b0, 16'd480, 9'b0}) >>> 9;
-	assign scaled_f2 = ({{16{f2[15]}},f2} * (32'b1111_1111_1111_1111_1111_1110_0010_0000) + {7'b0, 16'd480, 9'b0}) >>> 9;
-	assign scaled_f3 = ({{16{f3[15]}},f3} * (32'b1111_1111_1111_1111_1111_1110_0010_0000) + {7'b0, 16'd480, 9'b0}) >>> 9;
-	assign scaled_f4 = ({{16{f4[15]}},f4} * (32'b1111_1111_1111_1111_1111_1110_0010_0000) + {7'b0, 16'd480, 9'b0}) >>> 9;
-	assign scaled_f5 = ({{16{f5[15]}},f5} * (32'b1111_1111_1111_1111_1111_1110_0010_0000) + {7'b0, 16'd480, 9'b0}) >>> 9;
-	assign scaled_f6 = ({{16{f6[15]}},f6} * (32'b1111_1111_1111_1111_1111_1110_0010_0000) + {7'b0, 16'd480, 9'b0}) >>> 9;
-	assign scaled_f7 = ({{16{f7[15]}},f7} * (32'b1111_1111_1111_1111_1111_1110_0010_0000) + {7'b0, 16'd480, 9'b0}) >>> 9;
-	assign scaled_f8 = ({{16{f8[15]}},f8} * (32'b1111_1111_1111_1111_1111_1110_0010_0000) + {7'b0, 16'd480, 9'b0}) >>> 9;
-	assign scaled_f9 = ({{16{f9[15]}},f9} * (32'b1111_1111_1111_1111_1111_1110_0010_0000) + {7'b0, 16'd480, 9'b0}) >>> 9;
-	assign scaled_f10 = ({{16{f10[15]}},f10} * (32'b1111_1111_1111_1111_1111_1110_0010_0000) + {7'b0, 16'd480, 9'b0}) >>> 9;
-	assign scaled_f11 = ({{16{f11[15]}},f11} * (32'b1111_1111_1111_1111_1111_1110_0010_0000) + {7'b0, 16'd480, 9'b0}) >>> 9;
-	assign scaled_f12 = ({{16{f12[15]}},f12} * (32'b1111_1111_1111_1111_1111_1110_0010_0000) + {7'b0, 16'd480, 9'b0}) >>> 9;
-	assign scaled_f13 = ({{16{f13[15]}},f13} * (32'b1111_1111_1111_1111_1111_1110_0010_0000) + {7'b0, 16'd480, 9'b0}) >>> 9;
-	assign scaled_f14 = ({{16{f14[15]}},f14} * (32'b1111_1111_1111_1111_1111_1110_0010_0000) + {7'b0, 16'd480, 9'b0}) >>> 9;
-	assign scaled_f15 = ({{16{f15[15]}},f15} * (32'b1111_1111_1111_1111_1111_1110_0010_0000) + {7'b0, 16'd480, 9'b0}) >>> 9;
+	assign scaled_f0 = ({{24{f0[23]}},f0} * (48'b1111_1111_1111_1111_1111_1111_1111_1111_1111_1110_0010_0000) + {11'b0, 24'd480, 13'b0}) >>> 13;
+	assign scaled_f1 = ({{24{f1[23]}},f1} * (48'b1111_1111_1111_1111_1111_1111_1111_1111_1111_1110_0010_0000) + {11'b0, 24'd480, 13'b0}) >>> 13;
+	assign scaled_f2 = ({{24{f2[23]}},f2} * (48'b1111_1111_1111_1111_1111_1111_1111_1111_1111_1110_0010_0000) + {11'b0, 24'd480, 13'b0}) >>> 13;
+	assign scaled_f3 = ({{24{f3[23]}},f3} * (48'b1111_1111_1111_1111_1111_1111_1111_1111_1111_1110_0010_0000) + {11'b0, 24'd480, 13'b0}) >>> 13;
+	assign scaled_f4 = ({{24{f4[23]}},f4} * (48'b1111_1111_1111_1111_1111_1111_1111_1111_1111_1110_0010_0000) + {11'b0, 24'd480, 13'b0}) >>> 13;
+	assign scaled_f5 = ({{24{f5[23]}},f5} * (48'b1111_1111_1111_1111_1111_1111_1111_1111_1111_1110_0010_0000) + {11'b0, 24'd480, 13'b0}) >>> 13;
+	assign scaled_f6 = ({{24{f6[23]}},f6} * (48'b1111_1111_1111_1111_1111_1111_1111_1111_1111_1110_0010_0000) + {11'b0, 24'd480, 13'b0}) >>> 13;
+	assign scaled_f7 = ({{24{f7[23]}},f7} * (48'b1111_1111_1111_1111_1111_1111_1111_1111_1111_1110_0010_0000) + {11'b0, 24'd480, 13'b0}) >>> 13;
+	assign scaled_f8 = ({{24{f8[23]}},f8} * (48'b1111_1111_1111_1111_1111_1111_1111_1111_1111_1110_0010_0000) + {11'b0, 24'd480, 13'b0}) >>> 13;
+	assign scaled_f9 = ({{24{f9[23]}},f9} * (48'b1111_1111_1111_1111_1111_1111_1111_1111_1111_1110_0010_0000) + {11'b0, 24'd480, 13'b0}) >>> 13;
+	assign scaled_f10 = ({{24{f10[23]}},f10} * (48'b1111_1111_1111_1111_1111_1111_1111_1111_1111_1110_0010_0000) + {11'b0, 24'd480, 13'b0}) >>> 13;
+	assign scaled_f11 = ({{24{f11[23]}},f11} * (48'b1111_1111_1111_1111_1111_1111_1111_1111_1111_1110_0010_0000) + {11'b0, 24'd480, 13'b0}) >>> 13;
+	assign scaled_f12 = ({{24{f12[23]}},f12} * (48'b1111_1111_1111_1111_1111_1111_1111_1111_1111_1110_0010_0000) + {11'b0, 24'd480, 13'b0}) >>> 13;
+	assign scaled_f13 = ({{24{f13[23]}},f13} * (48'b1111_1111_1111_1111_1111_1111_1111_1111_1111_1110_0010_0000) + {11'b0, 24'd480, 13'b0}) >>> 13;
+	assign scaled_f14 = ({{24{f14[23]}},f14} * (48'b1111_1111_1111_1111_1111_1111_1111_1111_1111_1110_0010_0000) + {11'b0, 24'd480, 13'b0}) >>> 13;
+	assign scaled_f15 = ({{24{f15[23]}},f15} * (48'b1111_1111_1111_1111_1111_1111_1111_1111_1111_1110_0010_0000) + {11'b0, 24'd480, 13'b0}) >>> 13;
 	
 	assign r = r_reg;
 	assign g = g_reg;
@@ -160,13 +160,6 @@ module data(input clk, input done, input hblank, input vblank, input [10:0] hori
 			g_reg <= 4'b0;
 			b_reg <= 4'b0;
 		end
-		/*
-		else begin
-			r_reg <= {f3[5], f2[5], f0[5], 1'b1};
-			g_reg <= {f7[5], f6[5], f5[5], f4[5]};
-			b_reg <= {f11[5], f10[5], f9[5], f8[0]};
-		end
-		*/
 		//Column 0
 		else if (horizontal_count < 40) begin
 			r_reg <= (vertical_count > scaled_f8) ? 4'b1100 : 4'b0;
@@ -274,16 +267,16 @@ module data(input clk, input done, input hblank, input vblank, input [10:0] hori
 endmodule
 
 module video_sync_generator(input clk, input done, output vsync, output hsync, output [3:0] r, output [3:0] g, output [3:0] b,
-									 input [15:0] f0, input [15:0] f1, input [15:0] f2, input [15:0] f3,
-									 input [15:0] f4, input [15:0] f5, input [15:0] f6, input [15:0] f7,
-									 input [15:0] f8, input [15:0] f9, input [15:0] f10, input [15:0] f11,
-									 input [15:0] f12, input [15:0] f13, input [15:0] f14, input [15:0] f15);
+									 input [23:0] f0, input [23:0] f1, input [23:0] f2, input [23:0] f3,
+									 input [23:0] f4, input [23:0] f5, input [23:0] f6, input [23:0] f7,
+									 input [23:0] f8, input [23:0] f9, input [23:0] f10, input [23:0] f11,
+									 input [23:0] f12, input [23:0] f13, input [23:0] f14, input [23:0] f15);
 
 	
 	wire hblank, vblank, newline;
 	wire [10:0] horizontal_count, vertical_count;
 	
-	reg [15:0] f0_reg, f1_reg, f2_reg, f3_reg, 
+	reg [23:0] f0_reg, f1_reg, f2_reg, f3_reg, 
 				  f4_reg, f5_reg, f6_reg, f7_reg, 
 				  f8_reg, f9_reg, f10_reg, f11_reg, 
 				  f12_reg, f13_reg, f14_reg, f15_reg,
@@ -320,22 +313,22 @@ module video_sync_generator(input clk, input done, output vsync, output hsync, o
 	
 	always @ (posedge clk) begin
 		if(horizontal_count > 640 && vertical_count > 480) begin
-			f0_display <= f0_reg[15] ? 16'b0 : f0_reg;
-			f1_display <= f1_reg[15] ? 16'b0 : f1_reg;
-			f2_display <= f2_reg[15] ? 16'b0 : f2_reg;
-			f3_display <= f3_reg[15] ? 16'b0 : f3_reg;
-			f4_display <= f4_reg[15] ? 16'b0 : f4_reg;
-			f5_display <= f5_reg[15] ? 16'b0 : f5_reg;
-			f6_display <= f6_reg[15] ? 16'b0 : f6_reg;
-			f7_display <= f7_reg[15] ? 16'b0 : f7_reg;
-			f8_display <= f8_reg[15] ? 16'b0 : f8_reg;
-			f9_display <= f9_reg[15] ? 16'b0 : f9_reg;
-			f10_display <= f10_reg[15] ? 16'b0 : f10_reg;
-			f11_display <= f11_reg[15] ? 16'b0 : f11_reg;
-			f12_display <= f12_reg[15] ? 16'b0 : f12_reg;
-			f13_display <= f13_reg[15] ? 16'b0 : f13_reg;
-			f14_display <= f14_reg[15] ? 16'b0 : f14_reg;
-			f15_display <= f15_reg[15] ? 16'b0 : f15_reg;
+			f0_display <= f0_reg[23] ? 24'b0 : f0_reg;
+			f1_display <= f1_reg[23] ? 24'b0 : f1_reg;
+			f2_display <= f2_reg[23] ? 24'b0 : f2_reg;
+			f3_display <= f3_reg[23] ? 24'b0 : f3_reg;
+			f4_display <= f4_reg[23] ? 24'b0 : f4_reg;
+			f5_display <= f5_reg[23] ? 24'b0 : f5_reg;
+			f6_display <= f6_reg[23] ? 24'b0 : f6_reg;
+			f7_display <= f7_reg[23] ? 24'b0 : f7_reg;
+			f8_display <= f8_reg[23] ? 24'b0 : f8_reg;
+			f9_display <= f9_reg[23] ? 24'b0 : f9_reg;
+			f10_display <= f10_reg[23] ? 24'b0 : f10_reg;
+			f11_display <= f11_reg[23] ? 24'b0 : f11_reg;
+			f12_display <= f12_reg[23] ? 24'b0 : f12_reg;
+			f13_display <= f13_reg[23] ? 24'b0 : f13_reg;
+			f14_display <= f14_reg[23] ? 24'b0 : f14_reg;
+			f15_display <= f15_reg[23] ? 24'b0 : f15_reg;
 		end
 		else begin
 			f0_display <= f0_display;

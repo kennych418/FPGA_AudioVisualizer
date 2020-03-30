@@ -3,119 +3,119 @@ Timing Analyzer Summary
 ------------------------------------------------------------
 
 Type  : Slow 1200mV 85C Model Setup 'vga_clk'
-Slack : 8.549
+Slack : 7.624
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Setup 'clk'
-Slack : 12.866
+Slack : 13.536
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Setup 'altera_reserved_tck'
-Slack : 44.181
+Slack : 42.437
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Setup 'system_clk'
-Slack : 493.218
+Slack : 492.956
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Setup 'newline'
-Slack : 63995.301
+Slack : 63995.477
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Hold 'clk'
-Slack : 0.246
-TNS   : 0.000
-
-Type  : Slow 1200mV 85C Model Hold 'altera_reserved_tck'
-Slack : 0.340
+Slack : 0.247
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Hold 'system_clk'
 Slack : 0.341
 TNS   : 0.000
 
+Type  : Slow 1200mV 85C Model Hold 'altera_reserved_tck'
+Slack : 0.343
+TNS   : 0.000
+
 Type  : Slow 1200mV 85C Model Hold 'vga_clk'
-Slack : 0.427
+Slack : 0.430
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Hold 'newline'
-Slack : 1.652
+Slack : 1.250
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Recovery 'altera_reserved_tck'
-Slack : 95.439
+Slack : 94.586
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Removal 'altera_reserved_tck'
-Slack : 1.068
+Slack : 1.067
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'clk'
-Slack : 9.549
+Slack : 9.550
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'vga_clk'
-Slack : 19.591
+Slack : 19.636
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'altera_reserved_tck'
-Slack : 49.531
+Slack : 49.536
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'system_clk'
-Slack : 499.585
+Slack : 499.587
 TNS   : 0.000
 
 Type  : Slow 1200mV 85C Model Minimum Pulse Width 'newline'
-Slack : 31999.762
+Slack : 31999.760
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Setup 'vga_clk'
-Slack : 9.377
+Slack : 8.630
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Setup 'clk'
-Slack : 13.441
+Slack : 13.999
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Setup 'altera_reserved_tck'
-Slack : 44.654
+Slack : 42.974
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Setup 'system_clk'
-Slack : 493.688
+Slack : 493.508
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Setup 'newline'
-Slack : 63995.706
+Slack : 63995.867
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Hold 'clk'
-Slack : 0.243
+Slack : 0.253
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Hold 'system_clk'
-Slack : 0.305
+Slack : 0.304
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Hold 'altera_reserved_tck'
-Slack : 0.306
+Slack : 0.307
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Hold 'vga_clk'
-Slack : 0.392
+Slack : 0.393
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Hold 'newline'
-Slack : 1.516
+Slack : 1.140
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Recovery 'altera_reserved_tck'
-Slack : 95.903
+Slack : 95.130
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Removal 'altera_reserved_tck'
-Slack : 0.988
+Slack : 0.984
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'clk'
@@ -123,43 +123,43 @@ Slack : 9.575
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'vga_clk'
-Slack : 19.561
+Slack : 19.614
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'altera_reserved_tck'
-Slack : 49.547
+Slack : 49.555
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'system_clk'
-Slack : 499.549
+Slack : 499.577
 TNS   : 0.000
 
 Type  : Slow 1200mV 0C Model Minimum Pulse Width 'newline'
-Slack : 31999.724
+Slack : 31999.740
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Setup 'vga_clk'
-Slack : 14.825
+Slack : 14.398
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Setup 'clk'
-Slack : 16.525
+Slack : 16.808
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Setup 'altera_reserved_tck'
-Slack : 47.791
+Slack : 47.048
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Setup 'system_clk'
-Slack : 496.919
+Slack : 496.695
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Setup 'newline'
-Slack : 63997.968
+Slack : 63998.013
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Hold 'clk'
-Slack : 0.096
+Slack : 0.095
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Hold 'system_clk'
@@ -167,19 +167,19 @@ Slack : 0.146
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Hold 'altera_reserved_tck'
-Slack : 0.148
+Slack : 0.150
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Hold 'vga_clk'
-Slack : 0.169
+Slack : 0.159
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Hold 'newline'
-Slack : 0.669
+Slack : 0.506
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Recovery 'altera_reserved_tck'
-Slack : 97.734
+Slack : 97.310
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Removal 'altera_reserved_tck'
@@ -191,19 +191,19 @@ Slack : 9.403
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'vga_clk'
-Slack : 19.679
+Slack : 19.690
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'altera_reserved_tck'
-Slack : 49.389
+Slack : 49.386
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'system_clk'
-Slack : 499.655
+Slack : 499.709
 TNS   : 0.000
 
 Type  : Fast 1200mV 0C Model Minimum Pulse Width 'newline'
-Slack : 31999.697
+Slack : 31999.737
 TNS   : 0.000
 
 ------------------------------------------------------------

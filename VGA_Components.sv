@@ -1,23 +1,6 @@
 //=========== VGA Components for 640x480p ===========//
-
-module PLL(clk, pixelclk);	//setting DE10-Lite 50Mhz clk to 25Mhz pixel clk
-	
-	input clk;
-	output pixelclk;
-	
-	reg pixelclk;
-	
-	initial begin
-		pixelclk = 0;
-	end
-	
-	always @ (posedge clk) begin
-		pixelclk = (pixelclk) ? 1'b0 : 1'b1;	//Cuts frequency in half
-	end
-	
-endmodule
-
-module hsync(pixelclk, hsync_out, blank_out, newline_out, pixel_count);
+//To change resolution, google the parameters and change them appropriately//
+module hsync(input pixelclk, output hsync_out, output blank_out, output newline_out, output [10:0] pixel_count);
 
 	parameter TOTAL_COUNTER = 800;
 	parameter SYNC = 96;
@@ -25,70 +8,51 @@ module hsync(pixelclk, hsync_out, blank_out, newline_out, pixel_count);
 	parameter DISPLAY = 640;
 	parameter FRONTPORCH = 16;
 
-	input pixelclk;
-	output hsync_out, blank_out, newline_out;
-	output [10:0] pixel_count;
-	
-	
-	reg hsync_out, blank_out, newline_out;
-	reg [10:0] counter = 11'b0000000000;
+	reg [10:0] counter;
 	
 	assign pixel_count = counter;
 	
 	always @ (posedge pixelclk) begin	//counter
-		
 		if(counter < TOTAL_COUNTER)						//reset counter if every 800 clk cycles
 			counter <= counter + 11'b0000000001;
 		else
-			counter <= 11'b0000000000;
-			
+			counter <= 11'b0000000000;		
 	end
 	
 	always @ (posedge pixelclk) begin	//hsync
-	
 		if(counter < (DISPLAY + FRONTPORCH))
 			hsync_out <= 1;
 		else if(counter >= (DISPLAY + FRONTPORCH) && counter < (DISPLAY + FRONTPORCH + SYNC))
 			hsync_out <= 0;
 		else if(counter >= (DISPLAY + FRONTPORCH + SYNC))	
-			hsync_out <= 1;	
-			
+			hsync_out <= 1;			
 	end
 	
-	always @ (posedge pixelclk) begin	//blank
-													//high during display interval
+	always @ (posedge pixelclk) begin	//blank, high during display interval
 		if(counter < DISPLAY)
 			blank_out <= 0;
 		else
 			blank_out <= 1;
-		
 	end
 	
 	always @ (posedge pixelclk) begin	//newline
-	
 		if(counter == 0)
 			newline_out <= 1;
 		else
 			newline_out <= 0;
-	
 	end
 
 endmodule
 
-module vsync(newline_in, vsync_out, blank_out, pixel_count);
+module vsync(input newline_in, output vsync_out, output blank_out, output [10:0] pixel_count);
 
 	parameter TOTAL_COUNTER = 525;
 	parameter SYNC = 2;
 	parameter BACKPORCH = 33;
 	parameter DISPLAY = 480;
 	parameter FRONTPORCH = 10;
-
-	input newline_in;
-	output vsync_out, blank_out;
-	output [10:0] pixel_count;
 	
-	reg vsync_out, blank_out;
-	reg [10:0] counter = 11'b0000000000;
+	reg [10:0] counter;
 	
 	assign pixel_count = counter;
 	
@@ -132,7 +96,8 @@ module data(input clk, input done, input hblank, input vblank, input [10:0] hori
 				   scaled_f8, scaled_f9, scaled_f10, scaled_f11, 
 				   scaled_f12, scaled_f13, scaled_f14, scaled_f15;
 	
-	//Perform a linear transform to go from 0 to 32767 into 480 to 0, Y = (x / 32767) * (-480) + 480
+	//I know this is insanely unoptimized
+	//Perform a linear transform to go from 0 to 16384 into 480 to 0, Y = (x / 32767) * (-480) + 480
 	assign scaled_f0 = ({{24{f0[23]}},f0} * (48'b1111_1111_1111_1111_1111_1111_1111_1111_1111_1110_0010_0000) + {10'b0, 24'd480, 14'b0}) >>> 14;
 	assign scaled_f1 = ({{24{f1[23]}},f1} * (48'b1111_1111_1111_1111_1111_1111_1111_1111_1111_1110_0010_0000) + {10'b0, 24'd480, 14'b0}) >>> 14;
 	assign scaled_f2 = ({{24{f2[23]}},f2} * (48'b1111_1111_1111_1111_1111_1111_1111_1111_1111_1110_0010_0000) + {10'b0, 24'd480, 14'b0}) >>> 14;
@@ -266,7 +231,7 @@ module data(input clk, input done, input hblank, input vblank, input [10:0] hori
 
 endmodule
 
-module video_sync_generator(input clk, input done, output vsync, output hsync, output [3:0] r, output [3:0] g, output [3:0] b,
+module VGA_generator(input clk, input done, output vsync, output hsync, output [3:0] r, output [3:0] g, output [3:0] b,
 									 input [23:0] f0, input [23:0] f1, input [23:0] f2, input [23:0] f3,
 									 input [23:0] f4, input [23:0] f5, input [23:0] f6, input [23:0] f7,
 									 input [23:0] f8, input [23:0] f9, input [23:0] f10, input [23:0] f11,
@@ -284,8 +249,6 @@ module video_sync_generator(input clk, input done, output vsync, output hsync, o
 				  f4_display, f5_display, f6_display, f7_display, 
 				  f8_display, f9_display, f10_display, f11_display, 
 				  f12_display, f13_display, f14_display, f15_display; 
-	
-	//PLL clockdivider(clk, pixelclk);
 	
 	hsync horizontal(clk, hsync, hblank, newline, horizontal_count);
 	vsync vertical(newline, vsync, vblank, vertical_count);
@@ -350,12 +313,12 @@ module video_sync_generator(input clk, input done, output vsync, output hsync, o
 		end
 	end
 	
-	data display(	.clk					(clk),
-						.done					(done),
-						.hblank				(hblank), 
-						.vblank				(vblank), 
-						.horizontal_count	(horizontal_count),
-						.vertical_count	(vertical_count),
+	data display(	.clk						(clk),
+						.done						(done),
+						.hblank					(hblank), 
+						.vblank					(vblank), 
+						.horizontal_count		(horizontal_count),
+						.vertical_count		(vertical_count),
 						.r						(r), 
 						.g						(g), 
 						.b						(b),

@@ -1,7 +1,0 @@
-module multiplier_TB;
-	
-	reg [11:0] a_real, a_imag, b_real, b_imag;
-	reg [23:0] c_real, c_imag;
-	
-							 
-endmodule 

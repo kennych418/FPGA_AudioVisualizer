@@ -1,5 +1,5 @@
 Assembler report for FFT
-Mon Mar 30 16:12:06 2020
+Wed Apr 01 01:17:14 2020
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -38,7 +38,7 @@ refer to the applicable agreement for further details.
 +---------------------------------------------------------------+
 ; Assembler Summary                                             ;
 +-----------------------+---------------------------------------+
-; Assembler Status      ; Successful - Mon Mar 30 16:12:06 2020 ;
+; Assembler Status      ; Successful - Wed Apr 01 01:17:14 2020 ;
 ; Revision Name         ; FFT                                   ;
 ; Top-level Entity Name ; FFT                                   ;
 ; Family                ; MAX 10                                ;
@@ -77,8 +77,8 @@ refer to the applicable agreement for further details.
 +----------------+-------------------------------------------------------------------+
 ; Option         ; Setting                                                           ;
 +----------------+-------------------------------------------------------------------+
-; JTAG usercode  ; 0x00B2824B                                                        ;
-; Checksum       ; 0x00B2824B                                                        ;
+; JTAG usercode  ; 0x00B2FFFD                                                        ;
+; Checksum       ; 0x00B2FFFD                                                        ;
 +----------------+-------------------------------------------------------------------+
 
 
@@ -88,14 +88,14 @@ refer to the applicable agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus Prime Assembler
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Mon Mar 30 16:12:03 2020
+    Info: Processing started: Wed Apr 01 01:17:10 2020
 Info: Command: quartus_asm --read_settings_files=off --write_settings_files=off FFT -c FFT
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (115031): Writing out detailed assembly data for power analysis
 Info (115030): Assembler is generating device programming files
 Info: Quartus Prime Assembler was successful. 0 errors, 1 warning
     Info: Peak virtual memory: 4742 megabytes
-    Info: Processing ended: Mon Mar 30 16:12:07 2020
+    Info: Processing ended: Wed Apr 01 01:17:14 2020
     Info: Elapsed time: 00:00:04
     Info: Total CPU time (on all processors): 00:00:04
 

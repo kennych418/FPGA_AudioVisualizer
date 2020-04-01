@@ -1,144 +1,134 @@
-`define tmax 1023
-`define tmin -1024
+//Compare results using butterfly_test.py
 
-//`define twiddle0 32'h7fff_0000 //0 deg
-//`define twiddle1 32'h7641_cf05 //-22.5 deg
-//`define twiddle2 32'h5a82_a57e //-45 deg
-//`define twiddle3 32'h30fb_89bf //-67.5 deg
-//`define twiddle4 32'h0000_8000 //-90 deg
-//`define twiddle5 32'hcf05_89bf //-112.5 deg
-//`define twiddle6 32'ha57e_a57e //-135 deg
-//`define twiddle7 32'h89bf_cf05 //-157.5 deg
+`define tmax 24'd131071
+`define tmin -24'd131072
 
 module butterflyunit_TB;
-	
-	//11 bit 2's complement signed real and imag numbers
-	//32 point FFT (2^5) requires 5 extra bits for bit growth
 		
-	reg [15:0] A_t_real, A_t_imag, B_t_real, B_t_imag, W_real, W_imag;
-	wire [15:0] A_f_real, A_f_imag, B_f_real, B_f_imag;
+	reg [23:0] A_t_real, A_t_imag, B_t_real, B_t_imag, W_real, W_imag;
+	reg [23:0] A_f_real, A_f_imag, B_f_real, B_f_imag;
 	
 	butterflyunit UUT( {A_t_real, A_t_imag}, {B_t_real, B_t_imag}, {W_real, W_imag}, {A_f_real, A_f_imag}, {B_f_real, B_f_imag});
 	
 	initial begin
-	/*
-		A_t_real = 16383;
-		A_t_imag = 16383;
-		B_t_real = 16383;
-		B_t_imag = 16383;
-		W_real = 16'b0111_1111_1111_1111;	//0 degrees
-		W_imag = 16'b0000_0000_0000_0000;	//PASS
+	
+		A_t_real = `tmax;
+		A_t_imag = `tmax;
+		B_t_real = `tmax;
+		B_t_imag = `tmax;
+		W_real = 24'h7fffff;	//0 degrees
+		W_imag = 24'h000000;	//PASS
 		#50;  
-		W_real = 16'b0101_1010_1000_0010;	//-45.0 degrees
-		W_imag = 16'b1010_0101_0111_1110;	//PASS
+		W_real = 24'h7641b3;	//-22.5 degrees
+		W_imag = 24'hcf043e;	//PASS
 		#50; 
-		W_real = 16'b0000_0000_0000_0000;	//-90.0 degrees
-		W_imag = 16'b1000_0000_0000_0000;	//PASS
+		W_real = 24'h5a827a;	//-45 degrees
+		W_imag = 24'ha57d86;	//PASS
 		#50; 
-		W_real = 16'b1010_0101_0111_1110;	//-135.0 degrees
-		W_imag = 16'b1010_0101_0111_1110;	//PASS
+		W_real = 24'h30fbc2;	//-67.5 degrees
+		W_imag = 24'h89be4d;	//PASS
 		#50; 
-		W_real = 16'b1000_0000_0000_0000;	//-180.0 degrees
-		W_imag = 16'b0000_0000_0000_0000;	//PASS
+		W_real = 24'h000000;	//-90 degrees
+		W_imag = 24'h800000;	//PASS
 		#50; 
-		W_real = 16'b1010_0101_0111_1110;	//-225.0 degrees
-		W_imag = 16'b0101_1010_1000_0010;	//PASS
+		W_real = 24'hcf043e;	//-112.5 degrees
+		W_imag = 24'h89be4d;	//PASS
 		#50;  
-		W_real = 16'b0000_0000_0000_0000;	//-270.0 degrees
-		W_imag = 16'b0111_1111_1111_1111;	//PASS
+		W_real = 24'ha57d86;	//-135 degrees
+		W_imag = 24'ha57d86;	//PASS
 		#50; 
-		W_real = 16'b0101_1010_1000_0010;	//-315.0 degrees
-		W_imag = 16'b0101_1010_1000_0010;	//PASS
+		W_real = 24'h89be4d;	//-157.5 degrees
+		W_imag = 24'hcf043e;	//PASS
 		#100; 
 		
-		A_t_real = 16383;
-		A_t_imag = 16383;
-		B_t_real = -16384;
-		B_t_imag = -16384;
-		W_real = 16'b0111_1111_1111_1111;	//0 degrees
-		W_imag = 16'b0000_0000_0000_0000;	//PASS
+		A_t_real = `tmax;
+		A_t_imag = `tmax;
+		B_t_real = `tmin;
+		B_t_imag = `tmin;
+		W_real = 24'h7fffff;	//0 degrees
+		W_imag = 24'h000000;	//PASS
 		#50;  
-		W_real = 16'b0101_1010_1000_0010;	//-45.0 degrees
-		W_imag = 16'b1010_0101_0111_1110;	//PASS
+		W_real = 24'h7641b3;	//-22.5 degrees
+		W_imag = 24'hcf043e;	//PASS
 		#50; 
-		W_real = 16'b0000_0000_0000_0000;	//-90.0 degrees
-		W_imag = 16'b1000_0000_0000_0000;	//PASS
+		W_real = 24'h5a827a;	//-45 degrees
+		W_imag = 24'ha57d86;	//PASS
 		#50; 
-		W_real = 16'b1010_0101_0111_1110;	//-135.0 degrees
-		W_imag = 16'b1010_0101_0111_1110;	//PASS
+		W_real = 24'h30fbc2;	//-67.5 degrees
+		W_imag = 24'h89be4d;	//PASS
 		#50; 
-		W_real = 16'b1000_0000_0000_0000;	//-180.0 degrees
-		W_imag = 16'b0000_0000_0000_0000;	//PASS
+		W_real = 24'h000000;	//-90 degrees
+		W_imag = 24'h800000;	//PASS
 		#50; 
-		W_real = 16'b1010_0101_0111_1110;	//-225.0 degrees
-		W_imag = 16'b0101_1010_1000_0010;	//PASS
+		W_real = 24'hcf043e;	//-112.5 degrees
+		W_imag = 24'h89be4d;	//PASS
 		#50;  
-		W_real = 16'b0000_0000_0000_0000;	//-270.0 degrees
-		W_imag = 16'b0111_1111_1111_1111;	//PASS
+		W_real = 24'ha57d86;	//-135 degrees
+		W_imag = 24'ha57d86;	//PASS
 		#50; 
-		W_real = 16'b0101_1010_1000_0010;	//-315.0 degrees
-		W_imag = 16'b0101_1010_1000_0010;	//PASS
+		W_real = 24'h89be4d;	//-157.5 degrees
+		W_imag = 24'hcf043e;	//PASS
 		#100; 
 		
-		A_t_real = 16383;
-		A_t_imag = -16384;
-		B_t_real = -16384;
-		B_t_imag = 16383;
-		W_real = 16'b0111_1111_1111_1111;	//0 degrees
-		W_imag = 16'b0000_0000_0000_0000;	//PASS
+		A_t_real = `tmax;
+		A_t_imag = `tmin;
+		B_t_real = `tmin;
+		B_t_imag = `tmax;
+		W_real = 24'h7fffff;	//0 degrees
+		W_imag = 24'h000000;	//PASS
 		#50;  
-		W_real = 16'b0101_1010_1000_0010;	//-45.0 degrees
-		W_imag = 16'b1010_0101_0111_1110;	//PASS
+		W_real = 24'h7641b3;	//-22.5 degrees
+		W_imag = 24'hcf043e;	//PASS
 		#50; 
-		W_real = 16'b0000_0000_0000_0000;	//-90.0 degrees
-		W_imag = 16'b1000_0000_0000_0000;	//PASS
+		W_real = 24'h5a827a;	//-45 degrees
+		W_imag = 24'ha57d86;	//PASS
 		#50; 
-		W_real = 16'b1010_0101_0111_1110;	//-135.0 degrees
-		W_imag = 16'b1010_0101_0111_1110;	//PASS
+		W_real = 24'h30fbc2;	//-67.5 degrees
+		W_imag = 24'h89be4d;	//PASS
 		#50; 
-		W_real = 16'b1000_0000_0000_0000;	//-180.0 degrees
-		W_imag = 16'b0000_0000_0000_0000;	//PASS
+		W_real = 24'h000000;	//-90 degrees
+		W_imag = 24'h800000;	//PASS
 		#50; 
-		W_real = 16'b1010_0101_0111_1110;	//-225.0 degrees
-		W_imag = 16'b0101_1010_1000_0010;	//PASS
+		W_real = 24'hcf043e;	//-112.5 degrees
+		W_imag = 24'h89be4d;	//PASS
 		#50;  
-		W_real = 16'b0000_0000_0000_0000;	//-270.0 degrees
-		W_imag = 16'b0111_1111_1111_1111;	//PASS
+		W_real = 24'ha57d86;	//-135 degrees
+		W_imag = 24'ha57d86;	//PASS
 		#50; 
-		W_real = 16'b0101_1010_1000_0010;	//-315.0 degrees
-		W_imag = 16'b0101_1010_1000_0010;	//PASS
+		W_real = 24'h89be4d;	//-157.5 degrees
+		W_imag = 24'hcf043e;	//PASS
 		#100; 
 		
-		A_t_real = -16384;
-		A_t_imag = -16384;
-		B_t_real = -16384;
-		B_t_imag = -16384;
-		W_real = 16'b0111_1111_1111_1111;	//0 degrees
-		W_imag = 16'b0000_0000_0000_0000;	//PASS
+		A_t_real = `tmin;
+		A_t_imag = `tmin;
+		B_t_real = `tmin;
+		B_t_imag = `tmin;
+		W_real = 24'h7fffff;	//0 degrees
+		W_imag = 24'h000000;	//PASS
 		#50;  
-		W_real = 16'b0101_1010_1000_0010;	//-45.0 degrees
-		W_imag = 16'b1010_0101_0111_1110;	//PASS
+		W_real = 24'h7641b3;	//-22.5 degrees
+		W_imag = 24'hcf043e;	//PASS
 		#50; 
-		W_real = 16'b0000_0000_0000_0000;	//-90.0 degrees
-		W_imag = 16'b1000_0000_0000_0000;	//PASS
+		W_real = 24'h5a827a;	//-45 degrees
+		W_imag = 24'ha57d86;	//PASS
 		#50; 
-		W_real = 16'b1010_0101_0111_1110;	//-135.0 degrees
-		W_imag = 16'b1010_0101_0111_1110;	//PASS
+		W_real = 24'h30fbc2;	//-67.5 degrees
+		W_imag = 24'h89be4d;	//PASS
 		#50; 
-		W_real = 16'b1000_0000_0000_0000;	//-180.0 degrees
-		W_imag = 16'b0000_0000_0000_0000;	//PASS
+		W_real = 24'h000000;	//-90 degrees
+		W_imag = 24'h800000;	//PASS
 		#50; 
-		W_real = 16'b1010_0101_0111_1110;	//-225.0 degrees
-		W_imag = 16'b0101_1010_1000_0010;	//PASS
+		W_real = 24'hcf043e;	//-112.5 degrees
+		W_imag = 24'h89be4d;	//PASS
 		#50;  
-		W_real = 16'b0000_0000_0000_0000;	//-270.0 degrees
-		W_imag = 16'b0111_1111_1111_1111;	//PASS
+		W_real = 24'ha57d86;	//-135 degrees
+		W_imag = 24'ha57d86;	//PASS
 		#50; 
-		W_real = 16'b0101_1010_1000_0010;	//-315.0 degrees
-		W_imag = 16'b0101_1010_1000_0010;	//PASS
+		W_real = 24'h89be4d;	//-157.5 degrees
+		W_imag = 24'hcf043e;	//PASS
 		#100; 
 		
-	*/
+	
 	#10;
 	end
 							 

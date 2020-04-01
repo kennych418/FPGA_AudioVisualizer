@@ -1,9 +1,0 @@
-module FFT_TB;
-
-	reg clk, reset, DOUT, LRCLK, BCLK, vsync, hsync;
-	reg [3:0] r, g, b;
-
-	FFT UUT( clk,  reset,  DOUT,  LRCLK,  BCLK, 		  
-			   vsync,  hsync, r, g, b);
-
-endmodule

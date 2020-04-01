@@ -6,13 +6,24 @@ To do so, members will design a system that uses an intel FPGA as a digital sign
 ![Block Diagram](https://github.com/kennych418/FPGA_AudioVisualizer/blob/master/Block%20Diagram.png)
 
 ## Hardware
-* Adafruit SPH0645 i2S MEMS Microphone
-* Intel DE10-Lite FPGA
+* [Adafruit SPH0645 i2S MEMS Microphone](https://www.adafruit.com/product/3421)
+* [Intel DE10-Lite FPGA](https://www.intel.com/content/www/us/en/programmable/solutions/partners/partner-profile/terasic-inc-/board/max-10-device-family---de10-lite-board.html)
 * VGA Compatible Monitor
 * VGA Male to Male Cable
 * Wires
 
 ## Files
+### System Verilog (*.sv)
+* FFT
+* clkdiv
+* mic_translator
+* FFT_Processor
+* butterflyunit
+* VGA_Components
+### Testbenches (*_TB.sv)
+
+### Debugging Scripts (*.py)
+* butteryfly_test
 
 ## Ext. Mic to Mic Translator
 

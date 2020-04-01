@@ -1,5 +1,5 @@
 Flow report for FFT
-Mon Mar 30 02:35:32 2020
+Mon Mar 30 16:12:22 2020
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -40,15 +40,15 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Flow Summary                                                                     ;
 +------------------------------------+---------------------------------------------+
-; Flow Status                        ; Successful - Mon Mar 30 02:35:32 2020       ;
+; Flow Status                        ; Successful - Mon Mar 30 16:12:22 2020       ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; FFT                                         ;
 ; Top-level Entity Name              ; FFT                                         ;
 ; Family                             ; MAX 10                                      ;
 ; Device                             ; 10M50DAF484C7G                              ;
 ; Timing Models                      ; Final                                       ;
-; Total logic elements               ; 14,583 / 49,760 ( 29 % )                    ;
-;     Total combinational functions  ; 13,593 / 49,760 ( 27 % )                    ;
+; Total logic elements               ; 14,554 / 49,760 ( 29 % )                    ;
+;     Total combinational functions  ; 13,566 / 49,760 ( 27 % )                    ;
 ;     Dedicated logic registers      ; 2,601 / 49,760 ( 5 % )                      ;
 ; Total registers                    ; 2601                                        ;
 ; Total pins                         ; 19 / 360 ( 5 % )                            ;
@@ -66,7 +66,7 @@ refer to the applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 03/30/2020 02:32:43 ;
+; Start date & time ; 03/30/2020 16:09:40 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; FFT                 ;
 +-------------------+---------------------+
@@ -77,7 +77,7 @@ refer to the applicable agreement for further details.
 +--------------------------------------+---------------------------------------------------------------------+---------------+-------------+------------------+
 ; Assignment Name                      ; Value                                                               ; Default Value ; Entity Name ; Section Id       ;
 +--------------------------------------+---------------------------------------------------------------------+---------------+-------------+------------------+
-; COMPILER_SIGNATURE_ID                ; 13870907198271.158556076320268                                      ; --            ; --          ; --               ;
+; COMPILER_SIGNATURE_ID                ; 13870907198271.158560978017056                                      ; --            ; --          ; --               ;
 ; CYCLONEII_OPTIMIZATION_TECHNIQUE     ; Speed                                                               ; Balanced      ; --          ; --               ;
 ; EDA_OUTPUT_DATA_FORMAT               ; Verilog Hdl                                                         ; --            ; --          ; eda_simulation   ;
 ; EDA_SIMULATION_TOOL                  ; ModelSim-Altera (Verilog)                                           ; <None>        ; --          ; --               ;
@@ -135,12 +135,12 @@ refer to the applicable agreement for further details.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:54     ; 1.0                     ; 5051 MB             ; 00:01:12                           ;
-; Fitter               ; 00:01:28     ; 1.5                     ; 6012 MB             ; 00:04:08                           ;
-; Assembler            ; 00:00:03     ; 1.0                     ; 4743 MB             ; 00:00:04                           ;
-; Timing Analyzer      ; 00:00:10     ; 3.0                     ; 4988 MB             ; 00:00:24                           ;
-; EDA Netlist Writer   ; 00:00:04     ; 1.0                     ; 4796 MB             ; 00:00:05                           ;
-; Total                ; 00:02:39     ; --                      ; --                  ; 00:05:53                           ;
+; Analysis & Synthesis ; 00:00:52     ; 1.0                     ; 5057 MB             ; 00:01:11                           ;
+; Fitter               ; 00:01:23     ; 1.5                     ; 6094 MB             ; 00:03:45                           ;
+; Assembler            ; 00:00:03     ; 1.0                     ; 4742 MB             ; 00:00:04                           ;
+; Timing Analyzer      ; 00:00:09     ; 3.0                     ; 4982 MB             ; 00:00:24                           ;
+; EDA Netlist Writer   ; 00:00:05     ; 1.0                     ; 4795 MB             ; 00:00:05                           ;
+; Total                ; 00:02:32     ; --                      ; --                  ; 00:05:29                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

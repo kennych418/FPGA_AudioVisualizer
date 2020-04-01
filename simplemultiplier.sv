@@ -1,5 +1,5 @@
-module simplemultiplier( input [23:0] multiplicand, input [23:0] multiplier, 
-								  output [47:0] product);
+module simplemultiplier( 	input [23:0] multiplicand, input [23:0] multiplier, 
+							output [47:0] product);
 	
 	reg [47:0] multiplicand_extend;
 	reg [47:0] multiplier_extend;

@@ -19,7 +19,7 @@ I designed and implemented the system to verify that it is possible on the chose
 
 I selected an i2S MEMS microphone primarily because it can transmit audio information through a digital communication protocol. Analog or PCM microphones were not considered since an FPGA is a digital device and can't interface with these microphones. However, I later discovered that this is not true and more information is provided in the Future Improvements section.
 
-I chose the DE10-Lite FPGA Dev Kit because it is cheap and provides the necessary I/O for me to interface with the microphone and VGA display. The table below lists all of the connections between the microphone and the FPGA. Any pins that are not listed are left floating.
+I chose the DE10-Lite FPGA Dev Kit because it is cheap and provides the necessary I/O for me to interface with the microphone and VGA display. The table below lists all of the wire connections between the microphone and the FPGA. Any pins that are not listed are left floating.
 
 | Microphone | FPGA |
 |------------|------|
@@ -28,6 +28,8 @@ I chose the DE10-Lite FPGA Dev Kit because it is cheap and provides the necessar
 | BCLK | GPIO 31 (PIN_AA7) |
 | DOUT | GPIO 32 (PIN_Y6) |
 | LRCLK | GPIO 33 (PIN_AA6) |
+
+I used a VGA display as my external display because it is simple to use with an FPGA, provides a lot of flexibility, and offers a lot of space to work with. Other potential external displays include an array of LED strips, numbers on the onboard 7-seg displays, or even an array of speakers that can recreate the sound that is sensed by the microphone. I used the VGA Male to Male cable to connect the FPGA to my VGA monitor.
 
 ## Files
 ### System Verilog (*.sv)

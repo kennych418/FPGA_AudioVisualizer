@@ -3,7 +3,7 @@ Digital Audio Visualizer (DAV) is a new IEEE project that will pilot in the 2020
 
 To do so, members will design a system that uses an intel FPGA as a digital signals processor. The FPGA will receive audio inputs in real time through an external microphone and display the resulting frequency spectrum on an external display. A block diagram is shown below.
 
-![Block Diagram](https://github.com/kennych418/FPGA_AudioVisualizer/blob/master/Block%20Diagram.png)
+![Block Diagram](https://github.com/kennych418/FPGA_AudioVisualizer/blob/master/pictures/Block%20Diagram.png)
 
 I designed and implemented the system to verify that it is possible on the hardware chosen. This documentation describes all of the steps taken and difficulties encountered while implementing the digital audio visualizer. The reader should understand how to replicate or even improve the existing design.
 
@@ -13,6 +13,9 @@ I designed and implemented the system to verify that it is possible on the hardw
 * VGA Compatible Monitor
 * VGA Male to Male Cable
 * Wires
+
+![Block Diagram](https://github.com/kennych418/FPGA_AudioVisualizer/blob/master/pictures/System.png)
+![Block Diagram](https://github.com/kennych418/FPGA_AudioVisualizer/blob/master/pictures/Ext.Display.png)
 
 ## Files
 ### System Verilog (*.sv)

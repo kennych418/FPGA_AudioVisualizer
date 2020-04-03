@@ -36,13 +36,16 @@ The "Quartus for Designing and Debugging" section will go over how to use Quartu
 ## Files
 ### System Verilog (*.sv)
 * FFT
+    * clkdiv
+    * mic_translator
+    * FFT_Processor
+        * butterflyunit
+    * VGA_Components
+### Testbenches (*_TB.sv)
 * clkdiv
 * mic_translator
 * FFT_Processor
 * butterflyunit
-* VGA_Components
-### Testbenches (*_TB.sv)
-
 ### Debugging Scripts (*.py)
 * butteryfly_test
 

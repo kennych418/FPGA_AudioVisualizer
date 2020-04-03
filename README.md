@@ -5,6 +5,8 @@ To do so, members will design a system that uses an intel FPGA as a digital sign
 
 ![Block Diagram](https://github.com/kennych418/FPGA_AudioVisualizer/blob/master/Block%20Diagram.png)
 
+I designed and implemented the system to verify that it is possible on the hardware chosen. This documentation describes all of the steps taken and difficulties encountered while implementing the digital audio visualizer. The reader should understand how to replicate or even improve the existing design.
+
 ## Hardware
 * [Adafruit SPH0645 i2S MEMS Microphone](https://www.adafruit.com/product/3421)
 * [Intel DE10-Lite FPGA](https://www.intel.com/content/www/us/en/programmable/solutions/partners/partner-profile/terasic-inc-/board/max-10-device-family---de10-lite-board.html)

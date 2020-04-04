@@ -43,13 +43,13 @@ All of the synthesizable files are listed below in the heirarchy that they are u
         * butterflyunit
     * VGA_generator
 
-The FFT module is the top-level of the audio visualizer. Its inputs are the FPGA's 50MHz base clock (clk), a reset button on the FPGA board (reset), and the microphone's data signal (DOUT). Its outputs are the microphone's clk and control signals (BCLK, LRCLK), and the VGA's clk, control, and data signals (vsync, hsync, r[3:0], g[3:0], b[3:0]).
+The **FFT** module is the top-level of the audio visualizer. Its inputs are the FPGA's 50MHz base clock (clk), a reset button on the FPGA board (reset), and the microphone's data signal (DOUT). Its outputs are the microphone's clk and control signals (BCLK, LRCLK), and the VGA's clk, control, and data signals (vsync, hsync, r[3:0], g[3:0], b[3:0]).
 
 Internally, there are two clkdiv's, the mic_translator, FFT_Processor, and VGA_generator. The two clkdiv's are used to derive a 125kHz system clock and 25MHz vga clock from the FPGA's main 50MHz base clock. The system clock controls the mic_translator and FFT_Processor. I arbitrarily set to 125kHz to provide plenty of headroom for the mic_translator and FFT_Processor to meet timing constraints, such as any setup and hold times. The designer can experiment with a faster system clock speed if they desire. However, it doesn't matter for a VGA display since the VGA protocol is locked at 60 FPS. At 125kHz, the mic_translator and FFT_Processor can still complete multiple cycles within a single frame of the VGA monitor. The vga clock drives the VGA_generator and is set to 25MHz because it is required by the VGA protocol. Along with establishing the system and vga clock domains, the FFT file also connects the mic_translator, FFT_Processor, and VGA_generator together and links them with their respective I/O pins. 
 
-The clkdiv module is used to generate a slower output clock (clk_out) from a faster input clock signal (clk_in). It also has a single parameter called counter_threshold, which can be used by the designer to set the output clock speed whenever a new clkdiv module is used in the project. The output clock frequency is based on the formula clk_out [Hz] = clk_in [Hz] / (2+2*counter_threshold). 
+The **clkdiv** module is used to generate a slower output clock (clk_out) from a faster input clock signal (clk_in). It also has a single parameter called counter_threshold, which can be used by the designer to set the output clock speed whenever a new clkdiv module is used in the project. The output clock frequency is based on the formula clk_out [Hz] = clk_in [Hz] / (2+2*counter_threshold). 
 
-The mic_translator file  
+The **mic_translator** module is used to generate the microphone's i2S signals and translate them into a readable format for the FFT_Processor. The mic_translator also stores 16 sets of audio data, which is necessary for a 16 point FFT. The inputs are the 125kHz system clock (clk), a reset button on the FPGA board (reset), and the microphone's data signal (DOUT). The outputs are the microphone's clk and control signals (BCLK, LRCLK), a flag signal that indicates when a new audio sample has been acquired (new_t), and all 16 sets of stored audio data (t0[17:0] - t15[17:0]).  
 ### Testbenches (*_TB.sv)
 The following testbench files were used to debug the their respective *.sv files.
 * clkdiv

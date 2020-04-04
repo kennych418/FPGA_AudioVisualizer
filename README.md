@@ -70,4 +70,7 @@ Further into the project's development, I discovered that the FPGA has an on-die
 However, using the on-die ADC may require an additional module to translate between the ADC and the FFT_Processor. This could potentially take more resources than the existing mic_translator. Intel provides a demo design on how to use the on-die ADC [here](https://fpgacloud.intel.com/devstore/platform/15.1.0/Standard/adc-rtl-max10-de10-lite/).
 
 ### Different Displays
-Although the VGA display was a convenient option for me, others might find it difficult to develop the VGA_components on their own. The designer is free to use any other external display that is more convenient for them, such as an array of LED strips, numbers on the onboard 7-seg displays, or even an array of speakers that can recreate the sound that is sensed by the microphone.
+Although the VGA display was a convenient option for me, others might find it difficult to develop the VGA_generator on their own. The designer is free to use any other external display that is more convenient for them, such as an array of LED strips, numbers on the onboard 7-seg displays, or even an array of speakers that can recreate the sound that is sensed by the microphone.
+
+### Reset Button
+I still need to implement the reset button into all modules so that they regs initialize with a starting value.

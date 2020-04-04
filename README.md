@@ -73,4 +73,4 @@ However, using the on-die ADC may require an additional module to translate betw
 Although the VGA display was a convenient option for me, others might find it difficult to develop the VGA_generator on their own. The designer is free to use any other external display that is more convenient for them, such as an array of LED strips, numbers on the onboard 7-seg displays, or even an array of speakers that can recreate the sound that is sensed by the microphone.
 
 ### Reset Button
-I still need to implement the reset button into all modules so that they regs initialize with a starting value.
+I still need to implement the reset button into all modules so that the regs initialize with a starting value.

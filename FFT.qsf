@@ -218,7 +218,6 @@ set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_COUNTER_PIPELINE=
 set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_ADVANCED_TRIGGER_ENTITY=sld_reserved_FFT_Mic_Translator_1_d1da," -section_id Mic_20Translator
 set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_TRIGGER_LEVEL_PIPELINE=1" -section_id Mic_20Translator
 set_global_assignment -name SLD_NODE_PARAMETER_ASSIGNMENT "SLD_ENABLE_ADVANCED_TRIGGER=1" -section_id Mic_20Translator
-set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
 set_global_assignment -name SYSTEMVERILOG_FILE FFT.sv
 set_global_assignment -name SYSTEMVERILOG_FILE clkdiv.sv
 set_global_assignment -name SYSTEMVERILOG_FILE clkdiv_TB.sv
@@ -228,7 +227,8 @@ set_global_assignment -name SYSTEMVERILOG_FILE FFT_Processor.sv
 set_global_assignment -name SYSTEMVERILOG_FILE FFT_Processor_TB.sv
 set_global_assignment -name SYSTEMVERILOG_FILE butterflyunit.sv
 set_global_assignment -name SYSTEMVERILOG_FILE butterflyunit_TB.sv
-set_global_assignment -name SYSTEMVERILOG_FILE VGA_Components.sv
+set_global_assignment -name SYSTEMVERILOG_FILE VGA_generator.sv
 set_global_assignment -name SDC_FILE clk.sdc
 set_global_assignment -name SIGNALTAP_FILE MicTranslatorTap.stp
+set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
 set_global_assignment -name SLD_FILE db/MicTranslatorTap_auto_stripped.stp

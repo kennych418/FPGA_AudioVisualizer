@@ -1,5 +1,5 @@
 Analysis & Synthesis report for FFT
-Wed Apr 01 01:15:45 2020
+Fri Apr 03 17:49:00 2020
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -231,7 +231,7 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Wed Apr 01 01:15:44 2020       ;
+; Analysis & Synthesis Status        ; Successful - Fri Apr 03 17:49:00 2020       ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; FFT                                         ;
 ; Top-level Entity Name              ; FFT                                         ;
@@ -352,7 +352,7 @@ refer to the applicable agreement for further details.
 ;     Processor 2            ;   0.2%      ;
 ;     Processor 3            ;   0.2%      ;
 ;     Processor 4            ;   0.2%      ;
-;     Processor 5            ;   0.1%      ;
+;     Processor 5            ;   0.2%      ;
 ;     Processor 6            ;   0.1%      ;
 +----------------------------+-------------+
 
@@ -363,11 +363,11 @@ refer to the applicable agreement for further details.
 ; File Name with User-Entered Path                                   ; Used in Netlist ; File Type                                    ; File Name with Absolute Path                                                                           ; Library     ;
 +--------------------------------------------------------------------+-----------------+----------------------------------------------+--------------------------------------------------------------------------------------------------------+-------------+
 ; FFT.sv                                                             ; yes             ; User SystemVerilog HDL File                  ; C:/Users/chank/OneDrive/Quartus/FFT/FFT.sv                                                             ;             ;
-; butterflyunit.sv                                                   ; yes             ; User SystemVerilog HDL File                  ; C:/Users/chank/OneDrive/Quartus/FFT/butterflyunit.sv                                                   ;             ;
-; FFT_Processor.sv                                                   ; yes             ; User SystemVerilog HDL File                  ; C:/Users/chank/OneDrive/Quartus/FFT/FFT_Processor.sv                                                   ;             ;
-; mic_translator.sv                                                  ; yes             ; User SystemVerilog HDL File                  ; C:/Users/chank/OneDrive/Quartus/FFT/mic_translator.sv                                                  ;             ;
-; VGA_Components.sv                                                  ; yes             ; User SystemVerilog HDL File                  ; C:/Users/chank/OneDrive/Quartus/FFT/VGA_Components.sv                                                  ;             ;
 ; clkdiv.sv                                                          ; yes             ; User SystemVerilog HDL File                  ; C:/Users/chank/OneDrive/Quartus/FFT/clkdiv.sv                                                          ;             ;
+; mic_translator.sv                                                  ; yes             ; User SystemVerilog HDL File                  ; C:/Users/chank/OneDrive/Quartus/FFT/mic_translator.sv                                                  ;             ;
+; FFT_Processor.sv                                                   ; yes             ; User SystemVerilog HDL File                  ; C:/Users/chank/OneDrive/Quartus/FFT/FFT_Processor.sv                                                   ;             ;
+; butterflyunit.sv                                                   ; yes             ; User SystemVerilog HDL File                  ; C:/Users/chank/OneDrive/Quartus/FFT/butterflyunit.sv                                                   ;             ;
+; VGA_generator.sv                                                   ; yes             ; User SystemVerilog HDL File                  ; C:/Users/chank/OneDrive/Quartus/FFT/VGA_generator.sv                                                   ;             ;
 ; sld_signaltap.vhd                                                  ; yes             ; Megafunction                                 ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/sld_signaltap.vhd                               ;             ;
 ; sld_signaltap_impl.vhd                                             ; yes             ; Encrypted Megafunction                       ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/sld_signaltap_impl.vhd                          ;             ;
 ; sld_ela_control.vhd                                                ; yes             ; Encrypted Megafunction                       ; c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/sld_ela_control.vhd                             ;             ;
@@ -449,6 +449,7 @@ refer to the applicable agreement for further details.
 ; complexadder.sv                                                    ; yes             ; User SystemVerilog HDL File                  ; complexadder.sv                                                                                        ;             ;
 ; simplemultiplier.sv                                                ; yes             ; User SystemVerilog HDL File                  ; simplemultiplier.sv                                                                                    ;             ;
 ; complexsubtractor.sv                                               ; yes             ; User SystemVerilog HDL File                  ; complexsubtractor.sv                                                                                   ;             ;
+; VGA_Components.sv                                                  ; yes             ; User SystemVerilog HDL File                  ; C:/Users/chank/OneDrive/Quartus/FFT/VGA_Components.sv                                                  ;             ;
 ; db/mult_jrs.tdf                                                    ; yes             ; Auto-Generated Megafunction                  ; C:/Users/chank/OneDrive/Quartus/FFT/db/mult_jrs.tdf                                                    ;             ;
 ; db/mult_tns.tdf                                                    ; yes             ; Auto-Generated Megafunction                  ; C:/Users/chank/OneDrive/Quartus/FFT/db/mult_tns.tdf                                                    ;             ;
 ; db/mult_pgs.tdf                                                    ; yes             ; Auto-Generated Megafunction                  ; C:/Users/chank/OneDrive/Quartus/FFT/db/mult_pgs.tdf                                                    ;             ;
@@ -12880,7 +12881,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:26     ;
+; Top            ; 00:00:27     ;
 +----------------+--------------+
 
 
@@ -13012,34 +13013,34 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Wed Apr 01 01:14:52 2020
+    Info: Processing started: Fri Apr 03 17:48:05 2020
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off FFT -c FFT
 Info (16303): Aggressive Performance optimization mode selected -- timing performance will be prioritized at the potential cost of increased logic area and compilation time
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 6 of the 6 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file fft.sv
     Info (12023): Found entity 1: FFT File: C:/Users/chank/OneDrive/Quartus/FFT/FFT.sv Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file butterflyunit.sv
-    Info (12023): Found entity 1: butterflyunit File: C:/Users/chank/OneDrive/Quartus/FFT/butterflyunit.sv Line: 1
-Info (12021): Found 1 design units, including 1 entities, in source file butterflyunit_tb.sv
-    Info (12023): Found entity 1: butterflyunit_TB File: C:/Users/chank/OneDrive/Quartus/FFT/butterflyunit_TB.sv Line: 6
-Info (12021): Found 1 design units, including 1 entities, in source file fft_processor.sv
-    Info (12023): Found entity 1: FFT_Processor File: C:/Users/chank/OneDrive/Quartus/FFT/FFT_Processor.sv Line: 12
-Info (12021): Found 1 design units, including 1 entities, in source file fft_processor_tb.sv
-    Info (12023): Found entity 1: FFT_Processor_TB File: C:/Users/chank/OneDrive/Quartus/FFT/FFT_Processor_TB.sv Line: 4
-Info (12021): Found 1 design units, including 1 entities, in source file mic_translator.sv
-    Info (12023): Found entity 1: mic_translator File: C:/Users/chank/OneDrive/Quartus/FFT/mic_translator.sv Line: 5
-Info (12021): Found 4 design units, including 4 entities, in source file vga_components.sv
-    Info (12023): Found entity 1: hsync File: C:/Users/chank/OneDrive/Quartus/FFT/VGA_Components.sv Line: 2
-    Info (12023): Found entity 2: vsync File: C:/Users/chank/OneDrive/Quartus/FFT/VGA_Components.sv Line: 46
-    Info (12023): Found entity 3: data File: C:/Users/chank/OneDrive/Quartus/FFT/VGA_Components.sv Line: 84
-    Info (12023): Found entity 4: VGA_generator File: C:/Users/chank/OneDrive/Quartus/FFT/VGA_Components.sv Line: 232
-Info (12021): Found 1 design units, including 1 entities, in source file mic_translator_tb.sv
-    Info (12023): Found entity 1: mic_translator_TB File: C:/Users/chank/OneDrive/Quartus/FFT/mic_translator_tb.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file clkdiv.sv
     Info (12023): Found entity 1: clkdiv File: C:/Users/chank/OneDrive/Quartus/FFT/clkdiv.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file clkdiv_tb.sv
     Info (12023): Found entity 1: clkdiv50to4_TB File: C:/Users/chank/OneDrive/Quartus/FFT/clkdiv_TB.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file mic_translator.sv
+    Info (12023): Found entity 1: mic_translator File: C:/Users/chank/OneDrive/Quartus/FFT/mic_translator.sv Line: 5
+Info (12021): Found 1 design units, including 1 entities, in source file mic_translator_tb.sv
+    Info (12023): Found entity 1: mic_translator_TB File: C:/Users/chank/OneDrive/Quartus/FFT/mic_translator_tb.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file fft_processor.sv
+    Info (12023): Found entity 1: FFT_Processor File: C:/Users/chank/OneDrive/Quartus/FFT/FFT_Processor.sv Line: 12
+Info (12021): Found 1 design units, including 1 entities, in source file fft_processor_tb.sv
+    Info (12023): Found entity 1: FFT_Processor_TB File: C:/Users/chank/OneDrive/Quartus/FFT/FFT_Processor_TB.sv Line: 4
+Info (12021): Found 1 design units, including 1 entities, in source file butterflyunit.sv
+    Info (12023): Found entity 1: butterflyunit File: C:/Users/chank/OneDrive/Quartus/FFT/butterflyunit.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file butterflyunit_tb.sv
+    Info (12023): Found entity 1: butterflyunit_TB File: C:/Users/chank/OneDrive/Quartus/FFT/butterflyunit_TB.sv Line: 6
+Info (12021): Found 4 design units, including 4 entities, in source file vga_generator.sv
+    Info (12023): Found entity 1: hsync File: C:/Users/chank/OneDrive/Quartus/FFT/VGA_generator.sv Line: 3
+    Info (12023): Found entity 2: vsync File: C:/Users/chank/OneDrive/Quartus/FFT/VGA_generator.sv Line: 47
+    Info (12023): Found entity 3: data File: C:/Users/chank/OneDrive/Quartus/FFT/VGA_generator.sv Line: 85
+    Info (12023): Found entity 4: VGA_generator File: C:/Users/chank/OneDrive/Quartus/FFT/VGA_generator.sv Line: 234
 Info (12127): Elaborating entity "FFT" for the top level hierarchy
 Info (12128): Elaborating entity "clkdiv" for hierarchy "clkdiv:vga_clock" File: C:/Users/chank/OneDrive/Quartus/FFT/FFT.sv Line: 9
 Info (12128): Elaborating entity "clkdiv" for hierarchy "clkdiv:main_clock" File: C:/Users/chank/OneDrive/Quartus/FFT/FFT.sv Line: 12
@@ -13047,9 +13048,9 @@ Info (12128): Elaborating entity "mic_translator" for hierarchy "mic_translator:
 Info (12128): Elaborating entity "FFT_Processor" for hierarchy "FFT_Processor:main_professor" File: C:/Users/chank/OneDrive/Quartus/FFT/FFT.sv Line: 37
 Info (12128): Elaborating entity "butterflyunit" for hierarchy "FFT_Processor:main_professor|butterflyunit:BFU0" File: C:/Users/chank/OneDrive/Quartus/FFT/FFT_Processor.sv Line: 237
 Info (12128): Elaborating entity "VGA_generator" for hierarchy "VGA_generator:main_vga" File: C:/Users/chank/OneDrive/Quartus/FFT/FFT.sv Line: 49
-Info (12128): Elaborating entity "hsync" for hierarchy "VGA_generator:main_vga|hsync:horizontal" File: C:/Users/chank/OneDrive/Quartus/FFT/VGA_Components.sv Line: 251
-Info (12128): Elaborating entity "vsync" for hierarchy "VGA_generator:main_vga|vsync:vertical" File: C:/Users/chank/OneDrive/Quartus/FFT/VGA_Components.sv Line: 252
-Info (12128): Elaborating entity "data" for hierarchy "VGA_generator:main_vga|data:display" File: C:/Users/chank/OneDrive/Quartus/FFT/VGA_Components.sv Line: 326
+Info (12128): Elaborating entity "hsync" for hierarchy "VGA_generator:main_vga|hsync:horizontal" File: C:/Users/chank/OneDrive/Quartus/FFT/VGA_generator.sv Line: 253
+Info (12128): Elaborating entity "vsync" for hierarchy "VGA_generator:main_vga|vsync:vertical" File: C:/Users/chank/OneDrive/Quartus/FFT/VGA_generator.sv Line: 254
+Info (12128): Elaborating entity "data" for hierarchy "VGA_generator:main_vga|data:display" File: C:/Users/chank/OneDrive/Quartus/FFT/VGA_generator.sv Line: 328
 Info (12021): Found 1 design units, including 1 entities, in source file db/sld_ela_trigger_16o.tdf
     Info (12023): Found entity 1: sld_ela_trigger_16o File: C:/Users/chank/OneDrive/Quartus/FFT/db/sld_ela_trigger_16o.tdf Line: 25
 Info (12021): Found 1 design units, including 1 entities, in source file db/sld_reserved_fft_mic_translator_1_d1da.v
@@ -13076,7 +13077,7 @@ Info (12021): Found 1 design units, including 1 entities, in source file db/cmpr
     Info (12023): Found entity 1: cmpr_drb File: C:/Users/chank/OneDrive/Quartus/FFT/db/cmpr_drb.tdf Line: 22
 Info (12033): Analysis and Synthesis generated Signal Tap or debug node instance "Mic_20Translator"
 Info (11170): Starting IP generation for the debug fabric: alt_sld_fab.
-Info (11172): 2020.04.01.01:15:07 Progress: Loading sld3cba3e19/alt_sld_fab_wrapper_hw.tcl
+Info (11172): 2020.04.03.17:48:22 Progress: Loading sld3cba3e19/alt_sld_fab_wrapper_hw.tcl
 Info (11172): Alt_sld_fab.alt_sld_fab: SLD fabric agents which did not specify prefer_host were connected to JTAG
 Info (11172): Alt_sld_fab: Generating alt_sld_fab "alt_sld_fab" for QUARTUS_SYNTH
 Info (11172): Alt_sld_fab: "alt_sld_fab" instantiated alt_sld_fab "alt_sld_fab"
@@ -13100,22 +13101,22 @@ Info (12021): Found 2 design units, including 1 entities, in source file db/ip/s
 Info (12021): Found 1 design units, including 1 entities, in source file db/ip/sld3cba3e19/submodules/alt_sld_fab_alt_sld_fab_splitter.sv
     Info (12023): Found entity 1: alt_sld_fab_alt_sld_fab_splitter File: C:/Users/chank/OneDrive/Quartus/FFT/db/ip/sld3cba3e19/submodules/alt_sld_fab_alt_sld_fab_splitter.sv Line: 3
 Info (278001): Inferred 46 megafunctions from design logic
-    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "VGA_generator:main_vga|data:display|Mult8" File: C:/Users/chank/OneDrive/Quartus/FFT/VGA_Components.sv Line: 107
-    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "VGA_generator:main_vga|data:display|Mult9" File: C:/Users/chank/OneDrive/Quartus/FFT/VGA_Components.sv Line: 108
-    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "VGA_generator:main_vga|data:display|Mult10" File: C:/Users/chank/OneDrive/Quartus/FFT/VGA_Components.sv Line: 109
-    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "VGA_generator:main_vga|data:display|Mult11" File: C:/Users/chank/OneDrive/Quartus/FFT/VGA_Components.sv Line: 110
-    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "VGA_generator:main_vga|data:display|Mult12" File: C:/Users/chank/OneDrive/Quartus/FFT/VGA_Components.sv Line: 111
-    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "VGA_generator:main_vga|data:display|Mult13" File: C:/Users/chank/OneDrive/Quartus/FFT/VGA_Components.sv Line: 112
-    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "VGA_generator:main_vga|data:display|Mult14" File: C:/Users/chank/OneDrive/Quartus/FFT/VGA_Components.sv Line: 113
-    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "VGA_generator:main_vga|data:display|Mult15" File: C:/Users/chank/OneDrive/Quartus/FFT/VGA_Components.sv Line: 114
-    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "VGA_generator:main_vga|data:display|Mult0" File: C:/Users/chank/OneDrive/Quartus/FFT/VGA_Components.sv Line: 99
-    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "VGA_generator:main_vga|data:display|Mult1" File: C:/Users/chank/OneDrive/Quartus/FFT/VGA_Components.sv Line: 100
-    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "VGA_generator:main_vga|data:display|Mult2" File: C:/Users/chank/OneDrive/Quartus/FFT/VGA_Components.sv Line: 101
-    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "VGA_generator:main_vga|data:display|Mult3" File: C:/Users/chank/OneDrive/Quartus/FFT/VGA_Components.sv Line: 102
-    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "VGA_generator:main_vga|data:display|Mult4" File: C:/Users/chank/OneDrive/Quartus/FFT/VGA_Components.sv Line: 103
-    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "VGA_generator:main_vga|data:display|Mult5" File: C:/Users/chank/OneDrive/Quartus/FFT/VGA_Components.sv Line: 104
-    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "VGA_generator:main_vga|data:display|Mult6" File: C:/Users/chank/OneDrive/Quartus/FFT/VGA_Components.sv Line: 105
-    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "VGA_generator:main_vga|data:display|Mult7" File: C:/Users/chank/OneDrive/Quartus/FFT/VGA_Components.sv Line: 106
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "VGA_generator:main_vga|data:display|Mult8" File: C:/Users/chank/OneDrive/Quartus/FFT/VGA_generator.sv Line: 109
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "VGA_generator:main_vga|data:display|Mult9" File: C:/Users/chank/OneDrive/Quartus/FFT/VGA_generator.sv Line: 110
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "VGA_generator:main_vga|data:display|Mult10" File: C:/Users/chank/OneDrive/Quartus/FFT/VGA_generator.sv Line: 111
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "VGA_generator:main_vga|data:display|Mult11" File: C:/Users/chank/OneDrive/Quartus/FFT/VGA_generator.sv Line: 112
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "VGA_generator:main_vga|data:display|Mult12" File: C:/Users/chank/OneDrive/Quartus/FFT/VGA_generator.sv Line: 113
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "VGA_generator:main_vga|data:display|Mult13" File: C:/Users/chank/OneDrive/Quartus/FFT/VGA_generator.sv Line: 114
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "VGA_generator:main_vga|data:display|Mult14" File: C:/Users/chank/OneDrive/Quartus/FFT/VGA_generator.sv Line: 115
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "VGA_generator:main_vga|data:display|Mult15" File: C:/Users/chank/OneDrive/Quartus/FFT/VGA_generator.sv Line: 116
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "VGA_generator:main_vga|data:display|Mult0" File: C:/Users/chank/OneDrive/Quartus/FFT/VGA_generator.sv Line: 101
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "VGA_generator:main_vga|data:display|Mult1" File: C:/Users/chank/OneDrive/Quartus/FFT/VGA_generator.sv Line: 102
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "VGA_generator:main_vga|data:display|Mult2" File: C:/Users/chank/OneDrive/Quartus/FFT/VGA_generator.sv Line: 103
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "VGA_generator:main_vga|data:display|Mult3" File: C:/Users/chank/OneDrive/Quartus/FFT/VGA_generator.sv Line: 104
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "VGA_generator:main_vga|data:display|Mult4" File: C:/Users/chank/OneDrive/Quartus/FFT/VGA_generator.sv Line: 105
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "VGA_generator:main_vga|data:display|Mult5" File: C:/Users/chank/OneDrive/Quartus/FFT/VGA_generator.sv Line: 106
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "VGA_generator:main_vga|data:display|Mult6" File: C:/Users/chank/OneDrive/Quartus/FFT/VGA_generator.sv Line: 107
+    Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "VGA_generator:main_vga|data:display|Mult7" File: C:/Users/chank/OneDrive/Quartus/FFT/VGA_generator.sv Line: 108
     Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "FFT_Processor:main_professor|butterflyunit:BFU0|Mult0" File: C:/Users/chank/OneDrive/Quartus/FFT/butterflyunit.sv Line: 23
     Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "FFT_Processor:main_professor|butterflyunit:BFU4|Mult0" File: C:/Users/chank/OneDrive/Quartus/FFT/butterflyunit.sv Line: 23
     Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "FFT_Processor:main_professor|butterflyunit:BFU4|Mult1" File: C:/Users/chank/OneDrive/Quartus/FFT/butterflyunit.sv Line: 24
@@ -13146,8 +13147,8 @@ Info (278001): Inferred 46 megafunctions from design logic
     Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "FFT_Processor:main_professor|butterflyunit:BFU2|Mult2" File: C:/Users/chank/OneDrive/Quartus/FFT/butterflyunit.sv Line: 25
     Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "FFT_Processor:main_professor|butterflyunit:BFU2|Mult3" File: C:/Users/chank/OneDrive/Quartus/FFT/butterflyunit.sv Line: 26
     Info (278003): Inferred multiplier megafunction ("lpm_mult") from the following logic: "FFT_Processor:main_professor|butterflyunit:BFU0|Mult2" File: C:/Users/chank/OneDrive/Quartus/FFT/butterflyunit.sv Line: 25
-Info (12130): Elaborated megafunction instantiation "VGA_generator:main_vga|data:display|lpm_mult:Mult8" File: C:/Users/chank/OneDrive/Quartus/FFT/VGA_Components.sv Line: 107
-Info (12133): Instantiated megafunction "VGA_generator:main_vga|data:display|lpm_mult:Mult8" with the following parameter: File: C:/Users/chank/OneDrive/Quartus/FFT/VGA_Components.sv Line: 107
+Info (12130): Elaborated megafunction instantiation "VGA_generator:main_vga|data:display|lpm_mult:Mult8" File: C:/Users/chank/OneDrive/Quartus/FFT/VGA_generator.sv Line: 109
+Info (12133): Instantiated megafunction "VGA_generator:main_vga|data:display|lpm_mult:Mult8" with the following parameter: File: C:/Users/chank/OneDrive/Quartus/FFT/VGA_generator.sv Line: 109
     Info (12134): Parameter "LPM_WIDTHA" = "23"
     Info (12134): Parameter "LPM_WIDTHB" = "48"
     Info (12134): Parameter "LPM_WIDTHP" = "71"
@@ -14485,9 +14486,9 @@ Info (21057): Implemented 14746 device resources after synthesis - the final res
     Info (21064): Implemented 80 RAM segments
     Info (21062): Implemented 288 DSP elements
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 647 warnings
-    Info: Peak virtual memory: 5054 megabytes
-    Info: Processing ended: Wed Apr 01 01:15:45 2020
-    Info: Elapsed time: 00:00:53
+    Info: Peak virtual memory: 5052 megabytes
+    Info: Processing ended: Fri Apr 03 17:49:00 2020
+    Info: Elapsed time: 00:00:55
     Info: Total CPU time (on all processors): 00:01:09
 
 

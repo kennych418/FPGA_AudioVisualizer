@@ -19,7 +19,7 @@ I designed and implemented the system to verify that it is possible on the chose
 
 I selected an i2S MEMS microphone primarily because it can transmit audio information through a digital communication protocol. Analog or PCM microphones were not considered since an FPGA is a digital device and can't interface with these microphones. However, I later discovered that this is not true and more information is provided in the Future Improvements section.
 
-I chose the DE10-Lite FPGA Dev Kit because it is cheap and provides the necessary I/O for me to interface with the microphone and VGA display. To use the DE10-Lite, you must connect your computer to your FPGA through a USB A to B cable (one is packaged with the DE10-Lite). This will provide power to the FPGA and allow you to program it through intel's Quartus IDE. The table below lists all of the wire connections between the microphone and the FPGA. Any pins that are not listed are left floating.
+I chose the DE10-Lite FPGA Dev Kit because it is cheap, fast (50MHz), and provides the necessary I/O for me to interface with the microphone and VGA display. To use the DE10-Lite, you must connect your computer to your FPGA through a USB A to B cable (one is packaged with the DE10-Lite). This will provide power to the FPGA and allow you to program it through intel's Quartus IDE. The table below lists all of the wire connections between the microphone and the FPGA. Any pins that are not listed are left floating.
 
 | Microphone | FPGA |
 |------------|------|
@@ -41,7 +41,12 @@ All of the synthesizable files are listed below in the heirarchy that they are u
     * mic_translator
     * FFT_Processor
         * butterflyunit
-    * VGA_Components
+    * VGA_generator
+
+The FFT file contains the top-level module of the audio visualizer. Its inputs are the FPGA's 50MHz base clock (clk), a reset button on the FPGA board (reset), and the microphone's data signal (DOUT). Its outputs are the microphone's clk and control signals (BCLK, LRCLK), and the VGA's clk, control, and data signals (vsync, hsync, r[3:0], g[3:0], b[3:0]).
+Internally, there are two clkdiv's, the mic_translator, FFT_Processor, and VGA_generator. The two clkdiv's are used to derive a 125kHz system clock and 25MHz vga clock from the FPGA's main 50MHz base clock. The system clock controls the mic_translator and FFT_Processor. I arbitrarily set to 125kHz to provide plenty of headroom for the mic_translator and FFT_Processor to meet timing constraints, such as any setup and hold times. The designer can experiment with a faster system clock speed if they desire. However, it doesn't matter for a VGA display since the VGA protocol is locked at 60 FPS. At 125kHz, the mic_translator and FFT_Processor can still complete multiple cycles within a single frame of the VGA monitor. The vga clock drives the VGA_generator and is set to 25MHz because it is required by the VGA protocol. Along with establishing the system and vga clock domains, the FFT file also connects the mic_translator, FFT_Processor, and VGA_generator together and links them with their respective I/O pins. 
+
+The mic_translator file 
 ### Testbenches (*_TB.sv)
 The following testbench files were used to debug the their respective *.sv files.
 * clkdiv
@@ -51,14 +56,6 @@ The following testbench files were used to debug the their respective *.sv files
 ### Debugging Scripts (*.py)
 The following scripts were used to perform quick calculations used to verify the testbench results.
 * butteryfly_test
-
-## Ext. Mic to Mic Translator
-
-## Mic Translator to FFT Processor
-
-## FFT Processor to Display Generator
-
-## Display Generator to Ext. Display
 
 ## Quartus for Design and Debugging
 

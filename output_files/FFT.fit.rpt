@@ -1,5 +1,5 @@
 Fitter report for FFT
-Wed Apr 01 01:17:07 2020
+Fri Apr 03 17:50:24 2020
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -72,7 +72,7 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Fitter Summary                                                                   ;
 +------------------------------------+---------------------------------------------+
-; Fitter Status                      ; Successful - Wed Apr 01 01:17:07 2020       ;
+; Fitter Status                      ; Successful - Fri Apr 03 17:50:24 2020       ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; FFT                                         ;
 ; Top-level Entity Name              ; FFT                                         ;
@@ -158,16 +158,16 @@ refer to the applicable agreement for further details.
 ; Number detected on machine ; 12          ;
 ; Maximum allowed            ; 6           ;
 ;                            ;             ;
-; Average used               ; 1.50        ;
+; Average used               ; 1.49        ;
 ; Maximum used               ; 6           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;  10.3%      ;
-;     Processor 3            ;  10.1%      ;
-;     Processor 4            ;  10.0%      ;
-;     Processor 5            ;   9.9%      ;
-;     Processor 6            ;   9.8%      ;
+;     Processor 2            ;  10.0%      ;
+;     Processor 3            ;   9.9%      ;
+;     Processor 4            ;   9.7%      ;
+;     Processor 5            ;   9.6%      ;
+;     Processor 6            ;   9.6%      ;
 +----------------------------+-------------+
 
 
@@ -8620,11 +8620,11 @@ Info (176353): Automatically promoted node clkdiv:main_clock|clk_out_reg  File: 
 Info (176353): Automatically promoted node clkdiv:vga_clock|clk_out_reg  File: C:/Users/chank/OneDrive/Quartus/FFT/clkdiv.sv Line: 16
     Info (176355): Automatically promoted destinations to use location or clock signal Global Clock
     Info (176356): Following destination nodes may be non-global or may not use global or regional clocks
-        Info (176357): Destination node VGA_generator:main_vga|hsync:horizontal|newline_out File: C:/Users/chank/OneDrive/Quartus/FFT/VGA_Components.sv Line: 2
+        Info (176357): Destination node VGA_generator:main_vga|hsync:horizontal|newline_out File: C:/Users/chank/OneDrive/Quartus/FFT/VGA_generator.sv Line: 3
         Info (176357): Destination node clkdiv:vga_clock|clk_out_reg~0 File: C:/Users/chank/OneDrive/Quartus/FFT/clkdiv.sv Line: 16
 Info (176353): Automatically promoted node altera_internal_jtag~TCKUTAP 
     Info (176355): Automatically promoted destinations to use location or clock signal Global Clock
-Info (176353): Automatically promoted node VGA_generator:main_vga|hsync:horizontal|newline_out  File: C:/Users/chank/OneDrive/Quartus/FFT/VGA_Components.sv Line: 2
+Info (176353): Automatically promoted node VGA_generator:main_vga|hsync:horizontal|newline_out  File: C:/Users/chank/OneDrive/Quartus/FFT/VGA_generator.sv Line: 3
     Info (176355): Automatically promoted destinations to use location or clock signal Global Clock
 Info (176353): Automatically promoted node sld_signaltap:Mic_20Translator|sld_signaltap_impl:sld_signaltap_body|sld_signaltap_implb:sld_signaltap_body|reset_all  File: c:/intelfpga_lite/18.1/quartus/libraries/megafunctions/sld_signaltap_impl.vhd Line: 882
     Info (176355): Automatically promoted destinations to use location or clock signal Global Clock
@@ -8649,7 +8649,7 @@ Info (170193): Fitter routing operations beginning
 Info (170195): Router estimated average interconnect usage is 10% of the available device resources
     Info (170196): Router estimated peak interconnect usage is 37% of the available device resources in the region that extends from location X45_Y22 to location X55_Y32
 Info (170194): Fitter routing operations ending: elapsed time is 00:00:17
-Info (11888): Total time spent on timing analysis during the Fitter is 9.01 seconds.
+Info (11888): Total time spent on timing analysis during the Fitter is 9.19 seconds.
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (334003): Started post-fitting delay annotation
@@ -8657,10 +8657,10 @@ Info (334004): Delay annotation completed successfully
 Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:10
 Info (144001): Generated suppressed messages file C:/Users/chank/OneDrive/Quartus/FFT/output_files/FFT.fit.smsg
 Info: Quartus Prime Fitter was successful. 0 errors, 20 warnings
-    Info: Peak virtual memory: 6090 megabytes
-    Info: Processing ended: Wed Apr 01 01:17:09 2020
-    Info: Elapsed time: 00:01:23
-    Info: Total CPU time (on all processors): 00:03:47
+    Info: Peak virtual memory: 6088 megabytes
+    Info: Processing ended: Fri Apr 03 17:50:26 2020
+    Info: Elapsed time: 00:01:25
+    Info: Total CPU time (on all processors): 00:03:40
 
 
 +----------------------------+

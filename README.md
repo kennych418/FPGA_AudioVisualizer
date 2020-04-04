@@ -35,6 +35,7 @@ The "Quartus for Designing and Debugging" section will go over how to use Quartu
 
 ## Files
 ### System Verilog (*.sv)
+All of the synthesizable files are listed below in the heirarchy that they are used in the audio visualizer design.
 * FFT
     * clkdiv
     * mic_translator
@@ -42,11 +43,13 @@ The "Quartus for Designing and Debugging" section will go over how to use Quartu
         * butterflyunit
     * VGA_Components
 ### Testbenches (*_TB.sv)
+The following testbench files were used to debug the their respective *.sv files.
 * clkdiv
 * mic_translator
 * FFT_Processor
 * butterflyunit
 ### Debugging Scripts (*.py)
+The following scripts were used to perform quick calculations used to verify the testbench results.
 * butteryfly_test
 
 ## Ext. Mic to Mic Translator

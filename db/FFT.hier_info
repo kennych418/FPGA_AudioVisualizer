@@ -95,7 +95,7 @@ clk_out <= clk_out_reg.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |FFT|mic_translator:main_translator
-clk => BCLK.IN0
+clk => BCLK.DATAA
 clk => t0_reg[0].CLK
 clk => t0_reg[1].CLK
 clk => t0_reg[2].CLK
@@ -790,7 +790,7 @@ reset => bit_cnt.OUTPUTSELECT
 reset => bit_cnt.OUTPUTSELECT
 reset => bit_cnt.OUTPUTSELECT
 reset => bit_cnt.OUTPUTSELECT
-reset => BCLK.IN1
+reset => BCLK.OUTPUTSELECT
 DOUT => data_buffer.DATAB
 LRCLK <= LRCLK_reg.DB_MAX_OUTPUT_PORT_TYPE
 BCLK <= BCLK.DB_MAX_OUTPUT_PORT_TYPE

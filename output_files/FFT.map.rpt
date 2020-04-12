@@ -1,5 +1,5 @@
 Analysis & Synthesis report for FFT
-Fri Apr 03 17:49:00 2020
+Sat Apr 11 20:08:14 2020
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -231,7 +231,7 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Fri Apr 03 17:49:00 2020       ;
+; Analysis & Synthesis Status        ; Successful - Sat Apr 11 20:08:14 2020       ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; FFT                                         ;
 ; Top-level Entity Name              ; FFT                                         ;
@@ -351,8 +351,8 @@ refer to the applicable agreement for further details.
 ;     Processor 1            ; 100.0%      ;
 ;     Processor 2            ;   0.2%      ;
 ;     Processor 3            ;   0.2%      ;
-;     Processor 4            ;   0.2%      ;
-;     Processor 5            ;   0.2%      ;
+;     Processor 4            ;   0.1%      ;
+;     Processor 5            ;   0.1%      ;
 ;     Processor 6            ;   0.1%      ;
 +----------------------------+-------------+
 
@@ -449,7 +449,7 @@ refer to the applicable agreement for further details.
 ; complexadder.sv                                                    ; yes             ; User SystemVerilog HDL File                  ; complexadder.sv                                                                                        ;             ;
 ; simplemultiplier.sv                                                ; yes             ; User SystemVerilog HDL File                  ; simplemultiplier.sv                                                                                    ;             ;
 ; complexsubtractor.sv                                               ; yes             ; User SystemVerilog HDL File                  ; complexsubtractor.sv                                                                                   ;             ;
-; VGA_Components.sv                                                  ; yes             ; User SystemVerilog HDL File                  ; C:/Users/chank/OneDrive/Quartus/FFT/VGA_Components.sv                                                  ;             ;
+; VGA_Components.sv                                                  ; yes             ; User SystemVerilog HDL File                  ; VGA_Components.sv                                                                                      ;             ;
 ; db/mult_jrs.tdf                                                    ; yes             ; Auto-Generated Megafunction                  ; C:/Users/chank/OneDrive/Quartus/FFT/db/mult_jrs.tdf                                                    ;             ;
 ; db/mult_tns.tdf                                                    ; yes             ; Auto-Generated Megafunction                  ; C:/Users/chank/OneDrive/Quartus/FFT/db/mult_tns.tdf                                                    ;             ;
 ; db/mult_pgs.tdf                                                    ; yes             ; Auto-Generated Megafunction                  ; C:/Users/chank/OneDrive/Quartus/FFT/db/mult_pgs.tdf                                                    ;             ;
@@ -1014,40 +1014,40 @@ Note: number of Embedded Multiplier Blocks used is only available after a succes
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                          ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------+
-; 3:1                ; 288 bits  ; 576 LEs       ; 288 LEs              ; 288 LEs                ; Yes        ; |FFT|mic_translator:main_translator|t10_reg[16]     ;
-; 3:1                ; 7 bits    ; 14 LEs        ; 7 LEs                ; 7 LEs                  ; Yes        ; |FFT|mic_translator:main_translator|data_counter[0] ;
-; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |FFT|mic_translator:main_translator|bit_cnt[29]     ;
-; 4:1                ; 24 bits   ; 48 LEs        ; 24 LEs               ; 24 LEs                 ; Yes        ; |FFT|FFT_Processor:main_professor|mem0[20]          ;
-; 4:1                ; 24 bits   ; 48 LEs        ; 48 LEs               ; 0 LEs                  ; Yes        ; |FFT|FFT_Processor:main_professor|mem0[33]          ;
-; 4:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |FFT|FFT_Processor:main_professor|cycles_counter[3] ;
-; 5:1                ; 24 bits   ; 72 LEs        ; 48 LEs               ; 24 LEs                 ; Yes        ; |FFT|FFT_Processor:main_professor|mem8[18]          ;
-; 5:1                ; 24 bits   ; 72 LEs        ; 48 LEs               ; 24 LEs                 ; Yes        ; |FFT|FFT_Processor:main_professor|mem8[42]          ;
-; 5:1                ; 18 bits   ; 54 LEs        ; 18 LEs               ; 36 LEs                 ; Yes        ; |FFT|mic_translator:main_translator|data_buffer[8]  ;
-; 6:1                ; 24 bits   ; 96 LEs        ; 48 LEs               ; 48 LEs                 ; Yes        ; |FFT|FFT_Processor:main_professor|mem2[13]          ;
-; 6:1                ; 24 bits   ; 96 LEs        ; 72 LEs               ; 24 LEs                 ; Yes        ; |FFT|FFT_Processor:main_professor|mem2[42]          ;
-; 7:1                ; 24 bits   ; 96 LEs        ; 48 LEs               ; 48 LEs                 ; Yes        ; |FFT|FFT_Processor:main_professor|mem4[23]          ;
-; 7:1                ; 20 bits   ; 80 LEs        ; 40 LEs               ; 40 LEs                 ; Yes        ; |FFT|FFT_Processor:main_professor|mem14[5]          ;
-; 7:1                ; 22 bits   ; 88 LEs        ; 44 LEs               ; 44 LEs                 ; Yes        ; |FFT|FFT_Processor:main_professor|mem12[11]         ;
-; 7:1                ; 44 bits   ; 176 LEs       ; 132 LEs              ; 44 LEs                 ; Yes        ; |FFT|FFT_Processor:main_professor|mem6[6]           ;
-; 7:1                ; 24 bits   ; 96 LEs        ; 72 LEs               ; 24 LEs                 ; Yes        ; |FFT|FFT_Processor:main_professor|mem4[43]          ;
-; 7:1                ; 28 bits   ; 112 LEs       ; 84 LEs               ; 28 LEs                 ; Yes        ; |FFT|FFT_Processor:main_professor|mem14[36]         ;
-; 7:1                ; 26 bits   ; 104 LEs       ; 78 LEs               ; 26 LEs                 ; Yes        ; |FFT|FFT_Processor:main_professor|mem12[28]         ;
-; 7:1                ; 52 bits   ; 208 LEs       ; 208 LEs              ; 0 LEs                  ; Yes        ; |FFT|FFT_Processor:main_professor|mem10[27]         ;
-; 4:1                ; 24 bits   ; 48 LEs        ; 24 LEs               ; 24 LEs                 ; Yes        ; |FFT|FFT_Processor:main_professor|mem15[14]         ;
-; 4:1                ; 24 bits   ; 48 LEs        ; 48 LEs               ; 0 LEs                  ; Yes        ; |FFT|FFT_Processor:main_professor|mem15[24]         ;
-; 5:1                ; 24 bits   ; 72 LEs        ; 48 LEs               ; 24 LEs                 ; Yes        ; |FFT|FFT_Processor:main_professor|mem7[13]          ;
-; 5:1                ; 24 bits   ; 72 LEs        ; 48 LEs               ; 24 LEs                 ; Yes        ; |FFT|FFT_Processor:main_professor|mem7[46]          ;
-; 6:1                ; 24 bits   ; 96 LEs        ; 48 LEs               ; 48 LEs                 ; Yes        ; |FFT|FFT_Processor:main_professor|mem13[2]          ;
-; 6:1                ; 24 bits   ; 96 LEs        ; 72 LEs               ; 24 LEs                 ; Yes        ; |FFT|FFT_Processor:main_professor|mem13[33]         ;
-; 7:1                ; 11 bits   ; 44 LEs        ; 44 LEs               ; 0 LEs                  ; Yes        ; |FFT|FFT_Processor:main_professor|W1[23]            ;
-; 7:1                ; 22 bits   ; 88 LEs        ; 44 LEs               ; 44 LEs                 ; Yes        ; |FFT|FFT_Processor:main_professor|mem11[4]          ;
-; 7:1                ; 24 bits   ; 96 LEs        ; 48 LEs               ; 48 LEs                 ; Yes        ; |FFT|FFT_Processor:main_professor|mem1[5]           ;
-; 7:1                ; 23 bits   ; 92 LEs        ; 46 LEs               ; 46 LEs                 ; Yes        ; |FFT|FFT_Processor:main_professor|mem3[11]          ;
-; 7:1                ; 47 bits   ; 188 LEs       ; 141 LEs              ; 47 LEs                 ; Yes        ; |FFT|FFT_Processor:main_professor|mem5[19]          ;
-; 7:1                ; 26 bits   ; 104 LEs       ; 78 LEs               ; 26 LEs                 ; Yes        ; |FFT|FFT_Processor:main_professor|mem11[46]         ;
-; 7:1                ; 24 bits   ; 96 LEs        ; 72 LEs               ; 24 LEs                 ; Yes        ; |FFT|FFT_Processor:main_professor|mem1[37]          ;
-; 7:1                ; 25 bits   ; 100 LEs       ; 75 LEs               ; 25 LEs                 ; Yes        ; |FFT|FFT_Processor:main_professor|mem3[28]          ;
-; 7:1                ; 49 bits   ; 196 LEs       ; 196 LEs              ; 0 LEs                  ; Yes        ; |FFT|FFT_Processor:main_professor|mem9[46]          ;
+; 3:1                ; 288 bits  ; 576 LEs       ; 288 LEs              ; 288 LEs                ; Yes        ; |FFT|mic_translator:main_translator|t5_reg[1]       ;
+; 3:1                ; 7 bits    ; 14 LEs        ; 7 LEs                ; 7 LEs                  ; Yes        ; |FFT|mic_translator:main_translator|data_counter[3] ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 32 LEs               ; 32 LEs                 ; Yes        ; |FFT|mic_translator:main_translator|bit_cnt[27]     ;
+; 4:1                ; 24 bits   ; 48 LEs        ; 24 LEs               ; 24 LEs                 ; Yes        ; |FFT|FFT_Processor:main_professor|mem0[8]           ;
+; 4:1                ; 24 bits   ; 48 LEs        ; 48 LEs               ; 0 LEs                  ; Yes        ; |FFT|FFT_Processor:main_professor|mem0[44]          ;
+; 4:1                ; 3 bits    ; 6 LEs         ; 3 LEs                ; 3 LEs                  ; Yes        ; |FFT|FFT_Processor:main_professor|cycles_counter[0] ;
+; 5:1                ; 24 bits   ; 72 LEs        ; 48 LEs               ; 24 LEs                 ; Yes        ; |FFT|FFT_Processor:main_professor|mem8[13]          ;
+; 5:1                ; 24 bits   ; 72 LEs        ; 48 LEs               ; 24 LEs                 ; Yes        ; |FFT|FFT_Processor:main_professor|mem8[46]          ;
+; 5:1                ; 18 bits   ; 54 LEs        ; 18 LEs               ; 36 LEs                 ; Yes        ; |FFT|mic_translator:main_translator|data_buffer[3]  ;
+; 6:1                ; 24 bits   ; 96 LEs        ; 48 LEs               ; 48 LEs                 ; Yes        ; |FFT|FFT_Processor:main_professor|mem2[7]           ;
+; 6:1                ; 24 bits   ; 96 LEs        ; 72 LEs               ; 24 LEs                 ; Yes        ; |FFT|FFT_Processor:main_professor|mem2[39]          ;
+; 7:1                ; 24 bits   ; 96 LEs        ; 48 LEs               ; 48 LEs                 ; Yes        ; |FFT|FFT_Processor:main_professor|mem4[17]          ;
+; 7:1                ; 20 bits   ; 80 LEs        ; 40 LEs               ; 40 LEs                 ; Yes        ; |FFT|FFT_Processor:main_professor|mem14[10]         ;
+; 7:1                ; 22 bits   ; 88 LEs        ; 44 LEs               ; 44 LEs                 ; Yes        ; |FFT|FFT_Processor:main_professor|mem12[22]         ;
+; 7:1                ; 44 bits   ; 176 LEs       ; 132 LEs              ; 44 LEs                 ; Yes        ; |FFT|FFT_Processor:main_professor|mem10[2]          ;
+; 7:1                ; 24 bits   ; 96 LEs        ; 72 LEs               ; 24 LEs                 ; Yes        ; |FFT|FFT_Processor:main_professor|mem4[29]          ;
+; 7:1                ; 28 bits   ; 112 LEs       ; 84 LEs               ; 28 LEs                 ; Yes        ; |FFT|FFT_Processor:main_professor|mem14[34]         ;
+; 7:1                ; 26 bits   ; 104 LEs       ; 78 LEs               ; 26 LEs                 ; Yes        ; |FFT|FFT_Processor:main_professor|mem12[43]         ;
+; 7:1                ; 52 bits   ; 208 LEs       ; 208 LEs              ; 0 LEs                  ; Yes        ; |FFT|FFT_Processor:main_professor|mem6[29]          ;
+; 4:1                ; 24 bits   ; 48 LEs        ; 24 LEs               ; 24 LEs                 ; Yes        ; |FFT|FFT_Processor:main_professor|mem15[10]         ;
+; 4:1                ; 24 bits   ; 48 LEs        ; 48 LEs               ; 0 LEs                  ; Yes        ; |FFT|FFT_Processor:main_professor|mem15[47]         ;
+; 5:1                ; 24 bits   ; 72 LEs        ; 48 LEs               ; 24 LEs                 ; Yes        ; |FFT|FFT_Processor:main_professor|mem7[12]          ;
+; 5:1                ; 24 bits   ; 72 LEs        ; 48 LEs               ; 24 LEs                 ; Yes        ; |FFT|FFT_Processor:main_professor|mem7[24]          ;
+; 6:1                ; 24 bits   ; 96 LEs        ; 48 LEs               ; 48 LEs                 ; Yes        ; |FFT|FFT_Processor:main_professor|mem13[22]         ;
+; 6:1                ; 24 bits   ; 96 LEs        ; 72 LEs               ; 24 LEs                 ; Yes        ; |FFT|FFT_Processor:main_professor|mem13[30]         ;
+; 7:1                ; 11 bits   ; 44 LEs        ; 44 LEs               ; 0 LEs                  ; Yes        ; |FFT|FFT_Processor:main_professor|W2[25]            ;
+; 7:1                ; 22 bits   ; 88 LEs        ; 44 LEs               ; 44 LEs                 ; Yes        ; |FFT|FFT_Processor:main_professor|mem11[23]         ;
+; 7:1                ; 24 bits   ; 96 LEs        ; 48 LEs               ; 48 LEs                 ; Yes        ; |FFT|FFT_Processor:main_professor|mem1[9]           ;
+; 7:1                ; 23 bits   ; 92 LEs        ; 46 LEs               ; 46 LEs                 ; Yes        ; |FFT|FFT_Processor:main_professor|mem3[16]          ;
+; 7:1                ; 47 bits   ; 188 LEs       ; 141 LEs              ; 47 LEs                 ; Yes        ; |FFT|FFT_Processor:main_professor|mem5[17]          ;
+; 7:1                ; 26 bits   ; 104 LEs       ; 78 LEs               ; 26 LEs                 ; Yes        ; |FFT|FFT_Processor:main_professor|mem11[24]         ;
+; 7:1                ; 24 bits   ; 96 LEs        ; 72 LEs               ; 24 LEs                 ; Yes        ; |FFT|FFT_Processor:main_professor|mem1[39]          ;
+; 7:1                ; 25 bits   ; 100 LEs       ; 75 LEs               ; 25 LEs                 ; Yes        ; |FFT|FFT_Processor:main_professor|mem3[47]          ;
+; 7:1                ; 49 bits   ; 196 LEs       ; 196 LEs              ; 0 LEs                  ; Yes        ; |FFT|FFT_Processor:main_professor|mem9[38]          ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------+
 
 
@@ -12881,7 +12881,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:27     ;
+; Top            ; 00:00:26     ;
 +----------------+--------------+
 
 
@@ -13013,7 +13013,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Fri Apr 03 17:48:05 2020
+    Info: Processing started: Sat Apr 11 20:07:20 2020
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off FFT -c FFT
 Info (16303): Aggressive Performance optimization mode selected -- timing performance will be prioritized at the potential cost of increased logic area and compilation time
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
@@ -13045,6 +13045,7 @@ Info (12127): Elaborating entity "FFT" for the top level hierarchy
 Info (12128): Elaborating entity "clkdiv" for hierarchy "clkdiv:vga_clock" File: C:/Users/chank/OneDrive/Quartus/FFT/FFT.sv Line: 9
 Info (12128): Elaborating entity "clkdiv" for hierarchy "clkdiv:main_clock" File: C:/Users/chank/OneDrive/Quartus/FFT/FFT.sv Line: 12
 Info (12128): Elaborating entity "mic_translator" for hierarchy "mic_translator:main_translator" File: C:/Users/chank/OneDrive/Quartus/FFT/FFT.sv Line: 24
+Warning (10235): Verilog HDL Always Construct warning at mic_translator.sv(44): variable "reset" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/Users/chank/OneDrive/Quartus/FFT/mic_translator.sv Line: 44
 Info (12128): Elaborating entity "FFT_Processor" for hierarchy "FFT_Processor:main_professor" File: C:/Users/chank/OneDrive/Quartus/FFT/FFT.sv Line: 37
 Info (12128): Elaborating entity "butterflyunit" for hierarchy "FFT_Processor:main_professor|butterflyunit:BFU0" File: C:/Users/chank/OneDrive/Quartus/FFT/FFT_Processor.sv Line: 237
 Info (12128): Elaborating entity "VGA_generator" for hierarchy "VGA_generator:main_vga" File: C:/Users/chank/OneDrive/Quartus/FFT/FFT.sv Line: 49
@@ -13077,7 +13078,7 @@ Info (12021): Found 1 design units, including 1 entities, in source file db/cmpr
     Info (12023): Found entity 1: cmpr_drb File: C:/Users/chank/OneDrive/Quartus/FFT/db/cmpr_drb.tdf Line: 22
 Info (12033): Analysis and Synthesis generated Signal Tap or debug node instance "Mic_20Translator"
 Info (11170): Starting IP generation for the debug fabric: alt_sld_fab.
-Info (11172): 2020.04.03.17:48:22 Progress: Loading sld3cba3e19/alt_sld_fab_wrapper_hw.tcl
+Info (11172): 2020.04.11.20:07:36 Progress: Loading sld3cba3e19/alt_sld_fab_wrapper_hw.tcl
 Info (11172): Alt_sld_fab.alt_sld_fab: SLD fabric agents which did not specify prefer_host were connected to JTAG
 Info (11172): Alt_sld_fab: Generating alt_sld_fab "alt_sld_fab" for QUARTUS_SYNTH
 Info (11172): Alt_sld_fab: "alt_sld_fab" instantiated alt_sld_fab "alt_sld_fab"
@@ -14485,10 +14486,10 @@ Info (21057): Implemented 14746 device resources after synthesis - the final res
     Info (21061): Implemented 14354 logic cells
     Info (21064): Implemented 80 RAM segments
     Info (21062): Implemented 288 DSP elements
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 647 warnings
-    Info: Peak virtual memory: 5052 megabytes
-    Info: Processing ended: Fri Apr 03 17:49:00 2020
-    Info: Elapsed time: 00:00:55
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 648 warnings
+    Info: Peak virtual memory: 5055 megabytes
+    Info: Processing ended: Sat Apr 11 20:08:14 2020
+    Info: Elapsed time: 00:00:54
     Info: Total CPU time (on all processors): 00:01:09
 
 

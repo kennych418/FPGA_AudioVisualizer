@@ -51,7 +51,11 @@ Internally, there are two clkdiv's, the mic_translator, FFT_Processor, and VGA_g
 
 The **clkdiv** module is used to generate a slower output clock (clk_out) from a faster input clock signal (clk_in). It also has a single parameter called counter_threshold, which can be used by the designer to set the output clock speed whenever a new clkdiv module is used in the project. The output clock frequency is based on the formula clk_out [Hz] = clk_in [Hz] / (2+2*counter_threshold). 
 
-The **mic_translator** module is used to generate the microphone's i2S signals and translate them into a readable format for the FFT_Processor. The mic_translator also stores 16 sets of audio data, which is necessary for a 16 point FFT. The inputs are the 125kHz system clock (clk), a reset button on the FPGA board (reset), and the microphone's data signal (DOUT). The outputs are the microphone's clk and control signals (BCLK, LRCLK), a flag signal that indicates when a new audio sample has been acquired (new_t), and all 16 sets of stored audio data (t0[17:0] - t15[17:0]).  
+The **mic_translator** module is used to generate the microphone's i2S signals and translate them into a readable format for the FFT_Processor. The mic_translator also stores 16 sets of audio data, which is necessary for a 16 point FFT. The inputs are the 125kHz system clock (clk), a reset button on the FPGA board (reset), and the microphone's data signal (DOUT). The outputs are the microphone's clk and control signals (BCLK, LRCLK), a flag signal that indicates when a new audio sample has been acquired (new_t), and all 16 sets of stored audio data (t0[17:0] - t15[17:0]). It should be noted that the i2S signals' speed is dependant on the clk input, where BCLK is equal to the frequency of the input clk. Therefore, increasing the input clk frequency will increase the sample rate.
+
+Internally, the mic_translator has several data buffers and counters controlled by sequential logic to translate i2S signals for the SPH0645 microphone. You can find more information about the i2S protocol from online or from the microphone's datasheet. The following chart summarizes each signal's function and reset value. 
+
+The **FFT_Processor** module takes the audio data from the microphone, calculates the FFT, and outputs the corresponding frequency data. 
 ### Testbenches (*_TB.sv)
 The following testbench files were used to debug the their respective *.sv files.
 * clkdiv

@@ -12,14 +12,13 @@ module mic_translator(input clk, input reset, input DOUT, output LRCLK, output B
 	reg [6:0] data_counter;
 	reg [31:0] bit_cnt;
 	reg [17:0] calibrated_data_buffer;
-	wire BCLK_out;
 	
 	//Dumb shit i have to do for the simulator to work
 	reg [17:0] 	t0_reg, t1_reg, t2_reg, t3_reg,
 				  	t4_reg, t5_reg, t6_reg, t7_reg,
 				  	t8_reg, t9_reg, t10_reg, t11_reg,
 				  	t12_reg, t13_reg, t14_reg, t15_reg;
-	reg LRCLK_reg, new_t_reg;
+	reg BCLK_reg, LRCLK_reg, new_t_reg;
 	assign t0 = t0_reg;
 	assign t1 = t1_reg;
 	assign t2 = t2_reg;
@@ -36,12 +35,20 @@ module mic_translator(input clk, input reset, input DOUT, output LRCLK, output B
 	assign t13 = t13_reg;
 	assign t14 = t14_reg;
 	assign t15 = t15_reg;
+	assign BCLK = BCLK_reg
 	assign LRCLK = LRCLK_reg;
 	assign new_t = new_t_reg;
 	
 	assign calibrated_data_buffer = data_buffer + `_CALIBRATION;
 	
-	assign BCLK = clk | (~reset);
+	always @ (clk) begin
+		if (reset == 1'b0) begin
+			BCLK_reg <= 1'b1;
+		end
+		else begin
+			BCLK_reg <= clk;
+		end
+	end
 	
 	always @ (negedge clk) begin
 		if (reset == 1'b0) begin

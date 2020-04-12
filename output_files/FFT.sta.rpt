@@ -1,5 +1,5 @@
 Timing Analyzer report for FFT
-Fri Apr 03 17:50:41 2020
+Sat Apr 11 20:09:55 2020
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -94,15 +94,15 @@ refer to the applicable agreement for further details.
 ; Number detected on machine ; 12          ;
 ; Maximum allowed            ; 6           ;
 ;                            ;             ;
-; Average used               ; 2.98        ;
+; Average used               ; 2.86        ;
 ; Maximum used               ; 6           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;  43.5%      ;
-;     Processor 3            ;  41.2%      ;
-;     Processor 4            ;  39.7%      ;
-;     Processors 5-6         ;  36.6%      ;
+;     Processor 2            ;  41.5%      ;
+;     Processor 3            ;  39.0%      ;
+;     Processor 4            ;  37.5%      ;
+;     Processors 5-6         ;  34.2%      ;
 +----------------------------+-------------+
 
 
@@ -111,7 +111,7 @@ refer to the applicable agreement for further details.
 +---------------+--------+--------------------------+
 ; SDC File Path ; Status ; Read at                  ;
 +---------------+--------+--------------------------+
-; clk.sdc       ; OK     ; Fri Apr 03 17:50:34 2020 ;
+; clk.sdc       ; OK     ; Sat Apr 11 20:09:48 2020 ;
 +---------------+--------+--------------------------+
 
 
@@ -666,7 +666,7 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 Info: *******************************************************************
 Info: Running Quartus Prime Timing Analyzer
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Fri Apr 03 17:50:32 2020
+    Info: Processing started: Sat Apr 11 20:09:46 2020
 Info: Command: quartus_sta FFT -c FFT
 Info: qsta_default_script.tcl version: #1
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
@@ -854,8 +854,8 @@ Info (332102): Design is not fully constrained for setup requirements
 Info (332102): Design is not fully constrained for hold requirements
 Info: Quartus Prime Timing Analyzer was successful. 0 errors, 48 warnings
     Info: Peak virtual memory: 4985 megabytes
-    Info: Processing ended: Fri Apr 03 17:50:41 2020
+    Info: Processing ended: Sat Apr 11 20:09:55 2020
     Info: Elapsed time: 00:00:09
-    Info: Total CPU time (on all processors): 00:00:23
+    Info: Total CPU time (on all processors): 00:00:22
 
 

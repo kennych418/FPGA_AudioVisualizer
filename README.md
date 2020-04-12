@@ -57,7 +57,7 @@ Internally, the mic_translator has several data buffers and counters controlled 
 
 The **FFT_Processor** module takes the audio data from the microphone, calculates the FFT, and outputs the corresponding frequency data. The inputs are the 125kHz system clock (clk), a reset button on the FPGA (reset), a flag signal that indicates when a new audio sample has been acquired (new_t), and all 16 sets of stored audio data from the mic_translator (t0[17:0] - t15[17:0]). The outputs are a flag signal that indicates when the FFT calculation is finished, and all 16 sets of frequency data (f0[23:0] - f15[23:0]). It should be noted that the FFT_Processor requires four clock cycles to complete each FFT calculation.
 
-Internally, there is a whole fuck ton of shit.
+Internally, there is a whole fuck ton of shit. A block diagram is shown below and more information will be posted later.
 
 The **butterflyunit** module performs the smallest unit operation of the FFT on two inputs. More information on the butterfly unit can be found online. The inputs are the real & imaginary input samples (A_t[47:0] and B_t[47:0]) and the twiddle factor (W[47:0]). THe outputs are the real & imaginary output samples (A_f[47:0], B_f[47:0]).
 

@@ -47,7 +47,7 @@ The **FFT** module is the top-level of the audio visualizer. Its inputs are the 
 
 Internally, there are two clkdiv's, the mic_translator, FFT_Processor, and VGA_generator. The two clkdiv's are used to derive a 125kHz system clock and 25MHz vga clock from the FPGA's main 50MHz base clock. The system clock controls the mic_translator and FFT_Processor. I arbitrarily set to 125kHz to provide plenty of headroom for the mic_translator and FFT_Processor to meet timing constraints, such as any setup and hold times. The designer can experiment with a faster system clock speed if they desire. However, it doesn't matter for a VGA display since the VGA protocol is locked at 60 FPS. At 125kHz, the mic_translator and FFT_Processor can still complete multiple cycles within a single frame of the VGA monitor. The vga clock drives the VGA_generator and is set to 25MHz because it is required by the VGA protocol. Along with establishing the system and vga clock domains, the FFT file also connects the mic_translator, FFT_Processor, and VGA_generator together and links them with their respective I/O pins. A block diagram is shown below.
 
-![FFT Diagram](https://github.com/kennych418/FPGA_AudioVisualizer/blob/master/pictures/FFT%20Diagram.png)
+![Block Diagram](https://github.com/kennych418/FPGA_AudioVisualizer/blob/master/pictures/FFT%20Diagram.png)
 
 The **clkdiv** module is used to generate a slower output clock (clk_out) from a faster input clock signal (clk_in). It also has a single parameter called counter_threshold, which can be used by the designer to set the output clock speed whenever a new clkdiv module is used in the project. The output clock frequency is based on the formula clk_out [Hz] = clk_in [Hz] / (2+2*counter_threshold). 
 

@@ -57,7 +57,7 @@ Internally, the mic_translator has several data buffers and counters controlled 
 
 The **FFT_Processor** module takes the audio data from the microphone, calculates the FFT over four clock cycles, and outputs the corresponding frequency data. The inputs are the 125kHz system clock (clk), a reset button on the FPGA (reset), a flag signal that indicates when a new audio sample has been acquired (new_t), and all 16 sets of stored audio data from the mic_translator (t0[17:0] - t15[17:0]). The outputs are a flag signal that indicates when the FFT calculation is finished, and all 16 sets of frequency data (f0[23:0] - f15[23:0]). 
 
-Internally, there is a whole fuck ton of shit. A block diagram is shown below and more information will be posted later.
+Internally, there are eight butterfly units and a lot of sequential logic that controls the input to each butterfly unit. The eight butterfly units 
 
 ![Block Diagram](https://github.com/kennych418/FPGA_AudioVisualizer/blob/master/pictures/FFT_Processor%20Diagram.png)
 
@@ -81,6 +81,10 @@ The following scripts were used to perform quick calculations used to verify the
 
 ## Future Improvements
 ### FPGA with flash memory
+
+### 32 point FFT or higher instead of 16
+When I first started designing the project, I didn't realize that the real portion of the DFT is symmetric. As a result, the resolution of my visualizer is lower than expected. With a 32 point FFT or above, you can have a finer resolution for better visualization. However, this will require a lot more resources from the FPGA. With the current implementation of the FFT_Processor, a 32 point FFT will not fit on the DE10 Lite FPGA. However, you can adjust the FFT_Processor to use only one butterflyunit and store all the results in registers. This is explained in greater detail in [George Slade's article](http://web.mit.edu/6.111/www/f2017/handouts/FFTtutorial121102.pdf?fbclid=IwAR1bvgwIdH4KpCR6y5HdHb4cVpvUhySQTUzOMBI4a99tWIJc6waVf-O8PHQ).
+
 ### Microphone options with ADC
 Further into the project's development, I discovered that the FPGA has an on-die ADC. This would allow the FPGA to interface with analog or PCM microphones, eliminating the need for a complicated mic_translator module. Additionally, this opens up a wide range of new micrphones that could be used, such as an [electret](https://www.adafruit.com/product/1063) or standard karaoke microphone. 
 

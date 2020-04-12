@@ -59,6 +59,8 @@ The **FFT_Processor** module takes the audio data from the microphone, calculate
 
 Internally, there is a whole fuck ton of shit. A block diagram is shown below and more information will be posted later.
 
+![Block Diagram](https://github.com/kennych418/FPGA_AudioVisualizer/blob/master/pictures/FFT_Processor%20Diagram.png)
+
 The **butterflyunit** module performs the smallest unit operation of the FFT on two inputs. More information on the butterfly unit can be found online. The inputs are the real & imaginary input samples (A_t[47:0] and B_t[47:0]) and the twiddle factor (W[47:0]). THe outputs are the real & imaginary output samples (A_f[47:0], B_f[47:0]).
 
 Internally, there's also a lot of complicated shit.

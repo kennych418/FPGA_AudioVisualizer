@@ -56,6 +56,7 @@ The **mic_translator** module is used to generate the microphone's i2S signals a
 Internally, the mic_translator has several data buffers and counters controlled by sequential logic to generate and translate the microphone's i2S signals. You can find more information about the i2S protocol from online or from the microphone's datasheet.
 
 The **FFT_Processor** module takes the audio data from the microphone, calculates the FFT over four clock cycles, and outputs the corresponding frequency data. The inputs are the 125kHz system clock (clk), a reset button on the FPGA (reset), a flag signal that indicates when a new audio sample has been acquired (new_t), and all 16 sets of stored audio data from the mic_translator (t0[17:0] - t15[17:0]). The outputs are a flag signal that indicates when the FFT calculation is finished, and all 16 sets of frequency data (f0[23:0] - f15[23:0]). 
+
 Internally, there is a whole fuck ton of shit. A block diagram is shown below and more information will be posted later.
 
 ![Block Diagram](https://github.com/kennych418/FPGA_AudioVisualizer/blob/master/pictures/FFT_Processor%20Diagram.png)

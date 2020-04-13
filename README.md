@@ -63,6 +63,8 @@ The FFT_Processor contains 8 butterflyunits that represent a single "layer" of t
 
 The FFT_Processor uses sequential logic, summarized as its "control logic", to determine the inputs and twiddle factors to each butterflyunit. For example, when new formatted audio data is present (new_t high) and the FFT_Processor is inactive (done is high), the control logic will set the new formatted audio data as the next input to the butterflyunit array and set the twiddle factors for the first layer. During the next 3 clock cycles, the control logic will direct the outputs of the butterflyunits back to their inputs and set the twiddle factors for the next layer. This will allow the FFT_Processor to move through each "layer" of the hardware FFT implementation. After the final layer, the FFT_Processor will remain inactive (done is high). The f0[23:0] - f15[23:0] outputs will contain only the real values of the calculation since those are the values we are interested in visualizing. A block diagram is shown below. 
 
+![Block Diagram](https://github.com/kennych418/FPGA_AudioVisualizer/blob/master/pictures/FFT%20Hardware%20Diagram.png)
+
 ![Block Diagram](https://github.com/kennych418/FPGA_AudioVisualizer/blob/master/pictures/FFT_Processor%20Diagram.png)
 
 The **butterflyunit** module performs the smallest unit operation of the FFT on two inputs. More information on the butterfly unit can be found online. The inputs are the real & imaginary input samples (A_t[47:0] and B_t[47:0]) and the twiddle factor (W[47:0]). THe outputs are the real & imaginary output samples (A_f[47:0], B_f[47:0]).

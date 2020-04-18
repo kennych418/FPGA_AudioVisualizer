@@ -64,15 +64,11 @@ The FFT_Processor contains 8 butterflyunits that represent a single "layer" of t
 ![Block Diagram](https://github.com/kennych418/FPGA_AudioVisualizer/blob/master/pictures/FFT%20Hardware%20Diagram.png)
 
 The FFT_Processor uses sequential logic, summarized as its "control logic", to determine the inputs and twiddle factors to each butterflyunit. For example, when new formatted audio data is present (new_t high) and the FFT_Processor is inactive (done is high), the control logic will set the new formatted audio data as the next input to the butterflyunit array and set the twiddle factors for the first layer. During the next 3 clock cycles, the control logic will direct the outputs of the butterflyunits back to their inputs and set the twiddle factors for the next layer. This will allow the FFT_Processor to move through each "layer" of the hardware FFT implementation. After the final layer, the FFT_Processor will remain inactive (done is high). The f0[23:0] - f15[23:0] outputs will contain only the real values of the calculation since those are the values we are interested in visualizing. A block diagram is shown below. 
-
 ![Block Diagram](https://github.com/kennych418/FPGA_AudioVisualizer/blob/master/pictures/FFT_Processor%20Diagram.png)
+The **butterflyunit** module performs the smallest unit operation of the FFT on two inputs. More information on the butterfly unit can be found online. The inputs are the real & imaginary input samples (A_t[47:0] and B_t[47:0]) and the twiddle factor (W[47:0]). The outputs are the real & imaginary output samples (A_f[47:0], B_f[47:0]).
 
-The **butterflyunit** module performs the smallest unit operation of the FFT on two inputs. More information on the butterfly unit can be found online. The inputs are the real & imaginary input samples (A_t[47:0] and B_t[47:0]) and the twiddle factor (W[47:0]). THe outputs are the real & imaginary output samples (A_f[47:0], B_f[47:0]).
-
-The input and output samples are formatted as {24'b real, 24'b imag}. For example, the upper 24 bits of A_t are the real values and the lower 24 bits are the imaginary values of input A_t. Internally, their is combinational logic that makes up 1 complex multiplier connected to 1 complex adder and 1 complex subtractor as shown below. 
-
+The input and output samples are formatted as {24'b real, 24'b imag}. For example, the upper 24 bits of A_t are the real values and the lower 24 bits are the imaginary values of input A_t. Internally, their is combinational logic that makes up 1 complex multiplier connected to 1 complex adder and 1 complex subtractor as shown below. It is important to note that multiplying two 48 bit numbers results in a 96 bit number. However, the complex adder and subtractor both require 48 bit inputs. As a result, we truncate the product and pass only the upper 24 bits of the real and imaginary components to the adder and subtractor. This is equivalent to dividing the original product by 2^24. To compensate for this and to avoid using fixed point notation, we must multiply the twiddle factor by 2^24. 
 ![Block Diagram](https://github.com/kennych418/FPGA_AudioVisualizer/blob/master/pictures/butterflyunit%20Diagram.png)
-
 The **VGA_generator** sldkfja;slidgja;wlrj
 
 ### Testbenches (*_TB.sv)

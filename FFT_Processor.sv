@@ -67,7 +67,7 @@ module FFT_Processor(input clk, input reset, input new_t,
 			W6 <= 48'b0;
 			W7 <= 48'b0;
 			cycles_counter <= 4;
-			done_reg <= 1;			/////////////////SHOULD REALLY BE 0
+			done_reg <= 1;
 		end
 		else begin
 			if (new_t && cycles_counter == 4) begin

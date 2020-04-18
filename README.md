@@ -69,7 +69,9 @@ The FFT_Processor uses sequential logic, summarized as its "control logic", to d
 
 The **butterflyunit** module performs the smallest unit operation of the FFT on two inputs. More information on the butterfly unit can be found online. The inputs are the real & imaginary input samples (A_t[47:0] and B_t[47:0]) and the twiddle factor (W[47:0]). THe outputs are the real & imaginary output samples (A_f[47:0], B_f[47:0]).
 
-Internally, there's also a lot of complicated shit.
+The input and output samples are formatted as {24'b real, 24'b imag}. For example, the upper 24 bits of A_t are the real values and the lower 24 bits are the imaginary values of input A_t. Internally, their is combinational logic that makes up 1 complex multiplier connected to 1 complex adder and 1 complex subtractor as shown below. 
+
+![Block Diagram](https://github.com/kennych418/FPGA_AudioVisualizer/blob/master/pictures/butterflyunit%20Diagram.png)
 
 The **VGA_generator** sldkfja;slidgja;wlrj
 

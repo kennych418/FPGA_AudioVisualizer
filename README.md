@@ -90,7 +90,9 @@ The following scripts were used to perform quick calculations used to verify the
 * butteryfly_test
 
 ## Quartus for Design and Debugging
-Quartus is intel's IDE for developing with their line of FPGA's. For this project, we used Quartus Lite (version 18.1) because it is free. Intel has a [youtube channel](https://www.youtube.com/channel/UC0wEPiFb0J6AZZ3oPXRoRpw) where they post many long and dry tutorial videos on how to use Quartus and its features. The main features that we'll need to use are the compiler, simulator, programmer, and the Signal Tap Logic Analyzer.
+Quartus is intel's IDE for developing with their line of FPGA's. For this project, we used Quartus Lite (version 18.1) because it is free. Intel has a [youtube channel](https://www.youtube.com/channel/UC0wEPiFb0J6AZZ3oPXRoRpw) where they post many long and dry tutorial videos on how to use Quartus and its features. The main features that we'll need to use are the pin planner, compiler, simulator, programmer, and the Signal Tap Logic Analyzer.
+
+The pin planner is built right into Quartus and sdlfkasdlf.
 
 The compiler is built right into Quartus and goes through the full process of taking your verilog files and generating a programming file for your FPGA. This includes going through the Analysis and Synthesis, Fitter, Assembler, Timing Analysis, and Netlist Writer. It is important to note that you can set the synthesizer's optimization by editting the Analysis and Synthesizer settings. For example, you can choose to optimize the design for energy efficiency, space efficiency, best performance, or a balance between the three. For our project, we chose to optimize for best performance.
 

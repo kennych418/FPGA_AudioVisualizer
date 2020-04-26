@@ -69,9 +69,15 @@ The **butterflyunit** module performs the smallest unit operation of the FFT on 
 
 The input and output samples are formatted as {24'b real, 24'b imag}. For example, the upper 24 bits of A_t are the real values and the lower 24 bits are the imaginary values of input A_t. Internally, their is combinational logic that makes up 1 complex multiplier connected to 1 complex adder and 1 complex subtractor as shown below. It is important to note that multiplying two signed 48 bit numbers results in a 96 bit product with a redundant sign bit. However, the complex adder and subtractor both require 48 bit inputs. As a result, we must remove the redundant sign bit then truncate the product by passing only the upper 24 bits of the real and imaginary components to the adder and subtractor. This is equivalent to dividing the original product by 2^23. To compensate for this, we must multiply the twiddle factor by 2^23. 
 ![Block Diagram](https://github.com/kennych418/FPGA_AudioVisualizer/blob/master/pictures/butterflyunit%20Diagram.png)
-The **VGA_generator** is responsible for visualizing the FFT results onto a monitor. The inputs are a 25MHz VGA clock (clk), a flag signal from the FFT_Processor that notifies when it is done with a new FFT calculation (done), and all 16 sets of frequency data (f0[23:0] - f15[23:0]). The outputs are the VGA's vertical clock (vsync), horizontal clock (hsync), and color data (r[3:0], g[3:0], b[3:0]).
+The **VGA_generator** is responsible for visualizing the FFT results onto a monitor. The inputs are a 25MHz VGA clock (clk), a flag signal from the FFT_Processor that notifies when it is done with a new FFT calculation (done), and all 16 sets of frequency data (f0[23:0] - f15[23:0]). The outputs are the VGA's vertical clock (vsync), horizontal clock (hsync), and color data (r[3:0], g[3:0], b[3:0]). You can find more information about the VGA protocol online. 
 
+Internally, the VGA generator contains 3 submodules that split up the task of controlling the outputs. These are the hsync module, vsync module, and display module. 
 
+The hsync module takes the VGA clock and generates the hsync signal based on a counter. In addition to that, it generates flags for the vsync and display. This includes a blank_out flag that tells the display when it is unnecessary to output any data, the newline_out flag that tell the vsync when a full horizontal line has been completed, and the pixel_count which tells the display which column the current pixel is in.
+
+The vsync module takes the hsync's newline_out flag, treats it like a clock, and generates the vsync signal based on a counter. In addition to that, it generates flags for the display. This includes a blank_out flag that tells the display when it is unnecessary to output any data and the pixel_count which tells the display which row the current pixel is in.
+
+The display module is where the bulk of the logic is located. 
 
 ### Testbenches (*_TB.sv)
 The following testbench files were used to debug the their respective *.sv files.

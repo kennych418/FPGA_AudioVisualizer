@@ -250,8 +250,8 @@ module VGA_generator(input clk, input done, output vsync, output hsync, output [
 				  f8_display, f9_display, f10_display, f11_display, 
 				  f12_display, f13_display, f14_display, f15_display; 
 	
-	hsync horizontal(clk, hsync, hblank, newline, horizontal_count);
 	vsync vertical(newline, vsync, vblank, vertical_count);
+	hsync horizontal(clk, hsync, hblank, newline, horizontal_count);
 	
 	always @ (posedge clk) begin
 		if (done) begin

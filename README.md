@@ -71,7 +71,7 @@ The input and output samples are formatted as {24'b real, 24'b imag}. For exampl
 ![Block Diagram](https://github.com/kennych418/FPGA_AudioVisualizer/blob/master/pictures/butterflyunit%20Diagram.png)
 The **VGA_generator** is responsible for visualizing the FFT results onto a monitor. The inputs are a 25MHz VGA clock (clk), a flag signal from the FFT_Processor that notifies when it is done with a new FFT calculation (done), and all 16 sets of frequency data (f0[23:0] - f15[23:0]). The outputs are the VGA's vertical clock (vsync), horizontal clock (hsync), and color data (r[3:0], g[3:0], b[3:0]). You can find more information about the VGA protocol online. 
 
-Internally, the VGA generator contains 3 submodules that split up the task of controlling the outputs. These are the hsync module, vsync module, and display module. 
+Since the FFT_Processor and VGA_generator are on two different clock domains, with the former at 125kHz and the later at 25MHz, they are asynchronous relative to each other. As a result, we need to use [synchronizers](http://www-inst.eecs.berkeley.edu/~cs150/sp12/agenda/lec/lec16-synch.pdf) on the frequency data passed between the two. This is done by using registers that are clocked by the VGA_generator's clock (f0_reg[23:0] - f15_reg[23:0]). This grabs onto the frequency data and synchronizes it with the rest of the VGA_generator's logic. Following that, we use another set of registers (f0_display[23:0] - f15_display[23:0]) that equals the respective f0_reg - f15_reg if it is a positive value or 23'b0 if it is a negative value. By doing this, we only display the real and positive output of the FFT calculation. The rest of the process is handled by 3 submodules within the VGA_generator that split up the task of controlling the VGA signals. These are the hsync module, vsync module, and display module. 
 
 The hsync module takes the VGA clock and generates the hsync signal based on a counter. In addition to that, it generates flags for the vsync and display. This includes a blank_out flag that tells the display when it is unnecessary to output any data, the newline_out flag that tell the vsync when a full horizontal line has been completed, and the pixel_count which tells the display which column the current pixel is in.
 
@@ -90,6 +90,7 @@ The following scripts were used to perform quick calculations used to verify the
 * butteryfly_test
 
 ## Quartus for Design and Debugging
+Quartus is intel's IDE for developing with their line of FPGA's. For this project, we used Quartus Lite (version 18.1) because it is free. 
 
 ## Future Improvements
 ### FPGA with flash memory

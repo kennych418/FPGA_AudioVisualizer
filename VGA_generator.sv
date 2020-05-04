@@ -1,6 +1,6 @@
 //=========== VGA Components for 640x480p ===========//
 //To change resolution, google the parameters and change them appropriately//
-module hsync(input pixelclk, output hsync_out, output blank_out, output newline_out, output [10:0] pixel_count);
+module hsync(input clk, output hsync_out, output blank_out, output newline_out, output [10:0] pixel_count);
 
 	parameter TOTAL_COUNTER = 800;
 	parameter SYNC = 96;
@@ -12,14 +12,14 @@ module hsync(input pixelclk, output hsync_out, output blank_out, output newline_
 	
 	assign pixel_count = counter;
 	
-	always @ (posedge pixelclk) begin	//counter
+	always @ (posedge clk) begin	//counter
 		if(counter < TOTAL_COUNTER)						//reset counter if every 800 clk cycles
 			counter <= counter + 11'b0000000001;
 		else
 			counter <= 11'b0000000000;		
 	end
 	
-	always @ (posedge pixelclk) begin	//hsync
+	always @ (posedge clk) begin	//hsync
 		if(counter < (DISPLAY + FRONTPORCH))
 			hsync_out <= 1;
 		else if(counter >= (DISPLAY + FRONTPORCH) && counter < (DISPLAY + FRONTPORCH + SYNC))
@@ -28,14 +28,14 @@ module hsync(input pixelclk, output hsync_out, output blank_out, output newline_
 			hsync_out <= 1;			
 	end
 	
-	always @ (posedge pixelclk) begin	//blank, high during display interval
+	always @ (posedge clk) begin	//blank, high during display interval
 		if(counter < DISPLAY)
 			blank_out <= 0;
 		else
 			blank_out <= 1;
 	end
 	
-	always @ (posedge pixelclk) begin	//newline
+	always @ (posedge clk) begin	//newline
 		if(counter == 0)
 			newline_out <= 1;
 		else
@@ -97,7 +97,7 @@ module data(input clk, input done, input hblank, input vblank, input [10:0] hori
 				   scaled_f12, scaled_f13, scaled_f14, scaled_f15;
 	
 	//I know this is insanely unoptimized
-	//Perform a linear transform to go from 0 to 16384 into 480 to 0, Y = (x / 32767) * (-480) + 480
+	//Perform a linear transform to go from 0 to 8388608 (range of f0-f15) into 480 to 0 (inverted range of vertical pixels), use Y = (x / 8388607) * (-480) + 480
 	assign scaled_f0 = ({{24{f0[23]}},f0} * (48'b1111_1111_1111_1111_1111_1111_1111_1111_1111_1110_0010_0000) + {10'b0, 24'd480, 14'b0}) >>> 14;
 	assign scaled_f1 = ({{24{f1[23]}},f1} * (48'b1111_1111_1111_1111_1111_1111_1111_1111_1111_1110_0010_0000) + {10'b0, 24'd480, 14'b0}) >>> 14;
 	assign scaled_f2 = ({{24{f2[23]}},f2} * (48'b1111_1111_1111_1111_1111_1111_1111_1111_1111_1110_0010_0000) + {10'b0, 24'd480, 14'b0}) >>> 14;

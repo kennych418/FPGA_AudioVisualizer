@@ -93,9 +93,9 @@ The following testbench files were used to debug the their respective *.sv files
 The following scripts were used to perform quick calculations used to verify the testbench results.
 * butteryfly_test
 
-The butterfly_test script is used to help debug the butterflyunit module. To use it, you call the command shown below 
+The butterfly_test script is used to help debug the butterflyunit module. To use it, you call the command shown below. It takes the user's values for a_real, a_imag, b_real, and b_imag, calculates the correct butterflyunit output with every twiddle factor for a 16 point FFT, and prints them out. The user can then compare the results with the output of a butterflyunit testbench.
 
-`python butterfly_test [a_real] [a_imag] [b_real] [b_imag]`
+`python butterfly_test.py [a_real] [a_imag] [b_real] [b_imag]`
 
 ## Quartus for Design and Debugging
 Quartus is intel's IDE for developing with their line of FPGA's. For this project, we used Quartus Lite (version 18.1) because it is free. Intel has a [youtube channel](https://www.youtube.com/channel/UC0wEPiFb0J6AZZ3oPXRoRpw) where they post many long and dry tutorial videos on how to use Quartus and its features. The main features that we'll need to use are the pin planner, compiler, simulator, programmer, and the Signal Tap Logic Analyzer.
